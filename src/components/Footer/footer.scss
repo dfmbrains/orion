@@ -1,0 +1,252 @@
+.footer {
+  padding: 90px 0 50px;
+  background: #1B1B1B;
+  position: relative;
+
+  &__menu li:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #2F2F2F;
+    position: absolute;
+    top: 77%;
+  }
+
+  &__top {
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 253px;
+    height: 64px;
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 100px;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-family: "GT Walsheim Pro", sans-serif;
+    color: white;
+    margin-bottom: 31px;
+  }
+
+  &__link {
+    font-size: 17px;
+    font-family: "GT Walsheim Pro", sans-serif;
+    color: #919191;
+    transition: 0.3s;
+
+    & .hiring {
+      font-size: 13px;
+      color: #1B1B1B;
+      font-family: "GT Walsheim Pro", sans-serif;
+      background: #FFF017;
+      border-radius: 7px;
+      padding: 4px 12px;
+      margin-left: 25px;
+    }
+
+    &:hover {
+      color: white;
+      transition: 0.3s;
+    }
+  }
+
+  &__bot {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      font-size: 14px;
+      font-family: "GT Walsheim Pro", sans-serif;
+      color: #E5E5E5;
+    }
+
+    &_contacts {
+      display: flex;
+      column-gap: 17px;
+
+      & img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer {
+    padding: 80px 0 40px;
+
+    &__logo {
+      width: 220px;
+    }
+
+    &__row {
+      column-gap: 70px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding: 60px 0 30px;
+
+    &::after {
+      top: 80%;
+    }
+
+    &__top {
+      align-items: flex-start;
+    }
+
+    &__logo {
+      width: 200px;
+      height: auto;
+    }
+
+    &__row {
+      column-gap: 40px;
+    }
+
+    &__title {
+      margin: 0 0 20px;
+    }
+
+    &__menu {
+      li:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+
+      .hiring {
+        font-size: 12px;
+        padding: 3px 10px;
+        margin: 0 0 0 15px;
+      }
+    }
+
+    &__top {
+      padding: 0 0 60px;
+    }
+
+    &__bot {
+      padding: 25px 0 0;
+    }
+  }
+}
+
+@media (max-width: 996px) {
+  .footer {
+    padding: 40px 0 20px;
+
+    &::after {
+      top: auto;
+      bottom: 65px;
+    }
+
+    &__logo {
+      width: 150px;
+    }
+
+    &__top {
+      column-gap: 15px;
+      padding: 0 0 30px;
+    }
+
+    &__row {
+      column-gap: 11px;
+    }
+
+    &__title {
+      font-size: 16px;
+      margin: 0 0 15px;
+    }
+
+    &__link {
+      font-size: 15px;
+
+      .hiring {
+        font-size: 11px;
+        margin: 0 0 0 10px;
+      }
+    }
+
+    &__bot {
+      padding: 30px 0 0;
+
+      &_title {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__top {
+      column-gap: 30px;
+    }
+
+    &__row {
+      flex-wrap: wrap;
+      row-gap: 15px;
+      column-gap: 0;
+    }
+
+    &__menu {
+      width: 50%;
+    }
+
+    &__border {
+      padding: 15px 0 0;
+      border-top: 1px solid #2F2F2F;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    &::after {
+      bottom: 81.2px;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+      row-gap: 30px;
+      padding: 0 0 20px;
+    }
+
+    &__logo {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__bot {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      padding: 20px 0 0;
+
+      &_contacts {
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, input, ::placeholder {
+  font-family: "GT Walsheim Pro", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-small {
+  max-width: 1310px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-big {
+  max-width: 1560px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-services {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+@media (max-width: 1400px) {
+  .container-big {
+    max-width: 1200px;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .container-small {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1200px) {
+  .container-big {
+    max-width: 996px;
+  }
+
+  .container {
+    max-width: 996px;
+  }
+
+  .container-small {
+    max-width: 996px;
+  }
+}
+@media (max-width: 996px) {
+  .container-big {
+    max-width: 768px;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+
+  .container-small {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container-big {
+    max-width: 576px;
+  }
+
+  .container {
+    max-width: 576px;
+  }
+
+  .container-small {
+    max-width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container-big {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .container-small {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 425px) {
+  .container-big {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .container-small {
+    padding: 0 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

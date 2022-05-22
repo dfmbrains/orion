@@ -1,0 +1,412 @@
+.rates {
+  position: relative;
+  background: #EEF8FF;
+}
+.rates__bg {
+  width: calc(100% - 83px);
+  height: 82%;
+  position: absolute;
+  top: 0;
+  left: 41.5px;
+  z-index: 1;
+}
+.rates__bg .bluebg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+}
+.rates__bg .planet {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+}
+.rates__bg img {
+  width: 100%;
+}
+.rates__row {
+  display: flex;
+  justify-content: space-between;
+}
+.rates__card {
+  padding-left: 50px;
+  width: 40%;
+  z-index: 3;
+}
+.rates__card_title {
+  padding-top: 147px;
+  font-size: 38px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #1B1B1B;
+  margin-bottom: 29px;
+}
+.rates__card_subtitle {
+  font-size: 18px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #332C2C;
+  margin-bottom: 29px;
+}
+.rates__card_list {
+  border-radius: 15px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 22px;
+  position: relative;
+  column-gap: 15px;
+  z-index: 4;
+  width: 100%;
+}
+.rates__card_list .swiper {
+  border-radius: 15px;
+  position: static;
+}
+.rates__card_list .swiper__row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.rates__card_list .swiper-button-prev {
+  width: 38px;
+  height: 38px;
+  background: #D6D6D6;
+  border-radius: 50%;
+  left: calc(50% - 25px);
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  transform: translate(-50%, 100%);
+}
+.rates__card_list .swiper-button-prev::after {
+  color: #1B1B1B;
+  font-size: 16px;
+}
+.rates__card_list .swiper-button-next {
+  width: 38px;
+  height: 38px;
+  background: #D6D6D6;
+  border-radius: 50%;
+  left: calc(50% + 25px);
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  transform: translate(-50%, 100%);
+}
+.rates__card_list .swiper-button-next::after {
+  color: #1B1B1B;
+  font-size: 16px;
+}
+.rates__card_list-img {
+  width: 624px;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: -1;
+}
+.rates__card_list-item {
+  padding: 20px 0;
+  border-radius: 15px;
+  background: white;
+  font-size: 18px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #332C2C;
+  text-align: center;
+}
+.rates__calculate {
+  position: relative;
+  top: -72.9px;
+  z-index: 3;
+  padding: 55px 0;
+  background: white;
+  border-radius: 15px;
+}
+.rates__calculate_title {
+  font-size: 25px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #332C2C;
+  padding: 0 34px 35px;
+  border-bottom: 1px solid #F18200;
+}
+.rates__calculate_subtitle {
+  font-size: 16px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #828282;
+  text-align: center;
+}
+.rates__calculate_form {
+  padding: 44px 34px 35px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+}
+.rates__calculate_form-first {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+.rates__calculate_form-row {
+  display: flex;
+  column-gap: 55px;
+}
+.rates__calculate_input {
+  border-radius: 5px;
+  width: 273px;
+  background: #F7F7F7;
+  height: 62px;
+  padding: 20px 10px 20px 20px;
+  border: 0.1px solid transparent;
+  outline: none;
+}
+.rates__calculate_input::placeholder {
+  font-size: 16px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #828282;
+}
+.rates__calculate_input:hover {
+  border: 0.1px solid #828282;
+}
+.rates__calculate_btn {
+  background: #F18200;
+  padding: 18px 0 19px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: white;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.rates__calculate_btn:hover {
+  background: white;
+  color: #F18200;
+  border: 1px solid #F18200;
+  transition: 0.3s;
+}
+
+@media (max-width: 1400px) {
+  .rates__row {
+    align-items: center;
+  }
+  .rates__card_title {
+    padding: 0;
+    font-size: 34px;
+    margin: 0 0 25px;
+  }
+  .rates__card_subtitle {
+    font-size: 17px;
+    margin: 0 0 20px;
+  }
+  .rates__card_subtitle br {
+    display: none;
+  }
+  .rates__card_list {
+    margin: 40px 0 0;
+  }
+  .rates__card_list-item {
+    font-size: 17px;
+  }
+  .rates__card_list .swiper-button-next, .rates__card_list .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+  .rates__calculate {
+    padding: 40px 0;
+  }
+  .rates__calculate_title {
+    font-size: 23px;
+    padding: 0 25px 25px;
+  }
+  .rates__calculate_form {
+    padding: 40px 25px 25px;
+    row-gap: 30px;
+  }
+  .rates__calculate_lbl {
+    width: calc(50% - 27.5px);
+  }
+  .rates__calculate_input {
+    width: 100%;
+  }
+  .rates__calculate_subtitle {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .rates__row {
+    align-items: flex-start;
+  }
+  .rates__card {
+    width: 45%;
+    margin: 8% 0 0;
+  }
+  .rates__card_title {
+    font-size: 33px;
+  }
+  .rates__card_title br {
+    display: none;
+  }
+  .rates__card_subtitle {
+    font-size: 16px;
+    margin: 0 0 15px;
+  }
+  .rates__card_list {
+    margin: 30px 0 0;
+  }
+  .rates__card_list-item {
+    padding: 15px 0;
+    font-size: 16px;
+  }
+  .rates__card_list .swiper-button-next, .rates__card_list .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+  .rates__card_list .swiper-button-next::after, .rates__card_list .swiper-button-prev::after {
+    font-size: 15px;
+  }
+  .rates__calculate {
+    padding: 30px 0;
+  }
+  .rates__calculate_btn {
+    padding: 12px 0;
+    font-size: 17px;
+  }
+  .rates__calculate_title {
+    font-size: 21px;
+    padding: 0 20px 20px;
+  }
+  .rates__calculate_form {
+    padding: 30px 20px 20px;
+    row-gap: 20px;
+  }
+  .rates__calculate_form-first {
+    column-gap: 10px;
+  }
+  .rates__calculate_form-first img {
+    width: 20px;
+  }
+  .rates__calculate_form-row {
+    column-gap: 40px;
+  }
+  .rates__calculate_lbl {
+    width: calc(50% - 20px);
+  }
+  .rates__calculate_input {
+    padding: 15px 10px 15px 15px;
+  }
+  .rates__calculate_input::placeholder {
+    font-size: 15px;
+  }
+}
+@media (max-width: 996px) {
+  .rates {
+    padding: 0 0 50px;
+  }
+  .rates__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 70px;
+  }
+  .rates__card {
+    margin: 0;
+    width: 80%;
+    padding: 30px 0 0;
+  }
+  .rates__card_list-img {
+    width: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .rates__calculate {
+    margin: 50px 0 0;
+    width: calc(100% - 83px);
+    position: static;
+    padding: 30px 0 0;
+  }
+  .rates__calculate_title {
+    font-size: 23px;
+    text-align: center;
+  }
+  .rates__calculate_form {
+    padding: 30px;
+  }
+  .rates__bg {
+    height: 36%;
+  }
+}
+@media (max-width: 768px) {
+  .rates__bg .planet, .rates__bg .bluebg {
+    height: 430px;
+  }
+  .rates__calculate {
+    width: 100%;
+  }
+  .rates__calculate_form {
+    padding: 20px 15px;
+  }
+  .rates__calculate_form-first {
+    column-gap: 8px;
+  }
+  .rates__calculate_form-first img {
+    width: 14px;
+  }
+  .rates__calculate_form-row {
+    column-gap: 30px;
+  }
+  .rates__calculate_subtitle {
+    font-size: 13px;
+  }
+  .rates__calculate_lbl {
+    width: calc(50% - 15px);
+  }
+  .rates__calculate_input {
+    height: auto;
+    padding: 15px 10px;
+  }
+  .rates__calculate_input::placeholder {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .rates__bg {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+  .rates__card_title {
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+  .rates__card_list-item {
+    font-size: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .rates__card_list-item {
+    font-size: 14px;
+    padding: 10px 0 11px;
+  }
+  .rates__calculate {
+    padding: 15px 5px;
+  }
+  .rates__calculate_title {
+    font-size: 21px;
+    padding: 0 0 10px;
+  }
+  .rates__calculate_form {
+    padding: 15px 5px;
+  }
+  .rates__calculate_input {
+    padding: 10px;
+  }
+  .rates__calculate_input::placeholder {
+    font-size: 13px;
+  }
+  .rates__calculate_btn {
+    padding: 7px 0;
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=rates.css.map */

@@ -1,0 +1,132 @@
+.subscribe {
+  margin: 100px 0 0;
+  padding: 100px 0;
+  background: #F7F7F7;
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-family: "GT Walsheim Pro", sans-serif;
+    color: #1B1B1B;
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 25px;
+    font-family: "GT Walsheim Pro", sans-serif;
+    color: #8A8A8A;
+    margin-bottom: 55px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__lbl {
+    width: 500px;
+    border-bottom: 1px solid #AFAFAF;
+  }
+
+  &__input {
+    width: 74%;
+    height: 45px;
+    padding: 19px 0 22px 20px;
+    background: none;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 18px;
+
+    &::placeholder {
+      font-size: 18px;
+      font-family: "GT Walsheim Pro", sans-serif;
+      color: #828282;
+    }
+
+    &:active {
+      border: 1px solid #AFAFAF;
+    }
+  }
+
+  &__btn {
+    height: 35px;
+    padding: 0 35px;
+    font-size: 13px;
+    font-family: "GT Walsheim Pro", sans-serif;
+    color: white;
+    background: #F18200;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      background: white;
+      color: #F18200;
+      border: 1px solid #F18200;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .subscribe {
+    padding: 80px 0;
+    margin: 80px 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .subscribe {
+    padding: 60px 0;
+    margin: 60px 0 0;
+  }
+}
+
+@media (max-width: 996px) {
+  .subscribe {
+    padding: 40px 0;
+    margin: 40px 0 0;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      margin: 0 0 40px;
+    }
+
+    &__input {
+      padding: 15px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .subscribe {
+    &__title {
+      font-size: 21px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__lbl {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    &__input {
+      font-size: 16px;
+    }
+    &__btn {
+      padding: 0;
+      width: 25%;
+    }
+  }
+}

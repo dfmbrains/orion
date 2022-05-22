@@ -1,0 +1,20 @@
+.banner {
+  padding: 65px 0 73px;
+  background: #F18200;
+}
+.banner__title {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  margin-bottom: 15px;
+}
+.banner__subtitle {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.banner__subtitle .big {
+  font-size: 38px;
+}
+
+/*# sourceMappingURL=banner.css.map */

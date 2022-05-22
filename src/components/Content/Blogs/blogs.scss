@@ -1,0 +1,195 @@
+.blogs {
+  padding: 150px 0;
+  &__row {
+    display: flex;
+    column-gap: 190px;
+  }
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 42px;
+    row-gap: 82px;
+    &_item {
+      width: calc((100% / 2) - 21px);
+      transition: 0.5s;
+      border-bottom: 23px solid transparent;
+      cursor: pointer;
+      border-radius: 0 0 10px 10px;
+      &:hover {
+        border-bottom: 23px solid #F18200;
+        transition: 0.5s;
+        -webkit-box-shadow: 0 7px 27px -3px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: 0 7px 27px -3px rgba(34, 60, 80, 0.6);
+        box-shadow: 0 7px 27px -3px rgba(34, 60, 80, 0.6)
+      }
+    }
+    &_card {
+      width: 100%;
+      & img {
+        width: 100%;
+      }
+      &-bot {
+        margin: 30px 0 0 0;
+        display: flex;
+        column-gap: 19.5px;
+        padding: 0 10px 30px;
+      }
+      &-date {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-right: 13.5px;
+        border-right: 1px solid #A6A6A6;
+        & p {
+          color: #1B1B1B;
+          font-size: 19px;
+      }
+        & .blogs__left_card-day {
+          font-size: 44px;
+          font-weight: bold;
+        }
+      }
+      &-right {
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-name {
+        font-size: 15px;
+        color: #9EADB4;
+        margin-bottom: 2px;
+      }
+      &-title {
+        font-size: 23px;
+        color: #6C6C6C;
+        margin-bottom: 15px;
+      }
+      &-subtitle {
+        font-size: 18px;
+        color: #1B1B1B;
+        margin-bottom: 30px;
+      }
+      &-btn {
+        background: #F18200;
+        border: none;
+        padding: 9px 0 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #FFFFFF;
+        width: 166px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 58px;
+    &_form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 19px 30px 21px 20px;
+      border: 1px solid #AFAFAF;
+      &-title {
+        font-size: 24px;
+        color: #1B1B1B;
+        margin-bottom: 24px;
+      }
+    }
+    &_lbl {
+      width: 100%;
+    }
+    &_input {
+      height: 20px;
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #1B1B1B;
+    }
+    &_btn {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      transition: 0.3s;
+      &:hover {
+        color: #F18200;
+        transition: 0.3s;
+      }
+    }
+    &_about {
+      &-title {
+        font-size: 24px;
+        color: #1B1B1B;
+        margin-bottom: 24px;
+      }
+      &-subtitle {
+        margin-top: 28px;
+        font-size: 18px;
+        color: #332C2C;
+      }
+    }
+    &_menu {
+      display: flex;
+      flex-direction: column;
+      row-gap: 13px;
+      &-title {
+        color: #1B1B1B;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+      &-item {
+        color: #1B1B1B;
+        font-size: 18px;
+      }
+    }
+    &_posts {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      &-title {
+        font-size: 24px;
+        color: #1B1B1B;
+        margin-bottom: 5px;
+      }
+      &-card {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        & img {
+          width: 70px;
+          height: 70px;
+        }
+        &-name {
+          font-size: 13px;
+          color: #9EADB4;
+          margin-bottom: 6px;
+        }
+        &-descr {
+          color: #1B1B1B;
+          font-size: 18px;
+        }
+      }
+    }
+    &_tags {
+      &-title {
+        font-size: 24px;
+        color: #1B1B1B;
+        margin-bottom: 25px;
+      }
+      &-row {
+        display: flex;
+        flex-wrap: wrap;
+        & p {
+          font-size: 18px;
+          color: #9EADB4;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}

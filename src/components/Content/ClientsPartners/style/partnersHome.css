@@ -1,0 +1,31 @@
+.partnersClientsHome {
+  position: relative;
+}
+.partnersClientsHome__title {
+  text-align: center;
+  padding: 164px 0;
+  font-size: 65px;
+  color: white;
+}
+.partnersClientsHome__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+.partnersClientsHome__image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00000085;
+  z-index: 5;
+}
+.partnersClientsHome__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=partnersHome.css.map */

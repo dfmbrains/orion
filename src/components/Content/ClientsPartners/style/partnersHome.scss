@@ -1,0 +1,29 @@
+.partnersClientsHome {
+  position: relative;
+  &__title {
+    text-align: center;
+    padding: 164px 0;
+    font-size: 65px;
+    color: white;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #00000085;
+      z-index: 5;
+    }
+  }
+  &__image img{
+    width: 100%;
+    height: 100%;
+  }
+}

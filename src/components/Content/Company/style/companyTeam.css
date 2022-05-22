@@ -1,0 +1,126 @@
+.companyTeam .swiper-button-prev {
+  left: 130px;
+  top: calc(50% + 50px);
+  background: #D1D1D1;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-prev:hover {
+  background: #1B1B1B;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-prev:hover::after {
+  color: #D1D1D1;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-prev::after {
+  font-size: 15px;
+  color: #1B1B1B;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-next {
+  right: 130px;
+  top: calc(50% + 50px);
+  background: #D1D1D1;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-next:hover {
+  background: #1B1B1B;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-next:hover::after {
+  color: #D1D1D1;
+  transition: 0.3s;
+}
+.companyTeam .swiper-button-next::after {
+  font-size: 15px;
+  color: #1B1B1B;
+  transition: 0.3s;
+}
+.companyTeam__header {
+  background: #F18200;
+  padding: 150px 0 170px;
+  position: relative;
+}
+.companyTeam__header_image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.companyTeam__header_image::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00000060;
+  z-index: 1;
+}
+.companyTeam__header_image img {
+  width: 100%;
+  height: 100%;
+}
+.companyTeam__header_title {
+  font-size: 65px;
+  color: white;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.companyTeam__title {
+  font-size: 35px;
+  color: #1B1B1B;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.companyTeam__title .orange {
+  color: #F18200;
+}
+.companyTeam__bot {
+  padding: 110px 0 150px;
+}
+.companyTeam__subtitle {
+  font-size: 18px;
+  color: #332C2C;
+  text-align: center;
+}
+.companyTeam__row {
+  margin: 90px auto 0;
+  display: flex;
+  max-width: 900px;
+  column-gap: 50px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+}
+.companyTeam__card {
+  width: calc(50% - 25px);
+}
+.companyTeam__card img {
+  display: block;
+  margin: 0 auto;
+}
+.companyTeam__card_name {
+  font-size: 20px;
+  margin: 5px 0 10px;
+  text-align: center;
+}
+.companyTeam__card_subtitle {
+  font-size: 18px;
+  color: #332C2C;
+  margin-bottom: 15px;
+}
+.companyTeam__card_position {
+  font-size: 12px;
+  color: #9EADB4;
+  text-align: center;
+}
+
+/*# sourceMappingURL=companyTeam.css.map */

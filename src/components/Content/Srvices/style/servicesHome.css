@@ -1,0 +1,31 @@
+.servicesHome {
+  position: relative;
+}
+.servicesHome__title {
+  text-align: center;
+  padding: 175px 0;
+  font-size: 65px;
+  color: white;
+}
+.servicesHome__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+.servicesHome__image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00000085;
+  z-index: 5;
+}
+.servicesHome__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=servicesHome.css.map */

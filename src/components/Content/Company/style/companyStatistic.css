@@ -1,0 +1,29 @@
+.company__statistic {
+  background: #F18200;
+  padding: 150px 0;
+}
+.company__statistic_row {
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+}
+.company__statistic_card {
+  padding-left: 40px;
+  border-left: 1px solid white;
+}
+.company__statistic_title {
+  font-size: 17px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: white;
+  margin-bottom: 5px;
+}
+.company__statistic_subtitle {
+  font-size: 70px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: white;
+}
+.company__statistic_subtitle .small {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=companyStatistic.css.map */

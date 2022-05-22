@@ -1,0 +1,31 @@
+.servicesFreight {
+  padding: 120px 0 150px;
+}
+.servicesFreight__title {
+  font-size: 50px;
+  color: #1B1B1B;
+  margin: 0 0 30px;
+}
+.servicesFreight__subtitle {
+  font-size: 35px;
+  color: #5B5B5B;
+  margin: 0 0 100px;
+}
+.servicesFreight__list {
+  margin: 0 0 150px;
+}
+.servicesFreight__item:not(:last-child) {
+  margin: 0 0 60px;
+}
+.servicesFreight__item_title {
+  font-size: 35px;
+  color: #5B5B5B;
+  margin: 0 0 30px;
+  font-weight: normal;
+}
+.servicesFreight__item_subtitle {
+  font-size: 18px;
+  color: #332C2C;
+}
+
+/*# sourceMappingURL=FreightTransportation.css.map */

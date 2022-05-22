@@ -1,0 +1,88 @@
+.partnersClients {
+  padding: 0 0 189px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.partnersClients__row {
+  position: relative;
+  padding: 0 25px;
+}
+.partnersClients__row .swiper {
+  position: static;
+}
+.partnersClients__row .swiper .swiper-button-prev {
+  width: 38px;
+  height: 38px;
+  background: #D6D6D6;
+  border-radius: 50%;
+  left: auto;
+  right: 61px;
+  bottom: auto;
+  top: -20px;
+  transform: translate(0, -100%);
+}
+.partnersClients__row .swiper .swiper-button-prev::after {
+  color: #1B1B1B;
+  font-size: 16px;
+}
+.partnersClients__row .swiper .swiper-button-next {
+  width: 38px;
+  height: 38px;
+  background: #D6D6D6;
+  border-radius: 50%;
+  left: auto;
+  right: 0;
+  bottom: auto;
+  top: -20px;
+  transform: translate(0, -100%);
+}
+.partnersClients__row .swiper .swiper-button-next::after {
+  color: #1B1B1B;
+  font-size: 16px;
+}
+.partnersClients__nav {
+  padding: 89px 0 0;
+  max-width: 1050px;
+  margin: 0 auto 35px;
+  display: flex;
+  column-gap: 43px;
+}
+.partnersClients__nav .orange {
+  padding-bottom: 9px;
+  border-bottom: 5px solid #F18200;
+  color: #F18200;
+}
+.partnersClients__nav .yakor:active {
+  color: #F18200;
+}
+.partnersClients__link {
+  cursor: pointer;
+  color: #1B1B1B;
+  font-size: 18px;
+}
+.partnersClients__title {
+  font-size: 45px;
+  color: #1B1B1B;
+  margin-bottom: 42px;
+}
+.partnersClients__title .orange {
+  color: #F18200;
+}
+.partnersClients__subtitle {
+  font-size: 18px;
+  color: #332C2C;
+  margin-bottom: 112px;
+}
+.partnersClients__img {
+  height: 57px;
+  max-width: 231px;
+}
+.partnersClients__img img {
+  height: 100%;
+  width: 100%;
+}
+.partnersClients__testimonials {
+  background: #F7F7F7;
+}
+
+/*# sourceMappingURL=partnersClients.css.map */

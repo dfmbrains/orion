@@ -1,0 +1,116 @@
+.types {
+  padding: 100px 0;
+  background: #F7F7F7;
+  position: relative;
+}
+.types__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.types__bg .dots {
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.types__title {
+  font-size: 35px;
+  color: #1B1B1B;
+  margin-bottom: 130px;
+  text-align: center;
+}
+.types__title .orange {
+  color: #F18200;
+}
+.types__row {
+  display: flex;
+  column-gap: 120px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 100px;
+  margin-bottom: 100px;
+}
+.types__card {
+  width: calc(33.3333333333% - 80px);
+}
+.types__card_title {
+  margin: 32.6px 0 21.7px;
+  font-size: 20px;
+  color: #1B1B1B;
+}
+.types__card_subtitle {
+  font-size: 18px;
+  color: #6C6C6C;
+}
+.types__bot_title {
+  font-size: 18px;
+  color: #332C2C;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.types__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 71px;
+}
+.types__contact .big {
+  font-size: 20px;
+  color: #332C2C;
+}
+.types__contact .small {
+  font-size: 18px;
+  color: #332C2C;
+}
+.types__contact_icons {
+  display: flex;
+  column-gap: 20px;
+}
+.types__form {
+  display: flex;
+  border-bottom: 1px solid #AFAFAF;
+  width: 28.5%;
+}
+.types__lbl {
+  width: 65.5%;
+}
+.types__input {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 0 0 0 10px;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-family: "GT Walsheim Pro", sans-serif;
+}
+.types__input::placeholder {
+  font-size: 16px;
+  color: #828282;
+  font-family: "GT Walsheim Pro", sans-serif;
+}
+.types__input:hover {
+  border-top: 1px solid #828282;
+}
+.types__btn {
+  height: 34px;
+  width: 35.5%;
+  padding: 8.5px 0;
+  background: #F18200;
+  color: white;
+  font-size: 13px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.types__btn:hover {
+  background: transparent;
+  color: #F18200;
+  border: 1px solid #F18200;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=types.css.map */

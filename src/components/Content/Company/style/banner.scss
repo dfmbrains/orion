@@ -1,0 +1,18 @@
+.banner {
+  padding: 65px 0 73px;
+  background: #F18200;
+  &__title {
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    & .big {
+      font-size: 38px;
+    }
+  }
+}

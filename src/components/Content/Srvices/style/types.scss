@@ -1,0 +1,136 @@
+.types {
+  padding: 100px 0;
+  background: #F7F7F7;
+  position: relative;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    & .dots {
+      position: absolute;
+      top: 125px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &__title {
+    font-size: 35px;
+    color: #1B1B1B;
+    margin-bottom: 130px;
+    text-align: center;
+
+    & .orange {
+      color: #F18200;
+    }
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 120px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 100px;
+    margin-bottom: 100px;
+  }
+
+  &__card {
+    width: calc((100% / 3) - 80px);
+
+    &_title {
+      margin: 32.6px 0 21.7px;
+      font-size: 20px;
+      color: #1B1B1B;
+    }
+
+    &_subtitle {
+      font-size: 18px;
+      color: #6C6C6C;
+    }
+  }
+
+  &__bot {
+    &_title {
+      font-size: 18px;
+      color: #332C2C;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 71px;
+
+    & .big {
+      font-size: 20px;
+      color: #332C2C;
+    }
+
+    & .small {
+      font-size: 18px;
+      color: #332C2C;
+    }
+
+    &_icons {
+      display: flex;
+      column-gap: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    border-bottom: 1px solid #AFAFAF;
+    width: 28.5%;
+  }
+
+  &__lbl {
+    width: 65.5%;
+  }
+
+  &__input {
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 0 0 0 10px;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-family: "GT Walsheim Pro", sans-serif;
+
+    &::placeholder {
+      font-size: 16px;
+      color: #828282;
+      font-family: "GT Walsheim Pro", sans-serif;
+    }
+
+    &:hover {
+      border-top: 1px solid #828282;
+    }
+  }
+
+  &__btn {
+    height: 34px;
+    width: 35.5%;
+    padding: 8.5px 0;
+    background: #F18200;
+    color: white;
+    font-size: 13px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      background: transparent;
+      color: #F18200;
+      border: 1px solid #F18200;
+      transition: 0.3s;
+    }
+  }
+}

@@ -1,0 +1,222 @@
+.containerFreight {
+  position: relative;
+}
+.containerFreight__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+.containerFreight__bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.containerFreight__bg .dots {
+  position: absolute;
+  top: 125px;
+}
+.containerFreight__row {
+  padding: 0 60px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.containerFreight__img {
+  width: 35%;
+}
+.containerFreight__img img {
+  width: 100%;
+}
+.containerFreight__descr_title {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 45px;
+  margin: 0 0 64px;
+  color: #1B1B1B;
+}
+.containerFreight__descr_yellow {
+  color: #F18200;
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 30px;
+  margin-bottom: 23px;
+}
+.containerFreight__descr_subtitle {
+  font-family: "GT Walsheim Pro", sans-serif;
+  font-size: 17px;
+  padding-bottom: 31.5px;
+  border-bottom: 1px solid #A6A6A6;
+  color: #332C2C;
+}
+.containerFreight__descr_btn {
+  margin-top: 24px;
+  padding: 18.5px 126.6px;
+  background: #F18200;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: white;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.containerFreight__descr_btn:hover {
+  background: white;
+  color: #F18200;
+  border: 1px solid #F18200;
+  transition: 0.3s;
+}
+.containerFreight__card {
+  padding: 61.5px 52.5px 50.5px 51.5px;
+  background: white;
+}
+.containerFreight__card_title {
+  font-size: 22px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #1B1B1B;
+  margin-bottom: 20px;
+}
+.containerFreight__card_subtitle {
+  font-size: 17px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #6C6C6C;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1400px) {
+  .containerFreight {
+    padding: 50px 0 100px;
+  }
+  .containerFreight__row {
+    column-gap: 50px;
+  }
+  .containerFreight_img {
+    width: calc(33.3333333333% - 33.3333333333px);
+  }
+  .containerFreight__descr {
+    width: calc(35.7142857143% - 33.3333333333px);
+  }
+  .containerFreight__descr_title {
+    font-size: 38px;
+    margin: 0 0 35px;
+  }
+  .containerFreight__descr_yellow {
+    font-size: 28px;
+    margin: 0 0 20px;
+  }
+  .containerFreight__descr_subtitle {
+    padding: 0 0 20px;
+  }
+  .containerFreight__descr_subtitle br {
+    display: none;
+  }
+  .containerFreight__descr_btn {
+    margin: 18px 0 0;
+    padding: 14px;
+    width: 100%;
+  }
+  .containerFreight__card {
+    width: calc(31.25% - 33.3333333333px);
+    padding: 40px;
+  }
+  .containerFreight__card_title {
+    font-size: 21px;
+    margin: 0 0 15px;
+  }
+  .containerFreight__card_subtitle {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .containerFreight__descr_title {
+    font-size: 33px;
+    margin: 0 0 25px;
+  }
+  .containerFreight__descr_title br {
+    display: none;
+  }
+  .containerFreight__descr_yellow {
+    font-size: 24px;
+    margin: 0 0 15px;
+  }
+  .containerFreight__descr_subtitle {
+    font-size: 16px;
+  }
+  .containerFreight__card {
+    padding: 30px;
+  }
+  .containerFreight__card_title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 996px) {
+  .containerFreight {
+    padding: 50px 0;
+  }
+  .containerFreight__row {
+    padding: 0 30px 0 0;
+    column-gap: 0;
+  }
+  .containerFreight__img {
+    width: 30%;
+  }
+  .containerFreight__card {
+    padding: 20px 10px;
+    width: 27%;
+  }
+  .containerFreight__descr {
+    width: 41%;
+  }
+  .containerFreight__descr_title {
+    font-size: 28px;
+    margin: 0 0 25px;
+  }
+  .containerFreight__descr_yellow {
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+  .containerFreight__descr_subtitle {
+    font-size: 15px;
+    padding: 0 0 15px;
+  }
+  .containerFreight__descr_btn {
+    margin: 15px auto 0;
+    font-size: 16px;
+    width: 80%;
+    display: block;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 768px) {
+  .containerFreight__row {
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .containerFreight__img {
+    order: 0;
+    width: calc(50% - 10px);
+  }
+  .containerFreight__descr {
+    order: 2;
+    width: 100%;
+  }
+  .containerFreight__card {
+    order: 1;
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 425px) {
+  .containerFreight__row {
+    justify-content: center;
+  }
+  .containerFreight__img {
+    display: none;
+  }
+  .containerFreight__card {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=containerFreight.css.map */

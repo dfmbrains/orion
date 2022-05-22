@@ -1,0 +1,19 @@
+.we {
+  padding: 99px 0 104px;
+}
+.we__title {
+  font-size: 35px;
+  color: #1B1B1B;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.we__title_orange {
+  color: #F18200;
+}
+.we__subtitle {
+  font-size: 18px;
+  color: #332C2C;
+  text-align: center;
+}
+
+/*# sourceMappingURL=we.css.map */

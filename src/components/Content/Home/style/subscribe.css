@@ -1,0 +1,116 @@
+.subscribe {
+  margin: 100px 0 0;
+  padding: 100px 0;
+  background: #F7F7F7;
+}
+.subscribe__title {
+  text-align: center;
+  font-size: 30px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #1B1B1B;
+  margin-bottom: 6px;
+}
+.subscribe__subtitle {
+  text-align: center;
+  font-size: 25px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #8A8A8A;
+  margin-bottom: 55px;
+}
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+}
+.subscribe__lbl {
+  width: 500px;
+  border-bottom: 1px solid #AFAFAF;
+}
+.subscribe__input {
+  width: 74%;
+  height: 45px;
+  padding: 19px 0 22px 20px;
+  background: none;
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 18px;
+}
+.subscribe__input::placeholder {
+  font-size: 18px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: #828282;
+}
+.subscribe__input:active {
+  border: 1px solid #AFAFAF;
+}
+.subscribe__btn {
+  height: 35px;
+  padding: 0 35px;
+  font-size: 13px;
+  font-family: "GT Walsheim Pro", sans-serif;
+  color: white;
+  background: #F18200;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.subscribe__btn:hover {
+  background: white;
+  color: #F18200;
+  border: 1px solid #F18200;
+  transition: 0.3s;
+}
+
+@media (max-width: 1400px) {
+  .subscribe {
+    padding: 80px 0;
+    margin: 80px 0 0;
+  }
+}
+@media (max-width: 1200px) {
+  .subscribe {
+    padding: 60px 0;
+    margin: 60px 0 0;
+  }
+}
+@media (max-width: 996px) {
+  .subscribe {
+    padding: 40px 0;
+    margin: 40px 0 0;
+  }
+  .subscribe__title {
+    font-size: 26px;
+  }
+  .subscribe__subtitle {
+    font-size: 20px;
+    margin: 0 0 40px;
+  }
+  .subscribe__input {
+    padding: 15px;
+  }
+  .subscribe__input::placeholder {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .subscribe__title {
+    font-size: 21px;
+  }
+  .subscribe__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .subscribe__lbl {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .subscribe__input {
+    font-size: 16px;
+  }
+  .subscribe__btn {
+    padding: 0;
+    width: 25%;
+  }
+}
+
+/*# sourceMappingURL=subscribe.css.map */
