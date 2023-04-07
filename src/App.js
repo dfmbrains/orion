@@ -1,11 +1,9 @@
 import React from "react";
-import {Icon} from "@mui/material";
+import Header from "./shared/Header";
 
 function App() {
    return (
-       <>
-          <Icon>error_outline</Icon>
-       </>
+       <Header/>
    );
 }
 
