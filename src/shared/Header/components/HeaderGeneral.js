@@ -1,18 +1,20 @@
-import React from 'react';
-import {Box, Button, Container, Icon, styled, Typography, useTheme} from "@mui/material";
+import React, {useEffect, useState} from 'react';
+import {Box, Button, Icon, styled, Typography, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
+import OrionContainer from "../../../components/OrionContainer";
 
-const StyledBox = styled(Box)(({theme}) => ({
-   backgroundColor: "transparent",
-   padding: '13px 0 9px',
+const StyledBox = styled(Box)(({theme, active}) => ({
+   backgroundColor: active === 'true' ? '#252525' : 'transparent',
+   padding: '13px 0 10px',
    borderBottom: "1px solid #FFFFFF",
    position: "fixed",
    width: "100%",
-   top: 32,
+   top: active === 'true' ? 0 : 32,
    left: 0,
    zIndex: theme.zIndex.appBar,
+   transition: "0.2s",
 
    "& .material-icons": {
       color: "#FFFFFF"
@@ -46,9 +48,19 @@ const HeaderGeneral = () => {
    ]
    const theme = useTheme()
 
+   const [active, setActive] = useState(false)
+
+   useEffect(() => {
+      if (typeof window !== "undefined") {
+         window.addEventListener("scroll", () =>
+             setActive(window.pageYOffset > 32)
+         );
+      }
+   }, [])
+
    return (
-       <StyledBox theme={theme}>
-          <Container>
+       <StyledBox theme={theme} active={active.toString()}>
+          <OrionContainer>
              <FlexBetweenAlignCenter>
                 <Logo/>
                 <FlexAllCenter>
@@ -63,7 +75,7 @@ const HeaderGeneral = () => {
                    <Typography variant="subtitle2">RU</Typography>
                 </Button>
              </FlexBetweenAlignCenter>
-          </Container>
+          </OrionContainer>
        </StyledBox>
    );
 };

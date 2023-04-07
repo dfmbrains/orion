@@ -1,7 +1,8 @@
 export const themeOptions = {
    palette: {
       primary: {
-         main: '#F18200'
+         main: '#F18200',
+         contrastText: '#FFFFFF'
       },
       secondary: {
          main: '#FFFFFF'
@@ -24,6 +25,10 @@ export const themeOptions = {
          fontWeight: "bold"
       },
       h4: {
+         fontSize: 30,
+         fontWeight: "bold"
+      },
+      h5: {
          fontSize: 24
       },
       subtitle1: {

@@ -1,6 +1,7 @@
 import React from 'react';
 import {FlexBetweenAlignCenter, FlexGap10} from "../../../components/FlexBox";
-import {Box, Container, Icon, styled, Typography} from "@mui/material";
+import {Box, Icon, styled, Typography} from "@mui/material";
+import OrionContainer from "../../../components/OrionContainer";
 
 const StyledBox = styled(Box)(() => ({
    backgroundColor: "#252525",
@@ -17,7 +18,7 @@ const StyledBody2 = styled(Typography)(() => ({
 const HeaderTop = () => {
    return (
        <StyledBox>
-          <Container>
+          <OrionContainer>
              <FlexBetweenAlignCenter>
                 <FlexGap10>
                    <Icon fontSize={"small"}>support_agent</Icon>
@@ -33,7 +34,7 @@ const HeaderTop = () => {
                    </a>
                 </FlexGap10>
              </FlexBetweenAlignCenter>
-          </Container>
+          </OrionContainer>
        </StyledBox>
    );
 };

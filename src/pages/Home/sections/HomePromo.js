@@ -1,9 +1,10 @@
 import React from 'react';
-import {Container, styled, Typography} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 import {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {FlexAllCenter} from "../../../components/FlexBox";
 import PromoSlide1 from '../../../assets/images/main.jpg';
+import OrionContainer from "../../../components/OrionContainer";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -14,7 +15,7 @@ const StyledSection = styled('section')(() => ({
       textAlign: "center",
       color: "#FFFFFF"
    },
-   "& h4": {
+   "& h5": {
       width: "50%"
    },
    "& .mySwiper, & .mySwiperSlide": {height: "100%"},
@@ -32,9 +33,9 @@ const StyledFlexAllCenter = styled(FlexAllCenter)(() => ({
    zIndex: 10
 }));
 
-const StyledSlide = styled(FlexAllCenter)(({bgImage}) => ({
+const StyledSlide = styled(FlexAllCenter)(({bgimage}) => ({
    height: "100%",
-   background: `url(${bgImage})`,
+   background: `url(${bgimage})`,
    backgroundPosition: "center",
    backgroundSize: "cover",
    backgroundRepeat: "no-repeat",
@@ -86,13 +87,13 @@ const HomePromo = () => {
           >
              {slides.map((el, idx) => (
                  <SwiperSlide key={idx} className={"mySwiperSlide"}>
-                    <StyledSlide bgImage={el.bgImage}>
-                       <Container sx={{height: "100%"}}>
-                          <StyledFlexAllCenter bgImage={el.bgImage}>
+                    <StyledSlide bgimage={el.bgImage}>
+                       <OrionContainer sx={{height: "100%"}}>
+                          <StyledFlexAllCenter>
                              <Typography my={3} variant="h1">{el.title}</Typography>
-                             <Typography variant="h4">{el.subtitle}</Typography>
+                             <Typography variant="h5">{el.subtitle}</Typography>
                           </StyledFlexAllCenter>
-                       </Container>
+                       </OrionContainer>
                     </StyledSlide>
                  </SwiperSlide>
              ))}

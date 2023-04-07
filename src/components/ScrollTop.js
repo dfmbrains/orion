@@ -4,7 +4,7 @@ import {IconButton, Icon, styled, useTheme} from "@mui/material";
 const StyledIconButton = styled(IconButton)(({theme}) => ({
    position: "fixed",
    bottom: "3%",
-   right: "3%",
+   right: "1.5%",
    zIndex: theme.zIndex.mobileStepper,
    backgroundColor: theme.palette.primary.main,
 
