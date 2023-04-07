@@ -27,7 +27,6 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const StyledFlexAllCenter = styled(FlexAllCenter)(() => ({
-   height: "100%",
    flexDirection: "column",
    position: "relative",
    zIndex: 10
@@ -88,7 +87,7 @@ const HomePromo = () => {
              {slides.map((el, idx) => (
                  <SwiperSlide key={idx} className={"mySwiperSlide"}>
                     <StyledSlide bgimage={el.bgImage}>
-                       <OrionContainer sx={{height: "100%"}}>
+                       <OrionContainer>
                           <StyledFlexAllCenter>
                              <Typography my={3} variant="h1">{el.title}</Typography>
                              <Typography variant="h5">{el.subtitle}</Typography>
