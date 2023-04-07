@@ -24,8 +24,7 @@ export const themeOptions = {
          fontWeight: "bold"
       },
       h4: {
-         fontSize: 23,
-         fontWeight: "bold"
+         fontSize: 24
       },
       subtitle1: {
          fontSize: 20,

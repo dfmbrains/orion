@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Button, Container, Icon, styled, Typography} from "@mui/material";
+import {Box, Button, Container, Icon, styled, Typography, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 
-const StyledBox = styled(Box)(() => ({
+const StyledBox = styled(Box)(({theme}) => ({
    backgroundColor: "transparent",
    padding: '13px 0 9px',
    borderBottom: "1px solid #FFFFFF",
@@ -12,6 +12,7 @@ const StyledBox = styled(Box)(() => ({
    width: "100%",
    top: 32,
    left: 0,
+   zIndex: theme.zIndex.appBar,
 
    "& .material-icons": {
       color: "#FFFFFF"
@@ -25,7 +26,7 @@ const StyledBox = styled(Box)(() => ({
          top: "100%",
          left: "0",
          backgroundColor: "#F6803D",
-         height: 3,
+         height: 2,
          width: "100%",
          borderRadius: 5
       }
@@ -43,9 +44,10 @@ const HeaderGeneral = () => {
       {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
       {title: "Blogs", link: '/blogs'}, {title: "Contact", link: '/contact'}
    ]
+   const theme = useTheme()
 
    return (
-       <StyledBox>
+       <StyledBox theme={theme}>
           <Container>
              <FlexBetweenAlignCenter>
                 <Logo/>
