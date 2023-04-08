@@ -4,10 +4,10 @@ a {
    text-decoration: none;
 }
 
-.homeSection7Swiper {
+.swiperCustomNavigation {
    position: static !important;
 }
 
-.homeSection7Swiper .swiper-button-next, .homeSection7Swiper .swiper-button-prev {
+.swiperCustomNavigation .swiper-button-next, .swiperCustomNavigation .swiper-button-prev {
    display: none;
 }

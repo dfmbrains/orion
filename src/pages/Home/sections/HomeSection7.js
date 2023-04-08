@@ -12,6 +12,7 @@ import {FlexGap10} from "../../../components/FlexBox";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";
 import SwiperButtons from "../../../components/SwiperButtons";
+import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 120px",
@@ -33,12 +34,6 @@ const StyledPreviewMemberBox = styled('div')(() => ({
       width: "100%",
       height: "100%"
    }
-}));
-
-const StyledSwiperButtons = styled('div')(() => ({
-   position: "absolute",
-   top: "5%",
-   right: "5%"
 }));
 
 const StyledFlexGap10 = styled(FlexGap10)(({theme}) => ({
@@ -134,15 +129,15 @@ const HomeSection7 = () => {
 
              <Box mt={8} sx={{position: "relative"}}>
                 <Typography variant={"h2"} mb={5}>Meet the team</Typography>
-                <Swiper className="homeSection7Swiper"
+                <Swiper className="swiperCustomNavigation"
                         navigation={true}
                         modules={[Navigation]}
                         slidesPerView={4}
                         spaceBetween={20}
                 >
-                   <StyledSwiperButtons>
+                   <StyledSwiperButtonsPosition>
                       <SwiperButtons/>
-                   </StyledSwiperButtons>
+                   </StyledSwiperButtonsPosition>
                    {data.map((el, idx) => (
                        <SwiperSlide key={idx}>
                           <StyledFlexGap10 theme={theme} onClick={() => setActive(el)}>

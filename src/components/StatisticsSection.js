@@ -1,11 +1,15 @@
 import React from 'react';
-import {Box, Grid, styled, Typography} from "@mui/material";
+import {Box, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "./OrionContainer";
 import {FlexGap10} from "./FlexBox";
 
-const StyledSection = styled('section')(({bgcolor}) => ({
+const StyledSection = styled('section')(({bgcolor, theme}) => ({
    padding: "120px 0",
-   backgroundColor: bgcolor,
+   backgroundColor: bgcolor || theme.palette.primary.main,
+
+   "& .MuiTypography-root": {
+      color: bgcolor ? "#1B1B1B" : '#FFFFFF'
+   }
 }));
 
 const StatisticsSection = ({bgcolor}) => {
@@ -16,17 +20,19 @@ const StatisticsSection = ({bgcolor}) => {
       {title: 'Shipped Tons Per Month', value: '8', valueTag: 'Years'}
    ]
 
+   const theme = useTheme()
+
    return (
-       <StyledSection bgcolor={bgcolor}>
+       <StyledSection bgcolor={bgcolor} theme={theme}>
           <OrionContainer>
              <Grid container spacing={10}>
                 {data.map((el, idx) => (
                     <Grid item xs={3} key={idx}>
-                       <Box sx={{borderLeft: "1px solid #282519"}} pl={5} py={1}>
+                       <Box sx={{borderLeft: `1px solid ${bgcolor ? "#282519" : '#FFFFFF'}`}} pl={5} py={1}>
                           <Typography variant={"body1"}>{el.title}</Typography>
                           <FlexGap10>
-                             <Typography color={"#1B1B1B"} variant={"h1"} component={"h5"}>{el.value}</Typography>
-                             <Typography color={"#1B1B1B"} variant={"h4"} component={"h5"}
+                             <Typography variant={"h1"} component={"h5"}>{el.value}</Typography>
+                             <Typography variant={"h4"} component={"h5"}
                                          mt={2}>{el.valueTag}</Typography>
                           </FlexGap10>
                        </Box>

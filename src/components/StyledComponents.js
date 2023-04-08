@@ -27,4 +27,10 @@ const StylePromoColumn = styled(FlexAllCenter)(() => ({
    zIndex: 10
 }));
 
-export {StyledPromoBackgroundBox, StylePromoColumn}
+const StyledSwiperButtonsPosition = styled('div')(() => ({
+   position: "absolute",
+   top: "5%",
+   right: "5%"
+}));
+
+export {StyledPromoBackgroundBox, StylePromoColumn, StyledSwiperButtonsPosition}
