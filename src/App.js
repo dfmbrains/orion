@@ -6,6 +6,7 @@ import Header from "./shared/Header";
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import ScrollTop from "./components/ScrollTop";
+import Footer from "./shared/Footer";
 
 function App() {
    return (
@@ -16,6 +17,8 @@ function App() {
                 <Route element={<Home/>} path={"/"}/>
              </Routes>
           </main>
+          <Footer/>
+
           <ScrollTop/>
        </>
    );
