@@ -7,6 +7,7 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import ScrollTop from "./components/ScrollTop";
 import Footer from "./shared/Footer";
+import About from "./pages/About";
 
 function App() {
    return (
@@ -15,6 +16,7 @@ function App() {
           <main>
              <Routes>
                 <Route element={<Home/>} path={"/"}/>
+                <Route element={<About/>} path={"/about"}/>
              </Routes>
           </main>
           <Footer/>

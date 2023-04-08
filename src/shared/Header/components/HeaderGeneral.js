@@ -42,7 +42,7 @@ const StyledLink = styled(NavLink)(() => ({
 
 const HeaderGeneral = () => {
    const navigations = [
-      {title: "Home", link: '/'}, {title: "Company", link: '/company'},
+      {title: "Home", link: '/'}, {title: "Company", link: '/about'},
       {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
       {title: "Blogs", link: '/blogs'}, {title: "Contact", link: '/contact'}
    ]

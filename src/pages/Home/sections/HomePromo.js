@@ -2,8 +2,8 @@ import React from 'react';
 import {styled, Typography} from "@mui/material";
 import {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {FlexAllCenter} from "../../../components/FlexBox";
 import PromoSlide1 from '../../../assets/images/main.jpg';
+import {StyledPromoBackgroundBox, StylePromoColumn} from "../../../components/StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -22,32 +22,6 @@ const StyledSection = styled('section')(() => ({
       "&:after": {
          color: '#FFF'
       }
-   }
-}));
-
-const StyledFlexAllCenter = styled(FlexAllCenter)(() => ({
-   flexDirection: "column",
-   position: "relative",
-   zIndex: 10
-}));
-
-const StyledSlide = styled(FlexAllCenter)(({bgimage}) => ({
-   height: "100%",
-   background: `url(${bgimage})`,
-   backgroundPosition: "center",
-   backgroundSize: "cover",
-   backgroundRepeat: "no-repeat",
-   zIndex: 1,
-
-   "&:before": {
-      content: "''",
-      position: "absolute",
-      top: "0",
-      left: "0",
-      backgroundColor: "#00000090",
-      height: "100%",
-      width: "100%",
-      zIndex: 2,
    }
 }));
 
@@ -85,12 +59,12 @@ const HomePromo = () => {
           >
              {slides.map((el, idx) => (
                  <SwiperSlide key={idx} className={"mySwiperSlide"}>
-                    <StyledSlide bgimage={el.bgImage}>
-                       <StyledFlexAllCenter>
+                    <StyledPromoBackgroundBox bgimage={el.bgImage}>
+                       <StylePromoColumn>
                           <Typography my={3} variant="h1">{el.title}</Typography>
                           <Typography variant="h5">{el.subtitle}</Typography>
-                       </StyledFlexAllCenter>
-                    </StyledSlide>
+                       </StylePromoColumn>
+                    </StyledPromoBackgroundBox>
                  </SwiperSlide>
              ))}
           </Swiper>
