@@ -3,7 +3,7 @@ import {Container} from "@mui/material";
 
 const OrionContainer = ({children}) => {
    return (
-       <Container maxWidth={false}>
+       <Container maxWidth={false} sx={{px: {xl: 8}}}>
           {children}
        </Container>
    );

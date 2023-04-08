@@ -4,7 +4,6 @@ import {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {FlexAllCenter} from "../../../components/FlexBox";
 import PromoSlide1 from '../../../assets/images/main.jpg';
-import OrionContainer from "../../../components/OrionContainer";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -87,12 +86,10 @@ const HomePromo = () => {
              {slides.map((el, idx) => (
                  <SwiperSlide key={idx} className={"mySwiperSlide"}>
                     <StyledSlide bgimage={el.bgImage}>
-                       <OrionContainer>
-                          <StyledFlexAllCenter>
-                             <Typography my={3} variant="h1">{el.title}</Typography>
-                             <Typography variant="h5">{el.subtitle}</Typography>
-                          </StyledFlexAllCenter>
-                       </OrionContainer>
+                       <StyledFlexAllCenter>
+                          <Typography my={3} variant="h1">{el.title}</Typography>
+                          <Typography variant="h5">{el.subtitle}</Typography>
+                       </StyledFlexAllCenter>
                     </StyledSlide>
                  </SwiperSlide>
              ))}
