@@ -3,3 +3,11 @@
 a {
    text-decoration: none;
 }
+
+.homeSection7Swiper {
+   position: static !important;
+}
+
+.homeSection7Swiper .swiper-button-next, .homeSection7Swiper .swiper-button-prev {
+   display: none;
+}
