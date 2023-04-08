@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon, IconButton, styled} from "@mui/material";
 import {FlexBox} from "./FlexBox";
-import {useSwiper, useSwiperSlide} from "swiper/react";
+import {useSwiper} from "swiper/react";
 
 const StyledSwiperButtonsBox = styled(FlexBox)(() => ({
    alignItems: "center",
@@ -22,14 +22,13 @@ const StyledIconButton = styled(IconButton)(() => ({
 
 const SwiperButtons = () => {
    const swiper = useSwiper();
-   const swiperSlide = useSwiperSlide();
-   console.log(swiperSlide)
+
    return (
        <StyledSwiperButtonsBox>
-          <StyledIconButton disabled={false} onClick={() => swiper.slidePrev()} size={"small"}>
+          <StyledIconButton onClick={() => swiper.slidePrev()} size={"small"}>
              <Icon>keyboard_arrow_left</Icon>
           </StyledIconButton>
-          <StyledIconButton disabled={false} onClick={() => swiper.slideNext()} size={"small"}>
+          <StyledIconButton onClick={() => swiper.slideNext()} size={"small"}>
              <Icon>keyboard_arrow_right</Icon>
           </StyledIconButton>
        </StyledSwiperButtonsBox>

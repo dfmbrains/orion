@@ -7,6 +7,7 @@ import HomeSection5 from "./sections/HomeSection5";
 import HomeSection6 from "./sections/HomeSection6";
 import StatisticsSection from "../../components/StatisticsSection";
 import HomeSection7 from "./sections/HomeSection7";
+import HomeSection8 from "./sections/HomeSection8";
 
 const Home = () => {
    return (
@@ -19,6 +20,7 @@ const Home = () => {
           <HomeSection6/>
           <StatisticsSection bgcolor={"#F7F7F7"}/>
           <HomeSection7/>
+          <HomeSection8/>
        </>
    );
 };
