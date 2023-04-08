@@ -8,6 +8,7 @@ import HomeSection6 from "./sections/HomeSection6";
 import StatisticsSection from "../../components/StatisticsSection";
 import HomeSection7 from "./sections/HomeSection7";
 import HomeSection8 from "./sections/HomeSection8";
+import EmailFormSection from "../../components/EmailFormSection";
 
 const Home = () => {
    return (
@@ -21,6 +22,7 @@ const Home = () => {
           <StatisticsSection bgcolor={"#F7F7F7"}/>
           <HomeSection7/>
           <HomeSection8/>
+          <EmailFormSection/>
        </>
    );
 };
