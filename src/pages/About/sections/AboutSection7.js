@@ -6,7 +6,7 @@ import FeatureCard from "../../../components/FeatureCard";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
-   backgroundColor: "#F7F7F7",
+   backgroundColor: "#F7F7F7"
 }));
 
 const StyledFlexBox = styled(FlexBox)(() => ({
