@@ -7,6 +7,7 @@ import AboutSection3 from "./sections/AboutSection3";
 import AboutSection4 from "./sections/AboutSection4";
 import AboutSection5 from "./sections/AboutSection5";
 import AboutSection6 from "./sections/AboutSection6";
+import AboutSection7 from "./sections/AboutSection7";
 
 const About = () => {
    return (
@@ -19,6 +20,7 @@ const About = () => {
           <AboutSection4/>
           <AboutSection5/>
           <AboutSection6/>
+          <AboutSection7/>
        </>
    );
 };
