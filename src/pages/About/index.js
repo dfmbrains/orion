@@ -10,11 +10,13 @@ import AboutSection6 from "./sections/AboutSection6";
 import AboutSection7 from "./sections/AboutSection7";
 import AboutSection8 from "./sections/AboutSection8";
 import AboutSection9 from "./sections/AboutSection9";
+import AboutBg from '../../assets/images/backgrounds/about.png';
+import MeetTeamBg from '../../assets/images/backgrounds/meet_team.png';
 
 const About = () => {
    return (
        <>
-          <PromoSection title={"About us"}/>
+          <PromoSection title={"About us"} bgImage={AboutBg}/>
           <AboutSection1/>
           <AboutSection2/>
           <StatisticsSection/>
@@ -25,6 +27,7 @@ const About = () => {
           <AboutSection7/>
           <AboutSection8/>
           <AboutSection9/>
+          <PromoSection title={"Meet our Team"} bgImage={MeetTeamBg}/>
        </>
    );
 };

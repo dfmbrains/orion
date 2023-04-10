@@ -3,7 +3,7 @@ import {styled, Typography, useTheme} from "@mui/material";
 import {FlexAllCenter} from "../../../components/FlexBox";
 
 const StyledSection = styled('section')(() => ({
-   height: "calc(50vh - 32px / 2)",
+   height: "calc(50vh - 32px)",
 
    "& .MuiTypography-root": {
       width: "50%",

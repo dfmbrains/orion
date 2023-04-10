@@ -1,17 +1,16 @@
 import React from 'react';
 import {styled, Typography} from "@mui/material";
-import AboutBg from '../assets/images/backgrounds/about.png';
 import {StyledPromoBackgroundBox, StylePromoColumn} from "./StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
-   height: "calc(50vh - 32px / 2)",
+   height: "50vh",
 }));
 
-const PromoSection = ({title}) => {
+const PromoSection = ({title, bgImage}) => {
    return (
        <StyledSection>
-          <StyledPromoBackgroundBox bgimage={AboutBg}>
+          <StyledPromoBackgroundBox bgimage={bgImage}>
              <StylePromoColumn>
                 <Typography variant="h1">{title}</Typography>
              </StylePromoColumn>
