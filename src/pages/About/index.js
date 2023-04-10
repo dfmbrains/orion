@@ -3,6 +3,7 @@ import PromoSection from "../../components/PromoSection";
 import AboutSection1 from "./sections/AboutSection1";
 import AboutSection2 from "./sections/AboutSection2";
 import StatisticsSection from "../../components/StatisticsSection";
+import AboutSection3 from "./sections/AboutSection3";
 
 const About = () => {
    return (
@@ -11,6 +12,7 @@ const About = () => {
           <AboutSection1/>
           <AboutSection2/>
           <StatisticsSection/>
+          <AboutSection3/>
        </>
    );
 };
