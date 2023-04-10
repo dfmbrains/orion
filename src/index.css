@@ -11,3 +11,7 @@ a {
 .swiperCustomNavigation .swiper-button-next, .swiperCustomNavigation .swiper-button-prev {
    display: none;
 }
+
+.justify-text {
+   text-align: justify;
+}

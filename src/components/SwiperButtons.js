@@ -20,17 +20,32 @@ const StyledIconButton = styled(IconButton)(() => ({
    }
 }));
 
-const SwiperButtons = () => {
+export const SwiperButtonPrev = () => {
    const swiper = useSwiper();
 
    return (
+       <StyledIconButton className={"swiperButtonPrev"} onClick={() => swiper.slidePrev()} size={"small"}>
+          <Icon>keyboard_arrow_left</Icon>
+       </StyledIconButton>
+   )
+}
+
+export const SwiperButtonNext = () => {
+   const swiper = useSwiper();
+
+   return (
+       <StyledIconButton className={"swiperButtonNext"} onClick={() => swiper.slideNext()} size={"small"}>
+          <Icon>keyboard_arrow_right</Icon>
+       </StyledIconButton>
+   )
+}
+
+const SwiperButtons = () => {
+
+   return (
        <StyledSwiperButtonsBox>
-          <StyledIconButton onClick={() => swiper.slidePrev()} size={"small"}>
-             <Icon>keyboard_arrow_left</Icon>
-          </StyledIconButton>
-          <StyledIconButton onClick={() => swiper.slideNext()} size={"small"}>
-             <Icon>keyboard_arrow_right</Icon>
-          </StyledIconButton>
+          <SwiperButtonPrev/>
+          <SwiperButtonNext/>
        </StyledSwiperButtonsBox>
    );
 };

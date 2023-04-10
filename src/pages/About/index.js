@@ -12,6 +12,7 @@ import AboutSection8 from "./sections/AboutSection8";
 import AboutSection9 from "./sections/AboutSection9";
 import AboutBg from '../../assets/images/backgrounds/about.png';
 import MeetTeamBg from '../../assets/images/backgrounds/meet_team.png';
+import AboutSection10 from "./sections/AboutSection10";
 
 const About = () => {
    return (
@@ -28,6 +29,7 @@ const About = () => {
           <AboutSection8/>
           <AboutSection9/>
           <PromoSection title={"Meet our Team"} bgImage={MeetTeamBg}/>
+          <AboutSection10/>
        </>
    );
 };

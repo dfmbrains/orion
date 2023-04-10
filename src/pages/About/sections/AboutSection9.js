@@ -75,7 +75,7 @@ const AboutSection7 = () => {
                                 <Typography variant={"subtitle1"}>{el.name}</Typography>
                              </div>
                           </FlexGap10>
-                          <Typography mt={3} variant={"subtitle1"}>{el.text}</Typography>
+                          <Typography className={"justify-text"} mt={3} variant={"subtitle1"}>{el.text}</Typography>
                        </SwiperSlide>
                    ))}
                 </Swiper>

@@ -5,7 +5,7 @@ import {FlexBox} from "../../../components/FlexBox";
 import FeatureCard from "../../../components/FeatureCard";
 
 const StyledSection = styled('section')(() => ({
-   padding: "120px 0",
+   padding: "90px 0",
 }));
 
 const StyledFlexBox = styled(FlexBox)(() => ({
