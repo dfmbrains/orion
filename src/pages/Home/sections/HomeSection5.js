@@ -47,7 +47,9 @@ const HomeSection5 = () => {
           <OrionContainer>
              <StyledFlexBox>
                 {cards.map((el, idx) => (
-                    <FeatureCard key={idx} data={el}/>
+                    <React.Fragment key={idx}>
+                       <FeatureCard data={el}/>
+                    </React.Fragment>
                 ))}
              </StyledFlexBox>
           </OrionContainer>

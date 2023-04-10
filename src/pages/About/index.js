@@ -8,6 +8,7 @@ import AboutSection4 from "./sections/AboutSection4";
 import AboutSection5 from "./sections/AboutSection5";
 import AboutSection6 from "./sections/AboutSection6";
 import AboutSection7 from "./sections/AboutSection7";
+import AboutSection8 from "./sections/AboutSection8";
 
 const About = () => {
    return (
@@ -21,6 +22,7 @@ const About = () => {
           <AboutSection5/>
           <AboutSection6/>
           <AboutSection7/>
+          <AboutSection8/>
        </>
    );
 };
