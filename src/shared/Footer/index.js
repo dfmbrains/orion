@@ -1,12 +1,10 @@
 import React from 'react';
 import OrionContainer from "../../components/OrionContainer";
-import {ButtonGroup, Grid, Icon, IconButton, styled, Typography} from "@mui/material";
+import {Grid, styled, Typography} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexGap10} from "../../components/FlexBox";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import {Logo} from "../../components/Logo";
 import {Link} from "react-router-dom";
+import SocialMediaButtons from "../../components/SocialMediaButtons";
 
 const StyledFooter = styled('footer')(() => ({
    padding: "60px 0 40px",
@@ -97,23 +95,7 @@ const Footer = () => {
                 <FlexBetweenAlignCenter>
                    <Typography variant={"body2"} color={"#FFFFFF"}>Copyright ©2020 All rights reserved
                       oriontrans.kg</Typography>
-                   <ButtonGroup>
-                      <IconButton href={"#"} color={"secondary"}>
-                         <Icon>facebook</Icon>
-                      </IconButton>
-                      <IconButton href={"#"} color={"secondary"}>
-                         <InstagramIcon/>
-                      </IconButton>
-                      <IconButton href={"#"} color={"secondary"}>
-                         <LinkedInIcon/>
-                      </IconButton>
-                      <IconButton href={"#"} color={"secondary"}>
-                         <WhatsAppIcon/>
-                      </IconButton>
-                      <IconButton href={"#"} color={"secondary"}>
-                         <Icon>telegram</Icon>
-                      </IconButton>
-                   </ButtonGroup>
+                   <SocialMediaButtons color={"secondary"}/>
                 </FlexBetweenAlignCenter>
              </OrionContainer>
           </StyledBottomBox>

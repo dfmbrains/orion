@@ -9,6 +9,7 @@ import ScrollTop from "./components/ScrollTop";
 import Footer from "./shared/Footer";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 function App() {
    return (
@@ -19,6 +20,7 @@ function App() {
                 <Route element={<Home/>} path={"/"}/>
                 <Route element={<About/>} path={"/about"}/>
                 <Route element={<Blog/>} path={"/blog"}/>
+                <Route element={<Contact/>} path={"/contact"}/>
              </Routes>
           </main>
           <Footer/>

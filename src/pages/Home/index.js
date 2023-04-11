@@ -3,11 +3,11 @@ import HomePromo from "./sections/HomePromo";
 import HomeSection2 from "./sections/HomeSection2";
 import HomeSection3 from "./sections/HomeSection3";
 import HomeSection4 from "./sections/HomeSection4";
+import FeaturesSection from "../../components/FeaturesSection";
 import HomeSection5 from "./sections/HomeSection5";
-import HomeSection6 from "./sections/HomeSection6";
 import StatisticsSection from "../../components/StatisticsSection";
+import HomeSection6 from "./sections/HomeSection6";
 import HomeSection7 from "./sections/HomeSection7";
-import HomeSection8 from "./sections/HomeSection8";
 import EmailFormSection from "../../components/EmailFormSection";
 
 const Home = () => {
@@ -17,11 +17,11 @@ const Home = () => {
           <HomeSection2/>
           <HomeSection3/>
           <HomeSection4/>
+          <FeaturesSection/>
           <HomeSection5/>
-          <HomeSection6/>
           <StatisticsSection bgcolor={"#F7F7F7"}/>
+          <HomeSection6/>
           <HomeSection7/>
-          <HomeSection8/>
           <EmailFormSection/>
        </>
    );

@@ -7,6 +7,9 @@ export const themeOptions = {
       secondary: {
          main: '#FFFFFF',
          contrastText: '#F18200'
+      },
+      info: {
+         main: '#1B1B1B'
       }
    },
    typography: {
