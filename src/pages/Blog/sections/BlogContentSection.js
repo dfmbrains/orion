@@ -14,6 +14,9 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 
    "& .postCard": {
       width: "calc(100% / 3 - 40px * 2 / 3)"
+   },
+   "& .postCardImg": {
+      height: "270px"
    }
 }));
 

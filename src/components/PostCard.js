@@ -2,25 +2,7 @@ import React from 'react';
 import {Button, styled, Typography} from "@mui/material";
 import Blog from '../assets/images/blog1.png';
 import {FlexGap10} from "./FlexBox";
-
-const StyledImageBox = styled('div')(() => ({
-   position: "relative",
-   width: "100%",
-   height: "270px",
-   overflow: "hidden",
-   borderRadius: "10px",
-
-   "& img": {
-      maxWidth: "120%",
-      maxHeight: "120%",
-      minWidth: "100%",
-      minHeight: "100%",
-      position: "absolute",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)"
-   }
-}));
+import {StyledResponsiveImageBox} from "./StyledComponents";
 
 const StyledBox = styled('div')(() => ({
    paddingLeft: "15px",
@@ -30,9 +12,9 @@ const StyledBox = styled('div')(() => ({
 const PostCard = () => {
    return (
        <div className="postCard">
-          <StyledImageBox>
+          <StyledResponsiveImageBox className="postCardImg">
              <img src={Blog} alt="blog1"/>
-          </StyledImageBox>
+          </StyledResponsiveImageBox>
           <FlexGap10 mt={3} sx={{alignItems: "flex-start"}}>
              <div>
                 <Typography variant={"h2"} component={"h5"}>01</Typography>
