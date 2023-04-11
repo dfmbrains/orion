@@ -8,6 +8,7 @@ const StyledImageBox = styled('div')(() => ({
    width: "100%",
    height: "270px",
    overflow: "hidden",
+   borderRadius: "10px",
 
    "& img": {
       maxWidth: "120%",
@@ -28,7 +29,7 @@ const StyledBox = styled('div')(() => ({
 
 const PostCard = () => {
    return (
-       <div>
+       <div className="postCard">
           <StyledImageBox>
              <img src={Blog} alt="blog1"/>
           </StyledImageBox>
