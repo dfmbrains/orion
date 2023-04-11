@@ -19,7 +19,7 @@ const StyledFlexBox = styled(FlexBox)(() => ({
    }
 }));
 
-const AboutSection7 = () => {
+const AboutSection8 = () => {
    const cards = [
       {
          title: 'Integrity & Honesty',
@@ -71,4 +71,4 @@ const AboutSection7 = () => {
    );
 };
 
-export default AboutSection7;
+export default AboutSection8;
