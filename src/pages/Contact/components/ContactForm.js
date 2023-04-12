@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as Yup from "yup";
 import {Formik} from "formik";
-import {Button, Grid, TextField, Typography} from "@mui/material";
+import {Grid, TextField, Typography} from "@mui/material";
+import {useSnackbar} from "notistack";
+import emailjs from "@emailjs/browser";
+import {EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID_FOR_EMAIL} from "../../../utils/constants";
+import {LoadingButton} from "@mui/lab";
 
 const initialValues = {
    name: '',
@@ -21,8 +25,38 @@ const ContactForm = () => {
           .required("Email is required!")
    });
 
+   const {enqueueSnackbar} = useSnackbar();
+
+   const [loading, setLoading] = useState(false);
+
    const handleSubmitForm = (values) => {
-      console.log(values);
+      setLoading(true);
+
+      emailjs
+          .send(
+              EMAIL_JS_SERVICE_ID,
+              EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+              values,
+              EMAIL_JS_PUBLIC_KEY
+          )
+          .then(
+              () => {
+                 setLoading(false);
+                 enqueueSnackbar("Письмо отправлено", {variant: 'success'})
+              },
+              (error) => {
+                 setLoading(false);
+                 console.error(error);
+
+                 enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+              }
+          )
+          .catch((error) => {
+             setLoading(false);
+             console.error(error);
+
+             enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+          })
    }
 
    return (
@@ -104,8 +138,8 @@ const ContactForm = () => {
                        </Grid>
                     </Grid>
 
-                    <Button sx={{mt: 7, mb: 4}} size={"large"} color={"primary"} variant={"contained"}
-                            fullWidth>Send</Button>
+                    <LoadingButton sx={{mt: 7, mb: 4}} size={"large"} color={"primary"} variant={"contained"}
+                                   fullWidth loading={loading} type={"submit"}>Send</LoadingButton>
 
                     <Typography variant={"subtitle2"}>If we will not get back to you in 10 minutes you will get 5%
                        discount for any service</Typography>

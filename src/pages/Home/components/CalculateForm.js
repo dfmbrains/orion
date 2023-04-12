@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Formik} from "formik";
-import {Button, Grid, Icon, styled, TextField, Typography} from "@mui/material";
+import {Grid, Icon, styled, TextField, Typography} from "@mui/material";
 import {FlexBox} from "../../../components/FlexBox";
 import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
+import {
+   EMAIL_JS_PUBLIC_KEY,
+   EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+} from "../../../utils/constants";
+import {LoadingButton} from "@mui/lab";
+import {useSnackbar} from "notistack";
 
 const StyledIconBox = styled(FlexBox)(() => ({
    flexDirection: "column",
@@ -32,8 +39,39 @@ const CalculateForm = () => {
           .required("Email is required!")
    });
 
+   const {enqueueSnackbar} = useSnackbar();
+
+   const [loading, setLoading] = useState(false);
+
    const handleSubmitForm = (values) => {
-      console.log(values);
+      setLoading(true);
+      console.log(values)
+
+      emailjs
+          .send(
+              EMAIL_JS_SERVICE_ID,
+              EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+              values,
+              EMAIL_JS_PUBLIC_KEY
+          )
+          .then(
+              () => {
+                 setLoading(false);
+                 enqueueSnackbar("Письмо отправлено", {variant: 'success'})
+              },
+              (error) => {
+                 setLoading(false);
+                 console.error(error);
+
+                 enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+              }
+          )
+          .catch((error) => {
+             setLoading(false);
+             console.error(error);
+
+             enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+          })
    }
 
    return (
@@ -183,8 +221,8 @@ const CalculateForm = () => {
                           />
                        </Grid>
                     </Grid>
-                    <Button sx={{mt: 4, mb: 3}} size={"large"} variant={"contained"} color={"primary"} type={"submit"}
-                            fullWidth>Calculate</Button>
+                    <LoadingButton sx={{mt: 4, mb: 3}} size={"large"} variant={"contained"} color={"primary"}
+                                   type={"submit"} fullWidth loading={loading}>Calculate</LoadingButton>
                     <Typography variant={"body1"} sx={{textAlign: "center", color: "#828282"}}>You Will Get Your
                        Transportation Cost Within 10 Minutes To Your Email</Typography>
                  </form>
