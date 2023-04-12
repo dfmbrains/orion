@@ -21,6 +21,11 @@ const StyledSection = styled('section')(() => ({
 
 const StyledSlideBox = styled(StyledResponsiveImageBox)(() => ({
    height: "calc(100vh / 4 * 3)",
+
+   "& img": {
+      maxWidth: "200%",
+      maxHeight: "200%"
+   }
 }));
 
 const BlogDetailsPromo = () => {
