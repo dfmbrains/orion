@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Button, ButtonGroup, Divider, Grid, Icon, IconButton, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import ProvisionImg from '../../../assets/images/provision.png';
+import {Link} from "react-router-dom";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -40,9 +41,10 @@ const HomeSection4 = () => {
 
                    <Divider/>
 
-                   <Button variant={"contained"} color={"primary"} sx={{mt: 5, mb: 3, width: "60%"}} size={"large"}>
-                      Our Services
-                   </Button>
+                   <Link to={"/services"}>
+                      <Button variant={"contained"} color={"primary"} sx={{mt: 5, mb: 3, width: "60%"}} size={"large"}>Our
+                         Services </Button>
+                   </Link>
 
                    <br/>
 

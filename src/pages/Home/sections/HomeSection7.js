@@ -7,6 +7,14 @@ const StyledSection = styled('section')(() => ({
    padding: "45px 0 90px",
 }));
 
+const StyledGridItem = styled(Grid)(() => ({
+   padding: "45px 0 90px",
+
+   "& .postCardImg": {
+      height: "270px"
+   }
+}));
+
 const HomeSection7 = () => {
    return (
        <StyledSection>
@@ -14,15 +22,15 @@ const HomeSection7 = () => {
              <Typography variant={"h2"} mb={5}>Latest blog posts</Typography>
 
              <Grid container spacing={5}>
-                <Grid item xs={4}>
+                <StyledGridItem item xs={4}>
                    <PostCard/>
-                </Grid>
-                <Grid item xs={4}>
+                </StyledGridItem>
+                <StyledGridItem item xs={4}>
                    <PostCard/>
-                </Grid>
-                <Grid item xs={4}>
+                </StyledGridItem>
+                <StyledGridItem item xs={4}>
                    <PostCard/>
-                </Grid>
+                </StyledGridItem>
              </Grid>
           </OrionContainer>
        </StyledSection>

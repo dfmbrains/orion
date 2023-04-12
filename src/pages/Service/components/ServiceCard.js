@@ -32,7 +32,7 @@ const ServiceCard = () => {
    const navigate = useNavigate()
 
    return (
-       <StyledCard onClick={() => navigate('/service/1')} theme={theme} className={"serviceCard"}>
+       <StyledCard onClick={() => navigate('/services/1')} theme={theme} className={"serviceCard"}>
           <StyledResponsiveImageBox className="serviceCardImg">
              <img src={ServiceImg} alt="service"/>
           </StyledResponsiveImageBox>

@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Box, Button, Icon, styled, Typography, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 import OrionContainer from "../../../components/OrionContainer";
 
-const StyledBox = styled(Box)(({theme, active, color}) => ({
-   backgroundColor: active === 'true' || color === 'dark' ? '#252525' : 'transparent',
+const StyledBox = styled(Box)(({color}) => ({
+   backgroundColor: color === 'dark' ? '#252525' : 'transparent',
    padding: '13px 0 10px',
    borderBottom: "1px solid #FFFFFF",
-   position: "fixed",
+   position: "absolute",
    width: "100%",
-   top: active === 'true' ? 0 : 32,
+   top: 32,
    left: 0,
-   zIndex: theme.zIndex.appBar,
+   zIndex: 10,
    transition: "0.2s",
 
    "& .material-icons": {
@@ -35,9 +35,15 @@ const StyledBox = styled(Box)(({theme, active, color}) => ({
    }
 }));
 
-const StyledLink = styled(NavLink)(() => ({
+const StyledLink = styled(NavLink)(({theme}) => ({
    padding: "0 15px",
-   color: "#FFFFFF"
+   color: "#FFFFFF",
+   transition: "0.3s",
+
+   "&:hover": {
+      color: theme.palette.primary.main,
+      transition: "0.3s"
+   }
 }));
 
 const HeaderGeneral = ({color}) => {
@@ -48,24 +54,14 @@ const HeaderGeneral = ({color}) => {
    ]
    const theme = useTheme()
 
-   const [active, setActive] = useState(false)
-
-   useEffect(() => {
-      if (typeof window !== "undefined") {
-         window.addEventListener("scroll", () =>
-             setActive(window.pageYOffset > 32)
-         );
-      }
-   }, [])
-
    return (
-       <StyledBox theme={theme} active={active.toString()} color={color}>
+       <StyledBox color={color}>
           <OrionContainer>
              <FlexBetweenAlignCenter>
                 <Logo/>
                 <FlexAllCenter>
                    {navigations.map((el, idx) => (
-                       <StyledLink to={el.link} key={idx}>
+                       <StyledLink theme={theme} to={el.link} key={idx}>
                           <Typography variant="subtitle2">{el.title}</Typography>
                        </StyledLink>
                    ))}

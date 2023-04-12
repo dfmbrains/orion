@@ -4,7 +4,7 @@ import {StyledPromoBackgroundBox, StylePromoColumn} from "./StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
-   height: "50vh",
+   height: "55vh",
 }));
 
 const PromoSection = ({title, bgImage}) => {

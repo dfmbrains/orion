@@ -4,6 +4,7 @@ import ReviewsBg from '../../../assets/images/backgrounds/reviews.png';
 import OrionContainer from "../../../components/OrionContainer";
 import GreenLightsLogo from '../../../assets/images/companies/greenlights.png';
 import {FlexAllCenter, FlexGap10} from "../../../components/FlexBox";
+import {Link} from "react-router-dom";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
@@ -79,7 +80,9 @@ const HomeSection5 = () => {
 
              <br/>
 
-             <Button sx={{mt: 4}} variant={"contained"} color={"secondary"}>Read Others</Button>
+             <Link to={"/clients-&-partners"}>
+                <Button sx={{mt: 4}} variant={"contained"} color={"secondary"}>Read Others</Button>
+             </Link>
           </OrionContainer>
        </StyledSection>
    );

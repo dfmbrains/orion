@@ -34,7 +34,7 @@ const ClientsSection1 = () => {
                         onClick={() => setPart('clients')}>Clients.</Button>
                 <Button color={part === 'partners' ? "primary" : "info"} variant={"text"}
                         onClick={() => setPart('partners')}>Partners.</Button>
-                <Button color={"info"} variant={"text"}>Testimonials.</Button>
+                <Button href={'#testimonialsSections'} color={"info"} variant={"text"}>Testimonials.</Button>
              </ButtonGroup>
 
              <Typography mt={4} mb={5} variant={"h2"}>We Work With The <br/> Best <span

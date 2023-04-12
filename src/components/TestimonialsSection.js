@@ -49,7 +49,7 @@ const AboutSection7 = () => {
    ]
 
    return (
-       <StyledSection>
+       <StyledSection id="testimonialsSections">
           <OrionContainer>
              <Box sx={{position: "relative"}}>
                 <Typography variant={"h3"} mb={8}>Testimonials</Typography>

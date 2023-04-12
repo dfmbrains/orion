@@ -8,7 +8,7 @@ import {StyledPromoBackgroundBox, StylePromoColumn} from "../../../components/St
 const StyledSection = styled('section')(() => ({
    position: "relative",
    height: "calc(100vh - 32px)",
-   backgroundColor: "#000",
+   backgroundColor: "#252525",
 
    "& .MuiTypography-root": {
       textAlign: "center",

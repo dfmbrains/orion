@@ -1,36 +1,59 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {FlexBetweenAlignCenter, FlexGap10} from "../../../components/FlexBox";
-import {Box, Icon, styled, Typography} from "@mui/material";
+import {Box, Icon, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 
-const StyledBox = styled(Box)(() => ({
+const StyledBox = styled(Box)(({theme, active}) => ({
    backgroundColor: "#252525",
    padding: '6px 0',
+   position: active === 'true' ? "fixed" : 'static',
+   top: "0",
+   left: "0",
+   width: "100%",
+   zIndex: theme.zIndex.appBar,
+
    "& .material-icons": {
       color: "#FFFFFF"
    }
 }));
-const StyledBody2 = styled(Typography)(() => ({
-   color: "#FFFFFF"
+const StyledBody2 = styled(Typography)(({theme}) => ({
+   color: "#FFFFFF",
+   transition: "0.3s",
+
+   "&:hover": {
+      color: theme !== 'false' ? theme.palette.primary.main : "#FFFFFF",
+      transition: "0.3s"
+   }
 }));
 
-
 const HeaderTop = () => {
+   const theme = useTheme()
+
+   const [active, setActive] = useState(false)
+
+   useEffect(() => {
+      if (typeof window !== "undefined") {
+         window.addEventListener("scroll", () =>
+             setActive(window.pageYOffset > 32)
+         );
+      }
+   }, [])
+
    return (
-       <StyledBox>
+       <StyledBox theme={theme} active={active.toString()}>
           <OrionContainer>
              <FlexBetweenAlignCenter>
                 <FlexGap10>
                    <Icon fontSize={"small"}>support_agent</Icon>
-                   <StyledBody2 variant='body2'>Support 24 / 7</StyledBody2>
+                   <StyledBody2 variant='body2' theme={"false"}>Support 24 / 7</StyledBody2>
                 </FlexGap10>
                 <FlexGap10>
                    <Icon fontSize={"small"}>phone</Icon>
                    <a href="tel:+996705006088">
-                      <StyledBody2 variant='body2'>+996705006088</StyledBody2>
+                      <StyledBody2 theme={theme} variant='body2'>+996705006088</StyledBody2>
                    </a>
                    <a href="tel:+996707567676">
-                      <StyledBody2 variant='body2'>+996707567676</StyledBody2>
+                      <StyledBody2 theme={theme} variant='body2'>+996707567676</StyledBody2>
                    </a>
                 </FlexGap10>
              </FlexBetweenAlignCenter>
