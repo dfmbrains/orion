@@ -4,7 +4,8 @@ import ReviewsBg from '../../../assets/images/backgrounds/reviews.png';
 import OrionContainer from "../../../components/OrionContainer";
 import GreenLightsLogo from '../../../assets/images/companies/greenlights.png';
 import {FlexAllCenter, FlexGap10} from "../../../components/FlexBox";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {anchorLinkHandler} from "../../../helpers/utils";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
@@ -49,8 +50,14 @@ const HomeSection5 = () => {
    ]
 
    const theme = useTheme()
+   const navigate = useNavigate()
 
    const [counter, setCounter] = useState(0)
+
+   const navigateToClientsTestimonials = async () => {
+      await navigate('/clients-&-partners')
+      await anchorLinkHandler('testimonialsSection')
+   }
 
    return (
        <StyledSection>
@@ -80,9 +87,8 @@ const HomeSection5 = () => {
 
              <br/>
 
-             <Link to={"/clients-&-partners"}>
-                <Button sx={{mt: 4}} variant={"contained"} color={"secondary"}>Read Others</Button>
-             </Link>
+             <Button onClick={navigateToClientsTestimonials} sx={{mt: 4}} variant={"contained"} color={"secondary"}>Read
+                Others</Button>
           </OrionContainer>
        </StyledSection>
    );

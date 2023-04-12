@@ -4,7 +4,7 @@ import {Formik} from "formik";
 import {Grid, TextField, Typography} from "@mui/material";
 import {useSnackbar} from "notistack";
 import emailjs from "@emailjs/browser";
-import {EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID_FOR_EMAIL} from "../../../utils/constants";
+import {EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID_FOR_EMAIL} from "../../../helpers/constants";
 import {LoadingButton} from "@mui/lab";
 
 const initialValues = {

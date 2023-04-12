@@ -5,7 +5,7 @@ import {
    EMAIL_JS_PUBLIC_KEY,
    EMAIL_JS_SERVICE_ID,
    EMAIL_JS_TEMPLATE_ID_FOR_EMAIL
-} from "../utils/constants";
+} from "../helpers/constants";
 import emailjs from "@emailjs/browser";
 import {LoadingButton} from "@mui/lab";
 import {useSnackbar} from "notistack";

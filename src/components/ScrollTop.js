@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {IconButton, Icon, styled, useTheme} from "@mui/material";
-import {useLocation} from "react-router-dom";
 
 const StyledIconButton = styled(IconButton)(({theme, status}) => ({
    position: "fixed",
@@ -21,7 +20,6 @@ const StyledIconButton = styled(IconButton)(({theme, status}) => ({
 
 const ScrollTop = () => {
    const theme = useTheme()
-   const location = useLocation()
    const [active, setActive] = useState()
 
    useEffect(() => {
@@ -33,10 +31,6 @@ const ScrollTop = () => {
    }, [])
 
    const handleScroll = () => window.scrollTo({top: 0, left: 0, behavior: "smooth"})
-
-   useEffect(() => {
-      handleScroll()
-   }, [location.pathname])
 
    return (
        <StyledIconButton status={active} onClick={handleScroll} size={"large"} theme={theme}>
