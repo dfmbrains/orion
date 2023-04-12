@@ -24,7 +24,13 @@ const StyledPromoBackgroundBox = styled(FlexAllCenter)(({bgimage}) => ({
 const StylePromoColumn = styled(FlexAllCenter)(() => ({
    flexDirection: "column",
    position: "relative",
-   zIndex: 10
+   zIndex: 10,
+   width: "100%",
+
+   "& h1": {
+      width: "80%",
+      textAlign: "center"
+   }
 }));
 
 const StyledSwiperButtonsPosition = styled('div')(() => ({

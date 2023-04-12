@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Clients from "./pages/Clients";
 import Service from "./pages/Service";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
    return (
@@ -25,6 +26,7 @@ function App() {
                 <Route element={<Contact/>} path={"/contact"}/>
                 <Route element={<Clients/>} path={"/clients-&-partners"}/>
                 <Route element={<Service/>} path={"/services"}/>
+                <Route element={<ServiceDetails/>} path={"/services/:id"}/>
              </Routes>
           </main>
           <Footer/>
