@@ -5,8 +5,8 @@ import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 import OrionContainer from "../../../components/OrionContainer";
 
-const StyledBox = styled(Box)(({theme, active}) => ({
-   backgroundColor: active === 'true' ? '#252525' : 'transparent',
+const StyledBox = styled(Box)(({theme, active, color}) => ({
+   backgroundColor: active === 'true' || color === 'dark' ? '#252525' : 'transparent',
    padding: '13px 0 10px',
    borderBottom: "1px solid #FFFFFF",
    position: "fixed",
@@ -40,7 +40,7 @@ const StyledLink = styled(NavLink)(() => ({
    color: "#FFFFFF"
 }));
 
-const HeaderGeneral = () => {
+const HeaderGeneral = ({color}) => {
    const navigations = [
       {title: "Home", link: '/'}, {title: "Company", link: '/about'},
       {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
@@ -59,7 +59,7 @@ const HeaderGeneral = () => {
    }, [])
 
    return (
-       <StyledBox theme={theme} active={active.toString()}>
+       <StyledBox theme={theme} active={active.toString()} color={color}>
           <OrionContainer>
              <FlexBetweenAlignCenter>
                 <Logo/>

@@ -1,12 +1,12 @@
 import React from 'react';
 import {styled, Typography} from "@mui/material";
-import OrionContainer from "../../../components/OrionContainer";
+import OrionContainer from "./OrionContainer";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0 80px"
 }));
 
-const ServiceDetailsContent = () => {
+const PageDetailsContent = () => {
    return (
        <StyledSection>
           <OrionContainer>
@@ -53,4 +53,4 @@ const ServiceDetailsContent = () => {
    );
 };
 
-export default ServiceDetailsContent;
+export default PageDetailsContent;

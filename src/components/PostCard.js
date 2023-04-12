@@ -3,6 +3,7 @@ import {Button, styled, Typography} from "@mui/material";
 import Blog from '../assets/images/blog1.png';
 import {FlexGap10} from "./FlexBox";
 import {StyledResponsiveImageBox} from "./StyledComponents";
+import {useNavigate} from "react-router-dom";
 
 const StyledBox = styled('div')(() => ({
    paddingLeft: "15px",
@@ -10,6 +11,8 @@ const StyledBox = styled('div')(() => ({
 }));
 
 const PostCard = () => {
+   const navigate = useNavigate()
+
    return (
        <div className="postCard">
           <StyledResponsiveImageBox className="postCardImg">
@@ -27,7 +30,7 @@ const PostCard = () => {
                 <Typography variant={"subtitle2"} color={"##6C6C6C"} mb={3}>International Rail Freight: Everything you
                    need to know about Rail Freight</Typography>
 
-                <Button color={"primary"} variant={"contained"}>Read More</Button>
+                <Button onClick={() => navigate('1')} color={"primary"} variant={"contained"}>Read More</Button>
              </StyledBox>
           </FlexGap10>
        </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import HeaderTop from "./components/HeaderTop";
 import HeaderGeneral from "./components/HeaderGeneral";
 
-const Header = () => {
+const Header = ({color}) => {
    return (
        <header>
           <HeaderTop/>
-          <HeaderGeneral/>
+          <HeaderGeneral color={color}/>
        </header>
    );
 };
