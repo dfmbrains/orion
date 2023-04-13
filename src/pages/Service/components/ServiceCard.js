@@ -3,6 +3,7 @@ import ServiceImg from '../../../assets/images/service1.png';
 import {StyledResponsiveImageBox} from "../../../components/StyledComponents";
 import {Box, Card, styled, Typography, useTheme} from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import {handleScrollToTop} from "../../../helpers/utils";
 
 const StyledCard = styled(Card)(({theme}) => ({
    overflow: "hidden",
@@ -32,7 +33,10 @@ const ServiceCard = () => {
    const navigate = useNavigate()
 
    return (
-       <StyledCard onClick={() => navigate('/services/1')} theme={theme} className={"serviceCard"}>
+       <StyledCard onClick={() => {
+          handleScrollToTop()
+          navigate('/services/1')
+       }} theme={theme} className={"serviceCard"}>
           <StyledResponsiveImageBox className="serviceCardImg">
              <img src={ServiceImg} alt="service"/>
           </StyledResponsiveImageBox>

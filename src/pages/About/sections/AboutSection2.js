@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Button, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import MapBg from '../../../assets/images/mapTransparent.png';
@@ -17,6 +17,7 @@ import Rus from '../../../assets/images/countries/ru.png'
 import Tj from '../../../assets/images/countries/tj.png'
 import Tur from '../../../assets/images/countries/tur.png'
 import Uz from '../../../assets/images/countries/uz.png'
+import CompanyHistoryDialog from "../components/CompanyHistoryDialog";
 
 const StyledSection = styled('section')(() => ({
    padding: "120px 0 100px",
@@ -43,6 +44,9 @@ const StyledSwiperSlide = styled('div')(() => ({
 
 const AboutSection2 = () => {
    const theme = useTheme()
+   const [isOpenDialog, setIsOpenDialog] = useState(false)
+
+   const handleCloseDialog = () => setIsOpenDialog(false)
 
    const data = [
       {title: 'Kazakhstan', flag: Kz}, {title: 'Uzbekistan', flag: Uz}, {title: 'Turkmenistan', flag: Tur},
@@ -64,8 +68,8 @@ const AboutSection2 = () => {
                       proved to our clients and partners our level of professionalism in the logistics
                       field.</Typography>
 
-                   <Button size={"large"} variant={"outlined"} color={"primary"} sx={{width: "50%"}}>Read Our
-                      Story</Button>
+                   <Button onClick={() => setIsOpenDialog(true)} size={"large"} variant={"outlined"} color={"primary"}
+                           sx={{width: "50%"}}>Read Our Story</Button>
                 </Box>
 
                 <Box sx={{position: "relative"}}>
@@ -94,6 +98,8 @@ const AboutSection2 = () => {
           </OrionContainer>
 
           <img className="mapBg" src={MapBg} alt="map"/>
+
+          <CompanyHistoryDialog open={isOpenDialog} handleClose={handleCloseDialog}/>
        </StyledSection>
    );
 };

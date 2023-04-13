@@ -68,7 +68,7 @@ const HomeSection3 = () => {
    const countries = ['CIS Countries', 'Russia', 'Afghanistan', ' Iran', 'Eastern European', 'Baltic Countries']
 
    return (
-       <StyledSection>
+       <StyledSection id={"homeSection3"}>
           <OrionContainer>
              <StyledContentBox>
                 <StyledIntroBox>

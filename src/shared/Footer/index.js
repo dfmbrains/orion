@@ -93,8 +93,8 @@ const Footer = () => {
           <StyledBottomBox>
              <OrionContainer>
                 <FlexBetweenAlignCenter>
-                   <Typography variant={"body2"} color={"#FFFFFF"}>Copyright ©2020 All rights reserved
-                      oriontrans.kg</Typography>
+                   <Typography variant={"body2"} color={"#FFFFFF"}>Copyright ©{new Date().getFullYear()} All rights
+                      reserved oriontrans.kg</Typography>
                    <SocialMediaButtons color={"secondary"}/>
                 </FlexBetweenAlignCenter>
              </OrionContainer>

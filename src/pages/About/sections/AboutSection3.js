@@ -3,7 +3,8 @@ import {Button, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {FlexGap10} from "../../../components/FlexBox";
 import ClientsImg from '../../../assets/images/partners_and_clients.png';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {anchorLinkHandler, handleScrollToTop} from "../../../helpers/utils";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
@@ -15,6 +16,12 @@ const StyledSection = styled('section')(() => ({
 
 const AboutSection3 = () => {
    const theme = useTheme()
+   const navigate = useNavigate()
+
+   const navigateToCalculationForm = async () => {
+      await navigate('/')
+      await anchorLinkHandler('homeSection3')
+   }
 
    return (
        <StyledSection>
@@ -30,10 +37,11 @@ const AboutSection3 = () => {
                       freight-forwarding tariffs across more than 20 countries, by import, export, transit and internal
                       consignment and find for you a needed rolling stock to ship your cargo.</Typography>
                    <FlexGap10>
-                      <Link to={"/contact"}>
-                         <Button variant={"contained"} color={"primary"} size={"large"}>Contact Us</Button>
-                      </Link>
-                      <Button variant={"outlined"} color={"primary"} size={"large"}>Calculate A Rail Tariff</Button>
+                      <Button onClick={() => {
+                         handleScrollToTop()
+                         navigate('/contact')
+                      }} variant={"contained"} color={"primary"} size={"large"}>Contact Us</Button>
+                      <Button onClick={navigateToCalculationForm} variant={"outlined"} color={"primary"} size={"large"}>Calculate A Rail Tariff</Button>
                    </FlexGap10>
                 </Grid>
                 <Grid item xs={6}>
