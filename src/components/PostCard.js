@@ -4,6 +4,7 @@ import Blog from '../assets/images/blog1.png';
 import {FlexGap10} from "./FlexBox";
 import {StyledResponsiveImageBox} from "./StyledComponents";
 import {useNavigate} from "react-router-dom";
+import {handleScrollToTop} from "../helpers/utils";
 
 const StyledBox = styled('div')(() => ({
    paddingLeft: "15px",
@@ -30,7 +31,10 @@ const PostCard = () => {
                 <Typography variant={"subtitle2"} color={"##6C6C6C"} mb={3}>International Rail Freight: Everything you
                    need to know about Rail Freight</Typography>
 
-                <Button onClick={() => navigate('/blog/1')} color={"primary"} variant={"contained"}>Read More</Button>
+                <Button onClick={() => {
+                   handleScrollToTop()
+                   navigate('/blog/1')
+                }} color={"primary"} variant={"contained"}>Read More</Button>
              </StyledBox>
           </FlexGap10>
        </div>

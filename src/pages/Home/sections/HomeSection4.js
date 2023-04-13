@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import {Button, ButtonGroup, Divider, Grid, Icon, IconButton, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import ProvisionImg from '../../../assets/images/provision.png';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {handleScrollToTop} from "../../../helpers/utils";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -30,6 +31,7 @@ const HomeSection4 = () => {
 
    const [counter, setCounter] = useState(0)
 
+   const navigate = useNavigate()
 
    return (
        <StyledSection>
@@ -41,10 +43,11 @@ const HomeSection4 = () => {
 
                    <Divider/>
 
-                   <Link to={"/services"}>
-                      <Button variant={"contained"} color={"primary"} sx={{mt: 5, mb: 3, width: "60%"}} size={"large"}>Our
-                         Services </Button>
-                   </Link>
+                   <Button onClick={() => {
+                      handleScrollToTop()
+                      navigate('/services')
+                   }} variant={"contained"} color={"primary"} sx={{mt: 5, mb: 3, width: "60%"}} size={"large"}>Our
+                      Services</Button>
 
                    <br/>
 

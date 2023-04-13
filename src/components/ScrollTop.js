@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {IconButton, Icon, styled, useTheme} from "@mui/material";
+import {handleScrollToTop} from "../helpers/utils";
 
 const StyledIconButton = styled(IconButton)(({theme, status}) => ({
    position: "fixed",
@@ -30,10 +31,8 @@ const ScrollTop = () => {
       }
    }, [])
 
-   const handleScroll = () => window.scrollTo({top: 0, left: 0, behavior: "smooth"})
-
    return (
-       <StyledIconButton status={active} onClick={handleScroll} size={"large"} theme={theme}>
+       <StyledIconButton status={active} onClick={handleScrollToTop} size={"large"} theme={theme}>
           <Icon>arrow_upward</Icon>
        </StyledIconButton>
    );

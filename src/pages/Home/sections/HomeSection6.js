@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Box, Button, Divider, Grid, styled, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import AltynbekImg from '../../../assets/images/team/altynbek.png';
 import IlhomImg from '../../../assets/images/team/Ilhom.png';
@@ -13,6 +13,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";
 import SwiperButtons from "../../../components/SwiperButtons";
 import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
+import {anchorLinkHandler} from "../../../helpers/utils";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 120px",
@@ -95,7 +96,7 @@ const HomeSection6 = () => {
    const [active, setActive] = useState(data[0])
 
    return (
-       <StyledSection>
+       <StyledSection id="homeTeamSection">
           <OrionContainer>
              <Grid container alignItems={"center"} spacing={5}>
                 <Grid item xs={5.95}>
@@ -115,7 +116,7 @@ const HomeSection6 = () => {
                    </FlexGap10>
                    <Typography mb={3} variant={"subtitle2"} color={"#332C2C"}>{active.description}</Typography>
 
-                   <Button variant={"outlined"} color={"primary"}>Read More</Button>
+                   {/*<Button variant={"outlined"} color={"primary"}>Read More</Button>*/}
                 </Grid>
 
                 <Divider orientation={"vertical"} flexItem/>
@@ -140,7 +141,10 @@ const HomeSection6 = () => {
                    </StyledSwiperButtonsPosition>
                    {data.map((el, idx) => (
                        <SwiperSlide key={idx}>
-                          <StyledFlexGap10 theme={theme} onClick={() => setActive(el)}>
+                          <StyledFlexGap10 theme={theme} onClick={() => {
+                             anchorLinkHandler('homeTeamSection')
+                             setActive(el)
+                          }}>
                              <StyledPreviewMemberBox>
                                 <img src={el.photo} alt={el.name}/>
                              </StyledPreviewMemberBox>

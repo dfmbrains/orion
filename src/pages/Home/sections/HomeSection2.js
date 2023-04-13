@@ -4,6 +4,8 @@ import FreightTriangleBg from '../../../assets/images/freightTriangle.png';
 import ContainerFreight from '../../../assets/images/containerFreight.png';
 import EllipseBg from '../../../assets/images/ellipse.png';
 import OrionContainer from "../../../components/OrionContainer";
+import {useNavigate} from "react-router-dom";
+import {handleScrollToTop} from "../../../helpers/utils";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -33,6 +35,8 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const HomeSection2 = () => {
+   const navigate = useNavigate()
+
    return (
        <StyledSection>
           <OrionContainer>
@@ -49,7 +53,10 @@ const HomeSection2 = () => {
 
                    <Divider/>
 
-                   <Button sx={{mt: 3}} size={"large"} variant={"contained"} color={"primary"}>Learn more</Button>
+                   <Button onClick={() => {
+                      handleScrollToTop()
+                      navigate('/services')
+                   }} sx={{mt: 3}} size={"large"} variant={"contained"} color={"primary"}>Learn more</Button>
                 </Grid>
                 <Grid item xs={3.5} alignSelf={"center"}>
                    <Card sx={{p: 6}}>
