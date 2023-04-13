@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import SocialMediaButtons from "../../components/SocialMediaButtons";
 
 const StyledFooter = styled('footer')(() => ({
-   padding: "60px 0 40px",
+   padding: "60px 0 15px",
    backgroundColor: "#1B1B1B",
 
    "& .footerLink": {
@@ -20,7 +20,7 @@ const StyledFooter = styled('footer')(() => ({
 }));
 
 const StyledBottomBox = styled('div')(() => ({
-   padding: "32px 20px 0 0",
+   padding: "15px 20px 0 0",
    borderTop: "1px solid #2F2F2F",
    margin: "32px 0 0"
 }));
@@ -44,11 +44,11 @@ const Footer = () => {
       },
       {
          title: 'Company Service',
-         elements: ['Our Services', 'Track & Trace', 'Air Freight', 'Air Freight', 'Rail Freight', 'Container Freight Transport', 'Provision Of Rolling Stock']
+         elements: ['Our Services', 'Track & Trace', 'Air Freight', 'Rail Freight', 'Container Freight Transport', 'Provision Of Rolling Stock']
       },
       {
          title: 'Contact Us',
-         elements: ['Find us', 'Get In Touch']
+         elements: ['Find Us', 'Get In Touch']
       },
       {
          title: 'Latest News',
