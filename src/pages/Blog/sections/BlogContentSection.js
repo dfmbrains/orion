@@ -3,9 +3,13 @@ import {styled, Pagination} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import PostCard from "../../../components/PostCard";
 import {FlexBox} from "../../../components/FlexBox";
+import {useRecoilState} from "recoil";
+import {blogRecoil} from "../../../recoil";
+import MatxLoading from "../../../components/MatxLoading";
 
 const StyledSection = styled('section')(() => ({
-   padding: "100px 0 80px"
+   padding: "100px 0 80px",
+   position: "relative"
 }));
 
 const StyledFlexBox = styled(FlexBox)(() => ({
@@ -26,19 +30,24 @@ const StyledFlexEnd = styled(FlexBox)(() => ({
 }));
 
 const BlogContentSection = () => {
+   const [blogList] = useRecoilState(blogRecoil)
+
    return (
        <StyledSection>
-          <OrionContainer>
-             <StyledFlexBox>
-                {Array.from(Array(9).keys()).map((el => (
-                    <PostCard key={el}/>
-                )))}
-             </StyledFlexBox>
+          {blogList
+              ? <OrionContainer>
+                 <StyledFlexBox>
+                    {blogList.map(((el, ind) => (
+                        <PostCard key={ind} post={el}/>
+                    )))}
+                 </StyledFlexBox>
 
-             <StyledFlexEnd>
-                <Pagination count={3} color="primary"/>
-             </StyledFlexEnd>
-          </OrionContainer>
+                 <StyledFlexEnd>
+                    <Pagination count={3} color="primary"/>
+                 </StyledFlexEnd>
+              </OrionContainer>
+              : <MatxLoading/>
+          }
        </StyledSection>
    );
 };

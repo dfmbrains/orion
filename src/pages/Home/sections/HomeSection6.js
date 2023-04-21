@@ -1,12 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Box, Divider, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import AltynbekImg from '../../../assets/images/team/altynbek.png';
-import IlhomImg from '../../../assets/images/team/Ilhom.png';
-import AkimImg from '../../../assets/images/team/Akim.png';
-import AnvarImg from '../../../assets/images/team/Anvar.png';
-import AdiletImg from '../../../assets/images/team/adilet.png';
-import MadinaImg from '../../../assets/images/team/madina.png';
 import OfficeImg from '../../../assets/images/officePhoto.png';
 import {FlexGap10} from "../../../components/FlexBox";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -81,54 +75,15 @@ const HomeSection6 = () => {
              setActive(createdData[0])
           })
    }, [])
-   console.log(team)
-   const data = [
-      {
-         name: 'Altynbek Toktomushev',
-         position: 'Senior Logistics Manager & Specialist',
-         photo: AltynbekImg,
-         description: 'Altynbek  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      },
-      {
-         name: 'Ilhom Abdurasulov',
-         position: 'Chief Operating Officer',
-         photo: IlhomImg,
-         description: 'Ilhom  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      },
-      {
-         name: 'Anvar Malyanchinov',
-         position: 'Senior Logistics Specialist',
-         photo: AnvarImg,
-         description: 'Anvar  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      },
-      {
-         name: 'Akim',
-         position: 'Container Freight Specialist',
-         photo: AkimImg,
-         description: 'Akim  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      },
-      {
-         name: 'Madina Abdurasulova',
-         position: 'Digital Marketing Specialist',
-         photo: MadinaImg,
-         description: 'Madina  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      },
-      {
-         name: 'Adilet',
-         position: 'Senior Logistics Specialist',
-         photo: AdiletImg,
-         description: 'Adilet  is our senior logistics manager & specialist, with a wealth of knowledge and experience in this sphere/ He is specialising in managing the whole logistics process and will make sure that your cargo will be shipped with no delays and successful.'
-      }
-   ]
 
    const theme = useTheme()
 
-   const [active, setActive] = useState(data[0])
+   const [active, setActive] = useState(null)
 
    return (
        <StyledSection id="homeTeamSection">
           <OrionContainer>
-             {team
+             {team && active
                  ? <>
                     <Grid container alignItems={"center"} spacing={5}>
                        <Grid item xs={5.95}>

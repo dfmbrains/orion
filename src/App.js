@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -15,8 +15,27 @@ import ServiceDetails from "./pages/ServiceDetails";
 import BlogDetails from "./pages/BlogDetails";
 import LightHeaderLayout from "./components/LightHeaderLayout";
 import DarkHeaderLayout from "./components/DarkHeaderLayout";
+import {useRecoilState} from "recoil";
+import {blogRecoil} from "./recoil";
+import {getAllCollection} from "./firebase/firestoreFirebase";
+import {blogFirebasePath} from "./helpers/constants";
+import {getFileFromFirebase} from "./firebase/fileFirebase";
 
 function App() {
+   const [_, setBlogList] = useRecoilState(blogRecoil)
+
+   useEffect(() => {
+      getAllCollection(blogFirebasePath)
+          .then(data => {
+             const createdData = data.map(item => {
+                return getFileFromFirebase(`${blogFirebasePath}/${item.id}`)
+                    .then(file => ({...item, photo: file[0]}))
+             })
+             return Promise.all(createdData)
+          })
+          .then(createdData => setBlogList(createdData))
+   }, [])
+
    return (
        <>
           <Routes>
