@@ -75,7 +75,7 @@ const AboutSection9 = () => {
                               <SwiperSlide key={idx}>
                                  <div>
                                     <StyledPreviewMemberBox>
-                                       <img src={el.photo.file} alt={el.photo.name}/>
+                                       <img src={el.images.file} alt={el.images.name}/>
                                     </StyledPreviewMemberBox>
                                     <Typography mt={1} variant={"subtitle1"}>
                                        {formatName(el.firstName, el.midName, el.lastName)}

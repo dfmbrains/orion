@@ -16,46 +16,29 @@ import BlogDetails from "./pages/BlogDetails";
 import LightHeaderLayout from "./components/LightHeaderLayout";
 import DarkHeaderLayout from "./components/DarkHeaderLayout";
 import {useRecoilState} from "recoil";
-import {blogRecoil, serviceRecoil, teamRecoil} from "./recoil";
-import {getAllCollection} from "./firebase/firestoreFirebase";
-import {blogFirebasePath, serviceFirebasePath, teamFirebasePath} from "./helpers/constants";
-import {getFileFromFirebase} from "./firebase/fileFirebase";
+import {blogRecoil, partnersRecoil, serviceRecoil, teamRecoil} from "./recoil";
+import {blogFirebasePath, partnersFirebasePath, serviceFirebasePath, teamFirebasePath} from "./helpers/constants";
+import {getAllCollectionsWithImg} from "./helpers/utils";
 
 function App() {
    const [_, setBlogList] = useRecoilState(blogRecoil)
    const [__, setTeam] = useRecoilState(teamRecoil)
    const [___, setServiceList] = useRecoilState(serviceRecoil)
+   const [____, setPartnersList] = useRecoilState(partnersRecoil)
+
+   const getAllData = () => {
+      getAllCollectionsWithImg(blogFirebasePath, true)
+          .then(data => setBlogList(data))
+      getAllCollectionsWithImg(teamFirebasePath, false)
+          .then(data => setTeam(data))
+      getAllCollectionsWithImg(serviceFirebasePath, false)
+          .then(data => setServiceList(data))
+      getAllCollectionsWithImg(partnersFirebasePath, false)
+          .then(data => setPartnersList(data))
+   }
 
    useEffect(() => {
-      getAllCollection(blogFirebasePath)
-          .then(data => {
-             const createdData = data.map(item => {
-                return getFileFromFirebase(`${blogFirebasePath}/${item.id}`)
-                    .then(files => ({...item, images: files}))
-             })
-             return Promise.all(createdData)
-          })
-          .then(createdData => setBlogList(createdData))
-
-      getAllCollection(teamFirebasePath)
-          .then(data => {
-             const createdData = data.map(member => {
-                return getFileFromFirebase(`${teamFirebasePath}/${member.id}`)
-                    .then(file => ({...member, photo: file[0]}))
-             })
-             return Promise.all(createdData)
-          })
-          .then(createdData => setTeam(createdData))
-
-      getAllCollection(serviceFirebasePath)
-          .then(data => {
-             const createdData = data.map(item => {
-                return getFileFromFirebase(`${serviceFirebasePath}/${item.id}`)
-                    .then(file => ({...item, image: file[0]}))
-             })
-             return Promise.all(createdData)
-          })
-          .then(createdData => setServiceList(createdData))
+      getAllData()
    }, [])
 
    return (

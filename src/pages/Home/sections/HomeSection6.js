@@ -84,7 +84,7 @@ const HomeSection6 = () => {
 
                           <FlexGap10 my={3}>
                              <StyledPreviewMemberBox>
-                                <img src={active.photo.file} alt={active.photo.name}/>
+                                <img src={active.images.file} alt={active.images.name}/>
                              </StyledPreviewMemberBox>
                              <div>
                                 <Typography color={"#9EADB4"} variant={"body1"}>{active.position}</Typography>
@@ -123,7 +123,7 @@ const HomeSection6 = () => {
                                     setActive(el)
                                  }}>
                                     <StyledPreviewMemberBox>
-                                       <img src={el.photo.file} alt={el.photo.name}/>
+                                       <img src={el.images.file} alt={el.images.name}/>
                                     </StyledPreviewMemberBox>
                                     <div>
                                        <Typography color={"#9EADB4"} variant={"body1"}>{el.position}</Typography>

@@ -20,7 +20,7 @@ const ServiceDetails = () => {
       const files = await getFileFromFirebase(`${serviceFirebasePath}/${id}`)
       const data = await getCollectionDocumentById(serviceFirebasePath, id)
 
-      return {...data, image: files[0]}
+      return {...data, images: files[0]}
    }
 
    useEffect(() => {
@@ -37,7 +37,7 @@ const ServiceDetails = () => {
        <>
           {serviceDetailsData
               ? <>
-                 <PromoSection bgImage={serviceDetailsData.image.file}
+                 <PromoSection bgImage={serviceDetailsData.images.file}
                                title={serviceDetailsData.title}/>
                  <PageDetailsContent data={serviceDetailsData}/>
               </>

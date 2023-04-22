@@ -42,7 +42,7 @@ const ServiceCard = ({data}) => {
           navigate(`/services/${data.id}`)
        }} theme={theme} className={"serviceCard"}>
           <StyledResponsiveImageBox className="serviceCardImg">
-             <img src={data.image.file} alt={data.image.name}/>
+             <img src={data.images.file} alt={data.images.name}/>
           </StyledResponsiveImageBox>
           <Box pt={2} pb={5} px={3}>
              <Typography variant={"subtitle1"} mb={2}>{data.title}</Typography>

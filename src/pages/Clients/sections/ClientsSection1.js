@@ -5,8 +5,9 @@ import {Navigation} from "swiper";
 import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 import SwiperButtons from "../../../components/SwiperButtons";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {companiesImages} from "./companiesImages";
 import {FlexAllCenter} from "../../../components/FlexBox";
+import {useRecoilState} from "recoil";
+import {partnersRecoil} from "../../../recoil";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 160px",
@@ -25,6 +26,8 @@ const ClientsSection1 = () => {
    const theme = useTheme()
 
    const [part, setPart] = useState('clients')
+
+   const [partnersList] = useRecoilState(partnersRecoil)
 
    return (
        <StyledSection>
@@ -62,10 +65,10 @@ const ClientsSection1 = () => {
                       <SwiperButtons/>
                    </StyledSwiperButtonsPosition>
 
-                   {companiesImages.map((el, idx) => (
-                       <SwiperSlide key={idx}>
+                   {partnersList.map(el => (
+                       <SwiperSlide key={el.id}>
                           <StyledImageBox>
-                             <img src={el} alt={idx}/>
+                             <img src={el.images.file} alt={el.images.name}/>
                           </StyledImageBox>
                        </SwiperSlide>
                    ))}
