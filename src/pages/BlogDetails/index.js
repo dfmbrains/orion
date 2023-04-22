@@ -30,6 +30,10 @@ const BlogDetails = () => {
       }
    }, [blog])
 
+   useEffect(() => {
+      return () => setBlog(null)
+   }, [])
+
    return (
        <>
           {blog ? (
@@ -42,7 +46,7 @@ const BlogDetails = () => {
                  <MatxLoading/>
               </Styled100vhLoadingBox>
           )}
-             <EmailFormSection/>
+          <EmailFormSection/>
        </>
    );
 };

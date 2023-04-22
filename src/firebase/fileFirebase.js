@@ -1,6 +1,7 @@
 import {getStorage, ref, getDownloadURL, listAll} from "firebase/storage";
+import {firebaseApp} from "./index";
 
-const storage = getStorage();
+const storage = getStorage(firebaseApp);
 
 export const getFileFromFirebase = async (path) => {
    const listRef = ref(storage, path);

@@ -16,14 +16,15 @@ import BlogDetails from "./pages/BlogDetails";
 import LightHeaderLayout from "./components/LightHeaderLayout";
 import DarkHeaderLayout from "./components/DarkHeaderLayout";
 import {useRecoilState} from "recoil";
-import {blogRecoil, teamRecoil} from "./recoil";
+import {blogRecoil, serviceRecoil, teamRecoil} from "./recoil";
 import {getAllCollection} from "./firebase/firestoreFirebase";
-import {blogFirebasePath, teamFirebasePath} from "./helpers/constants";
+import {blogFirebasePath, serviceFirebasePath, teamFirebasePath} from "./helpers/constants";
 import {getFileFromFirebase} from "./firebase/fileFirebase";
 
 function App() {
    const [_, setBlogList] = useRecoilState(blogRecoil)
    const [__, setTeam] = useRecoilState(teamRecoil)
+   const [___, setServiceList] = useRecoilState(serviceRecoil)
 
    useEffect(() => {
       getAllCollection(blogFirebasePath)
@@ -45,6 +46,16 @@ function App() {
              return Promise.all(createdData)
           })
           .then(createdData => setTeam(createdData))
+
+      getAllCollection(serviceFirebasePath)
+          .then(data => {
+             const createdData = data.map(item => {
+                return getFileFromFirebase(`${serviceFirebasePath}/${item.id}`)
+                    .then(file => ({...item, image: file[0]}))
+             })
+             return Promise.all(createdData)
+          })
+          .then(createdData => setServiceList(createdData))
    }, [])
 
    return (

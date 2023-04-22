@@ -64,7 +64,8 @@ const Styled100vhLoadingBox = styled('div')(() => ({
 
 const Styled50vhLoadingBox = styled('div')(() => ({
    position: "relative",
-   height: "50vh"
+   height: "50vh",
+   width: "100%"
 }));
 
 export {

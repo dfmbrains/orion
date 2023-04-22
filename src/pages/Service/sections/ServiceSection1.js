@@ -3,6 +3,10 @@ import {Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import ServiceCard from "../components/ServiceCard";
 import {FlexBox} from "../../../components/FlexBox";
+import {useRecoilState} from "recoil";
+import {serviceRecoil} from "../../../recoil";
+import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
+import MatxLoading from "../../../components/MatxLoading";
 
 const StyledSection = styled('section')(() => ({
    padding: "120px 0"
@@ -22,6 +26,8 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 
 const ServiceSection1 = () => {
    const theme = useTheme()
+
+   const [serviceList] = useRecoilState(serviceRecoil)
 
    return (
        <StyledSection>
@@ -44,11 +50,16 @@ const ServiceSection1 = () => {
              </Grid>
 
              <StyledFlexBox>
-                {Array.from(Array(8).keys()).map((el => (
-                    <React.Fragment key={el}>
-                       <ServiceCard/>
-                    </React.Fragment>
-                )))}
+                {serviceList
+                    ? serviceList.map((el => (
+                        <React.Fragment key={el.id}>
+                           <ServiceCard data={el}/>
+                        </React.Fragment>
+                    )))
+                    : <Styled50vhLoadingBox>
+                       <MatxLoading/>
+                    </Styled50vhLoadingBox>
+                }
              </StyledFlexBox>
           </OrionContainer>
        </StyledSection>

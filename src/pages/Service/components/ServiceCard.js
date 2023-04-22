@@ -1,9 +1,10 @@
 import React from 'react';
-import ServiceImg from '../../../assets/images/service1.png';
 import {StyledResponsiveImageBox} from "../../../components/StyledComponents";
 import {Box, Card, styled, Typography, useTheme} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../../../helpers/utils";
+import {useRecoilState} from "recoil";
+import {serviceDetailsRecoil} from "../../../recoil";
 
 const StyledCard = styled(Card)(({theme}) => ({
    overflow: "hidden",
@@ -27,23 +28,25 @@ const StyledCard = styled(Card)(({theme}) => ({
    }
 }));
 
-const ServiceCard = () => {
+const ServiceCard = ({data}) => {
    const theme = useTheme()
 
    const navigate = useNavigate()
 
+   const [_, setServiceDetails] = useRecoilState(serviceDetailsRecoil)
+
    return (
        <StyledCard onClick={() => {
+          setServiceDetails(data)
           handleScrollToTop()
-          navigate('/services/1')
+          navigate(`/services/${data.id}`)
        }} theme={theme} className={"serviceCard"}>
           <StyledResponsiveImageBox className="serviceCardImg">
-             <img src={ServiceImg} alt="service"/>
+             <img src={data.image.file} alt={data.image.name}/>
           </StyledResponsiveImageBox>
           <Box pt={2} pb={5} px={3}>
-             <Typography variant={"subtitle1"} mb={2}>Rail Freight Transport</Typography>
-             <Typography variant={"subtitle2"} color={"#6C6C6C"}>Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Curabitur ac quam tellus. Etiam commodo diam nec tempus sagittis.</Typography>
+             <Typography variant={"subtitle1"} mb={2}>{data.title}</Typography>
+             <Typography variant={"subtitle2"} color={"#6C6C6C"}>{data.subtitle}</Typography>
           </Box>
           <div className="serviceCardLine"/>
        </StyledCard>
