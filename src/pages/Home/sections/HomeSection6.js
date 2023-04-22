@@ -8,10 +8,9 @@ import {Navigation} from "swiper";
 import SwiperButtons from "../../../components/SwiperButtons";
 import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 import {anchorLinkHandler, formatName} from "../../../helpers/utils";
-import {getAllCollection} from "../../../firebase/firestoreFirebase";
-import {teamFirebasePath} from "../../../helpers/constants";
-import {getFileFromFirebase} from "../../../firebase/fileFirebase";
 import MatxLoading from "../../../components/MatxLoading";
+import {useRecoilState} from "recoil";
+import {teamRecoil} from "../../../recoil";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 120px",
@@ -59,26 +58,17 @@ const StyledFlexGap10 = styled(FlexGap10)(({theme}) => ({
 }));
 
 const HomeSection6 = () => {
-   const [team, setTeam] = useState(null)
-
-   useEffect(() => {
-      getAllCollection(teamFirebasePath)
-          .then(data => {
-             const createdData = data.map(member => {
-                return getFileFromFirebase(`${teamFirebasePath}/${member.id}`)
-                    .then(file => ({...member, photo: file[0]}))
-             })
-             return Promise.all(createdData)
-          })
-          .then(createdData => {
-             setTeam(createdData)
-             setActive(createdData[0])
-          })
-   }, [])
-
    const theme = useTheme()
 
+   const [team] = useRecoilState(teamRecoil)
+
    const [active, setActive] = useState(null)
+
+   useEffect(() => {
+      if (team) {
+         setActive(team[0])
+      }
+   }, [team])
 
    return (
        <StyledSection id="homeTeamSection">
@@ -88,8 +78,7 @@ const HomeSection6 = () => {
                     <Grid container alignItems={"center"} spacing={5}>
                        <Grid item xs={5.95}>
                           <Typography mb={5} variant={"h2"}>These people work to make each freight successful and each
-                             the
-                             client satisfied</Typography>
+                             the client satisfied</Typography>
 
                           <Divider/>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {styled, Pagination} from "@mui/material";
+import {styled} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import PostCard from "../../../components/PostCard";
 import {FlexBox} from "../../../components/FlexBox";
@@ -13,7 +13,7 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const StyledFlexBox = styled(FlexBox)(() => ({
-   gap: '80px 40px',
+   gap: '80px 60px',
    flexWrap: "wrap",
 
    "& .postCard": {
@@ -22,11 +22,6 @@ const StyledFlexBox = styled(FlexBox)(() => ({
    "& .postCardImg": {
       height: "270px"
    }
-}));
-
-const StyledFlexEnd = styled(FlexBox)(() => ({
-   justifyContent: "flex-end",
-   margin: "60px 0 0"
 }));
 
 const BlogContentSection = () => {
@@ -41,10 +36,6 @@ const BlogContentSection = () => {
                         <PostCard key={ind} post={el}/>
                     )))}
                  </StyledFlexBox>
-
-                 <StyledFlexEnd>
-                    <Pagination count={3} color="primary"/>
-                 </StyledFlexEnd>
               </OrionContainer>
               : <MatxLoading/>
           }

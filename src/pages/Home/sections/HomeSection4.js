@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {Button, ButtonGroup, Divider, Grid, Icon, IconButton, styled, Typography, useTheme} from "@mui/material";
+import React from 'react';
+import {Button, Divider, Grid, styled, Typography} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import ProvisionImg from '../../../assets/images/provision.png';
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../../../helpers/utils";
+import ProvisionImg from '../../../assets/images/provision.png';
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -14,23 +14,6 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const HomeSection4 = () => {
-   const theme = useTheme()
-
-   const data = [
-      {
-         title: 'Provision of Rolling Stock',
-         subtitle: 'We offer services on provision of rolling stock according to the customer request. Our Logistics Specialists will assign a right rolling stock specifically to your cargo.',
-         img: ProvisionImg
-      },
-      {
-         title: 'Provision of Rolling Stock 2',
-         subtitle: 'We offer services on provision of rolling stock according to the customer request. Our Logistics Specialists will assign a right rolling stock specifically to your cargo.',
-         img: ProvisionImg
-      }
-   ]
-
-   const [counter, setCounter] = useState(0)
-
    const navigate = useNavigate()
 
    return (
@@ -38,34 +21,24 @@ const HomeSection4 = () => {
           <OrionContainer>
              <Grid container spacing={8}>
                 <Grid item xs={5}>
-                   <Typography mb={3} pr={6} variant={"h2"}>{data[counter].title}</Typography>
-                   <Typography mb={3} pr={6} variant={"subtitle2"}>{data[counter].subtitle}</Typography>
+                   <Typography mb={3} pr={6} variant={"h2"}>Provision of Rolling Stock</Typography>
+                   <Typography mb={3} pr={6} variant={"subtitle2"}>We offer services on provision of rolling stock
+                      according to the customer request. Our Logistics Specialists will assign a right rolling stock
+                      specifically to your cargo.</Typography>
 
                    <Divider/>
 
                    <Button onClick={() => {
                       handleScrollToTop()
                       navigate('/services')
-                   }} variant={"contained"} color={"primary"} sx={{mt: 5, mb: 3, width: "60%"}} size={"large"}>Our
+                   }} variant={"contained"} color={"primary"} sx={{mt: 5, width: "60%"}} size={"large"}>Our
                       Services</Button>
-
-                   <br/>
-
-                   <ButtonGroup>
-                      {Array.from(Array(data.length).keys()).map(el => (
-                          <IconButton sx={{color: counter === el ? theme.palette.primary.main : '#D6D6D6'}}
-                                      key={el} size={"small"} onClick={() => setCounter(el)}
-                          >
-                             <Icon sx={{fontSize: "12px"}}>fiber_manual_record</Icon>
-                          </IconButton>
-                      ))}
-                   </ButtonGroup>
                 </Grid>
 
                 <Divider flexItem orientation={"vertical"}/>
 
                 <Grid item xs={6}>
-                   <img src={data[counter].img} alt="provision" className="provisionImg"/>
+                   <img src={ProvisionImg} alt="provision" className="provisionImg"/>
                 </Grid>
              </Grid>
           </OrionContainer>

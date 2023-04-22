@@ -1,4 +1,4 @@
-import {getFirestore, doc, getDoc, getDocs, collection, query} from "firebase/firestore";
+import {collection, doc, getDoc, getDocs, getFirestore, query} from "firebase/firestore";
 import {firebaseApp} from "./index";
 
 const db = getFirestore(firebaseApp);
@@ -9,9 +9,7 @@ export const getAllCollection = async (path) => {
    const querySnapshot = await getDocs(q);
    const data = []
 
-   querySnapshot.forEach((doc) => {
-      data.push(doc.data())
-   });
+   querySnapshot.forEach(doc => data.push(doc.data()));
    return data
 }
 
