@@ -34,3 +34,8 @@ export const companyRecoil = atom({
    key: 'companyRecoilState',
    default: null,
 });
+
+export const reviewsRecoil = atom({
+   key: 'reviewsRecoilState',
+   default: null,
+});

@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import {Box, Button, ButtonGroup, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {Navigation} from "swiper";
-import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
+import {Styled50vhLoadingBox, StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 import SwiperButtons from "../../../components/SwiperButtons";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {FlexAllCenter} from "../../../components/FlexBox";
 import {useRecoilState} from "recoil";
 import {partnersRecoil} from "../../../recoil";
+import MatxLoading from "../../../components/MatxLoading";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 160px",
@@ -53,27 +54,31 @@ const ClientsSection1 = () => {
                 automobiles, electronics, and computer equipment, as well as promotional items, by train is
                 ideal.</Typography>
 
+             {partnersList
+                 ? <Box mt={6} pt={10} sx={{position: "relative"}}>
+                    <Swiper className="swiperCustomNavigation"
+                            navigation={true}
+                            modules={[Navigation]}
+                            slidesPerView={4}
+                            spaceBetween={20}
+                    >
+                       <StyledSwiperButtonsPosition>
+                          <SwiperButtons/>
+                       </StyledSwiperButtonsPosition>
 
-             <Box mt={6} pt={10} sx={{position: "relative"}}>
-                <Swiper className="swiperCustomNavigation"
-                        navigation={true}
-                        modules={[Navigation]}
-                        slidesPerView={4}
-                        spaceBetween={20}
-                >
-                   <StyledSwiperButtonsPosition>
-                      <SwiperButtons/>
-                   </StyledSwiperButtonsPosition>
-
-                   {partnersList.map(el => (
-                       <SwiperSlide key={el.id}>
-                          <StyledImageBox>
-                             <img src={el.images.file} alt={el.images.name}/>
-                          </StyledImageBox>
-                       </SwiperSlide>
-                   ))}
-                </Swiper>
-             </Box>
+                       {partnersList.map(el => (
+                           <SwiperSlide key={el.id}>
+                              <StyledImageBox>
+                                 <img src={el.images.file} alt={el.images.name}/>
+                              </StyledImageBox>
+                           </SwiperSlide>
+                       ))}
+                    </Swiper>
+                 </Box>
+                 : <Styled50vhLoadingBox>
+                    <MatxLoading/>
+                 </Styled50vhLoadingBox>
+             }
           </OrionContainer>
        </StyledSection>
    );

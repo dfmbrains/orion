@@ -16,16 +16,16 @@ import BlogDetails from "./pages/BlogDetails";
 import LightHeaderLayout from "./components/LightHeaderLayout";
 import DarkHeaderLayout from "./components/DarkHeaderLayout";
 import {useRecoilState} from "recoil";
-import {blogRecoil, companyRecoil, partnersRecoil, serviceRecoil, teamRecoil} from "./recoil";
+import {blogRecoil, companyRecoil, partnersRecoil, reviewsRecoil, serviceRecoil, teamRecoil} from "./recoil";
 import {
    blogFirebasePath,
    companyFirebasePath,
-   partnersFirebasePath,
+   partnersFirebasePath, reviewsFirebasePath,
    serviceFirebasePath,
    teamFirebasePath
 } from "./helpers/constants";
 import {getAllCollectionsWithImg} from "./helpers/utils";
-import {getAllCollection} from "./firebase/firestoreFirebase";
+import {getAllCollection, getCollectionsByFilter} from "./firebase/firestoreFirebase";
 
 function App() {
    const [_, setBlogList] = useRecoilState(blogRecoil)
@@ -33,6 +33,7 @@ function App() {
    const [___, setServiceList] = useRecoilState(serviceRecoil)
    const [____, setPartnersList] = useRecoilState(partnersRecoil)
    const [_____, setCompany] = useRecoilState(companyRecoil)
+   const [______, setReviews] = useRecoilState(reviewsRecoil)
 
    const getAllData = () => {
       getAllCollection(companyFirebasePath)
@@ -45,6 +46,8 @@ function App() {
           .then(data => setServiceList(data))
       getAllCollectionsWithImg(partnersFirebasePath, false)
           .then(data => setPartnersList(data))
+      getCollectionsByFilter(reviewsFirebasePath, 'status', true)
+          .then(data => setReviews(data))
    }
 
    useEffect(() => {

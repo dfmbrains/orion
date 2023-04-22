@@ -1,13 +1,14 @@
-import React from 'react';
-import {Grid, styled, Typography} from "@mui/material";
+import React, {useState} from 'react';
+import {Grid, styled, Tab, Tabs, Typography} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import {FlexGap10} from "../../../components/FlexBox";
+import {FlexBox, FlexGap10} from "../../../components/FlexBox";
 import SocialMediaButtons from "../../../components/SocialMediaButtons";
 import ContactForm from "../components/ContactForm";
 import {useRecoilState} from "recoil";
 import {companyRecoil} from "../../../recoil";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import MatxLoading from "../../../components/MatxLoading";
+import CreateReviewForm from "../../../components/CreateReviewForm";
 
 const StyledSection = styled('section')(() => ({
    padding: "50px 0 120px",
@@ -19,8 +20,19 @@ const StyledFlexGap10 = styled(FlexGap10)(() => ({
    alignItems: "flex-start"
 }));
 
+function a11yProps(index) {
+   return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+   };
+}
+
 const ContactContentSection = () => {
    const [company] = useRecoilState(companyRecoil)
+
+   const [formVariant, setFormVariant] = useState(0);
+
+   const handleChange = (event, newValue) => setFormVariant(newValue)
 
    return (
        <StyledSection>
@@ -31,9 +43,8 @@ const ContactContentSection = () => {
                        <Typography variant="h2">Get in touch with us</Typography>
                        <Typography mt={3} mb={6} variant="subtitle2">We are professional logistics specialists with a
                           passion for quality and efficiency. We believe in integrity, trust, and continuous
-                          improvement. We
-                          promise to listen and provide You with reliable freight forwarding services over the
-                          globe.</Typography>
+                          improvement. We promise to listen and provide You with reliable freight forwarding services
+                          over the globe.</Typography>
                        <Typography variant="body1" color={"#9EADB4"}>Support Center 24 / 7</Typography>
 
                        <StyledFlexGap10 my={3}>
@@ -62,7 +73,17 @@ const ContactContentSection = () => {
                        <SocialMediaButtons color={"info"}/>
                     </Grid>
                     <Grid item xs={6}>
-                       <ContactForm/>
+                       <FlexBox sx={{justifyContent: "flex-end"}}>
+                          <Tabs sx={{mb: 3}} value={formVariant} onChange={handleChange}>
+                             <Tab label="Contact" {...a11yProps(0)} />
+                             <Tab label="Leave testimonial" {...a11yProps(1)} />
+                          </Tabs>
+                       </FlexBox>
+
+                       {formVariant === 0
+                           ? <ContactForm/>
+                           : <CreateReviewForm/>
+                       }
                     </Grid>
                  </Grid>
                  : <Styled50vhLoadingBox>
