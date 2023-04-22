@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {FlexBetweenAlignCenter, FlexGap10} from "../../../components/FlexBox";
 import {Box, Icon, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
+import {useRecoilState} from "recoil";
+import {companyRecoil} from "../../../recoil";
 
 const StyledBox = styled(Box)(({theme, active}) => ({
    backgroundColor: "#252525",
@@ -29,6 +31,8 @@ const StyledBody2 = styled(Typography)(({theme}) => ({
 const HeaderTop = () => {
    const theme = useTheme()
 
+   const [company] = useRecoilState(companyRecoil)
+
    const [active, setActive] = useState(false)
 
    useEffect(() => {
@@ -49,11 +53,11 @@ const HeaderTop = () => {
                 </FlexGap10>
                 <FlexGap10>
                    <Icon fontSize={"small"}>phone</Icon>
-                   <a href="tel:+996705006088">
-                      <StyledBody2 theme={theme} variant='body2'>+996705006088</StyledBody2>
+                   <a href={`tel:${company?.about.phoneNumber1 || ''}`}>
+                      <StyledBody2 theme={theme} variant='body2'>{company?.about.phoneNumber1 || ''}</StyledBody2>
                    </a>
-                   <a href="tel:+996707567676">
-                      <StyledBody2 theme={theme} variant='body2'>+996707567676</StyledBody2>
+                   <a href={`tel:${company?.about.phoneNumber2 || ''}`}>
+                      <StyledBody2 theme={theme} variant='body2'>{company?.about.phoneNumber2 || ''}</StyledBody2>
                    </a>
                 </FlexGap10>
              </FlexBetweenAlignCenter>

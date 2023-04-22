@@ -16,17 +16,27 @@ import BlogDetails from "./pages/BlogDetails";
 import LightHeaderLayout from "./components/LightHeaderLayout";
 import DarkHeaderLayout from "./components/DarkHeaderLayout";
 import {useRecoilState} from "recoil";
-import {blogRecoil, partnersRecoil, serviceRecoil, teamRecoil} from "./recoil";
-import {blogFirebasePath, partnersFirebasePath, serviceFirebasePath, teamFirebasePath} from "./helpers/constants";
+import {blogRecoil, companyRecoil, partnersRecoil, serviceRecoil, teamRecoil} from "./recoil";
+import {
+   blogFirebasePath,
+   companyFirebasePath,
+   partnersFirebasePath,
+   serviceFirebasePath,
+   teamFirebasePath
+} from "./helpers/constants";
 import {getAllCollectionsWithImg} from "./helpers/utils";
+import {getAllCollection} from "./firebase/firestoreFirebase";
 
 function App() {
    const [_, setBlogList] = useRecoilState(blogRecoil)
    const [__, setTeam] = useRecoilState(teamRecoil)
    const [___, setServiceList] = useRecoilState(serviceRecoil)
    const [____, setPartnersList] = useRecoilState(partnersRecoil)
+   const [_____, setCompany] = useRecoilState(companyRecoil)
 
    const getAllData = () => {
+      getAllCollection(companyFirebasePath)
+          .then(data => setCompany(data[0]))
       getAllCollectionsWithImg(blogFirebasePath, true)
           .then(data => setBlogList(data))
       getAllCollectionsWithImg(teamFirebasePath, false)
