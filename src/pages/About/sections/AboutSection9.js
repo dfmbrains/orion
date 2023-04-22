@@ -8,6 +8,7 @@ import {useRecoilState} from "recoil";
 import {teamRecoil} from "../../../recoil";
 import MatxLoading from "../../../components/MatxLoading";
 import {formatName} from "../../../helpers/utils";
+import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -87,7 +88,9 @@ const AboutSection9 = () => {
                        </Swiper>
                     </Box>
                  </>
-                 : <MatxLoading/>
+                 : <Styled50vhLoadingBox>
+                    <MatxLoading/>
+                 </Styled50vhLoadingBox>
              }
           </OrionContainer>
        </StyledSection>

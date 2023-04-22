@@ -5,6 +5,11 @@ export const blogRecoil = atom({
    default: null,
 });
 
+export const blogDetailsRecoil = atom({
+   key: 'blogDetailsRecoilState',
+   default: null,
+});
+
 export const teamRecoil = atom({
    key: 'teamRecoilState',
    default: null,

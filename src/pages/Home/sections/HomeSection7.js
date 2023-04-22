@@ -5,6 +5,7 @@ import PostCard from "../../../components/PostCard";
 import {useRecoilState} from "recoil";
 import {blogRecoil} from "../../../recoil";
 import MatxLoading from "../../../components/MatxLoading";
+import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 
 const StyledSection = styled('section')(() => ({
    padding: "45px 0 90px",
@@ -36,7 +37,9 @@ const HomeSection7 = () => {
                     ))}
                  </Grid>
               </OrionContainer>
-              : <MatxLoading/>
+              : <Styled50vhLoadingBox>
+                 <MatxLoading/>
+              </Styled50vhLoadingBox>
           }
        </StyledSection>
    );

@@ -1,10 +1,11 @@
 import React from 'react';
 import {Button, styled, Typography} from "@mui/material";
-import Blog from '../assets/images/blog1.png';
 import {FlexGap10} from "./FlexBox";
 import {StyledResponsiveImageBox} from "./StyledComponents";
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../helpers/utils";
+import {useRecoilState} from "recoil";
+import {blogDetailsRecoil} from "../recoil";
 
 const StyledBox = styled('div')(() => ({
    paddingLeft: "15px",
@@ -18,10 +19,12 @@ const PostCard = ({post}) => {
 
    const date = new Date(post.created.toDate())
 
+   const [_, setBlog] = useRecoilState(blogDetailsRecoil)
+
    return (
        <div className="postCard">
           <StyledResponsiveImageBox className="postCardImg">
-             <img src={Blog} alt="blog1"/>
+             <img src={post.images[0].file} alt={post.images[0].name}/>
           </StyledResponsiveImageBox>
           <FlexGap10 mt={3} sx={{alignItems: "flex-start"}}>
              <div>
@@ -35,6 +38,7 @@ const PostCard = ({post}) => {
                 <Typography variant={"subtitle2"} color={"##6C6C6C"} mb={3}>{post.subtitle}</Typography>
 
                 <Button onClick={() => {
+                   setBlog(post)
                    handleScrollToTop()
                    navigate(`/blog/${post.id}`)
                 }} color={"primary"} variant={"contained"}>Read More</Button>

@@ -57,4 +57,21 @@ const StyledResponsiveImageBox = styled('div')(() => ({
    }
 }));
 
-export {StyledPromoBackgroundBox, StylePromoColumn, StyledSwiperButtonsPosition, StyledResponsiveImageBox}
+const Styled100vhLoadingBox = styled('div')(() => ({
+   position: "relative",
+   height: "100vh"
+}));
+
+const Styled50vhLoadingBox = styled('div')(() => ({
+   position: "relative",
+   height: "50vh"
+}));
+
+export {
+   StyledPromoBackgroundBox,
+   StylePromoColumn,
+   StyledSwiperButtonsPosition,
+   StyledResponsiveImageBox,
+   Styled100vhLoadingBox,
+   Styled50vhLoadingBox
+}

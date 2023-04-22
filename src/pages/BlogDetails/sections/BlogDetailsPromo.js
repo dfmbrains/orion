@@ -4,7 +4,6 @@ import OrionContainer from "../../../components/OrionContainer";
 import {Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {StyledResponsiveImageBox} from "../../../components/StyledComponents";
-import SlideImg from '../../../assets/images/blogDetails.png';
 
 const StyledSection = styled('section')(() => ({
    padding: "130px 0 0",
@@ -23,12 +22,12 @@ const StyledSlideBox = styled(StyledResponsiveImageBox)(() => ({
    height: "calc(100vh / 4 * 3)",
 
    "& img": {
-      maxWidth: "200%",
-      maxHeight: "200%"
+      maxWidth: "120%",
+      maxHeight: "120%"
    }
 }));
 
-const BlogDetailsPromo = () => {
+const BlogDetailsPromo = ({images}) => {
    return (
        <StyledSection>
           <OrionContainer>
@@ -39,21 +38,13 @@ const BlogDetailsPromo = () => {
                  modules={[Navigation]}
                  className="mySwiper"
              >
-                <SwiperSlide>
-                   <StyledSlideBox>
-                      <img src={SlideImg} alt="img"/>
-                   </StyledSlideBox>
-                </SwiperSlide>
-                <SwiperSlide>
-                   <StyledSlideBox>
-                      <img src={SlideImg} alt="img"/>
-                   </StyledSlideBox>
-                </SwiperSlide>
-                <SwiperSlide>
-                   <StyledSlideBox>
-                      <img src={SlideImg} alt="img"/>
-                   </StyledSlideBox>
-                </SwiperSlide>
+                {images.map((img, ind) => (
+                    <SwiperSlide key={ind}>
+                       <StyledSlideBox>
+                          <img src={img.file} alt={img.name}/>
+                       </StyledSlideBox>
+                    </SwiperSlide>
+                ))}
              </Swiper>
           </OrionContainer>
        </StyledSection>

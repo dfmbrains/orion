@@ -44,8 +44,7 @@ const CalculateForm = () => {
    const [loading, setLoading] = useState(false);
 
    const handleSubmitForm = (values) => {
-      setLoading(true);
-      console.log(values)
+      setLoading(true)
 
       emailjs
           .send(

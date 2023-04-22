@@ -30,7 +30,7 @@ function App() {
           .then(data => {
              const createdData = data.map(item => {
                 return getFileFromFirebase(`${blogFirebasePath}/${item.id}`)
-                    .then(file => ({...item, photo: file[0]}))
+                    .then(files => ({...item, images: files}))
              })
              return Promise.all(createdData)
           })

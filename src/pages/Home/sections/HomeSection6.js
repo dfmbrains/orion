@@ -6,7 +6,7 @@ import {FlexGap10} from "../../../components/FlexBox";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";
 import SwiperButtons from "../../../components/SwiperButtons";
-import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
+import {Styled50vhLoadingBox, StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 import {anchorLinkHandler, formatName} from "../../../helpers/utils";
 import MatxLoading from "../../../components/MatxLoading";
 import {useRecoilState} from "recoil";
@@ -137,7 +137,9 @@ const HomeSection6 = () => {
                        </Swiper>
                     </Box>
                  </>
-                 : <MatxLoading/>
+                 : <Styled50vhLoadingBox>
+                    <MatxLoading/>
+                 </Styled50vhLoadingBox>
              }
           </OrionContainer>
        </StyledSection>
