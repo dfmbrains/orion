@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Button, Icon, styled, Typography, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 import OrionContainer from "../../../components/OrionContainer";
+import {defaultAppLanguage} from "../../../helpers/constants";
+import i18next from "i18next";
 
 const StyledBox = styled(Box)(({color}) => ({
    backgroundColor: color === 'dark' ? '#252525' : 'transparent',
@@ -47,12 +49,19 @@ const StyledLink = styled(NavLink)(({theme}) => ({
 }));
 
 const HeaderGeneral = ({color}) => {
+   const theme = useTheme()
+   const [language, setLanguage] = useState(localStorage.getItem('i18nextLng') || defaultAppLanguage)
+
+   const handleChangeLanguage = (lang) => {
+      setLanguage(lang)
+      i18next.changeLanguage(lang)
+   }
+
    const navigations = [
       {title: "Home", link: '/'}, {title: "Company", link: '/about'},
       {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
       {title: "Blogs", link: '/blog'}, {title: "Contact", link: '/contact?form=0'}
    ]
-   const theme = useTheme()
 
    return (
        <StyledBox color={color}>
@@ -66,9 +75,9 @@ const HeaderGeneral = ({color}) => {
                        </StyledLink>
                    ))}
                 </FlexAllCenter>
-                <Button variant={"text"} color={"secondary"}
-                        startIcon={<Icon>language</Icon>}>
-                   <Typography variant="subtitle2">RU</Typography>
+                <Button onClick={() => handleChangeLanguage(language === 'ru' ? 'en' : 'ru')} variant={"text"}
+                        color={"secondary"} startIcon={<Icon>language</Icon>}>
+                   <Typography variant="subtitle2">{language.toUpperCase()}</Typography>
                 </Button>
              </FlexBetweenAlignCenter>
           </OrionContainer>

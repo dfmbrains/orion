@@ -10,3 +10,5 @@ export const companyFirebasePath = 'company'
 export const serviceFirebasePath = 'service'
 export const reviewsFirebasePath = 'reviews'
 export const partnersFirebasePath = 'partners'
+
+export const defaultAppLanguage = 'ru'

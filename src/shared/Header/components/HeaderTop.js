@@ -4,6 +4,7 @@ import {Box, Icon, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {useRecoilState} from "recoil";
 import {companyRecoil} from "../../../recoil";
+import {useTranslation} from "react-i18next";
 
 const StyledBox = styled(Box)(({theme, active}) => ({
    backgroundColor: "#252525",
@@ -30,6 +31,7 @@ const StyledBody2 = styled(Typography)(({theme}) => ({
 
 const HeaderTop = () => {
    const theme = useTheme()
+   const {t} = useTranslation()
 
    const [company] = useRecoilState(companyRecoil)
 
@@ -49,7 +51,7 @@ const HeaderTop = () => {
              <FlexBetweenAlignCenter>
                 <FlexGap10>
                    <Icon fontSize={"small"}>support_agent</Icon>
-                   <StyledBody2 variant='body2' theme={"false"}>Support 24 / 7</StyledBody2>
+                   <StyledBody2 variant='body2' theme={"false"}>{t('support')} 24 / 7</StyledBody2>
                 </FlexGap10>
                 <FlexGap10>
                    <Icon fontSize={"small"}>phone</Icon>
