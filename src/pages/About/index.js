@@ -13,11 +13,14 @@ import AboutSection6 from "./sections/AboutSection6";
 import AboutSection7 from "./sections/AboutSection7";
 import AboutSection8 from "./sections/AboutSection8";
 import AboutSection9 from "./sections/AboutSection9";
+import {useTranslation} from "react-i18next";
 
 const About = () => {
+   const {t} = useTranslation()
+
    return (
        <>
-          <PromoSection title={"About us"} bgImage={AboutBg}/>
+          <PromoSection title={t('about.promo1')} bgImage={AboutBg}/>
           <AboutSection1/>
           <AboutSection2/>
           <StatisticsSection/>
@@ -28,7 +31,7 @@ const About = () => {
           <AboutSection7/>
           <AboutSection8/>
           <TestimonialsSection/>
-          <PromoSection title={"Meet our Team"} bgImage={MeetTeamBg}/>
+          <PromoSection title={t('about.promo2')} bgImage={MeetTeamBg}/>
           <AboutSection9/>
        </>
    );

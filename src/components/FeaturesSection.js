@@ -3,6 +3,7 @@ import {styled} from "@mui/material";
 import OrionContainer from "./OrionContainer";
 import FeatureCard from "./FeatureCard";
 import {FlexBox} from "./FlexBox";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -19,28 +20,9 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 }));
 
 const FeaturesSection = () => {
-   const cards = [
-      {
-         title: 'Cost Effective Solutions',
-         subtitle: 'You will get our safe rail forwarding services at a minimum cost compared to our competitors',
-         icon: 'credit_score'
-      },
-      {
-         title: 'Trusted Partners',
-         subtitle: 'We have a direct agreement with the railways of CIS countries, and we work with the official representatives of the other countries Railways',
-         icon: 'health_and_safety'
-      },
-      {
-         title: 'Just In Time Shipments',
-         subtitle: 'You will achieve your desired shipment times with our rail freight services',
-         icon: 'access_time'
-      },
-      {
-         title: 'Financial Protection',
-         subtitle: 'Opportunity of the Rail rates payment, when there is a long-term engagement',
-         icon: 'monetization_on'
-      }
-   ]
+   const {t} = useTranslation()
+
+   const cards = t('featuresSection', {returnObjects: true}) || []
 
    return (
        <StyledSection>

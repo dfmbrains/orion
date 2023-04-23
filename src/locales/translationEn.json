@@ -1,3 +1,288 @@
 {
-  "support": "support"
+  "currentLanguage": "en",
+  "orionTrans": "Orion-Trans",
+  "words": {
+    "railTariff": "A Rail Tariff"
+  },
+  "buttons": {
+    "learnMore": "learn more",
+    "calculate": "calculate",
+    "ourServices": "our services",
+    "readOthers": "read others",
+    "send": "send",
+    "readOurStory": "Read Our Story",
+    "contactUs": "Contact Us"
+  },
+  "snackbarTexts": {
+    "letter": "The letter was sent",
+    "error": "Try again later"
+  },
+  "validation": {
+    "requiredName": "Name is required!",
+    "requiredPhoneNumber": "Phone number is required!",
+    "requiredEmail": "Email is required!"
+  },
+  "countries": [
+    "China",
+    "Kazakhstan",
+    "Uzbekistan",
+    "Russia",
+    "Turkmenistan",
+    "Tajikistan",
+    "Eastern Europe",
+    "Afghanistan",
+    "Iran",
+    "Baltic Countries",
+    "Azerbaijan"
+  ],
+  "menu": {
+    "home": "Home",
+    "services": "Services",
+    "company": "Company",
+    "clients": "Clients",
+    "partners": "Partners",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "getInTouch": "Get In Touch",
+    "leaveReview": "Leave a review"
+  },
+  "featuresSection": [
+    {
+      "title": "Cost Effective Solutions",
+      "subtitle": "You will get our safe rail forwarding services at a minimum cost compared to our competitors",
+      "icon": "credit_score"
+    },
+    {
+      "title": "Trusted Partners",
+      "subtitle": "We have a direct agreement with the railways of CIS countries, and we work with the official representatives of the other countries Railways",
+      "icon": "health_and_safety"
+    },
+    {
+      "title": "Just In Time Shipments",
+      "subtitle": "You will achieve your desired shipment times with our rail freight services",
+      "icon": "access_time"
+    },
+    {
+      "title": "Financial Protection",
+      "subtitle": "Opportunity of the Rail rates payment, when there is a long-term engagement",
+      "icon": "monetization_on"
+    }
+  ],
+  "statisticsSection": [
+    {
+      "title": "Shipped Tons Per Month",
+      "value": "10,000",
+      "valueTag": ""
+    },
+    {
+      "title": "Shipped Tons Per Month",
+      "value": "10+",
+      "valueTag": ""
+    },
+    {
+      "title": "Shipped Tons Per Month",
+      "value": "10",
+      "valueTag": "Years"
+    },
+    {
+      "title": "Shipped Tons Per Month",
+      "value": "8",
+      "valueTag": "Years"
+    }
+  ],
+  "emailFormSection": {
+    "title": "Leave your email.",
+    "subtitle": "We will definitely contact you",
+    "placeholder": "Your email"
+  },
+  "testimonialsSection": {
+    "title": "Testimonials"
+  },
+  "header": {
+    "support": "support"
+  },
+  "footer": {
+    "menu": {
+      "column1": "Our Divisions",
+      "column2": "Contact Us"
+    },
+    "privacy": {
+      "left": "Copyright",
+      "right": "All rights reserved"
+    }
+  },
+  "home": {
+    "promo": {
+      "slides": [
+        {
+          "title": "Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "subtitle": "No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+        },
+        {
+          "title": "2 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "subtitle": "2 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+        },
+        {
+          "title": "3 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "subtitle": "3 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+        }
+      ]
+    },
+    "section2": {
+      "title": "Container Freight",
+      "subtitle": "Fast & Convenient",
+      "description": "We create an effective transport chain monitoring of Container Freight to China and other countries. While your cargo is on its way, our logistic specialists will keep updating you whenever you need.",
+      "otherServices": {
+        "title": "Our Other Services",
+        "list": [
+          "Provision of Rolling Stock",
+          "Multimodal Freight Transport",
+          "Container Freight Transport",
+          "Rail freight",
+          "And way more"
+        ]
+      }
+    },
+    "section3": {
+      "title": "Freight Forwarding: Rail Rates",
+      "subtitle": "Our Company establishes itself as leading choice at the market of rail rates payment and we have direct agreement with Railways",
+      "description": "Some of the countries that we deliver to",
+      "calculation": {
+        "title": "Calculate Your Transportation",
+        "formPlaceholders": {
+          "placeholder1": "Departure Station",
+          "placeholder2": "Destination Station",
+          "placeholder3": "Cargo Name/ ETSNG Code",
+          "placeholder4": "Cargo Name /GNG Code",
+          "placeholder5": "Cargo Weight",
+          "placeholder6": "Number Of Wagons",
+          "placeholder7": "Your name",
+          "placeholder8": "Type Of Wagon",
+          "placeholder9": "Your Phone Number",
+          "placeholder10": "Your Email"
+        }
+      }
+    },
+    "section4": {
+      "title": "Provision of Rolling Stock",
+      "subtitle": "We offer services on provision of rolling stock according to the customer request. Our Logistics Specialists will assign a right rolling stock specifically to your cargo."
+    },
+    "section5": {
+      "title": "Our Clients Say"
+    },
+    "section6": {
+      "title": "These people work to make each freight successful and each the client satisfied",
+      "subtitle": "Meet the team"
+    },
+    "section7": {
+      "title": "Latest blog posts"
+    }
+  },
+  "about": {
+    "promo1": "About us",
+    "promo2": "Meet our Team",
+    "section1": {
+      "title": "We are <span>Orion-Trans</span> Providing You with the most actionable Rail Freight Service",
+      "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe."
+    },
+    "section2": {
+      "subtitle1": "Orion-Trans is an international modern company of rail freight forwarding services, based in Kyrgyzstan, Bishkek. We met up to make logistics services in more than 20 nations over the globe and have been operating on the market since 2012, thereby have proved to our clients and partners our level of professionalism in the logistics field.",
+      "subtitle2": "Countries we're carrying out international freight forwarding services:"
+    },
+    "section3": {
+      "title": "What we <span>offer</span>",
+      "subtitle1": "We offer to our clients the most actionable solutions in freight-forwarding services. Our team of professional logistics specialists will develop a plan of the whole transportation arrangement for your business.",
+      "subtitle2": "We will calculate for you all of the necessary rail freight-forwarding tariffs across more than 20 countries, by import, export, transit and internal consignment and find for you a needed rolling stock to ship your cargo."
+    },
+    "section4": {
+      "title1": "Our <span>Mission</span>",
+      "subtitle1": "To ensure businesses with all the necessary freight-forwarding services on the market: to be the most secure and trusted freight-forwarding company for the businesses, and to continuously improve the quality level of the services and work approach for the sake of the businesses.",
+      "title2": "Our <span>Vision</span>",
+      "subtitle2": "We see ourselves as the number one secure freight-forwarding company on the logistics market, who ensure new innovative logistics services to our clients and partners and create and develop convenient workplaces our team."
+    },
+    "section5": {
+      "title1": "Our <span>Goal</span>",
+      "subtitle": "Efficiently organize and accompany rail freight transportation, creating a fast, convenient and accessible rail freight.",
+      "title2": "Our <span>Objectives</span>",
+      "objectives": [
+        "Create an efficient chain of partnership with the railways, transport companies, and other freight-forwarding companies.",
+        "Continuously improve the quality level of professionalism and skills of our team - logistics specialists.",
+        "Enhance the quality of customer services and meet their requests",
+        "Integrating and developing the modern innovative technology to create more efficient and accessible freight-forwarding solutions for our clients and partners."
+      ]
+    },
+    "section6": {
+      "title": "Why us?",
+      "subtitle1": "clients make use of our services for more than",
+      "subtitle2": "years, and our partners work with us up to this day."
+    },
+    "section7": {
+      "title": "Our Benefits",
+      "list": [
+        {
+          "title": "Cost Effective Solutions",
+          "subtitle": "Competitive and cost-effective rail tariffs amongst freight-forwarding organizations.",
+          "icon": "credit_score"
+        },
+        {
+          "title": "Quick Response",
+          "subtitle": "Our team processes service requests in less than 10 minutes",
+          "icon": "quickreply"
+        },
+        {
+          "title": "Professional Specialists",
+          "subtitle": "Orion-Trans has a high-qualified logistics specialists with more than 8 - 10 years of experience in providing freight-forwarding services.",
+          "icon": "badge"
+        },
+        {
+          "title": "We Are With You 24/7",
+          "subtitle": "Quick response from our logistics specialists on any issue - 24/7",
+          "icon": "support_agent"
+        },
+        {
+          "title": "Efficiency",
+          "subtitle": "Our team’s professionalism will ensure a fast and reliable transport organization.",
+          "icon": "group_work"
+        },
+        {
+          "title": "Direct Agreements With Railways",
+          "subtitle": "We cooperate directly with railways of Kyrgyz Republic and the official railways representatives of Kazakhstan, Uzbekistan, Tadjikistan, Turkmenistan, Russia, Afghanistan and Iran.",
+          "icon": "gavel"
+        }
+      ]
+    },
+    "section8": {
+      "title": "Our Core Values",
+      "list": [
+        {
+          "title": "Integrity & Honesty",
+          "icon": "health_and_safety"
+        },
+        {
+          "title": "Exceptional Customer Service",
+          "icon": "support_agent"
+        },
+        {
+          "title": "Value Our People",
+          "icon": "groups"
+        },
+        {
+          "title": "Continuous Improvement",
+          "icon": "self_improvement"
+        },
+        {
+          "title": "Value Teamwork",
+          "icon": "group_work"
+        },
+        {
+          "title": "Direct Agreements With Railways",
+          "icon": "gavel"
+        }
+      ]
+    },
+    "section9": {
+      "title": "<span>Our team </span>is a crucial value of our company.",
+      "subtitle": "They are growth for a company, where each of a team member has its special strong personal qualities, and willingness to work and create."
+    }
+  }
 }

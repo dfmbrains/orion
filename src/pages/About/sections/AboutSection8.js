@@ -3,6 +3,7 @@ import {Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {FlexBox} from "../../../components/FlexBox";
 import FeatureCard from "../../../components/FeatureCard";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0",
@@ -20,32 +21,10 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 }));
 
 const AboutSection8 = () => {
-   const cards = [
-      {
-         title: 'Integrity & Honesty',
-         icon: 'health_and_safety'
-      },
-      {
-         title: 'Exceptional Customer Service',
-         icon: 'support_agent'
-      },
-      {
-         title: 'Value Our People',
-         icon: 'groups'
-      },
-      {
-         title: 'Continuous Improvement',
-         icon: 'self_improvement'
-      },
-      {
-         title: 'Value Teamwork',
-         icon: 'group_work'
-      },
-      {
-         title: 'Direct Agreements With Railways',
-         icon: 'gavel'
-      }
-   ]
+   const translationKey = 'about.section8'
+   const {t} = useTranslation()
+
+   const cards = t(`${translationKey}.list`, {returnObjects: true}) || []
 
    const theme = useTheme()
 
@@ -54,7 +33,8 @@ const AboutSection8 = () => {
           <OrionContainer>
              <Grid container alignItems={"center"}>
                 <Grid item xs={4}>
-                   <Typography color={theme.palette.primary.main} variant={"h3"}>Our Core Values</Typography>
+                   <Typography color={theme.palette.primary.main}
+                               variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
                 </Grid>
                 <Grid item xs={8}>
                    <StyledFlexBox>

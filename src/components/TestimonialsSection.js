@@ -8,20 +8,23 @@ import SwiperButtons from "./SwiperButtons";
 import {useRecoilState} from "recoil";
 import {reviewsRecoil} from "../recoil";
 import MatxLoading from "./MatxLoading";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "70px 0 90px",
    backgroundColor: "#F7F7F7"
 }));
 
-const AboutSection7 = () => {
+const TestimonialsSection = () => {
+   const {t} = useTranslation()
+
    const [reviews] = useRecoilState(reviewsRecoil)
 
    return (
        <StyledSection id="testimonialsSection">
           <OrionContainer>
              <Box sx={{position: "relative"}}>
-                <Typography variant={"h3"} mb={8}>Testimonials</Typography>
+                <Typography variant={"h3"} mb={8}>{t('testimonialsSection.title')}</Typography>
 
                 {reviews
                     ? <Swiper className="swiperCustomNavigation"
@@ -52,4 +55,4 @@ const AboutSection7 = () => {
    );
 };
 
-export default AboutSection7;
+export default TestimonialsSection;

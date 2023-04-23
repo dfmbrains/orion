@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "./OrionContainer";
 import {FlexGap10} from "./FlexBox";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(({bgcolor, theme}) => ({
    padding: "120px 0",
@@ -13,12 +14,9 @@ const StyledSection = styled('section')(({bgcolor, theme}) => ({
 }));
 
 const StatisticsSection = ({bgcolor}) => {
-   const data = [
-      {title: 'Shipped Tons Per Month', value: '10,000', valueTag: ''},
-      {title: 'Shipped Tons Per Month', value: '10+', valueTag: ''},
-      {title: 'Shipped Tons Per Month', value: '10', valueTag: 'Years'},
-      {title: 'Shipped Tons Per Month', value: '8', valueTag: 'Years'}
-   ]
+   const {t} = useTranslation()
+
+   const data = t('statisticsSection', {returnObjects: true}) || []
 
    const theme = useTheme()
 

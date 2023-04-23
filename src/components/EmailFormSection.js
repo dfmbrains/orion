@@ -9,9 +9,10 @@ import {
 import emailjs from "@emailjs/browser";
 import {LoadingButton} from "@mui/lab";
 import {useSnackbar} from "notistack";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
-   padding: "80px 0",
+   padding: "60px 0",
    backgroundColor: "#F7F7F7"
 }));
 
@@ -20,6 +21,7 @@ const StyledBox = styled('section')(() => ({
 }));
 
 const EmailFormSection = () => {
+   const {t} = useTranslation()
    const {enqueueSnackbar} = useSnackbar();
 
    const [email, setEmail] = useState('')
@@ -64,9 +66,8 @@ const EmailFormSection = () => {
        <StyledSection>
           <FlexAllCenter>
              <StyledBox>
-                <Typography mb={1} variant={"h4"} color={"#1B1B1B"}>All the news straight to your inbox.</Typography>
-                <Typography mb={6} variant={"h5"} color={"#8A8A8A"}>signup for Orion-Trans's weekly
-                   newsletter.</Typography>
+                <Typography mb={1} variant={"h4"} color={"#1B1B1B"}>{t('emailFormSection.title')}</Typography>
+                <Typography mb={6} variant={"h5"} color={"#8A8A8A"}>{t('emailFormSection.subtitle')}</Typography>
 
                 <form onSubmit={handleSubmit}>
                    <FlexGap10 sx={{justifyContent: "center"}}>
@@ -75,7 +76,7 @@ const EmailFormSection = () => {
                           size={"small"}
                           type="text"
                           name="email"
-                          label="Your email "
+                          label={t('emailFormSection.placeholder')}
                           variant="outlined"
                           value={email}
                           required={true}
@@ -83,7 +84,7 @@ const EmailFormSection = () => {
                       />
 
                       <LoadingButton loading={loading} variant={"contained"} color={"primary"}
-                                     type={"submit"}>Subscribe</LoadingButton>
+                                     type={"submit"}>{t('buttons.send')}</LoadingButton>
                    </FlexGap10>
                 </form>
              </StyledBox>

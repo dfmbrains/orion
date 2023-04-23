@@ -6,6 +6,7 @@ import EllipseBg from '../../../assets/images/ellipse.png';
 import OrionContainer from "../../../components/OrionContainer";
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../../../helpers/utils";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -35,38 +36,41 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const HomeSection2 = () => {
+   const translationKey = 'home.section2'
+
    const navigate = useNavigate()
+   const {t} = useTranslation()
+
+   const otherServicesList = t(`${translationKey}.otherServices.list`, {returnObjects: true}) || []
 
    return (
        <StyledSection>
           <OrionContainer>
              <Grid container spacing={8}>
                 <Grid item xs={3.5}>
-                   <img className="containerFreightImg" src={ContainerFreight} alt="containerFreight"/>
+                   <img className="containerFreightImg" src={ContainerFreight} alt={t(`${translationKey}.title`)}/>
                 </Grid>
                 <Grid item xs={5}>
-                   <Typography mb={6} variant="h2">Container Freight <br/> Transport</Typography>
-                   <Typography mb={3} color={"primary"} variant="h4">Fast & Convenient</Typography>
-                   <Typography mb={3} variant="body1">We create an effective transport chain monitoring of Container
-                      Freight to China and other countries. While your cargo is on its way, our logistic specialists
-                      will keep updating you whenever you need.</Typography>
+                   <Typography mb={6} variant="h2">{t(`${translationKey}.title`)}</Typography>
+                   <Typography mb={3} color={"primary"} variant="h4">{t(`${translationKey}.subtitle`)}</Typography>
+                   <Typography mb={3} variant="body1">{t(`${translationKey}.description`)}</Typography>
 
                    <Divider/>
 
                    <Button onClick={() => {
                       handleScrollToTop()
                       navigate('/services')
-                   }} sx={{mt: 3}} size={"large"} variant={"contained"} color={"primary"}>Learn more</Button>
+                   }} sx={{mt: 3}} size={"large"} variant={"contained"}
+                           color={"primary"}>{t('buttons.learnMore')}</Button>
                 </Grid>
                 <Grid item xs={3.5} alignSelf={"center"}>
                    <Card sx={{p: 6}}>
-                      <Typography mb={2} sx={{fontWeight: "bold"}} variant="h5">Our Other Services</Typography>
+                      <Typography mb={2} sx={{fontWeight: "bold"}}
+                                  variant="h5">{t(`${translationKey}.otherServices.title`)}</Typography>
 
-                      <Typography mb={1} variant="body1">Provision of Rolling Stock</Typography>
-                      <Typography mb={1} variant="body1">Multimodal Freight Transport</Typography>
-                      <Typography mb={1} variant="body1">Container Freight Transport</Typography>
-                      <Typography mb={1} variant="body1">Rail freight</Typography>
-                      <Typography variant="body1">And way more</Typography>
+                      {otherServicesList.map((el, ind) => (
+                          <Typography key={ind} mt={ind === 0 ? 0 : 1} variant="body1">{el}</Typography>
+                      ))}
                    </Card>
                 </Grid>
              </Grid>

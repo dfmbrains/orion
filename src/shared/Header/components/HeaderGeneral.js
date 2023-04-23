@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Box, Button, Icon, styled, Typography, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 import OrionContainer from "../../../components/OrionContainer";
-import {defaultAppLanguage} from "../../../helpers/constants";
 import i18next from "i18next";
+import {useTranslation} from "react-i18next";
 
 const StyledBox = styled(Box)(({color}) => ({
    backgroundColor: color === 'dark' ? '#252525' : 'transparent',
@@ -50,17 +50,13 @@ const StyledLink = styled(NavLink)(({theme}) => ({
 
 const HeaderGeneral = ({color}) => {
    const theme = useTheme()
-   const [language, setLanguage] = useState(localStorage.getItem('i18nextLng') || defaultAppLanguage)
-
-   const handleChangeLanguage = (lang) => {
-      setLanguage(lang)
-      i18next.changeLanguage(lang)
-   }
+   const {t} = useTranslation()
 
    const navigations = [
-      {title: "Home", link: '/'}, {title: "Company", link: '/about'},
-      {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
-      {title: "Blogs", link: '/blog'}, {title: "Contact", link: '/contact?form=0'}
+      {title: t("menu.home"), link: '/'}, {title: t("menu.company"), link: '/about'},
+      {title: t("menu.services"), link: '/services'},
+      {title: `${t("menu.clients")} & ${t("menu.partners")}`, link: '/clients-&-partners'},
+      {title: t("menu.blogs"), link: '/blog'}, {title: t("menu.contact"), link: '/contact?form=0'}
    ]
 
    return (
@@ -75,9 +71,9 @@ const HeaderGeneral = ({color}) => {
                        </StyledLink>
                    ))}
                 </FlexAllCenter>
-                <Button onClick={() => handleChangeLanguage(language === 'ru' ? 'en' : 'ru')} variant={"text"}
-                        color={"secondary"} startIcon={<Icon>language</Icon>}>
-                   <Typography variant="subtitle2">{language.toUpperCase()}</Typography>
+                <Button onClick={() => i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')}
+                        variant={"text"} color={"secondary"} startIcon={<Icon>language</Icon>}>
+                   <Typography variant="subtitle2">{t('currentLanguage').toUpperCase()}</Typography>
                 </Button>
              </FlexBetweenAlignCenter>
           </OrionContainer>

@@ -18,6 +18,7 @@ import Tj from '../../../assets/images/countries/tj.png'
 import Tur from '../../../assets/images/countries/tur.png'
 import Uz from '../../../assets/images/countries/uz.png'
 import CompanyHistoryDialog from "../components/CompanyHistoryDialog";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "120px 0 100px",
@@ -43,38 +44,32 @@ const StyledSwiperSlide = styled('div')(() => ({
 }));
 
 const AboutSection2 = () => {
+   const translationKey = 'about.section2'
+   const {t} = useTranslation()
+
    const theme = useTheme()
    const [isOpenDialog, setIsOpenDialog] = useState(false)
 
    const handleCloseDialog = () => setIsOpenDialog(false)
 
-   const data = [
-      {title: 'Kazakhstan', flag: Kz}, {title: 'Uzbekistan', flag: Uz}, {title: 'Turkmenistan', flag: Tur},
-      {title: 'China', flag: China}, {title: 'Russia', flag: Rus}, {title: 'Tajikistan', flag: Tj},
-      {title: 'Azerbaijan', flag: Azer}, {title: 'Eastern Europe countries.', flag: Europe},
-      {title: 'Afghanistan', flag: Afganistan}, {title: 'Iran', flag: Iran}, {title: 'Baltic Countries', flag: Baltic}
-   ]
+   const countries = t('countries', {returnObjects: true})
+   const countriesImg = [China, Kz, Uz, Rus, Tur, Tj, Europe, Afganistan, Iran, Baltic, Azer]
 
    return (
        <StyledSection>
           <OrionContainer>
              <Box sx={{position: "relative", zIndex: 2}}>
                 <Box sx={{width: "50%"}}>
-                   <Typography variant={"h2"} color={theme.palette.primary.main}>Orion-Trans</Typography>
-                   <Typography variant={"subtitle2"} mt={3} mb={4}>Orion-Trans is an international modern company of
-                      rail
-                      freight forwarding services, based in Kyrgyzstan, Bishkek. We met up to make logistics services in
-                      more than 20 nations over the globe and have been operating on the market since 2012, thereby have
-                      proved to our clients and partners our level of professionalism in the logistics
-                      field.</Typography>
+                   <Typography variant={"h2"} color={theme.palette.primary.main}>{t('orionTrans')}</Typography>
+                   <Typography variant={"subtitle2"} mt={3} mb={4}>{t(`${translationKey}.subtitle1`)}</Typography>
 
                    <Button onClick={() => setIsOpenDialog(true)} size={"large"} variant={"outlined"} color={"primary"}
-                           sx={{width: "50%"}}>Read Our Story</Button>
+                           sx={{width: "50%"}}>{t('buttons.readOurStory')}</Button>
                 </Box>
 
                 <Box sx={{position: "relative"}}>
-                   <Typography variant={"subtitle1"} mt={4} mb={6} fontWeight={"bold"}>Countries we're carrying out
-                      international freight forwarding services:</Typography>
+                   <Typography variant={"subtitle1"} mt={4} mb={6}
+                               fontWeight={"bold"}>{t(`${translationKey}.subtitle2`)}</Typography>
                    <Swiper className="swiperCustomNavigation"
                            navigation={true}
                            modules={[Navigation]}
@@ -84,11 +79,11 @@ const AboutSection2 = () => {
                       <StyledSwiperButtonsPosition>
                          <SwiperButtons/>
                       </StyledSwiperButtonsPosition>
-                      {data.map((el, idx) => (
+                      {countries.map((el, idx) => (
                           <SwiperSlide key={idx}>
                              <StyledSwiperSlide>
-                                <img src={el.flag} alt={el.title}/>
-                                <Typography variant={"subtitle1"}>{el.title}</Typography>
+                                <img src={countriesImg[idx]} alt={el}/>
+                                <Typography variant={"subtitle1"}>{el}</Typography>
                              </StyledSwiperSlide>
                           </SwiperSlide>
                       ))}

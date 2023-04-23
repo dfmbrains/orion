@@ -6,6 +6,7 @@ import {useRecoilState} from "recoil";
 import {blogRecoil} from "../../../recoil";
 import MatxLoading from "../../../components/MatxLoading";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "45px 0 90px",
@@ -21,13 +22,16 @@ const StyledGridItem = styled(Grid)(() => ({
 }));
 
 const HomeSection7 = () => {
+   const translationKey = 'home.section7'
+   const {t} = useTranslation()
+
    const [blogList] = useRecoilState(blogRecoil)
 
    return (
        <StyledSection>
           {blogList
               ? <OrionContainer>
-                 <Typography variant={"h2"} mb={5}>Latest blog posts</Typography>
+                 <Typography variant={"h2"} mb={5}>{t(`${translationKey}.title`)}</Typography>
 
                  <Grid container spacing={5}>
                     {blogList.slice(0, 3).map((el, ind) => (

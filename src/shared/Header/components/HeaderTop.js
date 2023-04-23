@@ -23,6 +23,9 @@ const StyledBody2 = styled(Typography)(({theme}) => ({
    color: "#FFFFFF",
    transition: "0.3s",
 
+   "& span": {
+      textTransform: "capitalize"
+   },
    "&:hover": {
       color: theme !== 'false' ? theme.palette.primary.main : "#FFFFFF",
       transition: "0.3s"
@@ -51,7 +54,7 @@ const HeaderTop = () => {
              <FlexBetweenAlignCenter>
                 <FlexGap10>
                    <Icon fontSize={"small"}>support_agent</Icon>
-                   <StyledBody2 variant='body2' theme={"false"}>{t('support')} 24 / 7</StyledBody2>
+                   <StyledBody2 variant='body2' theme={"false"}><span>{t('header.support')}</span> 24 / 7</StyledBody2>
                 </FlexGap10>
                 <FlexGap10>
                    <Icon fontSize={"small"}>phone</Icon>

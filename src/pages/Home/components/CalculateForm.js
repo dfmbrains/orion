@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Formik} from "formik";
-import {Grid, Icon, styled, TextField, Typography} from "@mui/material";
+import {Grid, Icon, styled, TextField} from "@mui/material";
 import {FlexBox} from "../../../components/FlexBox";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -10,6 +10,7 @@ import {
 } from "../../../helpers/constants";
 import {LoadingButton} from "@mui/lab";
 import {useSnackbar} from "notistack";
+import {useTranslation} from "react-i18next";
 
 const StyledIconBox = styled(FlexBox)(() => ({
    flexDirection: "column",
@@ -29,14 +30,16 @@ const initialValues = {
    email: ''
 }
 
-const CalculateForm = () => {
+const CalculateForm = ({translationKey}) => {
+   const {t} = useTranslation()
+
    const validationSchema = Yup.object().shape({
       name: Yup.string()
-          .required("Name is required!"),
+          .required(t('validation.requiredName')),
       phoneNumber: Yup.string()
-          .required("Phone number is required!"),
+          .required(t('validation.requiredPhoneNumber')),
       email: Yup.string()
-          .required("Email is required!")
+          .required(t('validation.requiredEmail'))
    });
 
    const {enqueueSnackbar} = useSnackbar();
@@ -56,20 +59,20 @@ const CalculateForm = () => {
           .then(
               () => {
                  setLoading(false);
-                 enqueueSnackbar("Письмо отправлено", {variant: 'success'})
+                 enqueueSnackbar(t('snackbarTexts.letter'), {variant: 'success'})
               },
               (error) => {
                  setLoading(false);
                  console.error(error);
 
-                 enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+                 enqueueSnackbar(t('snackbarTexts.error'), {variant: 'error'})
               }
           )
           .catch((error) => {
              setLoading(false);
              console.error(error);
 
-             enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+             enqueueSnackbar(t('snackbarTexts.error'), {variant: 'error'})
           })
    }
 
@@ -80,6 +83,7 @@ const CalculateForm = () => {
                initialValues={initialValues}
        >
           {({values, errors, touched, handleChange, handleSubmit}) => {
+             const placeholdersKey = `${translationKey}.calculation.formPlaceholders`
              return (
                  <form onSubmit={handleSubmit}>
                     <Grid container rowSpacing={3} justifyContent={"space-between"} alignItems={"center"}>
@@ -88,7 +92,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="departureStation"
-                              label="Departure Station"
+                              label={t(`${placeholdersKey}.placeholder1`)}
                               variant="outlined"
                               value={values.departureStation}
                               onChange={handleChange}
@@ -107,7 +111,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="destinationStation"
-                              label="Destination Station"
+                              label={t(`${placeholdersKey}.placeholder2`)}
                               variant="outlined"
                               value={values.destinationStation}
                               onChange={handleChange}
@@ -120,7 +124,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="etsngCode"
-                              label="Cargo Name/ ETSNG Code"
+                              label={t(`${placeholdersKey}.placeholder3`)}
                               variant="outlined"
                               value={values.etsngCode}
                               onChange={handleChange}
@@ -133,7 +137,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="gngCode"
-                              label="Cargo Name /GNG Code"
+                              label={t(`${placeholdersKey}.placeholder4`)}
                               variant="outlined"
                               value={values.gngCode}
                               onChange={handleChange}
@@ -146,7 +150,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="cargoWeight"
-                              label="Cargo Weight"
+                              label={t(`${placeholdersKey}.placeholder5`)}
                               variant="outlined"
                               value={values.cargoWeight}
                               onChange={handleChange}
@@ -159,7 +163,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="numberOfWagons"
-                              label="Number Of Wagons"
+                              label={t(`${placeholdersKey}.placeholder6`)}
                               variant="outlined"
                               value={values.numberOfWagons}
                               onChange={handleChange}
@@ -172,7 +176,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="name"
-                              label="Your name"
+                              label={t(`${placeholdersKey}.placeholder7`)}
                               variant="outlined"
                               value={values.name}
                               onChange={handleChange}
@@ -185,7 +189,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="typeOfWagon"
-                              label="Type Of Wagon"
+                              label={t(`${placeholdersKey}.placeholder8`)}
                               variant="outlined"
                               value={values.typeOfWagon}
                               onChange={handleChange}
@@ -198,7 +202,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="phoneNumber"
-                              label="Your Phone Number"
+                              label={t(`${placeholdersKey}.placeholder9`)}
                               variant="outlined"
                               value={values.phoneNumber}
                               onChange={handleChange}
@@ -211,7 +215,7 @@ const CalculateForm = () => {
                               fullWidth
                               type="text"
                               name="email"
-                              label="Your Email"
+                              label={t(`${placeholdersKey}.placeholder10`)}
                               variant="outlined"
                               value={values.email}
                               onChange={handleChange}
@@ -221,9 +225,7 @@ const CalculateForm = () => {
                        </Grid>
                     </Grid>
                     <LoadingButton sx={{mt: 4, mb: 3}} size={"large"} variant={"contained"} color={"primary"}
-                                   type={"submit"} fullWidth loading={loading}>Calculate</LoadingButton>
-                    <Typography variant={"body1"} sx={{textAlign: "center", color: "#828282"}}>You Will Get Your
-                       Transportation Cost Within 10 Minutes To Your Email</Typography>
+                                   type={"submit"} fullWidth loading={loading}>{t('buttons.calculate')}</LoadingButton>
                  </form>
              )
           }}

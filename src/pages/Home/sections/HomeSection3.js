@@ -4,6 +4,7 @@ import {Card, Divider, styled, Typography} from "@mui/material";
 import {FlexBox} from "../../../components/FlexBox";
 import CalculateForm from "../components/CalculateForm";
 import MapBg from '../../../assets/images/map.png';
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "0 0 120px",
@@ -65,17 +66,19 @@ const StyledCalculateItem = styled('div')(() => ({
 }));
 
 const HomeSection3 = () => {
-   const countries = ['CIS Countries', 'Russia', 'Afghanistan', ' Iran', 'Eastern European', 'Baltic Countries']
+   const translationKey = 'home.section3'
+   const {t} = useTranslation()
+
+   const countries = t('countries', {returnObjects: true}) || []
 
    return (
        <StyledSection id={"homeSection3"}>
           <OrionContainer>
              <StyledContentBox>
                 <StyledIntroBox>
-                   <Typography mb={3} variant={"h3"}>Freight Forwarding: Rail Rates</Typography>
-                   <Typography mb={3} variant={"subtitle2"}>Our Company establishes itself as leading choice at the
-                      market of rail rates payment and we have direct agreement with Railways</Typography>
-                   <Typography mb={2} variant={"subtitle2"}>Some of the countries that we deliver to</Typography>
+                   <Typography mb={3} variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
+                   <Typography mb={3} variant={"subtitle2"}>{t(`${translationKey}.subtitle`)}</Typography>
+                   <Typography mb={2} variant={"subtitle2"}>{t(`${translationKey}.description`)}</Typography>
 
                    <StyledCountryBox sx={{flexWrap: "wrap"}}>
                       {countries.map((el, idx) => (
@@ -88,13 +91,13 @@ const HomeSection3 = () => {
 
                 <StyledCalculateCard>
                    <StyledCalculateItem sx={{pt: 6, mb: 4}}>
-                      <Typography variant={"h5"}>Calculate Your Transportation</Typography>
+                      <Typography variant={"h5"}>{t(`${translationKey}.calculation.title`)}</Typography>
                    </StyledCalculateItem>
 
                    <Divider color={"#F18200"}/>
 
                    <StyledCalculateItem sx={{pb: 6, mt: 4}}>
-                      <CalculateForm/>
+                      <CalculateForm translationKey={translationKey}/>
                    </StyledCalculateItem>
                 </StyledCalculateCard>
 

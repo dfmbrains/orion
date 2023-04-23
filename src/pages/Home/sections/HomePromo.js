@@ -4,6 +4,7 @@ import {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import PromoSlide1 from '../../../assets/images/main.jpg';
 import {StyledPromoBackgroundBox, StylePromoColumn} from "../../../components/StyledComponents";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    position: "relative",
@@ -26,23 +27,10 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const HomePromo = () => {
-   const slides = [
-      {
-         title: 'Rail Freight-Forwarding Company: Quality Professional Solutions',
-         subtitle: 'No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying',
-         bgImage: PromoSlide1
-      },
-      {
-         title: 'Rail Freight-Forwarding Company: Quality Professional Solutions',
-         subtitle: 'No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying',
-         bgImage: PromoSlide1
-      },
-      {
-         title: 'Rail Freight-Forwarding Company: Quality Professional Solutions',
-         subtitle: 'No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying',
-         bgImage: PromoSlide1
-      }
-   ]
+   const {t} = useTranslation()
+
+   const slides = t('home.promo.slides', {returnObjects: true})
+   const slidesImgs = [PromoSlide1, PromoSlide1, PromoSlide1]
 
    return (
        <StyledSection>
@@ -59,7 +47,7 @@ const HomePromo = () => {
           >
              {slides.map((el, idx) => (
                  <SwiperSlide key={idx} className={"mySwiperSlide"}>
-                    <StyledPromoBackgroundBox bgimage={el.bgImage}>
+                    <StyledPromoBackgroundBox bgimage={slidesImgs[idx]}>
                        <StylePromoColumn>
                           <Typography my={3} variant="h1">{el.title}</Typography>
                           <Typography variant="h5">{el.subtitle}</Typography>

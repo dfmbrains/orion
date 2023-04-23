@@ -9,6 +9,7 @@ import {teamRecoil} from "../../../recoil";
 import MatxLoading from "../../../components/MatxLoading";
 import {formatName} from "../../../helpers/utils";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "100px 0",
@@ -44,6 +45,9 @@ const StyledPreviewMemberBox = styled('div')(() => ({
 }));
 
 const AboutSection9 = () => {
+   const translationKey = 'about.section9'
+   const {t} = useTranslation()
+
    const theme = useTheme()
 
    const [team] = useRecoilState(teamRecoil)
@@ -53,11 +57,12 @@ const AboutSection9 = () => {
           <OrionContainer>
              {team
                  ? <>
-                    <Typography variant={"h3"}><span style={{color: theme.palette.primary.main}}>Our team</span> is a
-                       crucial value of our company.</Typography>
-                    <Typography width={"50%"} mx={"auto"} variant={"subtitle2"} mt={1}>They are growth for a company,
-                       where each of a team member has its special strong personal qualities, and willingness to work
-                       and create.</Typography>
+                    <Typography variant={"h3"}>
+                       <Trans i18nKey={`${translationKey}.title`}
+                              components={{span: <span style={{color: theme.palette.primary.main}}>Our team </span>}}/>
+                    </Typography>
+                    <Typography width={"50%"} mx={"auto"} variant={"subtitle2"}
+                                mt={1}>{t(`${translationKey}.subtitle`)}</Typography>
 
                     <Box mx={"auto"} mt={8} sx={{position: "relative", width: "60%"}}>
                        <Swiper className="swiperCustomNavigation"

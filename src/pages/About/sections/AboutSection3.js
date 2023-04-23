@@ -5,6 +5,7 @@ import {FlexGap10} from "../../../components/FlexBox";
 import ClientsImg from '../../../assets/images/partners_and_clients.png';
 import {useNavigate} from "react-router-dom";
 import {anchorLinkHandler, handleScrollToTop} from "../../../helpers/utils";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
@@ -15,6 +16,9 @@ const StyledSection = styled('section')(() => ({
 }));
 
 const AboutSection3 = () => {
+   const translationKey = 'about.section3'
+   const {t} = useTranslation()
+
    const theme = useTheme()
    const navigate = useNavigate()
 
@@ -28,20 +32,20 @@ const AboutSection3 = () => {
           <OrionContainer>
              <Grid container spacing={8} alignItems={"center"}>
                 <Grid item xs={6}>
-                   <Typography mb={5} variant={"h3"}>What we<span
-                       style={{color: theme.palette.primary.main}}> offer</span></Typography>
-                   <Typography mb={4} variant={"subtitle2"}>We offer to our clients the most actionable solutions in
-                      freight-forwarding services. Our team of professional logistics specialists will develop a plan of
-                      the whole transportation arrangement for your business.</Typography>
-                   <Typography mb={5} variant={"subtitle2"}>We will calculate for you all of the necessary rail
-                      freight-forwarding tariffs across more than 20 countries, by import, export, transit and internal
-                      consignment and find for you a needed rolling stock to ship your cargo.</Typography>
+                   <Typography mb={5} variant={"h3"}>
+                      <Trans i18nKey={`${translationKey}.title`}
+                             components={{span: <span style={{color: theme.palette.primary.main}}>offer</span>}}/>
+                   </Typography>
+                   <Typography mb={4} variant={"subtitle2"}>{t(`${translationKey}.subtitle1`)}</Typography>
+                   <Typography mb={5} variant={"subtitle2"}>{t(`${translationKey}.subtitle2`)}</Typography>
+
                    <FlexGap10>
                       <Button onClick={() => {
                          handleScrollToTop()
                          navigate('/contact')
-                      }} variant={"contained"} color={"primary"} size={"large"}>Contact Us</Button>
-                      <Button onClick={navigateToCalculationForm} variant={"outlined"} color={"primary"} size={"large"}>Calculate A Rail Tariff</Button>
+                      }} variant={"contained"} color={"primary"} size={"large"}>{t('buttons.contactUs')}</Button>
+                      <Button onClick={navigateToCalculationForm} variant={"outlined"} color={"primary"}
+                              size={"large"}>{t('buttons.calculate')} {t('words.railTariff')}</Button>
                    </FlexGap10>
                 </Grid>
                 <Grid item xs={6}>
@@ -50,7 +54,8 @@ const AboutSection3 = () => {
              </Grid>
           </OrionContainer>
        </StyledSection>
-   );
+   )
+       ;
 };
 
 export default AboutSection3;

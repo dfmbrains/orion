@@ -5,6 +5,7 @@ import {FlexBetweenAlignCenter} from "../../components/FlexBox";
 import {Logo} from "../../components/Logo";
 import {useLocation, useNavigate} from "react-router-dom";
 import SocialMediaButtons from "../../components/SocialMediaButtons";
+import {useTranslation} from "react-i18next";
 
 const StyledFooter = styled('footer')(() => ({
    padding: "60px 0 15px",
@@ -27,26 +28,28 @@ const StyledBottomBox = styled('div')(() => ({
 }));
 
 const Footer = () => {
+   const {t} = useTranslation()
+
    const navigate = useNavigate()
    const location = useLocation()
 
    const footerMenu = [
       {
-         title: 'Our Divisions',
+         title: t('footer.menu.column1'),
          elements: [
-            {title: 'About US', link: '/', hash: 'header'},
-            {title: 'Company', link: '/about', hash: 'header'},
-            {title: 'Services', link: '/services', hash: 'header'},
-            {title: 'Clients & Partners', link: '/clients-&-partners', hash: 'header'},
-            {title: 'Blogs', link: '/blog', hash: 'header'},
-            {title: 'Contact Us', link: '/contact', hash: 'header'},
+            {title: t('menu.home'), link: '/', hash: 'header'},
+            {title: t('menu.company'), link: '/about', hash: 'header'},
+            {title: t('menu.services'), link: '/services', hash: 'header'},
+            {title: `${t('menu.clients')} & ${t('menu.partners')}`, link: '/clients-&-partners', hash: 'header'},
+            {title: t('menu.blogs'), link: '/blog', hash: 'header'},
+            {title: t('menu.contact'), link: '/contact', hash: 'header'},
          ]
       },
       {
-         title: 'Contact Us',
+         title: t('footer.menu.column2'),
          elements: [
-            {title: 'Get In Touch', link: '/contact?form=0', hash: 'getInTouch'},
-            {title: 'Leave a review', link: '/contact?form=1', hash: 'getInTouch'}
+            {title: t('menu.getInTouch'), link: '/contact?form=0', hash: 'getInTouch'},
+            {title: t('menu.leaveReview'), link: '/contact?form=1', hash: 'getInTouch'}
          ]
       }
    ]
@@ -97,8 +100,9 @@ const Footer = () => {
           <StyledBottomBox>
              <OrionContainer>
                 <FlexBetweenAlignCenter>
-                   <Typography variant={"body2"} color={"#FFFFFF"}>Copyright ©{new Date().getFullYear()} All rights
-                      reserved oriontrans.kg</Typography>
+                   <Typography variant={"body2"} color={"#FFFFFF"}>
+                      {t('footer.privacy.left')} ©{new Date().getFullYear()} {t('footer.privacy.right')} oriontrans.kg
+                   </Typography>
                    <SocialMediaButtons color={"secondary"}/>
                 </FlexBetweenAlignCenter>
              </OrionContainer>

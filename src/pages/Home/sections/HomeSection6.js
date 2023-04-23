@@ -11,6 +11,7 @@ import {anchorLinkHandler, formatName} from "../../../helpers/utils";
 import MatxLoading from "../../../components/MatxLoading";
 import {useRecoilState} from "recoil";
 import {teamRecoil} from "../../../recoil";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 120px",
@@ -58,6 +59,9 @@ const StyledFlexGap10 = styled(FlexGap10)(({theme}) => ({
 }));
 
 const HomeSection6 = () => {
+   const translationKey = 'home.section6'
+   const {t} = useTranslation()
+
    const theme = useTheme()
 
    const [team] = useRecoilState(teamRecoil)
@@ -77,8 +81,7 @@ const HomeSection6 = () => {
                  ? <>
                     <Grid container alignItems={"center"} spacing={5}>
                        <Grid item xs={5.95}>
-                          <Typography mb={5} variant={"h2"}>These people work to make each freight successful and each
-                             the client satisfied</Typography>
+                          <Typography mb={5} variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
 
                           <Divider/>
 
@@ -106,7 +109,7 @@ const HomeSection6 = () => {
                     </Grid>
 
                     <Box mt={8} sx={{position: "relative"}}>
-                       <Typography variant={"h2"} mb={5}>Meet the team</Typography>
+                       <Typography variant={"h2"} mb={5}>{t(`${translationKey}.subtitle`)}</Typography>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}
                                modules={[Navigation]}
