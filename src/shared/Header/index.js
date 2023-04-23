@@ -4,7 +4,7 @@ import HeaderGeneral from "./components/HeaderGeneral";
 
 const Header = ({color}) => {
    return (
-       <header>
+       <header id="header">
           <HeaderTop/>
           <HeaderGeneral color={color}/>
        </header>

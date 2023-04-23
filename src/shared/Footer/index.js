@@ -1,9 +1,9 @@
 import React from 'react';
 import OrionContainer from "../../components/OrionContainer";
 import {Grid, styled, Typography} from "@mui/material";
-import {FlexBetweenAlignCenter, FlexGap10} from "../../components/FlexBox";
+import {FlexBetweenAlignCenter} from "../../components/FlexBox";
 import {Logo} from "../../components/Logo";
-import {Link} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import SocialMediaButtons from "../../components/SocialMediaButtons";
 
 const StyledFooter = styled('footer')(() => ({
@@ -12,6 +12,7 @@ const StyledFooter = styled('footer')(() => ({
 
    "& .footerLink": {
       transition: "0.2s",
+      cursor: "pointer",
 
       "&:hover": {
          color: "#FFFFFF",
@@ -25,36 +26,48 @@ const StyledBottomBox = styled('div')(() => ({
    margin: "32px 0 0"
 }));
 
-const StyledMenuStatus = styled(Typography)(() => ({
-   backgroundColor: "#FFF017",
-   padding: "3px 10px",
-   borderRadius: "5px",
-   fontWeight: "500",
-   userSelect: "none"
-}));
-
 const Footer = () => {
+   const navigate = useNavigate()
+   const location = useLocation()
+
    const footerMenu = [
       {
          title: 'Our Divisions',
-         elements: ['About US', 'Company', 'Services', 'Clients & Partners', 'Blogs', {
-            title: 'Career',
-            status: 'We Are Hiring'
-         }]
-      },
-      {
-         title: 'Company Service',
-         elements: ['Our Services', 'Track & Trace', 'Air Freight', 'Rail Freight', 'Container Freight Transport', 'Provision Of Rolling Stock']
+         elements: [
+            {title: 'About US', link: '/', hash: 'header'},
+            {title: 'Company', link: '/about', hash: 'header'},
+            {title: 'Services', link: '/services', hash: 'header'},
+            {title: 'Clients & Partners', link: '/clients-&-partners', hash: 'header'},
+            {title: 'Blogs', link: '/blog', hash: 'header'},
+            {title: 'Contact Us', link: '/contact', hash: 'header'},
+         ]
       },
       {
          title: 'Contact Us',
-         elements: ['Find Us', 'Get In Touch']
-      },
-      {
-         title: 'Latest News',
-         elements: ['Expert Tips', 'A Sustainable Future', 'Fresh Start', 'Clean Spaces', 'Tips & Strategies']
+         elements: [
+            {title: 'Get In Touch', link: '/contact?form=0', hash: 'getInTouch'},
+            {title: 'Leave a review', link: '/contact?form=1', hash: 'getInTouch'}
+         ]
       }
    ]
+
+   const anchorLink = async (hash, page, behavior) => {
+      await navigate(page);
+
+      const target = document.getElementById(hash);
+      if (target) {
+         const {top: nodeTop, height: nodeHeight} = target.getBoundingClientRect();
+
+         const offsetTop = nodeTop > 0
+             ? nodeTop
+             : window.pageYOffset + nodeTop;
+
+         window.scrollTo({
+            top: offsetTop - (nodeHeight / 5),
+            behavior
+         });
+      }
+   };
 
    return (
        <StyledFooter>
@@ -64,24 +77,15 @@ const Footer = () => {
                    <Logo/>
                 </Grid>
                 <Grid item xs={9}>
-                   <Grid container spacing={2}>
+                   <Grid container justifyContent={"flex-end"} spacing={2}>
                       {footerMenu.map((el, idx) => (
                           <Grid item xs={3} key={idx}>
                              <Typography variant={"subtitle2"} color={"#FFFFFF"} mb={2}>{el.title}</Typography>
 
                              {el.elements.map((item, index) => (
-                                 item?.title
-                                     ? <FlexGap10 key={index} mb={1}>
-                                        <Link to={'/'}>
-                                           <Typography className="footerLink" variant={"body1"}
-                                                       color={"#919191"}>{item.title}</Typography>
-                                        </Link>
-                                        <StyledMenuStatus variant={"body2"}>{item.status}</StyledMenuStatus>
-                                     </FlexGap10>
-                                     : <Link to={'/'} key={index}>
-                                        <Typography className="footerLink" variant={"body1"} color={"#919191"}
-                                                    mb={1}>{item}</Typography>
-                                     </Link>
+                                 <Typography key={index} className="footerLink" variant={"body1"} color={"#919191"}
+                                             onClick={() => anchorLink(item.hash, item.link, location.pathname === el.link ? "smooth" : "auto")}
+                                             mb={1}>{item.title}</Typography>
                              ))}
                           </Grid>
                       ))}

@@ -50,7 +50,7 @@ const HeaderGeneral = ({color}) => {
    const navigations = [
       {title: "Home", link: '/'}, {title: "Company", link: '/about'},
       {title: "Services", link: '/services'}, {title: "Clients & Partners", link: '/clients-&-partners'},
-      {title: "Blogs", link: '/blog'}, {title: "Contact", link: '/contact'}
+      {title: "Blogs", link: '/blog'}, {title: "Contact", link: '/contact?form=0'}
    ]
    const theme = useTheme()
 

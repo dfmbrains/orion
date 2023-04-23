@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Grid, styled, Tab, Tabs, Typography} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {FlexBox, FlexGap10} from "../../../components/FlexBox";
@@ -9,6 +9,7 @@ import {companyRecoil} from "../../../recoil";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import MatxLoading from "../../../components/MatxLoading";
 import CreateReviewForm from "../../../components/CreateReviewForm";
+import {useSearchParams} from "react-router-dom";
 
 const StyledSection = styled('section')(() => ({
    padding: "50px 0 120px",
@@ -30,12 +31,12 @@ function a11yProps(index) {
 const ContactContentSection = () => {
    const [company] = useRecoilState(companyRecoil)
 
-   const [formVariant, setFormVariant] = useState(0);
+   const [formVariant, setFormVariant] = useSearchParams();
 
-   const handleChange = (event, newValue) => setFormVariant(newValue)
+   const handleChange = (event, newValue) => setFormVariant({form: newValue})
 
    return (
-       <StyledSection>
+       <StyledSection id="getInTouch">
           <OrionContainer>
              {company
                  ? <Grid container spacing={8}>
@@ -74,13 +75,13 @@ const ContactContentSection = () => {
                     </Grid>
                     <Grid item xs={6}>
                        <FlexBox sx={{justifyContent: "flex-end"}}>
-                          <Tabs sx={{mb: 3}} value={formVariant} onChange={handleChange}>
+                          <Tabs sx={{mb: 3}} value={+formVariant.get('form')} onChange={handleChange}>
                              <Tab label="Contact" {...a11yProps(0)} />
-                             <Tab label="Leave testimonial" {...a11yProps(1)} />
+                             <Tab label="Leave a review" {...a11yProps(1)} />
                           </Tabs>
                        </FlexBox>
 
-                       {formVariant === 0
+                       {+formVariant.get('form') === 0
                            ? <ContactForm/>
                            : <CreateReviewForm/>
                        }
