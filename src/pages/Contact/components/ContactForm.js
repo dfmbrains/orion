@@ -6,25 +6,27 @@ import {useSnackbar} from "notistack";
 import emailjs from "@emailjs/browser";
 import {EMAIL_JS_PUBLIC_KEY, EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID_FOR_EMAIL} from "../../../helpers/constants";
 import {LoadingButton} from "@mui/lab";
+import {useTranslation} from "react-i18next";
 
 const initialValues = {
    name: '',
    email: '',
-   website: '',
+   company: '',
    phoneNumber: '',
    message: ''
 }
 
-const ContactForm = () => {
+const ContactForm = ({translationKey}) => {
+   const {t} = useTranslation()
+
    const validationSchema = Yup.object().shape({
       name: Yup.string()
-          .required("Name is required!"),
-      phoneNumber: Yup.string()
-          .required("Phone number is required!"),
+          .required(t(`${translationKey}.errors.nameRequired`)),
       email: Yup.string()
-          .required("Email is required!"),
+          .required(t(`${translationKey}.errors.emailRequired`)),
       message: Yup.string()
-          .max(400, 'Maximum length exceeded')
+          .required(t(`${translationKey}.errors.messageRequired`))
+          .max(400, t(`${translationKey}.errors.messageMaxLength`))
    });
 
    const {enqueueSnackbar} = useSnackbar();
@@ -44,20 +46,20 @@ const ContactForm = () => {
           .then(
               () => {
                  setLoading(false);
-                 enqueueSnackbar("Письмо отправлено", {variant: 'success'})
+                 enqueueSnackbar(t('snackbarTexts.letter'), {variant: 'success'})
               },
               (error) => {
                  setLoading(false);
                  console.error(error);
 
-                 enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+                 enqueueSnackbar(t('snackbarTexts.error'), {variant: 'error'})
               }
           )
           .catch((error) => {
              setLoading(false);
              console.error(error);
 
-             enqueueSnackbar("Попробуйте позже", {variant: 'error'})
+             enqueueSnackbar(t('snackbarTexts.error'), {variant: 'error'})
           })
    }
 
@@ -76,7 +78,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="name"
-                              label="Name"
+                              label={t(`${translationKey}.placeholders.name`)}
                               variant="standard"
                               value={values.name}
                               onChange={handleChange}
@@ -89,7 +91,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="email"
-                              label="Email"
+                              label={t(`${translationKey}.placeholders.email`)}
                               variant="standard"
                               value={values.email}
                               onChange={handleChange}
@@ -101,13 +103,13 @@ const ContactForm = () => {
                           <TextField
                               fullWidth
                               type="text"
-                              name="website"
-                              label="Company Website"
+                              name="company"
+                              label={t(`${translationKey}.placeholders.company`)}
                               variant="standard"
-                              value={values.website}
+                              value={values.company}
                               onChange={handleChange}
-                              helperText={touched.website && errors.website}
-                              error={Boolean(errors.website && touched.website)}
+                              helperText={touched.company && errors.company}
+                              error={Boolean(errors.company && touched.company)}
                           />
                        </Grid>
                        <Grid item xs={6}>
@@ -115,7 +117,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="phoneNumber"
-                              label="Phone Number"
+                              label={t(`${translationKey}.placeholders.phoneNumber`)}
                               variant="standard"
                               value={values.phoneNumber}
                               onChange={handleChange}
@@ -130,7 +132,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="message"
-                              label="Message"
+                              label={t(`${translationKey}.placeholders.message`)}
                               variant="standard"
                               value={values.message}
                               onChange={handleChange}
@@ -141,7 +143,7 @@ const ContactForm = () => {
                     </Grid>
 
                     <LoadingButton sx={{mt: 7, mb: 1}} size={"large"} color={"primary"} variant={"contained"}
-                                   fullWidth loading={loading} type={"submit"}>Send</LoadingButton>
+                                   fullWidth loading={loading} type={"submit"}>{t('buttons.send')}</LoadingButton>
                  </form>
              )
           }}

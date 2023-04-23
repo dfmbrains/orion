@@ -10,6 +10,7 @@ import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import MatxLoading from "../../../components/MatxLoading";
 import CreateReviewForm from "../../../components/CreateReviewForm";
 import {useSearchParams} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "50px 0 120px",
@@ -29,6 +30,9 @@ function a11yProps(index) {
 }
 
 const ContactContentSection = () => {
+   const {t} = useTranslation()
+   const translationKey = 'contact.content'
+
    const [company] = useRecoilState(companyRecoil)
 
    const [formVariant, setFormVariant] = useSearchParams();
@@ -41,12 +45,11 @@ const ContactContentSection = () => {
              {company
                  ? <Grid container spacing={8}>
                     <Grid item xs={6}>
-                       <Typography variant="h2">Get in touch with us</Typography>
-                       <Typography mt={3} mb={6} variant="subtitle2">We are professional logistics specialists with a
-                          passion for quality and efficiency. We believe in integrity, trust, and continuous
-                          improvement. We promise to listen and provide You with reliable freight forwarding services
-                          over the globe.</Typography>
-                       <Typography variant="body1" color={"#9EADB4"}>Support Center 24 / 7</Typography>
+                       <Typography variant="h2">{t(`${translationKey}.title`)}</Typography>
+                       <Typography mt={3} mb={6} variant="subtitle2">{t(`${translationKey}.subtitle`)}</Typography>
+                       <Typography variant="body1" color={"#9EADB4"} textTransform={"capitalize"}>
+                          {t(`${translationKey}.supportCenter`)} 24 / 7
+                       </Typography>
 
                        <StyledFlexGap10 my={3}>
                           <a href={`tel:${company.about.phoneNumber1}`}>
@@ -59,31 +62,32 @@ const ContactContentSection = () => {
 
                        <StyledFlexGap10 my={3}>
                           <div>
-                             <Typography variant="body1" color={"#9EADB4"}>Our Location</Typography>
+                             <Typography variant="body1"
+                                         color={"#9EADB4"}>{t(`${translationKey}.ourLocation`)}</Typography>
                              <Typography variant="subtitle2">{company.about.address}</Typography>
                           </div>
                           <div>
-                             <Typography variant="body1" color={"#9EADB4"}>Write to us</Typography>
+                             <Typography variant="body1" color={"#9EADB4"}>{t(`${translationKey}.writeUs`)}</Typography>
                              <a href="mailto:office.oriontrans@gmail.com">
                                 <Typography variant="subtitle2" color="#1B1B1B">{company.about.email}</Typography>
                              </a>
                           </div>
                        </StyledFlexGap10>
 
-                       <Typography variant="body1" color={"#9EADB4"}>We are on social media</Typography>
+                       <Typography variant="body1" color={"#9EADB4"}>{t(`${translationKey}.inSocialMedia`)}</Typography>
                        <SocialMediaButtons color={"info"}/>
                     </Grid>
                     <Grid item xs={6}>
                        <FlexBox sx={{justifyContent: "flex-end"}}>
                           <Tabs sx={{mb: 3}} value={+formVariant.get('form')} onChange={handleChange}>
-                             <Tab label="Contact" {...a11yProps(0)} />
-                             <Tab label="Leave a review" {...a11yProps(1)} />
+                             <Tab label={t(`${translationKey}.forms.contact.title`)} {...a11yProps(0)} />
+                             <Tab label={t(`${translationKey}.forms.review.title`)} {...a11yProps(1)} />
                           </Tabs>
                        </FlexBox>
 
                        {+formVariant.get('form') === 0
-                           ? <ContactForm/>
-                           : <CreateReviewForm/>
+                           ? <ContactForm translationKey={`${translationKey}.forms`}/>
+                           : <CreateReviewForm translationKey={`${translationKey}.forms`}/>
                        }
                     </Grid>
                  </Grid>

@@ -6,8 +6,12 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import {Dialog} from "@mui/material";
 import {useEffect, useRef} from "react";
+import {useTranslation} from "react-i18next";
 
 export default function CompanyHistoryDialog({open, handleClose}) {
+   const translationKey = 'companyStory'
+   const {t} = useTranslation()
+
    const descriptionElementRef = useRef(null);
 
    useEffect(() => {
@@ -27,7 +31,7 @@ export default function CompanyHistoryDialog({open, handleClose}) {
            aria-labelledby="scroll-dialog-title"
            aria-describedby="scroll-dialog-description"
        >
-          <DialogTitle id="scroll-dialog-title">Our Story</DialogTitle>
+          <DialogTitle id="scroll-dialog-title">{t(`${translationKey}.title`)}</DialogTitle>
           <DialogContent dividers>
              <DialogContentText
                  id="scroll-dialog-description"
@@ -40,7 +44,7 @@ export default function CompanyHistoryDialog({open, handleClose}) {
              </DialogContentText>
           </DialogContent>
           <DialogActions>
-             <Button onClick={handleClose} color={"primary"} variant={"outlined"}>Cancel</Button>
+             <Button onClick={handleClose} color={"primary"} variant={"outlined"}>{t('buttons.cancel')}</Button>
           </DialogActions>
        </Dialog>
    );

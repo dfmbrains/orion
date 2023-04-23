@@ -12,7 +12,7 @@ const PromoSection = ({title, bgImage}) => {
        <StyledSection>
           <StyledPromoBackgroundBox bgimage={bgImage}>
              <StylePromoColumn>
-                <Typography variant="h1">{title}</Typography>
+                <Typography variant="h1" textTransform={"capitalize"}>{title}</Typography>
              </StylePromoColumn>
           </StyledPromoBackgroundBox>
        </StyledSection>

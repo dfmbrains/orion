@@ -9,12 +9,15 @@
     "calculate": "calculate",
     "ourServices": "our services",
     "readOthers": "read others",
+    "readMore": "read more",
     "send": "send",
     "readOurStory": "Read Our Story",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "cancel": "Cancel"
   },
   "snackbarTexts": {
     "letter": "The letter was sent",
+    "review": "The review was sent",
     "error": "Try again later"
   },
   "validation": {
@@ -284,5 +287,96 @@
       "title": "<span>Our team </span>is a crucial value of our company.",
       "subtitle": "They are growth for a company, where each of a team member has its special strong personal qualities, and willingness to work and create."
     }
+  },
+  "service": {
+    "promo": "services",
+    "section1": {
+      "title": "Service That Lead The Way To Better <span>Business</span>",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac quam tellus. Etiam commodo diam nec tempus sagittis. Aliquam erat volutpat. Suspendisse ultricies lacus et sem tincidunt condimentum. Mauris at sem vel ex luctus pharetra. Sed nec lobortis tellus. Duis eget cons"
+    },
+    "section2": {
+      "title": "For whom are our <span>services?</span>",
+      "list": [
+        {
+          "title": "Logistics Companies",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "business"
+        },
+        {
+          "title": "Construction Companies",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "construction"
+        },
+        {
+          "title": "Industrial And Manufacturing Enterprises",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "work_outline"
+        },
+        {
+          "title": "Individual Entrepreneurs",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "hail"
+        },
+        {
+          "title": "Importers And Exporters",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "local_shipping"
+        },
+        {
+          "title": "Car Shippers",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "directions_car"
+        }
+      ]
+    }
+  },
+  "clients": {
+    "promo": "Clients & Partners",
+    "section1": {
+      "clients": "clients",
+      "partners": "partners",
+      "testimonials": "testimonials",
+      "title": "We Work With The <br/> Best <span>{{item}}</span>",
+      "subtitle": "The use of railroads and trains to convey cargo on land is known as rail freight transport. Rail transport is popular, especially in continents with extensive journey durations, such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo, including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods, standardized shipping containers, or particularly constructed carriages for a specific sort of freight can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It costs more than sea freight, but less than air freight. Moving high-value industrial products like automobiles, electronics, and computer equipment, as well as promotional items, by train is ideal."
+    }
+  },
+  "blog": {
+    "promo": "Blogs & News"
+  },
+  "contact": {
+    "promo": "Contact us",
+    "content": {
+      "title": "Get in touch with us",
+      "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe.",
+      "supportCenter": "support center",
+      "ourLocation": "Our Location",
+      "writeUs": "Write to us",
+      "inSocialMedia": "We are on social media",
+      "forms": {
+        "placeholders": {
+          "name": "Name",
+          "email": "Email",
+          "phoneNumber": "Phone Number",
+          "message": "Message",
+          "company": "Your Company",
+          "review": "Review"
+        },
+        "contact": {
+          "title": "Contact"
+        },
+        "review": {
+          "title": "Leave a review"
+        },
+        "errors": {
+          "nameRequired": "Name is required!",
+          "emailRequired": "Email is required!",
+          "messageRequired": "Message is required!",
+          "messageMaxLength": "Maximum length exceeded"
+        }
+      }
+    }
+  },
+  "companyStory": {
+    "title": "Our Story"
   }
 }

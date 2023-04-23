@@ -3,6 +3,7 @@ import OrionContainer from "../../../components/OrionContainer";
 import {styled, Typography, useTheme} from "@mui/material";
 import {FlexBox} from "../../../components/FlexBox";
 import FeatureCard from "../../../components/FeatureCard";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "80px 0",
@@ -21,46 +22,20 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 }));
 
 const ServiceSection2 = () => {
+   const translationKey = 'service.section2'
+   const {t} = useTranslation()
+
    const theme = useTheme()
 
-   const cardsData = [
-      {
-         title: "Logistics Companies",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'business'
-      },
-      {
-         title: "Construction Companies",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'construction'
-      },
-      {
-         title: "Industrial And Manufacturing Enterprises",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'work_outline'
-      },
-      {
-         title: "Individual Entrepreneurs",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'hail'
-      },
-      {
-         title: "Importers And Exporters",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'local_shipping'
-      },
-      {
-         title: "Car Shippers",
-         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-         icon: 'directions_car'
-      }
-   ]
+   const cardsData = t(`${translationKey}.list`, {returnObjects: true}) || []
 
    return (
        <StyledSection>
           <OrionContainer>
-             <Typography variant={"h3"} mb={8} textAlign={"center"}>For whom are our <span
-                 style={{color: theme.palette.primary.main}}>services?</span></Typography>
+             <Typography variant={"h3"} mb={8} textAlign={"center"}>
+                <Trans i18nKey={`${translationKey}.title`}
+                       components={{span: <span style={{color: theme.palette.primary.main}}>services?</span>}}/>
+             </Typography>
 
              <StyledFlexBox>
                 {cardsData.map((el, idx) => (

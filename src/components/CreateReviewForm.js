@@ -7,6 +7,7 @@ import {LoadingButton} from "@mui/lab";
 import {v4 as uuidv4} from "uuid";
 import {createCollectionDocument} from "../firebase/firestoreFirebase";
 import {reviewsFirebasePath} from "../helpers/constants";
+import {useTranslation} from "react-i18next";
 
 const initialValues = {
    name: '',
@@ -14,13 +15,15 @@ const initialValues = {
    text: ''
 }
 
-const ContactForm = () => {
+const ContactForm = ({translationKey}) => {
+   const {t} = useTranslation()
+
    const validationSchema = Yup.object().shape({
       name: Yup.string()
-          .required("Обязательно напишите ваше имя"),
+          .required(t(`${translationKey}.errors.nameRequired`)),
       text: Yup.string()
-          .max(400, 'Maximum length exceeded')
-          .required("Обязательно напишите отзыв")
+          .required(t(`${translationKey}.errors.messageRequired`))
+          .max(400, t(`${translationKey}.errors.messageMaxLength`))
    });
 
    const {enqueueSnackbar} = useSnackbar();
@@ -37,9 +40,9 @@ const ContactForm = () => {
             created: new Date(),
             status: false
          })
-         enqueueSnackbar("Отзыв отправлен!", {variant: "success"});
+         enqueueSnackbar(t('snackbarTexts.review'), {variant: "success"});
       } catch (e) {
-         enqueueSnackbar("Произошла ошибка", {variant: "error"});
+         enqueueSnackbar(t('snackbarTexts.error'), {variant: "error"});
          console.log(e)
       }
       setLoading(false)
@@ -60,7 +63,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="name"
-                              label="Name"
+                              label={t(`${translationKey}.placeholders.name`)}
                               variant="standard"
                               value={values.name}
                               onChange={handleChange}
@@ -73,7 +76,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="company"
-                              label="Ваша компания"
+                              label={t(`${translationKey}.placeholders.company`)}
                               variant="standard"
                               value={values.company}
                               onChange={handleChange}
@@ -88,7 +91,7 @@ const ContactForm = () => {
                               fullWidth
                               type="text"
                               name="text"
-                              label="Отзыв"
+                              label={t(`${translationKey}.placeholders.review`)}
                               variant="standard"
                               value={values.text}
                               onChange={handleChange}
@@ -99,7 +102,7 @@ const ContactForm = () => {
                     </Grid>
 
                     <LoadingButton sx={{mt: 7, mb: 1}} size={"large"} color={"primary"} variant={"contained"}
-                                   fullWidth loading={loading} type={"submit"}>Send</LoadingButton>
+                                   fullWidth loading={loading} type={"submit"}>{t('buttons.send')}</LoadingButton>
                  </form>
              )
           }}

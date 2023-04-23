@@ -7,6 +7,7 @@ import {useRecoilState} from "recoil";
 import {serviceRecoil} from "../../../recoil";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import MatxLoading from "../../../components/MatxLoading";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "120px 0"
@@ -25,6 +26,9 @@ const StyledFlexBox = styled(FlexBox)(() => ({
 }));
 
 const ServiceSection1 = () => {
+   const translationKey = 'service.section1'
+   const {t} = useTranslation()
+
    const theme = useTheme()
 
    const [serviceList] = useRecoilState(serviceRecoil)
@@ -34,18 +38,17 @@ const ServiceSection1 = () => {
           <OrionContainer>
              <Grid container spacing={20} mb={15}>
                 <Grid item xs={6}>
-                   <Typography variant={"h2"}>Service That Lead The Way To Better <span
-                       style={{color: theme.palette.primary.main}}>Business</span></Typography>
+                   <Typography variant={"h2"}>
+                      <Trans i18nKey={`${translationKey}.title`}
+                             components={{span: <span style={{color: theme.palette.primary.main}}>Business</span>}}/>
+                   </Typography>
                 </Grid>
 
                 <Grid item xs={6}>
                    <Typography fontWeight={'bold'} color={theme.palette.primary.main} pb={1}
                                sx={{borderBottom: `5px solid ${theme.palette.primary.main}`, display: "inline"}}
-                               variant={"subtitle2"}>Orion-Trans.</Typography>
-                   <Typography variant={"subtitle2"} mt={3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Curabitur ac quam tellus. Etiam commodo diam nec tempus sagittis. Aliquam erat volutpat.
-                      Suspendisse ultricies lacus et sem tincidunt condimentum. Mauris at sem vel ex luctus pharetra.
-                      Sed nec lobortis tellus. Duis eget cons</Typography>
+                               variant={"subtitle2"}>{t('orionTrans')}.</Typography>
+                   <Typography variant={"subtitle2"} mt={3}>{t(`${translationKey}.subtitle`)}</Typography>
                 </Grid>
              </Grid>
 

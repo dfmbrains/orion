@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../helpers/utils";
 import {useRecoilState} from "recoil";
 import {blogDetailsRecoil} from "../recoil";
+import {useTranslation} from "react-i18next";
 
 const StyledBox = styled('div')(() => ({
    paddingLeft: "15px",
@@ -15,6 +16,7 @@ const StyledBox = styled('div')(() => ({
 const PostCard = ({post}) => {
    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
+   const {t} = useTranslation()
    const navigate = useNavigate()
 
    const date = new Date(post.created.toDate())
@@ -41,7 +43,7 @@ const PostCard = ({post}) => {
                    setBlog(post)
                    handleScrollToTop()
                    navigate(`/blog/${post.id}`)
-                }} color={"primary"} variant={"contained"}>Read More</Button>
+                }} color={"primary"} variant={"contained"}>{t('buttons.readMore')}</Button>
              </StyledBox>
           </FlexGap10>
        </div>

@@ -9,6 +9,7 @@ import {FlexAllCenter} from "../../../components/FlexBox";
 import {useRecoilState} from "recoil";
 import {partnersRecoil} from "../../../recoil";
 import MatxLoading from "../../../components/MatxLoading";
+import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(() => ({
    padding: "90px 0 160px",
@@ -24,6 +25,9 @@ const StyledImageBox = styled(FlexAllCenter)(() => ({
 }));
 
 const ClientsSection1 = () => {
+   const translationKey = 'clients.section1'
+   const {t} = useTranslation()
+
    const theme = useTheme()
 
    const [part, setPart] = useState('clients')
@@ -35,24 +39,22 @@ const ClientsSection1 = () => {
           <OrionContainer>
              <ButtonGroup>
                 <Button color={part === 'clients' ? "primary" : "info"} variant={"text"}
-                        onClick={() => setPart('clients')}>Clients.</Button>
+                        onClick={() => setPart('clients')}>{t(`${translationKey}.clients`)}.</Button>
                 <Button color={part === 'partners' ? "primary" : "info"} variant={"text"}
-                        onClick={() => setPart('partners')}>Partners.</Button>
-                <Button href={'#testimonialsSection'} color={"info"} variant={"text"}>Testimonials.</Button>
+                        onClick={() => setPart('partners')}>{t(`${translationKey}.partners`)}.</Button>
+                <Button href={'#testimonialsSection'} color={"info"}
+                        variant={"text"}>{t(`${translationKey}.testimonials`)}.</Button>
              </ButtonGroup>
 
-             <Typography mt={4} mb={5} variant={"h2"}>We Work With The <br/> Best <span
-                 style={{color: theme.palette.primary.main, textTransform: "capitalize"}}>{part}.</span></Typography>
+             <Typography mt={4} mb={5} variant={"h2"}>
+                <Trans i18nKey={`${translationKey}.title`} components={{
+                   span: <span style={{color: theme.palette.primary.main, textTransform: "capitalize"}}></span>,
+                   br: <br/>,
+                   item: part
+                }}/>
+             </Typography>
 
-             <Typography variant={"subtitle2"}>The use of railroads and trains to convey cargo on land is known as rail
-                freight transport. Rail transport is popular, especially in continents with extensive journey durations,
-                such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo,
-                including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods,
-                standardized shipping containers, or particularly constructed carriages for a specific sort of freight
-                can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It
-                costs more than sea freight, but less than air freight. Moving high-value industrial products like
-                automobiles, electronics, and computer equipment, as well as promotional items, by train is
-                ideal.</Typography>
+             <Typography variant={"subtitle2"}>{t(`${translationKey}.subtitle`)}</Typography>
 
              {partnersList
                  ? <Box mt={6} pt={10} sx={{position: "relative"}}>
