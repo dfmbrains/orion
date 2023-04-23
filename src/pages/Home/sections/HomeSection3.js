@@ -1,10 +1,12 @@
 import React from 'react';
 import OrionContainer from "../../../components/OrionContainer";
 import {Card, Divider, styled, Typography} from "@mui/material";
-import {FlexBox} from "../../../components/FlexBox";
 import CalculateForm from "../components/CalculateForm";
 import MapBg from '../../../assets/images/map.png';
 import {useTranslation} from "react-i18next";
+import {Navigation} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {SwiperButtonNext, SwiperButtonPrev} from "../../../components/SwiperButtons";
 
 const StyledSection = styled('section')(() => ({
    padding: "0 0 120px",
@@ -29,25 +31,35 @@ const StyledContentBox = styled('div')(() => ({
    }
 }));
 
-const StyledCountryBox = styled(FlexBox)(() => ({
-   alignItems: "center",
-   flexWrap: "wrap",
-   gap: "15px"
+const StyledSwiperBox = styled('div')(() => ({
+   position: "relative",
+
+   "& .swiperButtonPrev": {
+      position: "absolute",
+      top: "calc(100% + 10px)",
+      left: "0"
+   },
+   "& .swiperButtonNext": {
+      position: "absolute",
+      top: "calc(100% + 10px)",
+      transform: "translate(100%)",
+      left: "10px"
+   }
 }));
 
 const StyledCountryItem = styled('div')(() => ({
    background: "#e8f1fd",
    textAlign: "center",
-   width: "calc(100% / 3 - 15px * 2 / 3)",
    padding: "15px",
-   borderRadius: "15px"
+   borderRadius: "15px",
+   whiteSpace: "nowrap"
 }));
 
 const StyledIntroBox = styled('div')(() => ({
    position: "relative",
    padding: "150px 0",
    zIndex: 1,
-   width: "45%"
+   width: "45%",
 }));
 
 const StyledCalculateCard = styled(Card)(() => ({
@@ -80,13 +92,27 @@ const HomeSection3 = () => {
                    <Typography mb={3} variant={"subtitle2"}>{t(`${translationKey}.subtitle`)}</Typography>
                    <Typography mb={2} variant={"subtitle2"}>{t(`${translationKey}.description`)}</Typography>
 
-                   <StyledCountryBox sx={{flexWrap: "wrap"}}>
-                      {countries.map((el, idx) => (
-                          <StyledCountryItem key={idx}>
-                             <Typography variant={"subtitle2"}>{el}</Typography>
-                          </StyledCountryItem>
-                      ))}
-                   </StyledCountryBox>
+                   <StyledSwiperBox>
+                      <Swiper className="swiperCustomNavigation"
+                              navigation={true}
+                              modules={[Navigation]}
+                              slidesPerView={3}
+                              spaceBetween={15}
+                      >
+                         <>
+                            <SwiperButtonPrev/>
+                            <SwiperButtonNext/>
+                         </>
+
+                         {countries.map((el, idx) => (
+                             <SwiperSlide key={idx}>
+                                <StyledCountryItem key={idx}>
+                                   <Typography variant={"subtitle2"}>{el}</Typography>
+                                </StyledCountryItem>
+                             </SwiperSlide>
+                         ))}
+                      </Swiper>
+                   </StyledSwiperBox>
                 </StyledIntroBox>
 
                 <StyledCalculateCard>
