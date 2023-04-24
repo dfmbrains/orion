@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Button, Icon, styled, Typography, useTheme} from "@mui/material";
+import {Box, Button, Icon, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
@@ -7,16 +7,17 @@ import OrionContainer from "../../../components/OrionContainer";
 import i18next from "i18next";
 import {useTranslation} from "react-i18next";
 
-const StyledBox = styled(Box)(({color}) => ({
+const StyledBox = styled(Box)(({theme, color}) => ({
    backgroundColor: color === 'dark' ? '#252525' : 'transparent',
    padding: '13px 0 10px',
    borderBottom: "1px solid #FFFFFF",
    position: "absolute",
    width: "100%",
-   top: 32,
+   top: 27.15,
    left: 0,
    zIndex: 10,
    transition: "0.2s",
+   [theme.breakpoints.down("lg")]: {padding: '11px 0 9px'},
 
    "& .material-icons": {
       color: "#FFFFFF"
@@ -41,6 +42,7 @@ const StyledLink = styled(NavLink)(({theme}) => ({
    padding: "0 15px",
    color: "#FFFFFF",
    transition: "0.3s",
+   [theme.breakpoints.down("lg")]: {padding: "0 10px"},
 
    "&:hover": {
       color: theme.palette.primary.main,
@@ -51,6 +53,8 @@ const StyledLink = styled(NavLink)(({theme}) => ({
 const HeaderGeneral = ({color}) => {
    const theme = useTheme()
    const {t} = useTranslation()
+
+   const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
 
    const navigations = [
       {title: t("menu.home"), link: '/'}, {title: t("menu.company"), link: '/about'},
@@ -72,7 +76,7 @@ const HeaderGeneral = ({color}) => {
                    ))}
                 </FlexAllCenter>
                 <Button onClick={() => i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')}
-                        variant={"text"} color={"secondary"} startIcon={<Icon>language</Icon>}>
+                        variant={"text"} color={"secondary"} size={isLaptop ? "small" : 'medium'} startIcon={<Icon>language</Icon>}>
                    <Typography variant="subtitle2">{t('currentLanguage').toUpperCase()}</Typography>
                 </Button>
              </FlexBetweenAlignCenter>

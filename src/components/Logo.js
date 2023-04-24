@@ -6,7 +6,10 @@ import {Link} from "react-router-dom";
 const StyledLink = styled(Link)(() => ({
    display: "flex"
 }));
-const StyledImg = styled('img')(() => ({width: 196}));
+const StyledImg = styled('img')(({theme}) => ({
+   width: 196,
+   [theme.breakpoints.down("lg")]: {width: 160},
+}));
 
 export const Logo = () => {
    return (

@@ -1,14 +1,16 @@
 import React from 'react';
-import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import {createTheme, CssBaseline, ThemeProvider, useTheme} from "@mui/material";
 import {themeOptions} from "./options";
 
 const OrionTheme = ({children}) => {
-   const theme = createTheme({
-      ...themeOptions
+   const theme = useTheme()
+
+   const newTheme = createTheme({
+      ...themeOptions(theme)
    })
 
    return (
-       <ThemeProvider theme={theme}>
+       <ThemeProvider theme={newTheme}>
           <CssBaseline/>
           {children}
        </ThemeProvider>

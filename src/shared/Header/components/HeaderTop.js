@@ -14,9 +14,14 @@ const StyledBox = styled(Box)(({theme, active}) => ({
    left: "0",
    width: "100%",
    zIndex: theme.zIndex.appBar,
+   [theme.breakpoints.down("lg")]: {padding: '5px 0'},
 
    "& .material-icons": {
-      color: "#FFFFFF"
+      color: "#FFFFFF",
+      [theme.breakpoints.down("lg")]: {fontSize: 16},
+   },
+   "& .flexGap10": {
+      [theme.breakpoints.down("lg")]: {columnGap: "6px"},
    }
 }));
 const StyledBody2 = styled(Typography)(({theme}) => ({
@@ -52,12 +57,12 @@ const HeaderTop = () => {
        <StyledBox theme={theme} active={active.toString()}>
           <OrionContainer>
              <FlexBetweenAlignCenter>
-                <FlexGap10>
-                   <Icon fontSize={"small"}>support_agent</Icon>
+                <FlexGap10 className="flexGap10">
+                   <Icon className="icon" fontSize={"small"}>support_agent</Icon>
                    <StyledBody2 variant='body2' theme={"false"}><span>{t('header.support')}</span> 24 / 7</StyledBody2>
                 </FlexGap10>
-                <FlexGap10>
-                   <Icon fontSize={"small"}>phone</Icon>
+                <FlexGap10 className="flexGap10">
+                   <Icon className="icon" fontSize={"small"}>phone</Icon>
                    <a href={`tel:${company?.about.phoneNumber1 || ''}`}>
                       <StyledBody2 theme={theme} variant='body2'>{company?.about.phoneNumber1 || ''}</StyledBody2>
                    </a>
