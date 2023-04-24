@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {IconButton, Icon, styled, useTheme} from "@mui/material";
+import {IconButton, Icon, styled, useTheme, useMediaQuery} from "@mui/material";
 import {handleScrollToTop} from "../helpers/utils";
 
 const StyledIconButton = styled(IconButton)(({theme, status}) => ({
@@ -23,6 +23,8 @@ const ScrollTop = () => {
    const theme = useTheme()
    const [active, setActive] = useState()
 
+   const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
+
    useEffect(() => {
       if (typeof window !== "undefined") {
          window.addEventListener("scroll", () =>
@@ -32,8 +34,8 @@ const ScrollTop = () => {
    }, [])
 
    return (
-       <StyledIconButton status={active} onClick={handleScrollToTop} size={"large"} theme={theme}>
-          <Icon>arrow_upward</Icon>
+       <StyledIconButton status={active} onClick={handleScrollToTop} size={isLaptop ? "medium" : "large"} theme={theme}>
+          <Icon fontSize={isLaptop ? "small" : "medium"}>arrow_upward</Icon>
        </StyledIconButton>
    );
 };
