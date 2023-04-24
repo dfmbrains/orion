@@ -12,6 +12,7 @@ const StyledFooter = styled('footer')(({theme}) => ({
    backgroundColor: "#1B1B1B",
    [theme.breakpoints.down("lg")]: {padding: "40px 0 10px"},
    [theme.breakpoints.down("md")]: {padding: "30px 0 10px"},
+   [theme.breakpoints.down("sm")]: {padding: "30px 0 20px"},
 
    "& .footerLink": {
       transition: "0.2s",

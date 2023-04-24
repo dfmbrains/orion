@@ -10,6 +10,7 @@ const StyledIconButton = styled(IconButton)(({theme, status}) => ({
    backgroundColor: theme.palette.primary.main,
    transition: "0.2s",
    transform: `scale(${status > 0 ? '1' : '0'})`,
+   [theme.breakpoints.down("sm")]: {right: "15px"},
 
    "&:hover": {
       backgroundColor: theme.palette.primary.dark
@@ -35,7 +36,7 @@ const ScrollTop = () => {
 
    return (
        <StyledIconButton status={active} onClick={handleScrollToTop} size={isLaptop ? "medium" : "large"} theme={theme}>
-          <Icon fontSize={isLaptop ? "small" : "medium"}>arrow_upward</Icon>
+          <Icon>arrow_upward</Icon>
        </StyledIconButton>
    );
 };

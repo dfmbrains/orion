@@ -23,6 +23,7 @@ const StyledContentBox = styled('div')(({theme}) => ({
    width: "100%",
    [theme.breakpoints.down("lg")]: {padding: "0 30px"},
    [theme.breakpoints.down("md")]: {flexWrap: "wrap"},
+   [theme.breakpoints.down("sm")]: {padding: "0"},
 
    "& .mapBg": {
       position: "absolute",
@@ -72,6 +73,7 @@ const StyledIntroBox = styled('div')(({theme}) => ({
    width: "45%",
    [theme.breakpoints.down("lg")]: {width: "48%", padding: "60px 0"},
    [theme.breakpoints.down("md")]: {width: "100%", padding: "30px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "30px 20px"},
 }));
 
 const StyledCalculateCard = styled(Card)(({theme}) => ({

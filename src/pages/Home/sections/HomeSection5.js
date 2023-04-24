@@ -44,13 +44,13 @@ const HomeSection5 = () => {
       await navigate('/clients-&-partners')
       await anchorLinkHandler('testimonialsSection')
    }
-
+   console.log(reviews)
    return (
        <StyledSection>
           <OrionContainer>
              <Typography variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
 
-             {reviews
+             {reviews && reviews?.length > 0
                  ? <>
                     <Typography my={{lg: 2, xs: 1}} variant={"h5"}>{reviews[counter].text}</Typography>
                     <Typography variant={"subtitle2"}>{reviews[counter].name}</Typography>
