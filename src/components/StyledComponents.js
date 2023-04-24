@@ -30,7 +30,8 @@ const StylePromoColumn = styled(FlexAllCenter)(({theme}) => ({
    "& h1": {
       width: "80%",
       textAlign: "center",
-      [theme.breakpoints.down("lg")]: {width: "90%"}
+      [theme.breakpoints.down("lg")]: {width: "90%"},
+      [theme.breakpoints.down("md")]: {width: "95%"},
    }
 }));
 

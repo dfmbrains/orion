@@ -11,6 +11,7 @@ const StyledSection = styled('section')(({theme}) => ({
    height: "calc(100vh - 32px)",
    backgroundColor: "#252525",
    [theme.breakpoints.down("lg")]: {height: "calc(100vh - 27.15px)"},
+   [theme.breakpoints.down("md")]: {height: "calc(100vh - 26px)"},
 
    "& .MuiTypography-root": {
       textAlign: "center",
@@ -19,12 +20,14 @@ const StyledSection = styled('section')(({theme}) => ({
    "& h5": {
       width: "50%",
       [theme.breakpoints.down("lg")]: {width: "75%"},
+      [theme.breakpoints.down("md")]: {width: "85%"},
    },
    "& .mySwiper, & .mySwiperSlide": {height: "100%"},
    "& .swiper-button-prev, & .swiper-button-next": {
       "&:after": {
          color: '#FFF',
          [theme.breakpoints.down("lg")]: {fontSize: "36px"},
+         [theme.breakpoints.down("md")]: {fontSize: "28px"},
       }
    }
 }));

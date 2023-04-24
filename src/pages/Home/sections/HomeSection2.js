@@ -13,6 +13,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "120px 0 0",
    overflow: "hidden",
    [theme.breakpoints.down("lg")]: {padding: "100px 0 0"},
+   [theme.breakpoints.down("md")]: {padding: "80px 0 60px"},
 
    "& .freightTriangleBg": {
       position: "absolute",
@@ -29,13 +30,15 @@ const StyledSection = styled('section')(({theme}) => ({
       transform: 'translate(-50%)',
       width: "90%",
       height: "120%",
-      zIndex: -1
+      zIndex: -1,
+      [theme.breakpoints.down("md")]: {display: "none"},
    },
    "& .containerFreightImg": {
       "& img": {
-         width: "100%"
+         width: "100%",
       },
       [theme.breakpoints.down("lg")]: {display: "flex", alignItems: "flex-end"},
+      [theme.breakpoints.down("md")]: {display: "flex", justifyContent: "center"},
    }
 }));
 
@@ -54,12 +57,12 @@ const HomeSection2 = () => {
        <StyledSection>
           <OrionContainer>
              <Grid container spacing={{sm: 4, lg: 8}}>
-                <Grid item xs={3.5} className="containerFreightImg">
+                <Grid sx={{order: 0}} item md={3.5} sm={5} className="containerFreightImg">
                    <img src={ContainerFreight} alt={t(`${translationKey}.title`)}/>
                 </Grid>
-                <Grid item xs={5}>
-                   <Box sx={{pb: {sm: 5, lg: 0}}}>
-                      <Typography mb={{sm: 3, lg: 6}} variant="h2">{t(`${translationKey}.title`)}</Typography>
+                <Grid sx={{order: 2}} item md={5}>
+                   <Box sx={{pb: {xs: 1, md: 5, lg: 0}}}>
+                      <Typography mb={{sm: 2, md: 3, lg: 6}} variant="h2">{t(`${translationKey}.title`)}</Typography>
                       <Typography mb={{sm: 1, lg: 3}} color={"primary"}
                                   variant="h4">{t(`${translationKey}.subtitle`)}</Typography>
                       <Typography mb={{sm: 1, lg: 3}} variant="body1">{t(`${translationKey}.description`)}</Typography>
@@ -69,11 +72,12 @@ const HomeSection2 = () => {
                       <Button onClick={() => {
                          handleScrollToTop()
                          navigate('/services')
-                      }} sx={{mt: 3}} size={isLaptop ? "medium" : "large"} variant={"contained"}
+                      }} sx={{mt: {md: 3, sm: 2}}} size={isLaptop ? "medium" : "large"} variant={"contained"}
                               color={"primary"}>{t('buttons.learnMore')}</Button>
                    </Box>
                 </Grid>
-                <Grid item xs={3.5} sx={{alignSelf: {sm: "flex-start", lg: "center"}}}>
+                <Grid item sm={7} md={3.5}
+                      sx={{alignSelf: {sm: "center", md: "flex-start", lg: "center"}, order: {sm: 1, md: 3}}}>
                    <Card sx={{p: {sm: 2, lg: 6}}}>
                       <Typography mb={2} sx={{fontWeight: "bold"}}
                                   variant="h5">{t(`${translationKey}.otherServices.title`)}</Typography>
