@@ -79,12 +79,12 @@ const Footer = () => {
    return (
        <StyledFooter>
           <OrionContainer>
-             <Grid container spacing={12}>
-                <Grid item xs={3}>
+             <Grid container spacing={{sm: 12, xs: 4}}>
+                <Grid item sm={3} xs={12}>
                    <Logo/>
                 </Grid>
-                <Grid item xs={9}>
-                   <Grid container justifyContent={"flex-end"} spacing={2}>
+                <Grid item sm={9} xs={12}>
+                   <Grid container justifyContent={{sm: "flex-end", xs: "center"}} spacing={2}>
                       {footerMenu.map((el, idx) => (
                           <Grid item md={3} sm={4} key={idx}>
                              <Typography variant={"subtitle2"} color={"#FFFFFF"}
@@ -104,8 +104,12 @@ const Footer = () => {
 
           <StyledBottomBox>
              <OrionContainer>
-                <FlexBetweenAlignCenter>
-                   <Typography variant={"body2"} color={"#FFFFFF"}>
+                <FlexBetweenAlignCenter sx={{flexWrap: "wrap", justifyContent: {xs: "center", sm: "flex-between"}}}>
+                   <Typography sx={{
+                      width: {xs: "100%", sm: "unset"},
+                      mb: {xs: 1, sm: 0},
+                      textAlign: {xs: "center", sm: "unset"}
+                   }} variant={"body2"} color={"#FFFFFF"}>
                       {t('footer.privacy.left')} ©{new Date().getFullYear()} {t('footer.privacy.right')} oriontrans.kg
                    </Typography>
                    <SocialMediaButtons color={"secondary"}/>

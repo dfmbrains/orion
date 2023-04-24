@@ -15,6 +15,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "60px 0",
    backgroundColor: "#F7F7F7",
    [theme.breakpoints.down("lg")]: {padding: "45px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "30px 0"},
 }));
 
 const StyledBox = styled('div')(() => ({

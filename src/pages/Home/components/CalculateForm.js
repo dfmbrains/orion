@@ -91,7 +91,7 @@ const CalculateForm = ({translationKey}) => {
              const placeholdersKey = `${translationKey}.calculation.formPlaceholders`
              return (
                  <form onSubmit={handleSubmit}>
-                    <Grid container rowSpacing={3} justifyContent={"space-between"} alignItems={"center"}>
+                    <Grid container rowSpacing={{sm: 3, xs: 2}} justifyContent={"space-between"} alignItems={"center"}>
                        <Grid item xs={5.5}>
                           <TextField
                               size={isLaptop ? "small" : "medium"}
@@ -239,7 +239,7 @@ const CalculateForm = ({translationKey}) => {
                           />
                        </Grid>
                     </Grid>
-                    <LoadingButton sx={{mt: 4}} size={isLaptop ? "medium" : "large"} variant={"contained"}
+                    <LoadingButton sx={{mt: {sm: 4, xs: 3}}} size={isLaptop ? "medium" : "large"} variant={"contained"}
                                    color={"primary"} type={"submit"} fullWidth
                                    loading={loading}>{t('buttons.calculate')}</LoadingButton>
                  </form>

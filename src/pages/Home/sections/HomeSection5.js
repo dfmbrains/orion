@@ -18,6 +18,7 @@ const StyledSection = styled('section')(({theme}) => ({
    backgroundRepeat: "no-repeat",
    [theme.breakpoints.down("lg")]: {padding: "60px 0"},
    [theme.breakpoints.down("md")]: {padding: "50px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0 40px"},
 
    "& .MuiTypography-root": {
       color: "#FFFFFF"
@@ -51,12 +52,12 @@ const HomeSection5 = () => {
 
              {reviews
                  ? <>
-                    <Typography my={{lg: 2, sm: 1}} variant={"h5"}>{reviews[counter].text}</Typography>
+                    <Typography my={{lg: 2, xs: 1}} variant={"h5"}>{reviews[counter].text}</Typography>
                     <Typography variant={"subtitle2"}>{reviews[counter].name}</Typography>
                     <Typography variant={"h5"}>{reviews[counter].company}</Typography>
 
                     {reviews.length > 1 && (
-                        <Box mt={{lg: 3, xs: 2}}>
+                        <Box mt={{lg: 3, sm: 2, xs: 1}}>
                            <ButtonGroup>
                               {reviews.slice(0, 3).map((el, ind) => (
                                   <IconButton sx={{color: counter === el ? theme.palette.primary.main : '#D6D6D6'}}
@@ -69,7 +70,7 @@ const HomeSection5 = () => {
                         </Box>
                     )}
 
-                    <Button onClick={navigateToClientsTestimonials} sx={{mt: {lg: 5, md: 4, sm: 3}}}
+                    <Button onClick={navigateToClientsTestimonials} sx={{mt: {lg: 5, md: 4, sm: 3, xs: 2}}}
                             variant={"contained"}
                             color={"secondary"}>
                        {t('buttons.readOthers')}

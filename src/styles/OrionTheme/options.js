@@ -21,6 +21,7 @@ export const themeOptions = (theme) => {
             fontWeight: "bold",
             [theme.breakpoints.down("lg")]: {fontSize: 56},
             [theme.breakpoints.down("md")]: {fontSize: 42},
+            [theme.breakpoints.down("sm")]: {fontSize: 34},
          },
          h2: {
             fontSize: 45,
@@ -28,23 +29,27 @@ export const themeOptions = (theme) => {
             fontWeight: "bold",
             [theme.breakpoints.down("lg")]: {fontSize: 38},
             [theme.breakpoints.down("md")]: {fontSize: 34},
+            [theme.breakpoints.down("sm")]: {fontSize: 30},
          },
          h3: {
             fontSize: 35,
             fontWeight: "bold",
             [theme.breakpoints.down("lg")]: {fontSize: 30},
             [theme.breakpoints.down("md")]: {fontSize: 28},
+            [theme.breakpoints.down("sm")]: {fontSize: 26},
          },
          h4: {
             fontSize: 30,
             fontWeight: "bold",
             [theme.breakpoints.down("lg")]: {fontSize: 26},
             [theme.breakpoints.down("md")]: {fontSize: 24},
+            [theme.breakpoints.down("sm")]: {fontSize: 22},
          },
          h5: {
             fontSize: 24,
             [theme.breakpoints.down("lg")]: {fontSize: 22},
             [theme.breakpoints.down("md")]: {fontSize: 20},
+            [theme.breakpoints.down("sm")]: {fontSize: 18},
          },
          subtitle1: {
             fontSize: 20,
@@ -68,7 +73,7 @@ export const themeOptions = (theme) => {
             fontSize: 13,
             fontWeight: "300",
             [theme.breakpoints.down("lg")]: {fontSize: 12},
-            [theme.breakpoints.down("md")]: {fontSize: 11},
+            [theme.breakpoints.down("md")]: {fontSize: 11}
          }
       }
    }

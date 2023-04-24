@@ -18,6 +18,7 @@ const StyledSection = styled('section')(({theme}) => ({
    position: "relative",
    [theme.breakpoints.down("lg")]: {padding: "70px 0"},
    [theme.breakpoints.down("md")]: {padding: "60px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0"},
 }));
 
 const StyledImageBox = styled('div')(() => ({
@@ -35,6 +36,7 @@ const StyledPreviewMemberBox = styled('div')(({theme}) => ({
    minWidth: "100px",
    [theme.breakpoints.down("lg")]: {minWidth: "80px", width: "80px", height: "80px"},
    [theme.breakpoints.down("md")]: {minWidth: "70px", width: "70px", height: "70px"},
+   [theme.breakpoints.down("sm")]: {minWidth: "60px", width: "60px", height: "60px"},
 
    "& img": {
       position: "absolute",
@@ -83,9 +85,10 @@ const HomeSection6 = () => {
           <OrionContainer>
              {team && active
                  ? <>
-                    <Grid container alignItems={"center"} spacing={{lg: 5, md: 3}}>
+                    <Grid container alignItems={"center"} spacing={{lg: 5, md: 3, xs: 2}}>
                        <Grid item lg={5.95} md={6.95}>
-                          <Typography mb={{md: 5, xs: 3}} variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
+                          <Typography mb={{md: 5, sm: 3, xs: 2}}
+                                      variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
 
                           <Divider/>
 
@@ -112,7 +115,7 @@ const HomeSection6 = () => {
                        </Grid>
                     </Grid>
 
-                    <Box mt={{lg: 8, md: 6, sm: 4}} sx={{position: "relative"}}>
+                    <Box mt={{lg: 8, md: 6, sm: 4, xs: 3}} sx={{position: "relative"}}>
                        <Typography variant={"h2"} mb={{md: 5, xs: 3}}>{t(`${translationKey}.subtitle`)}</Typography>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}

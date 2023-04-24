@@ -12,6 +12,7 @@ const StyledSection = styled('section')(({theme}) => ({
    backgroundColor: "#252525",
    [theme.breakpoints.down("lg")]: {height: "calc(100vh - 27.15px)"},
    [theme.breakpoints.down("md")]: {height: "calc(100vh - 26px)"},
+   [theme.breakpoints.down("sm")]: {height: "calc(75vh)"},
 
    "& .MuiTypography-root": {
       textAlign: "center",
@@ -21,9 +22,12 @@ const StyledSection = styled('section')(({theme}) => ({
       width: "50%",
       [theme.breakpoints.down("lg")]: {width: "75%"},
       [theme.breakpoints.down("md")]: {width: "85%"},
+      [theme.breakpoints.down("sm")]: {width: "90%"},
    },
    "& .mySwiper, & .mySwiperSlide": {height: "100%"},
    "& .swiper-button-prev, & .swiper-button-next": {
+      [theme.breakpoints.down("sm")]: {display: "none"},
+
       "&:after": {
          color: '#FFF',
          [theme.breakpoints.down("lg")]: {fontSize: "36px"},

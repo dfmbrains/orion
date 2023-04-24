@@ -9,7 +9,7 @@ const FeatureCard = ({data}) => {
        <div className="featureCard">
           <Icon fontSize={isMobile ? "medium" : "large"}>{data.icon}</Icon>
 
-          <Typography mt={{lg: 2, xs: 1}} mb={{lg: 1, xs: 0.5}} sx={{fontWeight: "bold"}}
+          <Typography mt={{lg: 2, sm: 1, xs: 0.5}} mb={{lg: 1, xs: 0.5}} sx={{fontWeight: "bold"}}
                       variant={"subtitle1"}>{data.title}</Typography>
           {data?.subtitle && <Typography variant={"subtitle2"}>{data.subtitle}</Typography>}
        </div>

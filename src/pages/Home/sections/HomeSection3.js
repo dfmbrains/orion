@@ -30,16 +30,18 @@ const StyledContentBox = styled('div')(({theme}) => ({
       transform: "translate(-50%)",
       top: 0,
       width: "100%",
-      height: "38%",
-      zIndex: "0"
+      height: "100%",
+      zIndex: "0",
+      [theme.breakpoints.down("md")]: {height: "38%"},
+      [theme.breakpoints.down("sm")]: {height: "43%"},
    }
 }));
 
-const StyledSwiperBox = styled('div')(() => ({
+const StyledSwiperBox = styled('div')(({theme}) => ({
    position: "relative",
-
    "& .swiperButtonPrev, & .swiperButtonNext": {
-      minWidth: "auto", width: "28px", height: "28px"
+      minWidth: "auto", width: "28px", height: "28px",
+      [theme.breakpoints.down("sm")]: {display: "none"},
    },
    "& .swiperButtonPrev": {
       position: "absolute",
@@ -90,6 +92,7 @@ const StyledCalculateCard = styled(Card)(({theme}) => ({
       right: "unset",
       overflow: "unset"
    },
+   [theme.breakpoints.down("sm")]: {margin: "30px 0 0"},
 }));
 
 const StyledCalculateItem = styled('div')(({theme}) => ({
@@ -119,6 +122,16 @@ const HomeSection3 = () => {
                               modules={[Navigation]}
                               slidesPerView={3}
                               spaceBetween={15}
+                              breakpoints={{
+                                 600: {
+                                    spaceBetween: 15,
+                                    slidesPerView: 3
+                                 },
+                                 0: {
+                                    spaceBetween: 15,
+                                    slidesPerView: 2
+                                 }
+                              }}
                       >
                          <>
                             <SwiperButtonPrev/>
@@ -137,13 +150,13 @@ const HomeSection3 = () => {
                 </StyledIntroBox>
 
                 <StyledCalculateCard>
-                   <StyledCalculateItem sx={{pt: {lg: 6, sm: 3}, mb: {lg: 4, sm: 2}}}>
+                   <StyledCalculateItem sx={{pt: {lg: 6, sm: 3, xs: 2}, mb: {lg: 4, sm: 2, xs: 1}}}>
                       <Typography variant={"h5"}>{t(`${translationKey}.calculation.title`)}</Typography>
                    </StyledCalculateItem>
 
                    <Divider color={"#F18200"}/>
 
-                   <StyledCalculateItem sx={{pb: {lg: 6, sm: 3}, mt: {lg: 4, sm: 2}}}>
+                   <StyledCalculateItem sx={{pb: {lg: 6, xs: 3}, mt: {lg: 4, xs: 2}}}>
                       <CalculateForm translationKey={translationKey}/>
                    </StyledCalculateItem>
                 </StyledCalculateCard>

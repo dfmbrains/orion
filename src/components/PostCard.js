@@ -17,6 +17,7 @@ const StyledBox = styled('div')(({theme}) => ({
       paddingTop: "10px",
       borderTop: "1px solid #A6A6A6"
    },
+   [theme.breakpoints.down("sm")]: {paddingTop: "8px"},
 }));
 
 const PostCard = ({post}) => {
@@ -37,7 +38,7 @@ const PostCard = ({post}) => {
           <StyledResponsiveImageBox className="postCardImg">
              <img src={post.images[0].file} alt={post.images[0].name}/>
           </StyledResponsiveImageBox>
-          <FlexGap10 mt={{lg: 3, sm: 1}} sx={{alignItems: "flex-start", flexDirection: isTablet ? 'column' : "row"}}>
+          <FlexGap10 mt={{lg: 3, xs: 1}} sx={{alignItems: "flex-start", flexDirection: isTablet ? 'column' : "row"}}>
              {isTablet
                  ? <FlexGap10 sx={{alignItems: "flex-end"}}>
                     <Typography variant={"h2"} component={"h5"}>{date.getDate()}</Typography>

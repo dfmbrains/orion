@@ -14,6 +14,7 @@ const StyledSection = styled('section')(({theme}) => ({
    overflow: "hidden",
    [theme.breakpoints.down("lg")]: {padding: "100px 0 0"},
    [theme.breakpoints.down("md")]: {padding: "80px 0 60px"},
+   [theme.breakpoints.down("sm")]: {padding: "60px 0"},
 
    "& .freightTriangleBg": {
       position: "absolute",
@@ -56,29 +57,30 @@ const HomeSection2 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Grid container spacing={{sm: 4, lg: 8}}>
-                <Grid sx={{order: 0}} item md={3.5} sm={5} className="containerFreightImg">
+             <Grid container spacing={{xs: 4, lg: 8}}>
+                <Grid sx={{order: 0}} item md={3.5} sm={5} xs={5} className="containerFreightImg">
                    <img src={ContainerFreight} alt={t(`${translationKey}.title`)}/>
                 </Grid>
-                <Grid sx={{order: 2}} item md={5}>
+                <Grid sx={{order: 2}} item md={5} xs={12}>
                    <Box sx={{pb: {xs: 1, md: 5, lg: 0}}}>
-                      <Typography mb={{sm: 2, md: 3, lg: 6}} variant="h2">{t(`${translationKey}.title`)}</Typography>
-                      <Typography mb={{sm: 1, lg: 3}} color={"primary"}
+                      <Typography mb={{xs: 1, sm: 2, md: 3, lg: 6}}
+                                  variant="h2">{t(`${translationKey}.title`)}</Typography>
+                      <Typography mb={{xs: 1, lg: 3}} color={"primary"}
                                   variant="h4">{t(`${translationKey}.subtitle`)}</Typography>
-                      <Typography mb={{sm: 1, lg: 3}} variant="body1">{t(`${translationKey}.description`)}</Typography>
+                      <Typography mb={{xs: 1, lg: 3}} variant="body1">{t(`${translationKey}.description`)}</Typography>
 
                       <Divider/>
 
                       <Button onClick={() => {
                          handleScrollToTop()
                          navigate('/services')
-                      }} sx={{mt: {md: 3, sm: 2}}} size={isLaptop ? "medium" : "large"} variant={"contained"}
+                      }} sx={{mt: {md: 3, xs: 2}}} size={isLaptop ? "medium" : "large"} variant={"contained"}
                               color={"primary"}>{t('buttons.learnMore')}</Button>
                    </Box>
                 </Grid>
-                <Grid item sm={7} md={3.5}
+                <Grid item xs={7} md={3.5}
                       sx={{alignSelf: {sm: "center", md: "flex-start", lg: "center"}, order: {sm: 1, md: 3}}}>
-                   <Card sx={{p: {sm: 2, lg: 6}}}>
+                   <Card sx={{py: {sm: 2, lg: 6, xs: 2}, px: {sm: 2, lg: 6, xs: 1}}}>
                       <Typography mb={2} sx={{fontWeight: "bold"}}
                                   variant="h5">{t(`${translationKey}.otherServices.title`)}</Typography>
 
