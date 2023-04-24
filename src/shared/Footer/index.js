@@ -11,6 +11,7 @@ const StyledFooter = styled('footer')(({theme}) => ({
    padding: "60px 0 15px",
    backgroundColor: "#1B1B1B",
    [theme.breakpoints.down("lg")]: {padding: "40px 0 10px"},
+   [theme.breakpoints.down("md")]: {padding: "30px 0 10px"},
 
    "& .footerLink": {
       transition: "0.2s",
@@ -26,7 +27,8 @@ const StyledBottomBox = styled('div')(({theme}) => ({
    padding: "15px 20px 0 0",
    borderTop: "1px solid #2F2F2F",
    margin: "32px 0 0",
-   [theme.breakpoints.down("lg")]: {margin: "24px 0 0", padding: "10px 15px 0 0"},
+   [theme.breakpoints.down("lg")]: {margin: "24px 0 0", padding: "10px 20px 0 0"},
+   [theme.breakpoints.down("md")]: {margin: "16px 0 0", padding: "8px 20px 0 0"},
 }));
 
 const Footer = () => {
@@ -84,7 +86,7 @@ const Footer = () => {
                 <Grid item xs={9}>
                    <Grid container justifyContent={"flex-end"} spacing={2}>
                       {footerMenu.map((el, idx) => (
-                          <Grid item xs={3} key={idx}>
+                          <Grid item md={3} sm={4} key={idx}>
                              <Typography variant={"subtitle2"} color={"#FFFFFF"}
                                          mb={{lg: 2, xs: 1}}>{el.title}</Typography>
 
