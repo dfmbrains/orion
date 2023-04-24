@@ -7,9 +7,10 @@ import {useLocation, useNavigate} from "react-router-dom";
 import SocialMediaButtons from "../../components/SocialMediaButtons";
 import {useTranslation} from "react-i18next";
 
-const StyledFooter = styled('footer')(() => ({
+const StyledFooter = styled('footer')(({theme}) => ({
    padding: "60px 0 15px",
    backgroundColor: "#1B1B1B",
+   [theme.breakpoints.down("lg")]: {padding: "40px 0 10px"},
 
    "& .footerLink": {
       transition: "0.2s",
@@ -21,10 +22,11 @@ const StyledFooter = styled('footer')(() => ({
    }
 }));
 
-const StyledBottomBox = styled('div')(() => ({
+const StyledBottomBox = styled('div')(({theme}) => ({
    padding: "15px 20px 0 0",
    borderTop: "1px solid #2F2F2F",
-   margin: "32px 0 0"
+   margin: "32px 0 0",
+   [theme.breakpoints.down("lg")]: {margin: "24px 0 0", padding: "10px 15px 0 0"},
 }));
 
 const Footer = () => {
@@ -83,12 +85,13 @@ const Footer = () => {
                    <Grid container justifyContent={"flex-end"} spacing={2}>
                       {footerMenu.map((el, idx) => (
                           <Grid item xs={3} key={idx}>
-                             <Typography variant={"subtitle2"} color={"#FFFFFF"} mb={2}>{el.title}</Typography>
+                             <Typography variant={"subtitle2"} color={"#FFFFFF"}
+                                         mb={{lg: 2, xs: 1}}>{el.title}</Typography>
 
                              {el.elements.map((item, index) => (
                                  <Typography key={index} className="footerLink" variant={"body1"} color={"#919191"}
                                              onClick={() => anchorLink(item.hash, item.link, location.pathname === el.link ? "smooth" : "auto")}
-                                             mb={1}>{item.title}</Typography>
+                                             mb={{lg: 2, xs: 0.6}}>{item.title}</Typography>
                              ))}
                           </Grid>
                       ))}
