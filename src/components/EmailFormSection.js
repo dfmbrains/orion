@@ -17,7 +17,7 @@ const StyledSection = styled('section')(({theme}) => ({
    [theme.breakpoints.down("lg")]: {padding: "45px 0"},
 }));
 
-const StyledBox = styled('section')(() => ({
+const StyledBox = styled('div')(() => ({
    textAlign: "center"
 }));
 
@@ -68,7 +68,7 @@ const EmailFormSection = () => {
           <FlexAllCenter>
              <StyledBox>
                 <Typography mb={1} variant={"h4"} color={"#1B1B1B"}>{t('emailFormSection.title')}</Typography>
-                <Typography mb={{lg: 6, md: 4}} variant={"h5"}
+                <Typography mb={{lg: 6, md: 4, xs: 2}} variant={"h5"}
                             color={"#8A8A8A"}>{t('emailFormSection.subtitle')}</Typography>
 
                 <form onSubmit={handleSubmit}>

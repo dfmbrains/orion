@@ -12,6 +12,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "0 0 120px",
    background: "#EEF8FF",
    [theme.breakpoints.down("lg")]: {padding: "0 0 80px"},
+   [theme.breakpoints.down("md")]: {padding: "0 0 50px"},
 }));
 
 const StyledContentBox = styled('div')(({theme}) => ({
@@ -21,6 +22,7 @@ const StyledContentBox = styled('div')(({theme}) => ({
    padding: "0 50px",
    width: "100%",
    [theme.breakpoints.down("lg")]: {padding: "0 30px"},
+   [theme.breakpoints.down("md")]: {flexWrap: "wrap"},
 
    "& .mapBg": {
       position: "absolute",
@@ -28,7 +30,7 @@ const StyledContentBox = styled('div')(({theme}) => ({
       transform: "translate(-50%)",
       top: 0,
       width: "100%",
-      height: "100%",
+      height: "38%",
       zIndex: "0"
    }
 }));
@@ -67,6 +69,7 @@ const StyledIntroBox = styled('div')(({theme}) => ({
    zIndex: 1,
    width: "45%",
    [theme.breakpoints.down("lg")]: {width: "48%", padding: "60px 0"},
+   [theme.breakpoints.down("md")]: {width: "100%", padding: "30px 0"},
 }));
 
 const StyledCalculateCard = styled(Card)(({theme}) => ({
@@ -78,6 +81,15 @@ const StyledCalculateCard = styled(Card)(({theme}) => ({
    zIndex: 1,
    width: "40%",
    [theme.breakpoints.down("lg")]: {width: "45%", right: "30px"},
+   [theme.breakpoints.down("md")]: {
+      margin: "50px 0 0",
+      width: "100%",
+      position: "static",
+      transform: "unset",
+      top: "unset",
+      right: "unset",
+      overflow: "unset"
+   },
 }));
 
 const StyledCalculateItem = styled('div')(({theme}) => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, styled, Typography} from "@mui/material";
+import {Grid, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import PostCard from "../../../components/PostCard";
 import {useRecoilState} from "recoil";
@@ -12,6 +12,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "45px 0 90px",
    position: "relative",
    [theme.breakpoints.down("lg")]: {padding: "35px 0"},
+   [theme.breakpoints.down("md")]: {padding: "25px 0 0"},
 }));
 
 const StyledGridItem = styled(Grid)(({theme}) => ({
@@ -20,23 +21,27 @@ const StyledGridItem = styled(Grid)(({theme}) => ({
    "& .postCardImg": {
       height: "270px",
       [theme.breakpoints.down("lg")]: {height: "240px"},
+      [theme.breakpoints.down("md")]: {height: "220px"},
    }
 }));
 
 const HomeSection7 = () => {
    const translationKey = 'home.section7'
    const {t} = useTranslation()
+   const theme = useTheme()
 
    const [blogList] = useRecoilState(blogRecoil)
+
+   const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
 
    return (
        <StyledSection>
           {blogList
               ? <OrionContainer>
-                 <Typography variant={"h2"} mb={{lg: 5, md: 4}}>{t(`${translationKey}.title`)}</Typography>
+                 <Typography variant={"h2"} mb={{lg: 5, sm: 4, xs: 3}}>{t(`${translationKey}.title`)}</Typography>
 
-                 <Grid container spacing={5}>
-                    {blogList.slice(0, 3).map((el, ind) => (
+                 <Grid container spacing={{md: 5, xs: 2}}>
+                    {blogList.slice(0, isLaptop ? 2 : 3).map((el, ind) => (
                         <StyledGridItem key={ind} item lg={4} sm={6}>
                            <PostCard post={el}/>
                         </StyledGridItem>

@@ -9,6 +9,7 @@ import {useTranslation} from "react-i18next";
 const StyledSection = styled('section')(({theme}) => ({
    padding: "100px 0",
    [theme.breakpoints.down("lg")]: {padding: "80px 0"},
+   [theme.breakpoints.down("md")]: {padding: "60px 0"},
 
    "& .provisionImg": {
       width: "100%"

@@ -17,6 +17,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0 120px",
    position: "relative",
    [theme.breakpoints.down("lg")]: {padding: "70px 0"},
+   [theme.breakpoints.down("md")]: {padding: "60px 0"},
 }));
 
 const StyledImageBox = styled('div')(() => ({
@@ -33,6 +34,7 @@ const StyledPreviewMemberBox = styled('div')(({theme}) => ({
    position: "relative",
    minWidth: "100px",
    [theme.breakpoints.down("lg")]: {minWidth: "80px", width: "80px", height: "80px"},
+   [theme.breakpoints.down("md")]: {minWidth: "70px", width: "70px", height: "70px"},
 
    "& img": {
       position: "absolute",
@@ -83,11 +85,11 @@ const HomeSection6 = () => {
                  ? <>
                     <Grid container alignItems={"center"} spacing={{lg: 5, md: 3}}>
                        <Grid item lg={5.95} md={6.95}>
-                          <Typography mb={5} variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
+                          <Typography mb={{md: 5, xs: 3}} variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
 
                           <Divider/>
 
-                          <FlexGap10 my={3}>
+                          <FlexGap10 my={{md: 3, xs: 2}}>
                              <StyledPreviewMemberBox>
                                 <img src={active.images.file} alt={active.images.name}/>
                              </StyledPreviewMemberBox>
@@ -110,8 +112,8 @@ const HomeSection6 = () => {
                        </Grid>
                     </Grid>
 
-                    <Box mt={{lg: 8, md: 6}} sx={{position: "relative"}}>
-                       <Typography variant={"h2"} mb={5}>{t(`${translationKey}.subtitle`)}</Typography>
+                    <Box mt={{lg: 8, md: 6, sm: 4}} sx={{position: "relative"}}>
+                       <Typography variant={"h2"} mb={{md: 5, xs: 3}}>{t(`${translationKey}.subtitle`)}</Typography>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}
                                modules={[Navigation]}
@@ -122,9 +124,17 @@ const HomeSection6 = () => {
                                      spaceBetween: 20,
                                      slidesPerView: 4
                                   },
-                                  0: {
+                                  900: {
                                      spaceBetween: 15,
                                      slidesPerView: 3
+                                  },
+                                  550: {
+                                     spaceBetween: 15,
+                                     slidesPerView: 2
+                                  },
+                                  0: {
+                                     spaceBetween: 15,
+                                     slidesPerView: 1
                                   }
                                }}
                        >

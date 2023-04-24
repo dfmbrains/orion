@@ -35,10 +35,13 @@ const StylePromoColumn = styled(FlexAllCenter)(({theme}) => ({
    }
 }));
 
-const StyledSwiperButtonsPosition = styled('div')(() => ({
+const StyledSwiperButtonsPosition = styled('div')(({theme}) => ({
    position: "absolute",
    top: "5%",
-   right: "5%"
+   right: "5%",
+   "& .swiperButtonPrev, & .swiperButtonNext": {
+      [theme.breakpoints.down("md")]: {minWidth: "auto", width: "28px", height: "28px"}
+   },
 }));
 
 const StyledResponsiveImageBox = styled('div')(() => ({

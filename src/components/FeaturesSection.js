@@ -9,6 +9,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "100px 0",
    backgroundColor: "#F7F7F7",
    [theme.breakpoints.down("lg")]: {padding: "60px 0"},
+   [theme.breakpoints.down("md")]: {padding: "50px 0 60px"},
 }));
 
 const StyledFlexBox = styled(FlexBox)(({theme}) => ({
