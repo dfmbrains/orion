@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Formik} from "formik";
-import {Grid, Icon, styled, TextField} from "@mui/material";
+import {Grid, Icon, styled, TextField, useMediaQuery, useTheme} from "@mui/material";
 import {FlexBox} from "../../../components/FlexBox";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -12,9 +12,12 @@ import {LoadingButton} from "@mui/lab";
 import {useSnackbar} from "notistack";
 import {useTranslation} from "react-i18next";
 
-const StyledIconBox = styled(FlexBox)(() => ({
+const StyledIconBox = styled(FlexBox)(({theme}) => ({
    flexDirection: "column",
-   alignItems: "center"
+   alignItems: "center",
+   "& .icon": {
+      [theme.breakpoints.down("lg")]: {fontSize: "14px"}
+   }
 }));
 
 const initialValues = {
@@ -32,6 +35,10 @@ const initialValues = {
 
 const CalculateForm = ({translationKey}) => {
    const {t} = useTranslation()
+   const {enqueueSnackbar} = useSnackbar();
+   const theme = useTheme()
+
+   const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
 
    const validationSchema = Yup.object().shape({
       name: Yup.string()
@@ -41,8 +48,6 @@ const CalculateForm = ({translationKey}) => {
       email: Yup.string()
           .required(t('validation.requiredEmail'))
    });
-
-   const {enqueueSnackbar} = useSnackbar();
 
    const [loading, setLoading] = useState(false);
 
@@ -89,6 +94,7 @@ const CalculateForm = ({translationKey}) => {
                     <Grid container rowSpacing={3} justifyContent={"space-between"} alignItems={"center"}>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="departureStation"
@@ -102,12 +108,13 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={1}>
                           <StyledIconBox>
-                             <Icon fontSize={"small"}>west</Icon>
-                             <Icon fontSize={"small"}>east</Icon>
+                             <Icon className={"icon"} fontSize={"small"}>west</Icon>
+                             <Icon className={"icon"} fontSize={"small"}>east</Icon>
                           </StyledIconBox>
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="destinationStation"
@@ -121,6 +128,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="etsngCode"
@@ -134,6 +142,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="gngCode"
@@ -147,6 +156,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="cargoWeight"
@@ -160,6 +170,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="numberOfWagons"
@@ -173,6 +184,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="name"
@@ -186,6 +198,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="typeOfWagon"
@@ -199,6 +212,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="phoneNumber"
@@ -212,6 +226,7 @@ const CalculateForm = ({translationKey}) => {
                        </Grid>
                        <Grid item xs={5.5}>
                           <TextField
+                              size={isLaptop ? "small" : "medium"}
                               fullWidth
                               type="text"
                               name="email"
@@ -224,8 +239,9 @@ const CalculateForm = ({translationKey}) => {
                           />
                        </Grid>
                     </Grid>
-                    <LoadingButton sx={{mt: 4, mb: 3}} size={"large"} variant={"contained"} color={"primary"}
-                                   type={"submit"} fullWidth loading={loading}>{t('buttons.calculate')}</LoadingButton>
+                    <LoadingButton sx={{mt: 4}} size={isLaptop ? "medium" : "large"} variant={"contained"}
+                                   color={"primary"} type={"submit"} fullWidth
+                                   loading={loading}>{t('buttons.calculate')}</LoadingButton>
                  </form>
              )
           }}

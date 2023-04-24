@@ -5,17 +5,20 @@ import FeatureCard from "./FeatureCard";
 import {FlexBox} from "./FlexBox";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "100px 0",
-   backgroundColor: "#F7F7F7"
+   backgroundColor: "#F7F7F7",
+   [theme.breakpoints.down("lg")]: {padding: "60px 0"},
 }));
 
-const StyledFlexBox = styled(FlexBox)(() => ({
-   justifyContent: "space-between",
+const StyledFlexBox = styled(FlexBox)(({theme}) => ({
    alignItems: "flex-start",
+   flexWrap: "wrap",
+   gap: "40px 60px",
 
    "& .featureCard": {
-      width: "calc(100% / 4 - 60px * 3 / 4)"
+      width: "calc(100% / 4 - 60px * 3 / 4)",
+      [theme.breakpoints.down("lg")]: {width: "calc(100% / 2 - 60px / 2)"},
    }
 }));
 

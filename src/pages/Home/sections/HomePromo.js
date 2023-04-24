@@ -6,22 +6,25 @@ import PromoSlide1 from '../../../assets/images/main.jpg';
 import {StyledPromoBackgroundBox, StylePromoColumn} from "../../../components/StyledComponents";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    position: "relative",
    height: "calc(100vh - 32px)",
    backgroundColor: "#252525",
+   [theme.breakpoints.down("lg")]: {height: "calc(100vh - 27.15px)"},
 
    "& .MuiTypography-root": {
       textAlign: "center",
       color: "#FFFFFF"
    },
    "& h5": {
-      width: "50%"
+      width: "50%",
+      [theme.breakpoints.down("lg")]: {width: "75%"},
    },
    "& .mySwiper, & .mySwiperSlide": {height: "100%"},
    "& .swiper-button-prev, & .swiper-button-next": {
       "&:after": {
-         color: '#FFF'
+         color: '#FFF',
+         [theme.breakpoints.down("lg")]: {fontSize: "36px"},
       }
    }
 }));

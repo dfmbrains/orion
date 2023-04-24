@@ -21,7 +21,7 @@ const StyledPromoBackgroundBox = styled(FlexAllCenter)(({bgimage}) => ({
    }
 }));
 
-const StylePromoColumn = styled(FlexAllCenter)(() => ({
+const StylePromoColumn = styled(FlexAllCenter)(({theme}) => ({
    flexDirection: "column",
    position: "relative",
    zIndex: 10,
@@ -29,7 +29,8 @@ const StylePromoColumn = styled(FlexAllCenter)(() => ({
 
    "& h1": {
       width: "80%",
-      textAlign: "center"
+      textAlign: "center",
+      [theme.breakpoints.down("lg")]: {width: "90%"}
    }
 }));
 

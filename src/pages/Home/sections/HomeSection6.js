@@ -13,9 +13,10 @@ import {useRecoilState} from "recoil";
 import {teamRecoil} from "../../../recoil";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0 120px",
-   position: "relative"
+   position: "relative",
+   [theme.breakpoints.down("lg")]: {padding: "70px 0"},
 }));
 
 const StyledImageBox = styled('div')(() => ({
@@ -24,13 +25,14 @@ const StyledImageBox = styled('div')(() => ({
    }
 }));
 
-const StyledPreviewMemberBox = styled('div')(() => ({
+const StyledPreviewMemberBox = styled('div')(({theme}) => ({
    width: "100px",
    height: "100px",
    borderRadius: "50%",
    overflow: "hidden",
    position: "relative",
    minWidth: "100px",
+   [theme.breakpoints.down("lg")]: {minWidth: "80px", width: "80px", height: "80px"},
 
    "& img": {
       position: "absolute",
@@ -79,8 +81,8 @@ const HomeSection6 = () => {
           <OrionContainer>
              {team && active
                  ? <>
-                    <Grid container alignItems={"center"} spacing={5}>
-                       <Grid item xs={5.95}>
+                    <Grid container alignItems={"center"} spacing={{lg: 5, md: 3}}>
+                       <Grid item lg={5.95} md={6.95}>
                           <Typography mb={5} variant={"h2"}>{t(`${translationKey}.title`)}</Typography>
 
                           <Divider/>
@@ -101,24 +103,35 @@ const HomeSection6 = () => {
 
                        <Divider orientation={"vertical"} flexItem/>
 
-                       <Grid item xs={5.95}>
+                       <Grid item lg={5.95} md={5}>
                           <StyledImageBox>
                              <img src={OfficeImg} alt="office"/>
                           </StyledImageBox>
                        </Grid>
                     </Grid>
 
-                    <Box mt={8} sx={{position: "relative"}}>
+                    <Box mt={{lg: 8, md: 6}} sx={{position: "relative"}}>
                        <Typography variant={"h2"} mb={5}>{t(`${translationKey}.subtitle`)}</Typography>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}
                                modules={[Navigation]}
                                slidesPerView={4}
                                spaceBetween={20}
+                               breakpoints={{
+                                  1200: {
+                                     spaceBetween: 20,
+                                     slidesPerView: 4
+                                  },
+                                  0: {
+                                     spaceBetween: 15,
+                                     slidesPerView: 3
+                                  }
+                               }}
                        >
                           <StyledSwiperButtonsPosition>
                              <SwiperButtons/>
                           </StyledSwiperButtonsPosition>
+
                           {team.map((el, idx) => (
                               <SwiperSlide key={idx}>
                                  <StyledFlexGap10 theme={theme} onClick={() => {

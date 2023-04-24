@@ -8,17 +8,19 @@ import {Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperButtonNext, SwiperButtonPrev} from "../../../components/SwiperButtons";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "0 0 120px",
    background: "#EEF8FF",
+   [theme.breakpoints.down("lg")]: {padding: "0 0 80px"},
 }));
 
-const StyledContentBox = styled('div')(() => ({
+const StyledContentBox = styled('div')(({theme}) => ({
    position: "relative",
    display: "flex",
    alignItems: "center",
    padding: "0 50px",
    width: "100%",
+   [theme.breakpoints.down("lg")]: {padding: "0 30px"},
 
    "& .mapBg": {
       position: "absolute",
@@ -34,6 +36,9 @@ const StyledContentBox = styled('div')(() => ({
 const StyledSwiperBox = styled('div')(() => ({
    position: "relative",
 
+   "& .swiperButtonPrev, & .swiperButtonNext": {
+      minWidth: "auto", width: "28px", height: "28px"
+   },
    "& .swiperButtonPrev": {
       position: "absolute",
       top: "calc(100% + 10px)",
@@ -44,37 +49,41 @@ const StyledSwiperBox = styled('div')(() => ({
       top: "calc(100% + 10px)",
       transform: "translate(100%)",
       left: "10px"
-   }
+   },
 }));
 
-const StyledCountryItem = styled('div')(() => ({
+const StyledCountryItem = styled('div')(({theme}) => ({
    background: "#e8f1fd",
    textAlign: "center",
    padding: "15px",
    borderRadius: "15px",
-   whiteSpace: "nowrap"
+   whiteSpace: "nowrap",
+   [theme.breakpoints.down("lg")]: {padding: "8px 10px"},
 }));
 
-const StyledIntroBox = styled('div')(() => ({
+const StyledIntroBox = styled('div')(({theme}) => ({
    position: "relative",
    padding: "150px 0",
    zIndex: 1,
    width: "45%",
+   [theme.breakpoints.down("lg")]: {width: "48%", padding: "60px 0"},
 }));
 
-const StyledCalculateCard = styled(Card)(() => ({
+const StyledCalculateCard = styled(Card)(({theme}) => ({
    position: "absolute",
    right: '5%',
    top: '50%',
    transform: "translate(0, -50%)",
    borderRadius: "15px",
    zIndex: 1,
-   width: "40%"
+   width: "40%",
+   [theme.breakpoints.down("lg")]: {width: "45%", right: "30px"},
 }));
 
-const StyledCalculateItem = styled('div')(() => ({
+const StyledCalculateItem = styled('div')(({theme}) => ({
    paddingLeft: "32px",
-   paddingRight: "32px"
+   paddingRight: "32px",
+   [theme.breakpoints.down("lg")]: {paddingLeft: "16px", paddingRight: "16px",},
 }));
 
 const HomeSection3 = () => {
@@ -116,13 +125,13 @@ const HomeSection3 = () => {
                 </StyledIntroBox>
 
                 <StyledCalculateCard>
-                   <StyledCalculateItem sx={{pt: 6, mb: 4}}>
+                   <StyledCalculateItem sx={{pt: {lg: 6, sm: 3}, mb: {lg: 4, sm: 2}}}>
                       <Typography variant={"h5"}>{t(`${translationKey}.calculation.title`)}</Typography>
                    </StyledCalculateItem>
 
                    <Divider color={"#F18200"}/>
 
-                   <StyledCalculateItem sx={{pb: 6, mt: 4}}>
+                   <StyledCalculateItem sx={{pb: {lg: 6, sm: 3}, mt: {lg: 4, sm: 2}}}>
                       <CalculateForm translationKey={translationKey}/>
                    </StyledCalculateItem>
                 </StyledCalculateCard>

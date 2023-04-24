@@ -1,12 +1,16 @@
 import React from 'react';
-import {Icon, Typography} from "@mui/material";
+import {Icon, Typography, useMediaQuery, useTheme} from "@mui/material";
 
 const FeatureCard = ({data}) => {
+   const theme = useTheme()
+   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
    return (
        <div className="featureCard">
-          <Icon fontSize={"large"}>{data.icon}</Icon>
+          <Icon fontSize={isMobile ? "medium" : "large"}>{data.icon}</Icon>
 
-          <Typography mt={2} mb={1} sx={{fontWeight: "bold"}} variant={"subtitle1"}>{data.title}</Typography>
+          <Typography mt={{lg: 2, xs: 1}} mb={{lg: 1, xs: 0.5}} sx={{fontWeight: "bold"}}
+                      variant={"subtitle1"}>{data.title}</Typography>
           {data?.subtitle && <Typography variant={"subtitle2"}>{data.subtitle}</Typography>}
        </div>
    );

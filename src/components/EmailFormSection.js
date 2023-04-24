@@ -11,9 +11,10 @@ import {LoadingButton} from "@mui/lab";
 import {useSnackbar} from "notistack";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "60px 0",
-   backgroundColor: "#F7F7F7"
+   backgroundColor: "#F7F7F7",
+   [theme.breakpoints.down("lg")]: {padding: "45px 0"},
 }));
 
 const StyledBox = styled('section')(() => ({
@@ -67,7 +68,8 @@ const EmailFormSection = () => {
           <FlexAllCenter>
              <StyledBox>
                 <Typography mb={1} variant={"h4"} color={"#1B1B1B"}>{t('emailFormSection.title')}</Typography>
-                <Typography mb={6} variant={"h5"} color={"#8A8A8A"}>{t('emailFormSection.subtitle')}</Typography>
+                <Typography mb={{lg: 6, md: 4}} variant={"h5"}
+                            color={"#8A8A8A"}>{t('emailFormSection.subtitle')}</Typography>
 
                 <form onSubmit={handleSubmit}>
                    <FlexGap10 sx={{justifyContent: "center"}}>

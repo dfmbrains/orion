@@ -10,12 +10,13 @@ import {reviewsRecoil} from "../../../recoil";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import MatxLoading from "../../../components/MatxLoading";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "80px 0",
    background: `url(${ReviewsBg})`,
    backgroundPosition: "center",
    backgroundSize: "cover",
    backgroundRepeat: "no-repeat",
+   [theme.breakpoints.down("lg")]: {padding: "60px 0"},
 
    "& .MuiTypography-root": {
       color: "#FFFFFF"
@@ -44,16 +45,16 @@ const HomeSection5 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Typography mt={5} variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
+             <Typography variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
 
              {reviews
                  ? <>
-                    <Typography my={4} variant={"h5"}>{reviews[counter].text}</Typography>
-                    <Typography color={'secodanry'} variant={"subtitle2"}>{reviews[counter].name}</Typography>
-                    <Typography color={'secodanry'} variant={"h5"}>{reviews[counter].company}</Typography>
+                    <Typography my={{lg: 2, sm: 1}} variant={"h5"}>{reviews[counter].text}</Typography>
+                    <Typography variant={"subtitle2"}>{reviews[counter].name}</Typography>
+                    <Typography variant={"h5"}>{reviews[counter].company}</Typography>
 
                     {reviews.length > 1 && (
-                        <Box mt={3}>
+                        <Box mt={{lg: 3, md: 2}}>
                            <ButtonGroup>
                               {reviews.slice(0, 3).map((el, ind) => (
                                   <IconButton sx={{color: counter === el ? theme.palette.primary.main : '#D6D6D6'}}
@@ -66,7 +67,7 @@ const HomeSection5 = () => {
                         </Box>
                     )}
 
-                    <Button onClick={navigateToClientsTestimonials} sx={{mt: 4}} variant={"contained"}
+                    <Button onClick={navigateToClientsTestimonials} sx={{mt: {lg: 5, md: 4}}} variant={"contained"}
                             color={"secondary"}>
                        {t('buttons.readOthers')}
                     </Button>
