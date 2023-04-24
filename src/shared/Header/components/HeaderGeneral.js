@@ -1,6 +1,6 @@
 import React from 'react';
-import {Box, Button, Icon, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
-import {FlexBetweenAlignCenter, FlexAllCenter} from "../../../components/FlexBox";
+import {Box, Button, Icon, IconButton, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
+import {FlexBetweenAlignCenter, FlexAllCenter, FlexGap10} from "../../../components/FlexBox";
 import {Logo} from "../../../components/Logo";
 import {NavLink} from "react-router-dom";
 import OrionContainer from "../../../components/OrionContainer";
@@ -55,6 +55,8 @@ const HeaderGeneral = ({color}) => {
    const {t} = useTranslation()
 
    const isLaptop = useMediaQuery(theme.breakpoints.down("lg"));
+   const isLaptopOrDesktop = useMediaQuery(theme.breakpoints.up("md"));
+   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
 
    const navigations = [
       {title: t("menu.home"), link: '/'}, {title: t("menu.company"), link: '/about'},
@@ -68,17 +70,27 @@ const HeaderGeneral = ({color}) => {
           <OrionContainer>
              <FlexBetweenAlignCenter>
                 <Logo/>
-                <FlexAllCenter>
-                   {navigations.map((el, idx) => (
-                       <StyledLink theme={theme} to={el.link} key={idx}>
-                          <Typography variant="subtitle2">{el.title}</Typography>
-                       </StyledLink>
-                   ))}
-                </FlexAllCenter>
-                <Button onClick={() => i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')}
-                        variant={"text"} color={"secondary"} size={isLaptop ? "small" : 'medium'} startIcon={<Icon>language</Icon>}>
-                   <Typography variant="subtitle2">{t('currentLanguage').toUpperCase()}</Typography>
-                </Button>
+                {isLaptopOrDesktop && (
+                    <FlexAllCenter>
+                       {navigations.map((el, idx) => (
+                           <StyledLink theme={theme} to={el.link} key={idx}>
+                              <Typography variant="subtitle2">{el.title}</Typography>
+                           </StyledLink>
+                       ))}
+                    </FlexAllCenter>
+                )}
+                <FlexGap10>
+                   <Button onClick={() => i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')}
+                           variant={"text"} color={"secondary"} size={isLaptop ? "small" : 'medium'}
+                           startIcon={<Icon>language</Icon>}>
+                      <Typography variant="subtitle2">{t('currentLanguage').toUpperCase()}</Typography>
+                   </Button>
+                   {isTablet && (
+                       <IconButton color={"secondary"}>
+                          <Icon>menu</Icon>
+                       </IconButton>
+                   )}
+                </FlexGap10>
              </FlexBetweenAlignCenter>
           </OrionContainer>
        </StyledBox>

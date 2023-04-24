@@ -9,6 +9,7 @@ const StyledLink = styled(Link)(() => ({
 const StyledImg = styled('img')(({theme}) => ({
    width: 196,
    [theme.breakpoints.down("lg")]: {width: 160},
+   [theme.breakpoints.down("md")]: {width: 140},
 }));
 
 export const Logo = () => {
