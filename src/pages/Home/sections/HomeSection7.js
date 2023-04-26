@@ -12,8 +12,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "45px 0 90px",
    position: "relative",
    [theme.breakpoints.down("lg")]: {padding: "35px 0"},
-   [theme.breakpoints.down("md")]: {padding: "25px 0 0"},
-   [theme.breakpoints.down("sm")]: {padding: "0"},
+   [theme.breakpoints.down("md")]: {padding: "25px 0 0"}
 }));
 
 const StyledGridItem = styled(Grid)(({theme}) => ({
