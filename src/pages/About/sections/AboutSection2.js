@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Box, Button, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import MapBg from '../../../assets/images/mapTransparent.png';
+import MapBg from '../../../assets/images/mapTransparent.webp';
 import {Navigation} from "swiper";
 import {StyledSwiperButtonsPosition} from "../../../components/StyledComponents";
 import SwiperButtons from "../../../components/SwiperButtons";

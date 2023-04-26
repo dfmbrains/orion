@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import OurTeamImg from '../../../assets/images/our_team.png';
+import OurTeamImg from '../../../assets/images/our_team.webp';
 import {Trans, useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(({theme}) => ({

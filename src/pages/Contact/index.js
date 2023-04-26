@@ -1,6 +1,6 @@
 import React from 'react';
 import PromoSection from "../../components/PromoSection";
-import ContactBg from '../../assets/images/backgrounds/contact.png';
+import ContactBg from '../../assets/images/backgrounds/contact.webp';
 import FeaturesSection from "../../components/FeaturesSection";
 import ContactContentSection from "./sections/ContactContentSection";
 import {useTranslation} from "react-i18next";

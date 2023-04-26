@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Box, Divider, Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import OfficeImg from '../../../assets/images/officePhoto.png';
+import OfficeImg from '../../../assets/images/officePhoto.webp';
 import {FlexGap10} from "../../../components/FlexBox";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";

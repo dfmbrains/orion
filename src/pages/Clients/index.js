@@ -1,6 +1,6 @@
 import React from 'react';
 import PromoSection from "../../components/PromoSection";
-import ClientsBg from '../../assets/images/backgrounds/clients.png';
+import ClientsBg from '../../assets/images/backgrounds/clients.webp';
 import ClientsSection1 from "./sections/ClientsSection1";
 import TestimonialsSection from "../../components/TestimonialsSection";
 import {useTranslation} from "react-i18next";

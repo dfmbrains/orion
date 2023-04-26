@@ -2,7 +2,7 @@ import React from 'react';
 import OrionContainer from "../../../components/OrionContainer";
 import {Card, Divider, styled, Typography} from "@mui/material";
 import CalculateForm from "../components/CalculateForm";
-import MapBg from '../../../assets/images/map.png';
+import MapBg from '../../../assets/images/map.webp';
 import {useTranslation} from "react-i18next";
 import {Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";

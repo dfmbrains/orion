@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoWhite from '../assets/images/companies/logoWhite.png';
+import LogoWhite from '../assets/images/logoWhite.png';
 import {styled} from "@mui/material";
 import {Link} from "react-router-dom";
 

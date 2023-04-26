@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Box, Button, ButtonGroup, Icon, IconButton, styled, Typography, useTheme} from "@mui/material";
-import ReviewsBg from '../../../assets/images/backgrounds/reviews.png';
+import ReviewsBg from '../../../assets/images/backgrounds/reviews.webp';
 import OrionContainer from "../../../components/OrionContainer";
 import {useNavigate} from "react-router-dom";
 import {anchorLinkHandler} from "../../../helpers/utils";

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Divider, Grid, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import TeamImg from '../../../assets/images/team.png';
+import TeamImg from '../../../assets/images/team.webp';
 import {FlexBox} from "../../../components/FlexBox";
 import {Trans, useTranslation} from "react-i18next";
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {styled, Typography} from "@mui/material";
 import {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import PromoSlide1 from '../../../assets/images/main.jpg';
+import PromoSlide1 from '../../../assets/images/main.webp';
 import {StyledPromoBackgroundBox, StylePromoColumn} from "../../../components/StyledComponents";
 import {useTranslation} from "react-i18next";
 

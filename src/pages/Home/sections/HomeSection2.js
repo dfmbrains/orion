@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Button, Card, Divider, Grid, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
-import FreightTriangleBg from '../../../assets/images/freightTriangle.png';
-import ContainerFreight from '../../../assets/images/containerFreight.png';
-import EllipseBg from '../../../assets/images/ellipse.png';
+import FreightTriangleBg from '../../../assets/images/freightTriangle.webp';
+import ContainerFreight from '../../../assets/images/containerFreight.webp';
+import EllipseBg from '../../../assets/images/ellipse.webp';
 import OrionContainer from "../../../components/OrionContainer";
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../../../helpers/utils";

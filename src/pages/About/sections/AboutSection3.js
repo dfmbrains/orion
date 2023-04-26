@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Grid, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import {FlexGap10} from "../../../components/FlexBox";
-import ClientsImg from '../../../assets/images/partners_and_clients.png';
+import ClientsImg from '../../../assets/images/partners_and_clients.webp';
 import {useNavigate} from "react-router-dom";
 import {anchorLinkHandler, handleScrollToTop} from "../../../helpers/utils";
 import {Trans, useTranslation} from "react-i18next";

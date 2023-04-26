@@ -3,7 +3,7 @@ import {Button, Divider, Grid, styled, Typography, useMediaQuery, useTheme} from
 import OrionContainer from "../../../components/OrionContainer";
 import {useNavigate} from "react-router-dom";
 import {handleScrollToTop} from "../../../helpers/utils";
-import ProvisionImg from '../../../assets/images/provision.png';
+import ProvisionImg from '../../../assets/images/provision.webp';
 import {useTranslation} from "react-i18next";
 
 const StyledSection = styled('section')(({theme}) => ({
