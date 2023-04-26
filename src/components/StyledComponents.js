@@ -42,6 +42,14 @@ const StyledSwiperButtonsPosition = styled('div')(({theme}) => ({
    "& .swiperButtonPrev, & .swiperButtonNext": {
       [theme.breakpoints.down("md")]: {minWidth: "auto", width: "28px", height: "28px"}
    },
+   [theme.breakpoints.down("md")]: {
+      top: "auto",
+      right: "0",
+      bottom: "-40px"
+   },
+   [theme.breakpoints.down("sm")]: {
+      bottom: "-35px"
+   },
 }));
 
 const StyledResponsiveImageBox = styled('div')(() => ({

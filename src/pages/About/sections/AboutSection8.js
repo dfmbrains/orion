@@ -7,6 +7,8 @@ import {useTranslation} from "react-i18next";
 const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0",
    [theme.breakpoints.down("lg")]: {padding: "70px 0"},
+   [theme.breakpoints.down("md")]: {padding: "60px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0"},
 }));
 
 const AboutSection8 = () => {
@@ -20,15 +22,15 @@ const AboutSection8 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Grid container alignItems={"center"} spacing={{lg: 3, xs: 2}}>
-                <Grid item xs={4}>
-                   <Typography color={theme.palette.primary.main}
+             <Grid container alignItems={"center"} spacing={{md: 3, xs: 4}}>
+                <Grid item md={4} xs={12}>
+                   <Typography color={theme.palette.primary.main} textAlign={{md: "left", xs: "center"}}
                                variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
                 </Grid>
-                <Grid item xs={8}>
-                   <Grid container spacing={{lg: 3, xs: 2}}>
+                <Grid item md={8} xs={12}>
+                   <Grid container spacing={{lg: 3, md: 2, sm: 3, xs: 1}}>
                       {cards.map((el, idx) => (
-                          <Grid item md={4} sm={2} key={idx}>
+                          <Grid item sm={4} xs={6} key={idx}>
                              <FeatureCard data={el}/>
                           </Grid>
                       ))}

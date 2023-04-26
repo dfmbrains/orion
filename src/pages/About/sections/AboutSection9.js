@@ -14,6 +14,7 @@ import {Trans, useTranslation} from "react-i18next";
 const StyledSection = styled('section')(({theme}) => ({
    padding: "100px 0",
    [theme.breakpoints.down("lg")]: {padding: "80px 0"},
+   [theme.breakpoints.down("lg")]: {padding: "60px 0 70px"},
 
    "& .MuiTypography-root": {
       textAlign: "center"
@@ -24,6 +25,8 @@ const StyledSection = styled('section')(({theme}) => ({
       transform: "translate(-100%, -50%)",
       left: "-10%",
       [theme.breakpoints.down("lg")]: {left: "-10px"},
+      [theme.breakpoints.down("md")]: {left: "20px"},
+      [theme.breakpoints.down("sm")]: {left: "25px"},
    },
    "& .swiperButtonNext": {
       position: "absolute",
@@ -31,6 +34,8 @@ const StyledSection = styled('section')(({theme}) => ({
       transform: "translate(100%, -50%)",
       right: "-10%",
       [theme.breakpoints.down("lg")]: {right: "-10px"},
+      [theme.breakpoints.down("lg")]: {right: "20px"},
+      [theme.breakpoints.down("sm")]: {right: "25px"},
    }
 }));
 
@@ -67,13 +72,23 @@ const AboutSection9 = () => {
                     <Typography width={{lg: "50%", md: "80%", xs: "100%"}} mx={"auto"} variant={"subtitle2"}
                                 mt={1}>{t(`${translationKey}.subtitle`)}</Typography>
 
-                    <Box mx={"auto"} mt={{lg: 8, md: 6}}
+                    <Box mx={"auto"} mt={{lg: 8, md: 6, xs: 4}} px={{sm: 3, xs: 4, lg: 0}}
                          sx={{position: "relative", width: {lg: "60%", md: "80%", xs: "100%"}}}>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}
                                modules={[Navigation]}
                                slidesPerView={2}
                                spaceBetween={50}
+                               breakpoints={{
+                                  900: {
+                                     spaceBetween: 50,
+                                     slidesPerView: 2
+                                  },
+                                  0: {
+                                     spaceBetween: 30,
+                                     slidesPerView: 1
+                                  }
+                               }}
                        >
                           <>
                              <SwiperButtonPrev/>

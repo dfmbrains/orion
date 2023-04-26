@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Box, Button, styled, Typography, useTheme} from "@mui/material";
+import {Box, Button, styled, Typography, useMediaQuery, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
 import MapBg from '../../../assets/images/mapTransparent.png';
 import {Navigation} from "swiper";
@@ -25,22 +25,29 @@ const StyledSection = styled('section')(({theme}) => ({
    position: "relative",
    backgroundColor: "#F7F7F7",
    [theme.breakpoints.down("lg")]: {padding: "90px 0"},
+   [theme.breakpoints.down("md")]: {padding: "70px 0 90px"},
+   [theme.breakpoints.down("sm")]: {padding: "60px 0 70px"},
 
    "& .mapBg": {
       position: "absolute",
       top: "50%",
       right: "3%",
       transform: "translate(0, -50%)",
-      width: "55%"
+      width: "55%",
+      [theme.breakpoints.down("md")]: {width: "100%"},
    }
 }));
 
-const StyledSwiperSlide = styled('div')(() => ({
+const StyledSwiperSlide = styled('div')(({theme}) => ({
    "& img": {
       width: "40px",
       height: "40px",
       borderRadius: "50%",
-      margin: "0 0 15px"
+      margin: "0 0 15px",
+      [theme.breakpoints.down("sm")]: {margin: "0 auto 10px", display: "block"},
+   },
+   "& h6": {
+      [theme.breakpoints.down("sm")]: {textAlign: "center"},
    }
 }));
 
@@ -56,20 +63,24 @@ const AboutSection2 = () => {
    const countries = t('countries', {returnObjects: true})
    const countriesImg = [China, Kz, Uz, Rus, Tur, Tj, Europe, Afganistan, Iran, Baltic, Azer]
 
+   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
    return (
        <StyledSection>
           <OrionContainer>
              <Box sx={{position: "relative", zIndex: 2}}>
-                <Box sx={{width: "50%"}}>
+                <Box sx={{width: {md: "50%"}}}>
                    <Typography variant={"h2"} color={theme.palette.primary.main}>{t('orionTrans')}</Typography>
-                   <Typography variant={"subtitle2"} mt={3} mb={4}>{t(`${translationKey}.subtitle1`)}</Typography>
+                   <Typography variant={"subtitle2"} mt={{sm: 3, xs: 2}}
+                               mb={{sm: 4, xs: 3}}>{t(`${translationKey}.subtitle1`)}</Typography>
 
-                   <Button onClick={() => setIsOpenDialog(true)} size={"large"} variant={"outlined"} color={"primary"}
+                   <Button onClick={() => setIsOpenDialog(true)} size={isMobile ? "medium" : "large"}
+                           variant={"outlined"} color={"primary"}
                            sx={{width: "50%"}}>{t('buttons.readOurStory')}</Button>
                 </Box>
 
                 <Box sx={{position: "relative"}}>
-                   <Typography variant={"subtitle1"} mt={4} mb={6}
+                   <Typography variant={"subtitle1"} mt={4} mb={{sm: 6, xs: 4}}
                                fontWeight={"bold"}>{t(`${translationKey}.subtitle2`)}</Typography>
                    <Swiper className="swiperCustomNavigation"
                            navigation={true}
@@ -84,6 +95,14 @@ const AboutSection2 = () => {
                               900: {
                                  spaceBetween: 10,
                                  slidesPerView: 5
+                              },
+                              600: {
+                                 spaceBetween: 10,
+                                 slidesPerView: 4
+                              },
+                              0: {
+                                 spaceBetween: 5,
+                                 slidesPerView: 3
                               }
                            }}
                    >

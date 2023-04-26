@@ -8,6 +8,8 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0",
    backgroundColor: "#F7F7F7",
    [theme.breakpoints.down("lg")]: {padding: "80px 0"},
+   [theme.breakpoints.down("md")]: {padding: "60px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0"},
 
    "& .aboutSection4Img": {
       width: "80%",
@@ -25,7 +27,7 @@ const AboutSection4 = () => {
        <StyledSection>
           <OrionContainer>
              <Grid container spacing={{lg: 8, md: 6, xs: 4}} alignItems={"center"}>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                    <Typography mb={{lg: 2, xs: 1}} variant={"h3"}>
                       <Trans i18nKey={`${translationKey}.title1`}
                              components={{span: <span style={{color: theme.palette.primary.main}}>Mission</span>}}/>
@@ -38,7 +40,7 @@ const AboutSection4 = () => {
                    </Typography>
                    <Typography variant={"subtitle2"}>{t(`${translationKey}.subtitle2`)}</Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                    <img className="aboutSection4Img" src={OurTeamImg} alt="our team"/>
                 </Grid>
              </Grid>

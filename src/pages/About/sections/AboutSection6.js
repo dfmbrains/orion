@@ -7,6 +7,7 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "70px 0",
    backgroundColor: theme.palette.primary.main,
    [theme.breakpoints.down("lg")]: {padding: "50px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "40px 0"},
 
    "& .MuiTypography-root": {
       color: "#FFF",
@@ -29,11 +30,12 @@ const AboutSection6 = () => {
           <FlexAllCenter>
              <Box>
                 <Typography variant={"h2"} mb={2}>{t(`${translationKey}.title`)}</Typography>
-                <Typography variant={"subtitle1"}><Typography variant={"h4"}
-                                                              component={"span"}>200+ </Typography>{t(`${translationKey}.subtitle1`)}
+                <Typography width={{sm: "100%", xs: "80%"}} mx={{sm: "0", xs: "auto"}} variant={"subtitle1"}>
+                   <Typography variant={"h4"} component={"span"}>200+ </Typography>{t(`${translationKey}.subtitle1`)}
                 </Typography>
-                <Typography variant={"subtitle1"}><Typography variant={"h4"}
-                                                              component={"span"}>10 </Typography>{t(`${translationKey}.subtitle2`)}
+                <Typography width={{sm: "100%", xs: "80%"}} mx={{sm: "0", xs: "auto"}} mt={{md: 0, xs: 1}}
+                            variant={"subtitle1"}>
+                   <Typography variant={"h4"} component={"span"}>10 </Typography>{t(`${translationKey}.subtitle2`)}
                 </Typography>
              </Box>
           </FlexAllCenter>

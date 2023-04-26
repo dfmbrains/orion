@@ -10,9 +10,11 @@ import {reviewsRecoil} from "../recoil";
 import MatxLoading from "./MatxLoading";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "70px 0 90px",
-   backgroundColor: "#F7F7F7"
+   backgroundColor: "#F7F7F7",
+   [theme.breakpoints.down("md")]: {padding: "60px 0 80px"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0 70px"},
 }));
 
 const TestimonialsSection = () => {
@@ -32,6 +34,16 @@ const TestimonialsSection = () => {
                               modules={[Navigation]}
                               slidesPerView={2}
                               spaceBetween={50}
+                              breakpoints={{
+                                 900: {
+                                    spaceBetween: 50,
+                                    slidesPerView: 2
+                                 },
+                                 0: {
+                                    spaceBetween: 30,
+                                    slidesPerView: 1
+                                 }
+                              }}
                     >
                        <StyledSwiperButtonsPosition>
                           <SwiperButtons/>

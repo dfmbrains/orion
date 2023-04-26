@@ -8,6 +8,8 @@ const StyledSection = styled('section')(({theme}) => ({
    padding: "80px 0",
    backgroundColor: "#F7F7F7",
    [theme.breakpoints.down("lg")]: {padding: "70px 0"},
+   [theme.breakpoints.down("md")]: {padding: "60px 0"},
+   [theme.breakpoints.down("sm")]: {padding: "50px 0"},
 
    "& .featureCard": {
       width: "100%"
@@ -23,11 +25,12 @@ const AboutSection7 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Typography mb={10} variant={"h2"} textAlign={"center"}>{t(`${translationKey}.title`)}</Typography>
+             <Typography mb={{lg: 10, md: 8, sm: 6, xs: 4}} variant={"h2"}
+                         textAlign={"center"}>{t(`${translationKey}.title`)}</Typography>
 
-             <Grid container spacing={{lg: 8, md: 5}}>
+             <Grid container spacing={{lg: 8, md: 5, sm: 4, xs: 3}}>
                 {cards.map((el, idx) => (
-                    <Grid item md={4} sm={2} key={idx}>
+                    <Grid item md={4} sm={6} key={idx}>
                        <FeatureCard data={el}/>
                     </Grid>
                 ))}
