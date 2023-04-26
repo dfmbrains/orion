@@ -20,10 +20,11 @@ import Uz from '../../../assets/images/countries/uz.png'
 import CompanyHistoryDialog from "../components/CompanyHistoryDialog";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "120px 0 100px",
    position: "relative",
    backgroundColor: "#F7F7F7",
+   [theme.breakpoints.down("lg")]: {padding: "90px 0"},
 
    "& .mapBg": {
       position: "absolute",
@@ -75,6 +76,16 @@ const AboutSection2 = () => {
                            modules={[Navigation]}
                            slidesPerView={6}
                            spaceBetween={10}
+                           breakpoints={{
+                              1200: {
+                                 spaceBetween: 10,
+                                 slidesPerView: 6
+                              },
+                              900: {
+                                 spaceBetween: 10,
+                                 slidesPerView: 5
+                              }
+                           }}
                    >
                       <StyledSwiperButtonsPosition>
                          <SwiperButtons/>

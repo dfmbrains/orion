@@ -5,19 +5,21 @@ import TeamImg from '../../../assets/images/team.png';
 import {FlexBox} from "../../../components/FlexBox";
 import {Trans, useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "50px 0",
 
    "& .aboutSection5Img": {
       width: "80%",
-      marginTop: "28px"
+      marginTop: "28px",
+      [theme.breakpoints.down("lg")]: {width: "95%", marginTop: "20px"},
    },
    "& .aboutSection5Objectives": {
       backgroundColor: "#F7F7F7",
       padding: "15px 30px",
       "&:not(:last-child)": {
          marginBottom: "10px"
-      }
+      },
+      [theme.breakpoints.down("lg")]: {padding: "10px 15px"},
    }
 }));
 
@@ -32,15 +34,15 @@ const AboutSection5 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Grid container spacing={5}>
+             <Grid container spacing={{lg: 5, xs: 3}}>
                 <Grid item xs={6}>
                    <FlexBox sx={{height: "100%"}}>
                       <div>
-                         <Typography mb={3} variant={"h3"}>
+                         <Typography mb={{lg: 3, xs: 2}} variant={"h3"}>
                             <Trans i18nKey={`${translationKey}.title1`}
                                    components={{span: <span style={{color: theme.palette.primary.main}}>Goal</span>}}/>
                          </Typography>
-                         <Typography pb={3} width={"80%"}
+                         <Typography pb={{lg: 3, xs: 2}} width={"80%"}
                                      variant={"subtitle2"}>{t(`${translationKey}.subtitle`)}</Typography>
                          <Divider/>
                          <img className="aboutSection5Img" src={TeamImg} alt="team"/>
@@ -49,7 +51,7 @@ const AboutSection5 = () => {
                    </FlexBox>
                 </Grid>
                 <Grid item xs={6}>
-                   <Typography mb={3} variant={"h3"}>
+                   <Typography mb={{lg: 3, xs: 2}} variant={"h3"}>
                       <Trans i18nKey={`${translationKey}.title2`}
                              components={{span: <span style={{color: theme.palette.primary.main}}>Objectives</span>}}/>
                    </Typography>

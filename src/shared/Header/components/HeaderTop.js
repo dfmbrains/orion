@@ -15,10 +15,11 @@ const StyledBox = styled(Box)(({theme, active}) => ({
    width: "100%",
    zIndex: theme.zIndex.appBar,
    [theme.breakpoints.down("lg")]: {padding: '5px 0'},
+   [theme.breakpoints.down("sm")]: {padding: '8px 0'},
 
    "& .material-icons": {
       color: "#FFFFFF",
-      [theme.breakpoints.down("lg")]: {fontSize: 16},
+      [theme.breakpoints.down("lg")]: {fontSize: 17},
    },
    "& .flexGap10": {
       [theme.breakpoints.down("lg")]: {columnGap: "6px"},

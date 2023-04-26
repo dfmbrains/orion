@@ -6,13 +6,14 @@ import {useTranslation} from "react-i18next";
 const StyledSection = styled('section')(({theme}) => ({
    padding: "70px 0",
    backgroundColor: theme.palette.primary.main,
+   [theme.breakpoints.down("lg")]: {padding: "50px 0"},
 
    "& .MuiTypography-root": {
       color: "#FFF",
       textAlign: "center",
 
       "& span": {
-         fontSize: "32px"
+         fontWeight: "400"
       }
    }
 }));
@@ -28,8 +29,12 @@ const AboutSection6 = () => {
           <FlexAllCenter>
              <Box>
                 <Typography variant={"h2"} mb={2}>{t(`${translationKey}.title`)}</Typography>
-                <Typography variant={"subtitle1"}><span>200+ </span>{t(`${translationKey}.subtitle1`)}</Typography>
-                <Typography variant={"subtitle1"}><span>10 </span>{t(`${translationKey}.subtitle2`)}</Typography>
+                <Typography variant={"subtitle1"}><Typography variant={"h4"}
+                                                              component={"span"}>200+ </Typography>{t(`${translationKey}.subtitle1`)}
+                </Typography>
+                <Typography variant={"subtitle1"}><Typography variant={"h4"}
+                                                              component={"span"}>10 </Typography>{t(`${translationKey}.subtitle2`)}
+                </Typography>
              </Box>
           </FlexAllCenter>
        </StyledSection>

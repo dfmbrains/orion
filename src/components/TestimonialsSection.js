@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
        <StyledSection id="testimonialsSection">
           <OrionContainer>
              <Box sx={{position: "relative"}}>
-                <Typography variant={"h3"} mb={8}>{t('testimonialsSection.title')}</Typography>
+                <Typography variant={"h3"} mb={{lg: 8, md: 6, xs: 4}}>{t('testimonialsSection.title')}</Typography>
 
                 {reviews
                     ? <Swiper className="swiperCustomNavigation"
@@ -41,7 +41,8 @@ const TestimonialsSection = () => {
                            <SwiperSlide key={el.id}>
                               <Typography variant={"body1"} color={"#9EADB4"}>{el?.company || ''}</Typography>
                               <Typography variant={"h5"}>{el.name}</Typography>
-                              <Typography className={"justify-text"} mt={3} variant={"subtitle1"}>{el.text}</Typography>
+                              <Typography className={"justify-text"} mt={{md: 3, xs: 1.5}}
+                                          variant={"subtitle1"}>{el.text}</Typography>
                            </SwiperSlide>
                        ))}
                     </Swiper>

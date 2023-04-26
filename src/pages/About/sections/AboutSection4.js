@@ -4,12 +4,14 @@ import OrionContainer from "../../../components/OrionContainer";
 import OurTeamImg from '../../../assets/images/our_team.png';
 import {Trans, useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0",
    backgroundColor: "#F7F7F7",
+   [theme.breakpoints.down("lg")]: {padding: "80px 0"},
 
    "& .aboutSection4Img": {
-      width: "80%"
+      width: "80%",
+      [theme.breakpoints.down("lg")]: {width: "100%"},
    }
 }));
 
@@ -22,15 +24,15 @@ const AboutSection4 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Grid container spacing={8} alignItems={"center"}>
+             <Grid container spacing={{lg: 8, md: 6, xs: 4}} alignItems={"center"}>
                 <Grid item xs={6}>
-                   <Typography mb={2} variant={"h3"}>
+                   <Typography mb={{lg: 2, xs: 1}} variant={"h3"}>
                       <Trans i18nKey={`${translationKey}.title1`}
                              components={{span: <span style={{color: theme.palette.primary.main}}>Mission</span>}}/>
                    </Typography>
-                   <Typography mb={4} variant={"subtitle2"}>{t(`${translationKey}.subtitle1`)}</Typography>
+                   <Typography mb={{lg: 4, xs: 3}} variant={"subtitle2"}>{t(`${translationKey}.subtitle1`)}</Typography>
 
-                   <Typography mb={2} variant={"h3"}>
+                   <Typography mb={{lg: 2, xs: 1}} variant={"h3"}>
                       <Trans i18nKey={`${translationKey}.title2`}
                              components={{span: <span style={{color: theme.palette.primary.main}}>Vision</span>}}/>
                    </Typography>

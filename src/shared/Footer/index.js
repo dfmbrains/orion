@@ -105,7 +105,7 @@ const Footer = () => {
 
           <StyledBottomBox>
              <OrionContainer>
-                <FlexBetweenAlignCenter sx={{flexWrap: "wrap", justifyContent: {xs: "center", sm: "flex-between"}}}>
+                <FlexBetweenAlignCenter sx={{flexWrap: "wrap", justifyContent: {sm: "space-between", xs: "center"}}}>
                    <Typography sx={{
                       width: {xs: "100%", sm: "unset"},
                       mb: {xs: 1, sm: 0},

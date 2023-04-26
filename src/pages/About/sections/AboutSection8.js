@@ -1,23 +1,12 @@
 import React from 'react';
 import {Grid, styled, Typography, useTheme} from "@mui/material";
 import OrionContainer from "../../../components/OrionContainer";
-import {FlexBox} from "../../../components/FlexBox";
 import FeatureCard from "../../../components/FeatureCard";
 import {useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "90px 0",
-}));
-
-const StyledFlexBox = styled(FlexBox)(() => ({
-   justifyContent: "space-between",
-   alignItems: "flex-start",
-   flexWrap: "wrap",
-   rowGap: "50px",
-
-   "& .featureCard": {
-      width: "calc(100% / 3 - 80px * 2 / 3)"
-   }
+   [theme.breakpoints.down("lg")]: {padding: "70px 0"},
 }));
 
 const AboutSection8 = () => {
@@ -31,19 +20,19 @@ const AboutSection8 = () => {
    return (
        <StyledSection>
           <OrionContainer>
-             <Grid container alignItems={"center"}>
+             <Grid container alignItems={"center"} spacing={{lg: 3, xs: 2}}>
                 <Grid item xs={4}>
                    <Typography color={theme.palette.primary.main}
                                variant={"h3"}>{t(`${translationKey}.title`)}</Typography>
                 </Grid>
                 <Grid item xs={8}>
-                   <StyledFlexBox>
+                   <Grid container spacing={{lg: 3, xs: 2}}>
                       {cards.map((el, idx) => (
-                          <React.Fragment key={idx}>
+                          <Grid item md={4} sm={2} key={idx}>
                              <FeatureCard data={el}/>
-                          </React.Fragment>
+                          </Grid>
                       ))}
-                   </StyledFlexBox>
+                   </Grid>
                 </Grid>
              </Grid>
           </OrionContainer>

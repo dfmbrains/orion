@@ -73,7 +73,6 @@ export const themeOptions = (theme) => {
             fontSize: 13,
             fontWeight: "300",
             [theme.breakpoints.down("lg")]: {fontSize: 12},
-            [theme.breakpoints.down("md")]: {fontSize: 11}
          }
       }
    }

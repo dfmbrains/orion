@@ -11,8 +11,9 @@ import {formatName} from "../../../helpers/utils";
 import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
 import {Trans, useTranslation} from "react-i18next";
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
    padding: "100px 0",
+   [theme.breakpoints.down("lg")]: {padding: "80px 0"},
 
    "& .MuiTypography-root": {
       textAlign: "center"
@@ -21,13 +22,15 @@ const StyledSection = styled('section')(() => ({
       position: "absolute",
       top: "50%",
       transform: "translate(-100%, -50%)",
-      left: "-10%"
+      left: "-10%",
+      [theme.breakpoints.down("lg")]: {left: "-10px"},
    },
    "& .swiperButtonNext": {
       position: "absolute",
       top: "50%",
       transform: "translate(100%, -50%)",
-      right: "-10%"
+      right: "-10%",
+      [theme.breakpoints.down("lg")]: {right: "-10px"},
    }
 }));
 
@@ -61,10 +64,11 @@ const AboutSection9 = () => {
                        <Trans i18nKey={`${translationKey}.title`}
                               components={{span: <span style={{color: theme.palette.primary.main}}>Our team </span>}}/>
                     </Typography>
-                    <Typography width={"50%"} mx={"auto"} variant={"subtitle2"}
+                    <Typography width={{lg: "50%", md: "80%", xs: "100%"}} mx={"auto"} variant={"subtitle2"}
                                 mt={1}>{t(`${translationKey}.subtitle`)}</Typography>
 
-                    <Box mx={"auto"} mt={8} sx={{position: "relative", width: "60%"}}>
+                    <Box mx={"auto"} mt={{lg: 8, md: 6}}
+                         sx={{position: "relative", width: {lg: "60%", md: "80%", xs: "100%"}}}>
                        <Swiper className="swiperCustomNavigation"
                                navigation={true}
                                modules={[Navigation]}
