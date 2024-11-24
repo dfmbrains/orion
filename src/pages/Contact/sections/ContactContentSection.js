@@ -1,103 +1,136 @@
 import React from 'react';
-import {Grid, styled, Tab, Tabs, Typography} from "@mui/material";
-import OrionContainer from "../../../components/OrionContainer";
-import {FlexBox, FlexGap10} from "../../../components/FlexBox";
-import SocialMediaButtons from "../../../components/SocialMediaButtons";
-import ContactForm from "../components/ContactForm";
-import {useRecoilState} from "recoil";
-import {companyRecoil} from "../../../recoil";
-import {Styled50vhLoadingBox} from "../../../components/StyledComponents";
-import MatxLoading from "../../../components/MatxLoading";
-import CreateReviewForm from "../../../components/CreateReviewForm";
-import {useSearchParams} from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import { Grid, styled, Tab, Tabs, Typography } from '@mui/material';
+import OrionContainer from '../../../components/OrionContainer';
+import { FlexBox, FlexGap10 } from '../../../components/FlexBox';
+import SocialMediaButtons from '../../../components/SocialMediaButtons';
+import ContactForm from '../components/ContactForm';
+import { useRecoilState } from 'recoil';
+import { companyRecoil } from '../../../recoil';
+import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
+import MatxLoading from '../../../components/MatxLoading';
+import CreateReviewForm from '../../../components/CreateReviewForm';
+import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(() => ({
-   padding: "50px 0 120px",
-   backgroundColor: "#F7F7F7"
+  padding: '50px 0 120px',
+  backgroundColor: '#F7F7F7',
 }));
 
 const StyledFlexGap10 = styled(FlexGap10)(() => ({
-   columnGap: "20px",
-   alignItems: "flex-start"
+  columnGap: '20px',
+  alignItems: 'flex-start',
 }));
 
 function a11yProps(index) {
-   return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
-   };
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
 }
 
 const ContactContentSection = () => {
-   const {t} = useTranslation()
-   const translationKey = 'contact.content'
+  const { t } = useTranslation();
+  const translationKey = 'contact.content';
 
-   const [company] = useRecoilState(companyRecoil)
+  const [company] = useRecoilState(companyRecoil);
 
-   const [formVariant, setFormVariant] = useSearchParams();
+  const [formVariant, setFormVariant] = useSearchParams();
 
-   const handleChange = (event, newValue) => setFormVariant({form: newValue})
+  const handleChange = (event, newValue) => setFormVariant({ form: newValue });
 
-   return (
-       <StyledSection id="getInTouch">
-          <OrionContainer>
-             {company
-                 ? <Grid container spacing={8}>
-                    <Grid item xs={6}>
-                       <Typography variant="h2">{t(`${translationKey}.title`)}</Typography>
-                       <Typography mt={3} mb={6} variant="subtitle2">{t(`${translationKey}.subtitle`)}</Typography>
-                       <Typography variant="body1" color={"#9EADB4"} textTransform={"capitalize"}>
-                          {t(`${translationKey}.supportCenter`)} 24 / 7
-                       </Typography>
+  return (
+    <StyledSection id="getInTouch">
+      <OrionContainer>
+        {company ? (
+          <Grid container spacing={8}>
+            <Grid item xs={6}>
+              <Typography variant="h2">
+                {t(`${translationKey}.title`)}
+              </Typography>
+              <Typography mt={3} mb={6} variant="subtitle2">
+                {t(`${translationKey}.subtitle`)}
+              </Typography>
+              <Typography
+                variant="body1"
+                color={'#9EADB4'}
+                textTransform={'capitalize'}
+              >
+                {t(`${translationKey}.supportCenter`)} 24 / 7
+              </Typography>
 
-                       <StyledFlexGap10 my={3}>
-                          <a href={`tel:${company.about.phoneNumber1}`}>
-                             <Typography variant="h4" color="#1B1B1B">{company.about.phoneNumber1}</Typography>
-                          </a>
-                          <a href={`tel:${company.about.phoneNumber2}`}>
-                             <Typography variant="h4" color="#1B1B1B">{company.about.phoneNumber2}</Typography>
-                          </a>
-                       </StyledFlexGap10>
+              <StyledFlexGap10 my={3}>
+                <a href={`tel:${company.about.phoneNumber1}`}>
+                  <Typography variant="h4" color="#1B1B1B">
+                    {company.about.phoneNumber1}
+                  </Typography>
+                </a>
+                <a href={`tel:${company.about.phoneNumber2}`}>
+                  <Typography variant="h4" color="#1B1B1B">
+                    {company.about.phoneNumber2}
+                  </Typography>
+                </a>
+              </StyledFlexGap10>
 
-                       <StyledFlexGap10 my={3}>
-                          <div>
-                             <Typography variant="body1"
-                                         color={"#9EADB4"}>{t(`${translationKey}.ourLocation`)}</Typography>
-                             <Typography variant="subtitle2">{company.about.address}</Typography>
-                          </div>
-                          <div>
-                             <Typography variant="body1" color={"#9EADB4"}>{t(`${translationKey}.writeUs`)}</Typography>
-                             <a href="mailto:office.oriontrans@gmail.com">
-                                <Typography variant="subtitle2" color="#1B1B1B">{company.about.email}</Typography>
-                             </a>
-                          </div>
-                       </StyledFlexGap10>
+              <StyledFlexGap10 my={3}>
+                <div>
+                  <Typography variant="body1" color={'#9EADB4'}>
+                    {t(`${translationKey}.ourLocation`)}
+                  </Typography>
+                  <Typography variant="subtitle2">
+                    {company.about.address}
+                  </Typography>
+                </div>
+                <div>
+                  <Typography variant="body1" color={'#9EADB4'}>
+                    {t(`${translationKey}.writeUs`)}
+                  </Typography>
+                  <a href="mailto:office.oriontrans@gmail.com">
+                    <Typography variant="subtitle2" color="#1B1B1B">
+                      {company.about.email}
+                    </Typography>
+                  </a>
+                </div>
+              </StyledFlexGap10>
 
-                       <Typography variant="body1" color={"#9EADB4"}>{t(`${translationKey}.inSocialMedia`)}</Typography>
-                       <SocialMediaButtons color={"info"}/>
-                    </Grid>
-                    <Grid item xs={6}>
-                       <FlexBox sx={{justifyContent: "flex-end"}}>
-                          <Tabs sx={{mb: 3}} value={+formVariant.get('form')} onChange={handleChange}>
-                             <Tab label={t(`${translationKey}.forms.contact.title`)} {...a11yProps(0)} />
-                             <Tab label={t(`${translationKey}.forms.review.title`)} {...a11yProps(1)} />
-                          </Tabs>
-                       </FlexBox>
+              <Typography variant="body1" color={'#9EADB4'}>
+                {t(`${translationKey}.inSocialMedia`)}
+              </Typography>
+              <SocialMediaButtons color={'info'} />
+            </Grid>
+            <Grid item xs={6}>
+              <FlexBox sx={{ justifyContent: 'flex-end' }}>
+                <Tabs
+                  sx={{ mb: 3 }}
+                  value={+formVariant.get('form')}
+                  onChange={handleChange}
+                >
+                  <Tab
+                    label={t(`${translationKey}.forms.contact.title`)}
+                    {...a11yProps(0)}
+                  />
+                  <Tab
+                    label={t(`${translationKey}.forms.review.title`)}
+                    {...a11yProps(1)}
+                  />
+                </Tabs>
+              </FlexBox>
 
-                       {+formVariant.get('form') === 0
-                           ? <ContactForm translationKey={`${translationKey}.forms`}/>
-                           : <CreateReviewForm translationKey={`${translationKey}.forms`}/>
-                       }
-                    </Grid>
-                 </Grid>
-                 : <Styled50vhLoadingBox>
-                    <MatxLoading/>
-                 </Styled50vhLoadingBox>
-             }
-          </OrionContainer>
-       </StyledSection>
-   );
+              {+formVariant.get('form') === 0 ? (
+                <ContactForm translationKey={`${translationKey}.forms`} />
+              ) : (
+                <CreateReviewForm translationKey={`${translationKey}.forms`} />
+              )}
+            </Grid>
+          </Grid>
+        ) : (
+          <Styled50vhLoadingBox>
+            <MatxLoading />
+          </Styled50vhLoadingBox>
+        )}
+      </OrionContainer>
+    </StyledSection>
+  );
 };
 
 export default ContactContentSection;
