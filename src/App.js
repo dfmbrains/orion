@@ -15,7 +15,7 @@ import ServiceDetails from './pages/ServiceDetails';
 import BlogDetails from './pages/BlogDetails';
 import LightHeaderLayout from './components/LightHeaderLayout';
 import DarkHeaderLayout from './components/DarkHeaderLayout';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import {
   blogRecoil,
   companyRecoil,
@@ -39,12 +39,12 @@ import {
 } from './firebase/firestoreFirebase';
 
 function App() {
-  const [_, setBlogList] = useRecoilState(blogRecoil);
-  const [__, setTeam] = useRecoilState(teamRecoil);
-  const [___, setServiceList] = useRecoilState(serviceRecoil);
-  const [____, setPartnersList] = useRecoilState(partnersRecoil);
-  const [_____, setCompany] = useRecoilState(companyRecoil);
-  const [______, setReviews] = useRecoilState(reviewsRecoil);
+  const setBlogList = useSetRecoilState(blogRecoil);
+  const setTeam = useSetRecoilState(teamRecoil);
+  const setServiceList = useSetRecoilState(serviceRecoil);
+  const setPartnersList = useSetRecoilState(partnersRecoil);
+  const setCompany = useSetRecoilState(companyRecoil);
+  const setReviews = useSetRecoilState(reviewsRecoil);
 
   const getAllData = () => {
     getAllCollection(companyFirebasePath).then(data => setCompany(data[0]));

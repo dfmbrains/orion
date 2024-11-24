@@ -3,7 +3,7 @@ import { StyledResponsiveImageBox } from '../../../components/StyledComponents';
 import { Box, Card, styled, Typography, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { handleScrollToTop } from '../../../helpers/utils';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { serviceDetailsRecoil } from '../../../recoil';
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -33,7 +33,7 @@ const ServiceCard = ({ data }) => {
 
   const navigate = useNavigate();
 
-  const [_, setServiceDetails] = useRecoilState(serviceDetailsRecoil);
+  const setServiceDetails = useSetRecoilState(serviceDetailsRecoil);
 
   return (
     <StyledCard
