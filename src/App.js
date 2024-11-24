@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -46,28 +46,45 @@ function App() {
   const setCompany = useSetRecoilState(companyRecoil);
   const setReviews = useSetRecoilState(reviewsRecoil);
 
-  const getAllData = () => {
-    getAllCollection(companyFirebasePath).then(data => setCompany(data[0]));
-    getAllCollectionsWithImg(blogFirebasePath, true).then(data =>
-      setBlogList(data),
-    );
-    getAllCollectionsWithImg(teamFirebasePath, false).then(data =>
-      setTeam(data),
-    );
-    getAllCollectionsWithImg(serviceFirebasePath, false).then(data =>
-      setServiceList(data),
-    );
-    getAllCollectionsWithImg(partnersFirebasePath, false).then(data =>
-      setPartnersList(data),
-    );
-    getCollectionsByFilter(reviewsFirebasePath, 'status', true).then(data =>
-      setReviews(data),
-    );
-  };
+  const getAllData = useCallback(async () => {
+    try {
+      const [
+        companyData,
+        blogData,
+        teamData,
+        serviceData,
+        partnersData,
+        reviewsData,
+      ] = await Promise.all([
+        getAllCollection(companyFirebasePath),
+        getAllCollectionsWithImg(blogFirebasePath, true),
+        getAllCollectionsWithImg(teamFirebasePath, false),
+        getAllCollectionsWithImg(serviceFirebasePath, false),
+        getAllCollectionsWithImg(partnersFirebasePath, false),
+        getCollectionsByFilter(reviewsFirebasePath, 'status', true),
+      ]);
+
+      setCompany(companyData[0]);
+      setBlogList(blogData);
+      setTeam(teamData);
+      setServiceList(serviceData);
+      setPartnersList(partnersData);
+      setReviews(reviewsData);
+    } catch (error) {
+      console.error('Failed to fetch data:', error);
+    }
+  }, [
+    setCompany,
+    setBlogList,
+    setTeam,
+    setServiceList,
+    setPartnersList,
+    setReviews,
+  ]);
 
   useEffect(() => {
-    getAllData();
-  }, []);
+    getAllData().then(() => console.log('data fetched'));
+  }, [getAllData]);
 
   return (
     <>
