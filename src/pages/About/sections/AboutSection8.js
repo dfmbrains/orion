@@ -9,6 +9,16 @@ const StyledSection = styled('section')(({theme}) => ({
    [theme.breakpoints.down("lg")]: {padding: "70px 0"},
    [theme.breakpoints.down("md")]: {padding: "60px 0"},
    [theme.breakpoints.down("sm")]: {padding: "50px 0"},
+
+   "& .featureCard": {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+
+      "& h6": {
+         textAlign: "center",
+      }
+   }
 }));
 
 const AboutSection8 = () => {
@@ -31,7 +41,7 @@ const AboutSection8 = () => {
                    <Grid container spacing={{lg: 3, md: 2, sm: 3, xs: 1}}>
                       {cards.map((el, idx) => (
                           <Grid item sm={4} xs={6} key={idx}>
-                             <FeatureCard data={el}/>
+                             <FeatureCard className="localCard" data={el}/>
                           </Grid>
                       ))}
                    </Grid>
