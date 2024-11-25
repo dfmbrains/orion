@@ -2,7 +2,8 @@
   "currentLanguage": "en",
   "orionTrans": "Orion-Trans",
   "words": {
-    "railTariff": "A Rail Tariff"
+    "railTariff": "A Rail Tariff",
+    "menu": "Menu"
   },
   "buttons": {
     "learnMore": "learn more",
@@ -47,7 +48,8 @@
     "blogs": "Blogs",
     "contact": "Contact",
     "getInTouch": "Get In Touch",
-    "leaveReview": "Leave a review"
+    "leaveReview": "Leave a review",
+    "clientsAndPartners": "Clients & Partners"
   },
   "featuresSection": [
     {

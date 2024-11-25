@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Box,
-  Button,
   Icon,
   IconButton,
   styled,
@@ -10,15 +9,16 @@ import {
   useTheme,
 } from '@mui/material';
 import {
-  FlexBetweenAlignCenter,
   FlexAllCenter,
+  FlexBetweenAlignCenter,
   FlexGap10,
 } from '../../../components/FlexBox';
 import { Logo } from '../../../components/Logo';
 import { NavLink } from 'react-router-dom';
 import OrionContainer from '../../../components/OrionContainer';
-import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
+import ChangeLangButton from '../../../components/ChangeLangButton';
+import { HEADER_BURGER_MENU } from '../../../helpers/constants';
 
 const StyledBox = styled(Box)(({ theme, color }) => ({
   backgroundColor: color === 'dark' ? '#252525' : 'transparent',
@@ -63,25 +63,12 @@ const StyledLink = styled(NavLink)(({ theme }) => ({
   },
 }));
 
-const HeaderGeneral = ({ color }) => {
+const HeaderGeneral = ({ openBurger, color }) => {
   const theme = useTheme();
   const { t } = useTranslation();
 
-  const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
   const isLaptopOrDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-
-  const navigations = [
-    { title: t('menu.home'), link: '/' },
-    { title: t('menu.company'), link: '/about' },
-    { title: t('menu.services'), link: '/services' },
-    {
-      title: `${t('menu.clients')} & ${t('menu.partners')}`,
-      link: '/clients-&-partners',
-    },
-    { title: t('menu.blogs'), link: '/blog' },
-    { title: t('menu.contact'), link: '/contact?form=0' },
-  ];
 
   return (
     <StyledBox color={color}>
@@ -90,31 +77,18 @@ const HeaderGeneral = ({ color }) => {
           <Logo />
           {isLaptopOrDesktop && (
             <FlexAllCenter>
-              {navigations.map((el, idx) => (
+              {HEADER_BURGER_MENU.map((el, idx) => (
                 <StyledLink theme={theme} to={el.link} key={idx}>
-                  <Typography variant="subtitle2">{el.title}</Typography>
+                  <Typography variant="subtitle2">{t(el.title)}</Typography>
                 </StyledLink>
               ))}
             </FlexAllCenter>
           )}
           <FlexGap10>
-            <Button
-              onClick={() =>
-                i18next.changeLanguage(
-                  t('currentLanguage') === 'ru' ? 'en' : 'ru',
-                )
-              }
-              variant={'text'}
-              color={'secondary'}
-              size={isLaptop ? 'small' : 'medium'}
-              startIcon={<Icon>language</Icon>}
-            >
-              <Typography variant="subtitle2">
-                {t('currentLanguage').toUpperCase()}
-              </Typography>
-            </Button>
+            <ChangeLangButton />
+
             {isTablet && (
-              <IconButton color={'secondary'}>
+              <IconButton onClick={openBurger} color={'secondary'}>
                 <Icon>menu</Icon>
               </IconButton>
             )}

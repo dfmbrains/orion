@@ -15,3 +15,12 @@ export const reviewsFirebasePath = 'reviews';
 export const partnersFirebasePath = 'partners';
 
 export const defaultAppLanguage = 'ru';
+
+export const HEADER_BURGER_MENU = [
+  { title: 'menu.home', link: '/' },
+  { title: 'menu.company', link: '/about' },
+  { title: 'menu.services', link: '/services' },
+  { title: 'menu.clientsAndPartners', link: '/clients-&-partners' },
+  { title: 'menu.blogs', link: '/blog' },
+  { title: 'menu.contact', link: '/contact?form=0' },
+];

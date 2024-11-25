@@ -11,9 +11,10 @@ import { LoadingButton } from '@mui/lab';
 import { useSnackbar } from 'notistack';
 import { useTranslation } from 'react-i18next';
 
-const StyledSection = styled('section')(({ theme }) => ({
+const StyledSection = styled('section')(({ theme, background }) => ({
   padding: '60px 0',
-  backgroundColor: '#F7F7F7',
+  backgroundColor: background || '#F7F7F7',
+
   [theme.breakpoints.down('lg')]: { padding: '45px 0' },
   [theme.breakpoints.down('sm')]: { padding: '30px 0' },
 }));
@@ -22,7 +23,7 @@ const StyledBox = styled('div')(() => ({
   textAlign: 'center',
 }));
 
-const EmailFormSection = () => {
+const EmailFormSection = ({ background }) => {
   const { t } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -65,7 +66,7 @@ const EmailFormSection = () => {
   };
 
   return (
-    <StyledSection>
+    <StyledSection background={background}>
       <FlexAllCenter>
         <StyledBox>
           <Typography mb={1} variant={'h4'} color={'#1B1B1B'}>
