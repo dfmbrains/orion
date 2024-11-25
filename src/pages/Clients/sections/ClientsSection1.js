@@ -21,8 +21,12 @@ import { partnersRecoil } from '../../../recoil';
 import MatxLoading from '../../../components/MatxLoading';
 import { Trans, useTranslation } from 'react-i18next';
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 160px',
+
+  [theme.breakpoints.down('lg')]: { padding: '70px 0 130px' },
+  [theme.breakpoints.down('md')]: { padding: '50px 0 100px' },
+  [theme.breakpoints.down('sm')]: { padding: '40px 0 60px' },
 }));
 
 const StyledImageBox = styled(FlexAllCenter)(() => ({
@@ -67,7 +71,11 @@ const ClientsSection1 = () => {
           </Button>
         </ButtonGroup>
 
-        <Typography mt={4} mb={5} variant={'h2'}>
+        <Typography
+          variant={'h2'}
+          mt={{ md: 4, sm: 3, xs: 2 }}
+          mb={{ md: 5, sm: 4, xs: 3 }}
+        >
           <Trans
             i18nKey={`${translationKey}.title`}
             components={{
@@ -90,13 +98,17 @@ const ClientsSection1 = () => {
         </Typography>
 
         {partnersList ? (
-          <Box mt={6} pt={10} sx={{ position: 'relative' }}>
+          <Box
+            mt={{ md: 6, sm: 5, xs: 4 }}
+            pt={{ md: 10, sm: 8, xs: 6 }}
+            sx={{ position: 'relative' }}
+          >
             <Swiper
-              className="swiperCustomNavigation"
-              navigation={true}
-              modules={[Navigation]}
+              navigation
               slidesPerView={4}
               spaceBetween={20}
+              modules={[Navigation]}
+              className="swiperCustomNavigation"
             >
               <StyledSwiperButtonsPosition>
                 <SwiperButtons />
