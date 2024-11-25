@@ -12,9 +12,12 @@ import CreateReviewForm from '../../../components/CreateReviewForm';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({ theme }) => ({
   padding: '50px 0 120px',
   backgroundColor: '#F7F7F7',
+
+  [theme.breakpoints.down('lg')]: { padding: '40px 0 80px' },
+  [theme.breakpoints.down('md')]: { padding: '40px 0' },
 }));
 
 const StyledFlexGap10 = styled(FlexGap10)(() => ({
@@ -43,8 +46,8 @@ const ContactContentSection = () => {
     <StyledSection id="getInTouch">
       <OrionContainer>
         {company ? (
-          <Grid container spacing={8}>
-            <Grid item xs={6}>
+          <Grid container spacing={{ md: 8, sm: 6, xs: 4 }}>
+            <Grid item md={6} xs={12}>
               <Typography variant="h2">
                 {t(`${translationKey}.title`)}
               </Typography>
@@ -98,7 +101,7 @@ const ContactContentSection = () => {
               </Typography>
               <SocialMediaButtons color={'info'} />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item md={6} xs={12}>
               <FlexBox sx={{ justifyContent: 'flex-end' }}>
                 <Tabs
                   sx={{ mb: 3 }}
