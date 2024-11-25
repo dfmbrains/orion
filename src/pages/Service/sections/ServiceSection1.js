@@ -9,16 +9,26 @@ import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import MatxLoading from '../../../components/MatxLoading';
 import { Trans, useTranslation } from 'react-i18next';
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({ theme }) => ({
   padding: '120px 0',
+
+  [theme.breakpoints.down('lg')]: { padding: '100px 0 0' },
+  [theme.breakpoints.down('md')]: { padding: '80px 0 60px' },
+  [theme.breakpoints.down('sm')]: { padding: '50px 0' },
 }));
 
-const StyledFlexBox = styled(FlexBox)(() => ({
+const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
   gap: '60px 30px',
   flexWrap: 'wrap',
 
+  [theme.breakpoints.down('md')]: { gap: '40px 20px' },
+  [theme.breakpoints.down('sm')]: { gap: '30px 10px' },
+
   '& .serviceCard': {
     width: 'calc(100% / 4 - 30px * 3 / 4)',
+
+    [theme.breakpoints.down('md')]: { width: 'calc(100% / 3 - 30px * 2 / 3)' },
+    [theme.breakpoints.down('sm')]: { width: '100%' },
   },
   '& .serviceCardImg': {
     height: '100px',
@@ -36,8 +46,12 @@ const ServiceSection1 = () => {
   return (
     <StyledSection>
       <OrionContainer>
-        <Grid container spacing={20} mb={15}>
-          <Grid item xs={6}>
+        <Grid
+          container
+          spacing={{ md: 20, xs: 5 }}
+          mb={{ md: 15, sm: 10, xs: 5 }}
+        >
+          <Grid item md={6} xs={12}>
             <Typography variant={'h2'}>
               <Trans
                 i18nKey={`${translationKey}.title`}
@@ -49,10 +63,11 @@ const ServiceSection1 = () => {
                   ),
                 }}
               />
+              +
             </Typography>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item md={6} xs={12}>
             <Typography
               fontWeight={'bold'}
               color={theme.palette.primary.main}
