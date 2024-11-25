@@ -2,8 +2,11 @@ import React from 'react';
 import { styled, Typography } from '@mui/material';
 import OrionContainer from './OrionContainer';
 
-const StyledSection = styled('section')(() => ({
+const StyledSection = styled('section')(({theme}) => ({
   padding: '100px 0 80px',
+
+  [theme.breakpoints.down('lg')]: { padding: '80px 0 60px' },
+  [theme.breakpoints.down('md')]: { padding: '60px 0 40px' },
 }));
 
 const PageDetailsContent = ({ data }) => {
