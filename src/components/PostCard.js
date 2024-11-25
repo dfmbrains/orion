@@ -10,7 +10,7 @@ import { FlexGap10 } from './FlexBox';
 import { StyledResponsiveImageBox } from './StyledComponents';
 import { useNavigate } from 'react-router-dom';
 import { handleScrollToTop } from '../helpers/utils';
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil } from '../recoil';
 import { useTranslation } from 'react-i18next';
 
@@ -46,9 +46,9 @@ const PostCard = ({ post }) => {
   const navigate = useNavigate();
   const theme = useTheme();
 
-  const date = new Date(post.created.toDate());
+  const date = new Date(post.created);
 
-  const [_, setBlog] = useRecoilState(blogDetailsRecoil);
+  const setBlog = useSetRecoilState(blogDetailsRecoil);
 
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 

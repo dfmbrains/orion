@@ -53,7 +53,7 @@ const HomeSection5 = () => {
     await navigate('/clients-&-partners');
     await anchorLinkHandler('testimonialsSection');
   };
-  console.log(reviews);
+
   return (
     <StyledSection>
       <OrionContainer>

@@ -4,9 +4,6 @@ import { Formik } from 'formik';
 import { Grid, TextField } from '@mui/material';
 import { useSnackbar } from 'notistack';
 import { LoadingButton } from '@mui/lab';
-import { v4 as uuidv4 } from 'uuid';
-import { createCollectionDocument } from '../firebase/firestoreFirebase';
-import { reviewsFirebasePath } from '../helpers/constants';
 import { useTranslation } from 'react-i18next';
 
 const initialValues = {
@@ -29,16 +26,16 @@ const ContactForm = ({ translationKey }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmitForm = async values => {
+  const handleSubmitForm = async () => {
     setLoading(true);
 
     try {
-      await createCollectionDocument(reviewsFirebasePath, {
-        ...values,
-        id: uuidv4(),
-        created: new Date(),
-        status: false,
-      });
+      // await createCollectionDocument(reviewsFirebasePath, {
+      //   ...values,
+      //   id: uuidv4(),
+      //   created: new Date(),
+      //   status: false,
+      // });
       enqueueSnackbar(t('snackbarTexts.review'), { variant: 'success' });
     } catch (e) {
       enqueueSnackbar(t('snackbarTexts.error'), { variant: 'error' });
