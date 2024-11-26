@@ -66,7 +66,7 @@ const EmailFormSection = ({ background }) => {
   };
 
   return (
-    <StyledSection background={background}>
+    <StyledSection background={background} className="emailFormSection">
       <FlexAllCenter>
         <StyledBox>
           <Typography mb={1} variant={'h4'} color={'#1B1B1B'}>

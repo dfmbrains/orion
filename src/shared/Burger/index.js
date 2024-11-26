@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Divider,
   Drawer,
   Icon,
   IconButton,
@@ -29,8 +30,8 @@ const StyledBurger = styled('div')(() => ({
   width: '100vw',
   height: '100vh',
 
-  '& .logo': {
-    width: '200px',
+  '& .emailFormSection': {
+    padding: '10px 0 24px',
   },
 }));
 
@@ -38,6 +39,10 @@ const StyledBurgerHeader = styled('div')(({ theme }) => ({
   background: theme.palette.primary.main,
   padding: '16px 0',
   height: '80px',
+
+  '& .logo': {
+    width: '200px',
+  },
 
   '& .closeIcon': {
     fontSize: 32,
@@ -48,9 +53,6 @@ const StyledBurgerContact = styled('div')(({ theme }) => ({
   background: theme.palette.primary.light,
   padding: '12px 0',
 
-  '& .logo': {
-    width: '200px',
-  },
   '& .closeIcon': {
     fontSize: 32,
   },
@@ -62,13 +64,6 @@ const StyledBurgerMain = styled('div')(() => ({
 
   '& .logo': {
     width: '60px',
-  },
-  '& .terms': {
-    position: 'absolute',
-    bottom: 16,
-    left: '50%',
-    transform: 'translate(-50%)',
-    width: 'calc(100% - 32px)',
   },
 }));
 
@@ -163,19 +158,16 @@ const Burger = ({ isOpen, handleClose }) => {
                 </NavLink>
               ))}
             </StyledBurgerMenu>
-
-            <Typography
-              variant={'body2'}
-              className={'terms'}
-              sx={{ textAlign: 'center' }}
-            >
-              Copyright © {new Date().getFullYear()} Orion Trans{' '}
-              {t('footer.privacy.right')}
-            </Typography>
           </OrionContainer>
         </StyledBurgerMain>
 
         <EmailFormSection background={'#FFF'} />
+
+        <Divider />
+        <Typography mt={1} variant={'body2'} sx={{ textAlign: 'center' }}>
+          Copyright © {new Date().getFullYear()} Orion Trans{' '}
+          {t('footer.privacy.right')}
+        </Typography>
       </StyledBurger>
     </Drawer>
   );
