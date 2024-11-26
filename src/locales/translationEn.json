@@ -2,7 +2,6 @@
   "currentLanguage": "en",
   "orionTrans": "Orion-Trans",
   "words": {
-    "railTariff": "A Rail Tariff",
     "menu": "Menu"
   },
   "buttons": {
@@ -14,6 +13,7 @@
     "send": "send",
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
+    "calculateRailTariff": "Calculate A Rail Tariff",
     "cancel": "Cancel"
   },
   "snackbarTexts": {

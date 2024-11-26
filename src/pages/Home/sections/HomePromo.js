@@ -43,6 +43,8 @@ const HomePromo = () => {
   const { t } = useTranslation();
 
   const slides = t('home.promo.slides', { returnObjects: true });
+
+  //@Todo картинки поменять для каждого слайда
   const slidesImgs = [PromoSlide1, PromoSlide1, PromoSlide1];
 
   return (
@@ -51,7 +53,7 @@ const HomePromo = () => {
         spaceBetween={10}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         navigation={true}
@@ -71,6 +73,8 @@ const HomePromo = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/*@Todo menu as in design*/}
     </StyledSection>
   );
 };

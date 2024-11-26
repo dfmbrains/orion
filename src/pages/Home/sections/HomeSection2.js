@@ -108,6 +108,8 @@ const HomeSection2 = () => {
               >
                 {t('buttons.learnMore')}
               </Button>
+
+            {/*  @Todo button to get in touch*/}
             </Box>
           </Grid>
           <Grid

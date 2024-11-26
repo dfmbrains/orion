@@ -2,18 +2,18 @@
   "currentLanguage": "ru",
   "orionTrans": "Orion-Trans",
   "words": {
-    "railTariff": "A Rail Tariff",
     "menu": "Menu"
   },
   "buttons": {
-    "learnMore": "learn more",
-    "calculate": "calculate",
-    "ourServices": "our services",
+    "learnMore": "Подробнее",
+    "calculate": "Рассчитать",
+    "ourServices": "Наши услуги",
     "readOthers": "read others",
     "readMore": "read more",
     "send": "send",
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
+    "calculateRailTariff": "Расчет ж/д тарифа",
     "cancel": "Cancel"
   },
   "snackbarTexts": {
@@ -40,59 +40,69 @@
     "Azerbaijan"
   ],
   "menu": {
-    "home": "Home",
-    "services": "Services",
-    "company": "Company",
-    "clients": "Clients",
-    "partners": "Partners",
-    "blogs": "Blogs",
-    "contact": "Contact",
+    "home": "Главная",
+    "services": "Услуги",
+    "company": "О компании",
+    "clients": "Клиенты",
+    "partners": "Партнеры",
+    "blogs": "Статьи",
+    "contact": "Контакты",
     "getInTouch": "Get In Touch",
     "leaveReview": "Leave a review",
-    "clientsAndPartners": "Clients & Partners"
+    "clientsAndPartners": "Клиенты и Партнеры"
   },
   "featuresSection": [
     {
-      "title": "Cost Effective Solutions",
-      "subtitle": "You will get our safe rail forwarding services at a minimum cost compared to our competitors",
+      "title": "Эффективные решения",
+      "subtitle": "Мы предлагаем максимально выгодные расчеты железнодорожных услуг",
       "icon": "credit_score"
     },
     {
-      "title": "Trusted Partners",
-      "subtitle": "We have a direct agreement with the railways of CIS countries, and we work with the official representatives of the other countries Railways",
+      "title": "Надежные партнеры",
+      "subtitle": "Мы являемся официальными представителями Кыргыз Темир Жолу и имеем прямые договоры с железными дорогами Казахстана, Таджикистана, Туркменистана Узбекистана и России. Это позволяет нам работать без сложностей и завоевывать доверие множества клиентов",
       "icon": "health_and_safety"
     },
     {
-      "title": "Just In Time Shipments",
-      "subtitle": "You will achieve your desired shipment times with our rail freight services",
+      "title": "Сохранное сопровождение",
+      "subtitle": "Ваш персональный логист обеспечит своевременную доставку груза без повреждений, отслеживая его на каждом ваш груз был вовремя доставлен, без никаких либо повреждений, отслеживая ваш груз на каждом этапе перевозки",
       "icon": "access_time"
     },
     {
-      "title": "Financial Protection",
-      "subtitle": "Opportunity of the Rail rates payment, when there is a long-term engagement",
+      "title": "Комфорт и прозрачность",
+      "subtitle": "Наши специалисты всегда готовы предоставить консультации, помочь с выбором оптимального решения и оперативно реагировать на любые запросы, обеспечивая индивидуальный подход к каждому клиенту",
       "icon": "monetization_on"
     }
   ],
   "statisticsSection": [
     {
-      "title": "Shipped Tons Per Month",
-      "value": "10,000",
+      "title": "Перевезенных тонн грузов в месяц",
+      "value": "60,000",
       "valueTag": ""
     },
     {
-      "title": "Shipped Tons Per Month",
+      "title": "Перевезенных груженых вагонов в месяц",
       "value": "10+",
       "valueTag": ""
     },
     {
-      "title": "Shipped Tons Per Month",
+      "title": "Перевезенных порожних вагонов в месяц",
       "value": "10",
-      "valueTag": "Years"
+      "valueTag": ""
     },
     {
-      "title": "Shipped Tons Per Month",
+      "title": "на рынке",
       "value": "8",
-      "valueTag": "Years"
+      "valueTag": "Лет"
+    },
+    {
+      "title": "Довольных клиентов и партнеров",
+      "value": "200+",
+      "valueTag": ""
+    },
+    {
+      "title": "Лучших экспертов в области логистики в Кыргызстане",
+      "value": "10",
+      "valueTag": "Лет"
     }
   ],
   "emailFormSection": {
@@ -104,7 +114,7 @@
     "title": "Testimonials"
   },
   "header": {
-    "support": "support"
+    "support": "Поддержка"
   },
   "footer": {
     "menu": {
@@ -120,67 +130,70 @@
     "promo": {
       "slides": [
         {
-          "title": "Rail Freight-Forwarding Company: Quality Professional Solutions",
-          "subtitle": "No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "title": "Железнодорожные грузоперевозки",
+          "subtitle": "Мы обеспечим оптимальный маршрут и отслеживание груза на каждом этапе, независимо от расстояния и сложности перевозки"
         },
         {
-          "title": "2 Rail Freight-Forwarding Company: Quality Professional Solutions",
-          "subtitle": "2 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "title": "Расчет и оплата тарифов",
+          "subtitle": "Прямые договоры с железными дорогами для расчетов экспортно-импортных и транзитных тарифов, как внутри страны, так и за ее пределами"
         },
         {
-          "title": "3 Rail Freight-Forwarding Company: Quality Professional Solutions",
-          "subtitle": "3 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "title": "Железнодорожные контейнерные перевозки",
+          "subtitle": "Оперативные контейнерные перевозки железнодорожным транспортом любой сложности с минимальными затратами"
+        },
+        {
+          "title": "Предоставление подвижного состава",
+          "subtitle": "Подберем подвижной состав для вашего груза с гарантией точности и срока доставки, благодаря многолетним партнерским отношениям"
         }
       ]
     },
     "section2": {
-      "title": "Container Freight",
-      "subtitle": "Fast & Convenient",
-      "description": "We create an effective transport chain monitoring of Container Freight to China and other countries. While your cargo is on its way, our logistic specialists will keep updating you whenever you need.",
+      "title": "Железнодорожные контейнерные перевозки",
+      "subtitle": "Быстро и эффективно",
+      "description": "Мы обеспечиваем транспортировку контейнеров (груженных и порожних) в Китай и другие страны, оптимизируя маршруты для минимальных сроков и затрат",
       "otherServices": {
-        "title": "Our Other Services",
+        "title": "Другие наши услуги",
         "list": [
-          "Provision of Rolling Stock",
-          "Multimodal Freight Transport",
-          "Container Freight Transport",
-          "Rail freight",
-          "And way more"
+          "Международные железнодорожные перевозки",
+          "Экспедирование грузов: Расчет и оплата ж/д тарифов",
+          "Предоставление подвижного состава",
+          "И многое другое"
         ]
       }
     },
     "section3": {
-      "title": "Freight Forwarding: Rail Rates",
-      "subtitle": "Our Company establishes itself as leading choice at the market of rail rates payment and we have direct agreement with Railways",
-      "description": "Some of the countries that we deliver to",
+      "title": "Экспедирование грузов: расчет и оплата тарифов",
+      "subtitle": "Мы являемся одной из ведущих компаний на рынке по оплате железнодорожных тарифов по странам СНГ, Китая, России. Благодаря прямым договорам с железными дорогами мы предлагаем конкурентоспособные цены и комплексный сервис",
+      "description": "Наши услуги доступны в странах:",
       "calculation": {
-        "title": "Calculate Your Transportation",
+        "title": "Рассчитать ж/д тариф на перевозку",
         "formPlaceholders": {
-          "placeholder1": "Departure Station",
-          "placeholder2": "Destination Station",
-          "placeholder3": "Cargo Name/ ETSNG Code",
-          "placeholder4": "Cargo Name /GNG Code",
-          "placeholder5": "Cargo Weight",
-          "placeholder6": "Number Of Wagons",
-          "placeholder7": "Your name",
-          "placeholder8": "Type Of Wagon",
-          "placeholder9": "Your Phone Number",
-          "placeholder10": "Your Email"
+          "placeholder1": "Станция отправления",
+          "placeholder2": "Станция назначения",
+          "placeholder3": "Наименование груза (код ЕТСНГ)",
+          "placeholder4": "Наименование груза (код СНГ)",
+          "placeholder5": "Вес груза",
+          "placeholder6": "Количество вагонов",
+          "placeholder7": "Ваше имя",
+          "placeholder8": "Тип вагона",
+          "placeholder9": "Ваш номер телефона",
+          "placeholder10": "Ваш email"
         }
       }
     },
     "section4": {
-      "title": "Provision of Rolling Stock",
-      "subtitle": "We offer services on provision of rolling stock according to the customer request. Our Logistics Specialists will assign a right rolling stock specifically to your cargo."
+      "title": "Предоставление подвижного состава",
+      "subtitle": "Мы предлагаем услуги по предоставлению подвижного состава по специальному запросу. Наши логисты подберут подходящий вагон, учитывая все ваши требования"
     },
     "section5": {
-      "title": "Our Clients Say"
+      "title": "Клиенты о нас"
     },
     "section6": {
-      "title": "These people work to make each freight successful and each the client satisfied",
-      "subtitle": "Meet the team"
+      "title": "Команда профессионалов работают над тем, чтобы каждая перевозка была успешной, а каждый клиент остался доволен",
+      "subtitle": "Встречайте нашу команду"
     },
     "section7": {
-      "title": "Latest blog posts"
+      "title": "Последние статьи"
     }
   },
   "about": {

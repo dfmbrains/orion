@@ -82,7 +82,7 @@ const AboutSection3 = () => {
                 color={'primary'}
                 size={isTablet ? 'medium' : 'large'}
               >
-                {t('buttons.calculate')} {t('words.railTariff')}
+                {t('buttons.calculateRailTariff')}
               </Button>
             </FlexGap10>
           </Grid>
