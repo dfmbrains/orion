@@ -29,3 +29,12 @@ export const getAllCollectionsWithImg = async (path, multiFile) => {
     return Promise.all(createdData);
   });
 };
+
+export const createDesiredArrays = (arr) => {
+  const pairedValues = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    pairedValues.push(arr.slice(i, i + 2));
+  }
+
+  return pairedValues;
+};

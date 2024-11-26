@@ -11,12 +11,14 @@ import {
 import CalculateForm from '../components/CalculateForm';
 import MapBg from '../../../assets/images/map.webp';
 import { useTranslation } from 'react-i18next';
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   SwiperButtonNext,
   SwiperButtonPrev,
 } from '../../../components/SwiperButtons';
+
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { createDesiredArrays } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '0 0 120px',
@@ -97,9 +99,16 @@ const StyledIntroBox = styled('div')(({ theme }) => ({
   padding: '150px 0',
   zIndex: 1,
   width: '45%',
+
   [theme.breakpoints.down('lg')]: { width: '48%', padding: '60px 0' },
   [theme.breakpoints.down('md')]: { width: '100%', padding: '30px 0' },
   [theme.breakpoints.down('sm')]: { padding: '20px 20px 25px' },
+
+  '& .countriesBox': {
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '15px',
+  },
 }));
 
 const StyledCalculateCard = styled(Card)(({ theme }) => ({
@@ -136,7 +145,9 @@ const HomeSection3 = () => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const countries = t('countries', { returnObjects: true }) || [];
+  const countries = createDesiredArrays(
+    t('countries', { returnObjects: true }) || [],
+  );
 
   return (
     <StyledSection id={'homeSection3'}>
@@ -162,11 +173,11 @@ const HomeSection3 = () => {
                 ))
               ) : (
                 <Swiper
-                  className="swiperCustomNavigation"
-                  navigation={true}
-                  modules={[Navigation]}
+                  navigation
                   slidesPerView={3}
                   spaceBetween={15}
+                  modules={[Navigation]}
+                  className="swiperCustomNavigation"
                   breakpoints={{
                     600: {
                       spaceBetween: 15,
@@ -185,9 +196,21 @@ const HomeSection3 = () => {
 
                   {countries.map((item, idx) => (
                     <SwiperSlide key={idx}>
-                      <StyledCountryItem key={idx}>
-                        <Typography variant={'subtitle2'}>{item}</Typography>
-                      </StyledCountryItem>
+                      <div className="countriesBox">
+                        <StyledCountryItem key={idx}>
+                          <Typography variant={'subtitle2'}>
+                            {item[0]}
+                          </Typography>
+                        </StyledCountryItem>
+
+                        {item[1] && (
+                          <StyledCountryItem key={idx}>
+                            <Typography variant={'subtitle2'}>
+                              {item[1]}
+                            </Typography>
+                          </StyledCountryItem>
+                        )}
+                      </div>
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -197,7 +220,10 @@ const HomeSection3 = () => {
 
           <StyledCalculateCard>
             <StyledCalculateItem
-              sx={{ pt: { lg: 6, sm: 3, xs: 2 }, mb: { lg: 4, sm: 2, xs: 1 } }}
+              sx={{
+                pt: { lg: 6, sm: 3, xs: 2 },
+                mb: { lg: 4, sm: 2, xs: 1 },
+              }}
             >
               <Typography variant={'h5'}>
                 {t(`${translationKey}.calculation.title`)}
