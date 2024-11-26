@@ -21,9 +21,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { createDesiredArrays } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
-  padding: '0 0 120px',
+  padding: '0 0 80px',
   background: '#EEF8FF',
-  [theme.breakpoints.down('lg')]: { padding: '0 0 80px' },
+  [theme.breakpoints.down('lg')]: { padding: '0 0 60px' },
   [theme.breakpoints.down('md')]: { padding: '0 0 50px' },
 }));
 
@@ -48,7 +48,7 @@ const StyledContentBox = styled('div')(({ theme }) => ({
     zIndex: '0',
 
     [theme.breakpoints.down('md')]: { height: '38%' },
-    [theme.breakpoints.down('sm')]: { height: '50%' },
+    [theme.breakpoints.down('sm')]: { height: '60%' },
   },
 }));
 
@@ -59,8 +59,8 @@ const StyledSwiperBox = styled('div')(({ theme }) => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    alignItems: 'center',
     gap: '10px',
+    width: '100%',
   },
 
   '& .swiperButtonPrev, & .swiperButtonNext': {
@@ -91,12 +91,13 @@ const StyledCountryItem = styled('div')(({ theme }) => ({
   padding: '15px',
   borderRadius: '15px',
   whiteSpace: 'nowrap',
+
   [theme.breakpoints.down('lg')]: { padding: '8px 10px' },
 }));
 
 const StyledIntroBox = styled('div')(({ theme }) => ({
   position: 'relative',
-  padding: '150px 0',
+  padding: '80px 0',
   zIndex: 1,
   width: '45%',
 
@@ -108,6 +109,11 @@ const StyledIntroBox = styled('div')(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     rowGap: '15px',
+
+    [theme.breakpoints.down('sm')]: {
+      width: 'calc(50% - 5px)',
+      rowGap: '10px',
+    },
   },
 }));
 
@@ -119,6 +125,7 @@ const StyledCalculateCard = styled(Card)(({ theme }) => ({
   borderRadius: '15px',
   zIndex: 1,
   width: '40%',
+
   [theme.breakpoints.down('lg')]: { width: '45%', right: '30px' },
   [theme.breakpoints.down('md')]: {
     margin: '50px 0 0',
@@ -166,10 +173,18 @@ const HomeSection3 = () => {
 
             <StyledSwiperBox>
               {isMobile ? (
-                countries.map((item, idx) => (
-                  <StyledCountryItem key={idx}>
-                    <Typography variant={'subtitle2'}>{item}</Typography>
-                  </StyledCountryItem>
+                countries.flat('').map((item, idx) => (
+                  <div className="countriesBox">
+                    <StyledCountryItem key={idx}>
+                      <Typography variant={'subtitle2'}>{item[0]}</Typography>
+                    </StyledCountryItem>
+
+                    {item[1] && (
+                      <StyledCountryItem key={idx}>
+                        <Typography variant={'subtitle2'}>{item[1]}</Typography>
+                      </StyledCountryItem>
+                    )}
+                  </div>
                 ))
               ) : (
                 <Swiper
