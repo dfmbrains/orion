@@ -121,15 +121,23 @@
       "slides": [
         {
           "title": "Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "shortTitle": "Rail freight",
           "subtitle": "No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
         },
         {
           "title": "2 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "shortTitle": "Rail Rate Payment",
           "subtitle": "2 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
         },
         {
           "title": "3 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "shortTitle": "Container Freight Transport",
           "subtitle": "3 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+        },
+        {
+          "title": "4 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "shortTitle": "Provision of Rolling Stock",
+          "subtitle": "4 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
         }
       ]
     },
