@@ -28,7 +28,6 @@ import { HEADER_BURGER_MENU } from '../../helpers/constants';
 
 const StyledBurger = styled('div')(() => ({
   width: '100vw',
-  height: '100vh',
 
   '& .emailFormSection': {
     padding: '10px 0 24px',
@@ -37,8 +36,8 @@ const StyledBurger = styled('div')(() => ({
 
 const StyledBurgerHeader = styled('div')(({ theme }) => ({
   background: theme.palette.primary.main,
-  padding: '16px 0',
-  height: '80px',
+  padding: '8px 0 12px',
+  height: '68px',
 
   '& .logo': {
     width: '200px',
@@ -164,7 +163,12 @@ const Burger = ({ isOpen, handleClose }) => {
         <EmailFormSection background={'#FFF'} />
 
         <Divider />
-        <Typography mt={1} variant={'body2'} sx={{ textAlign: 'center' }}>
+        <Typography
+          mt={1}
+          pb={2}
+          variant={'body2'}
+          sx={{ textAlign: 'center' }}
+        >
           Copyright © {new Date().getFullYear()} Orion Trans{' '}
           {t('footer.privacy.right')}
         </Typography>
