@@ -48,7 +48,7 @@ const StyledSection = styled('section')(({ theme }) => ({
   },
 }));
 
-const StyledSwiperMenu = styled('div')(() => ({
+const StyledSwiperMenu = styled('div')(({ theme }) => ({
   position: 'absolute',
   height: '65px',
   width: '100%',
@@ -59,12 +59,16 @@ const StyledSwiperMenu = styled('div')(() => ({
   backgroundColor: '#FFFFFF25',
   display: 'flex',
   alignItems: 'center',
+
+  [theme.breakpoints.down('md')]: { height: '140px' },
 }));
 
-const StyledMenuContainer = styled('div')(() => ({
+const StyledMenuContainer = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  columnGap: '30px',
+  gap: '30px',
+
+  [theme.breakpoints.down('md')]: { flexWrap: 'wrap', gap: '15px' },
 }));
 
 const StyledMenuItem = styled(Typography)(({ theme, isSelected }) => ({
@@ -79,6 +83,10 @@ const StyledMenuItem = styled(Typography)(({ theme, isSelected }) => ({
 
   '&:hover': {
     borderBottom: `2px solid ${theme.palette.primary.main}`,
+  },
+
+  [theme.breakpoints.down('md')]: {
+    width: 'calc(100% / 2 - 15px / 2)',
   },
 }));
 
