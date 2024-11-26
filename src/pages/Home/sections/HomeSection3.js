@@ -1,6 +1,13 @@
 import React from 'react';
 import OrionContainer from '../../../components/OrionContainer';
-import { Card, Divider, styled, Typography } from '@mui/material';
+import {
+  Card,
+  Divider,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import CalculateForm from '../components/CalculateForm';
 import MapBg from '../../../assets/images/map.webp';
 import { useTranslation } from 'react-i18next';
@@ -24,6 +31,7 @@ const StyledContentBox = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: '0 50px',
   width: '100%',
+
   [theme.breakpoints.down('lg')]: { padding: '0 30px' },
   [theme.breakpoints.down('md')]: { flexWrap: 'wrap' },
   [theme.breakpoints.down('sm')]: { padding: '0' },
@@ -36,24 +44,37 @@ const StyledContentBox = styled('div')(({ theme }) => ({
     width: '100%',
     height: '100%',
     zIndex: '0',
+
     [theme.breakpoints.down('md')]: { height: '38%' },
-    [theme.breakpoints.down('sm')]: { height: '43%' },
+    [theme.breakpoints.down('sm')]: { height: '50%' },
   },
 }));
 
 const StyledSwiperBox = styled('div')(({ theme }) => ({
   position: 'relative',
+
+  [theme.breakpoints.down('sm')]: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    gap: '10px',
+  },
+
   '& .swiperButtonPrev, & .swiperButtonNext': {
     minWidth: 'auto',
     width: '28px',
     height: '28px',
+
     [theme.breakpoints.down('sm')]: { display: 'none' },
   },
+
   '& .swiperButtonPrev': {
     position: 'absolute',
     top: 'calc(100% + 10px)',
     left: '0',
   },
+
   '& .swiperButtonNext': {
     position: 'absolute',
     top: 'calc(100% + 10px)',
@@ -78,7 +99,7 @@ const StyledIntroBox = styled('div')(({ theme }) => ({
   width: '45%',
   [theme.breakpoints.down('lg')]: { width: '48%', padding: '60px 0' },
   [theme.breakpoints.down('md')]: { width: '100%', padding: '30px 0' },
-  [theme.breakpoints.down('sm')]: { padding: '30px 20px' },
+  [theme.breakpoints.down('sm')]: { padding: '20px 20px 25px' },
 }));
 
 const StyledCalculateCard = styled(Card)(({ theme }) => ({
@@ -109,8 +130,11 @@ const StyledCalculateItem = styled('div')(({ theme }) => ({
 }));
 
 const HomeSection3 = () => {
+  const theme = useTheme();
   const translationKey = 'home.section3';
   const { t } = useTranslation();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const countries = t('countries', { returnObjects: true }) || [];
 
@@ -130,36 +154,44 @@ const HomeSection3 = () => {
             </Typography>
 
             <StyledSwiperBox>
-              <Swiper
-                className="swiperCustomNavigation"
-                navigation={true}
-                modules={[Navigation]}
-                slidesPerView={3}
-                spaceBetween={15}
-                breakpoints={{
-                  600: {
-                    spaceBetween: 15,
-                    slidesPerView: 3,
-                  },
-                  0: {
-                    spaceBetween: 15,
-                    slidesPerView: 2,
-                  },
-                }}
-              >
-                <>
-                  <SwiperButtonPrev />
-                  <SwiperButtonNext />
-                </>
+              {isMobile ? (
+                countries.map((item, idx) => (
+                  <StyledCountryItem key={idx}>
+                    <Typography variant={'subtitle2'}>{item}</Typography>
+                  </StyledCountryItem>
+                ))
+              ) : (
+                <Swiper
+                  className="swiperCustomNavigation"
+                  navigation={true}
+                  modules={[Navigation]}
+                  slidesPerView={3}
+                  spaceBetween={15}
+                  breakpoints={{
+                    600: {
+                      spaceBetween: 15,
+                      slidesPerView: 3,
+                    },
+                    0: {
+                      spaceBetween: 15,
+                      slidesPerView: 2,
+                    },
+                  }}
+                >
+                  <>
+                    <SwiperButtonPrev />
+                    <SwiperButtonNext />
+                  </>
 
-                {countries.map((el, idx) => (
-                  <SwiperSlide key={idx}>
-                    <StyledCountryItem key={idx}>
-                      <Typography variant={'subtitle2'}>{el}</Typography>
-                    </StyledCountryItem>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                  {countries.map((item, idx) => (
+                    <SwiperSlide key={idx}>
+                      <StyledCountryItem key={idx}>
+                        <Typography variant={'subtitle2'}>{item}</Typography>
+                      </StyledCountryItem>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              )}
             </StyledSwiperBox>
           </StyledIntroBox>
 
