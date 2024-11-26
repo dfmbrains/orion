@@ -17,6 +17,7 @@ import OrionContainer from '../../../components/OrionContainer';
 import { useNavigate } from 'react-router-dom';
 import { handleScrollToTop } from '../../../helpers/utils';
 import { useTranslation } from 'react-i18next';
+import { FlexGap10 } from '../../../components/FlexBox';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',
@@ -96,20 +97,33 @@ const HomeSection2 = () => {
 
               <Divider />
 
-              <Button
-                onClick={() => {
-                  handleScrollToTop();
-                  navigate('/services');
-                }}
-                sx={{ mt: { md: 3, xs: 2 } }}
-                size={isLaptop ? 'medium' : 'large'}
-                variant={'contained'}
-                color={'primary'}
-              >
-                {t('buttons.learnMore')}
-              </Button>
+              <FlexGap10>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  sx={{ mt: { md: 3, xs: 2 } }}
+                  size={isLaptop ? 'medium' : 'large'}
+                  onClick={() => {
+                    handleScrollToTop();
+                    navigate('/services');
+                  }}
+                >
+                  {t('buttons.learnMore')}
+                </Button>
 
-            {/*  @Todo button to get in touch*/}
+                <Button
+                  color="primary"
+                  variant="outlined"
+                  sx={{ mt: { md: 3, xs: 2 } }}
+                  size={isLaptop ? 'medium' : 'large'}
+                  onClick={() => {
+                    handleScrollToTop();
+                    navigate('/contact?form=1');
+                  }}
+                >
+                  {t('buttons.order')}
+                </Button>
+              </FlexGap10>
             </Box>
           </Grid>
           <Grid

@@ -6,6 +6,7 @@
   },
   "buttons": {
     "learnMore": "learn more",
+    "order": "create order",
     "calculate": "calculate",
     "ourServices": "our services",
     "readOthers": "read others",
