@@ -26,7 +26,7 @@ const StyledSection = styled('section')(({ theme }) => ({
 
   [theme.breakpoints.down('lg')]: { padding: '100px 0 0' },
   [theme.breakpoints.down('md')]: { padding: '80px 0 60px' },
-  [theme.breakpoints.down('sm')]: { padding: '60px 0' },
+  [theme.breakpoints.down('sm')]: { padding: '40px 0 50px' },
 
   '& .freightTriangleBg': {
     position: 'absolute',
@@ -80,6 +80,7 @@ const HomeSection2 = () => {
   const { t } = useTranslation();
 
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const otherServicesList =
     t(`${translationKey}.otherServices.list`, { returnObjects: true }) || [];
@@ -95,19 +96,22 @@ const HomeSection2 = () => {
           </div>
         )}
 
-        <Grid container spacing={{ xs: 4 }}>
-          <Grid sx={{ order: 0 }} item md={4.5} sm={5} xs={5}>
-            {isTablet && (
-              <div className="containerFreightImg">
-                <img
-                  src={ContainerFreight}
-                  alt={t(`${translationKey}.title`)}
-                />
-              </div>
-            )}
-          </Grid>
-          <Grid sx={{ order: 2 }} item md={4.5} xs={12}>
-            <Box sx={{ pb: { xs: 1, md: 5, lg: 8 } }}>
+        <Grid container spacing={{ sm: 4, xs: 3 }}>
+          {!isMobile && (
+            <Grid item md={4.5} sm={5} xs={5}>
+              {isTablet && (
+                <div className="containerFreightImg">
+                  <img
+                    src={ContainerFreight}
+                    alt={t(`${translationKey}.title`)}
+                  />
+                </div>
+              )}
+            </Grid>
+          )}
+
+          <Grid item md={4.5} xs={12}>
+            <Box sx={{ pb: { xs: 0, md: 5, lg: 15 } }}>
               <Typography mb={{ xs: 1, sm: 2, md: 3, lg: 6 }} variant="h2">
                 {t(`${translationKey}.title`)}
               </Typography>
@@ -151,15 +155,18 @@ const HomeSection2 = () => {
           </Grid>
           <Grid
             item
-            xs={7}
+            xs={12}
             md={3}
             sx={{
               alignSelf: { sm: 'center', md: 'flex-start', lg: 'center' },
-              order: { sm: 1, md: 3 },
             }}
           >
             <Card
-              sx={{ py: { sm: 2, lg: 4, xs: 2 }, px: { sm: 2, lg: 4, xs: 1 } }}
+              sx={{
+                py: { lg: 4, sm: 2, xs: 4 },
+                px: { lg: 4, sm: 2, xs: 4 },
+                mb: { lg: 10, sm: 0 },
+              }}
             >
               <Typography mb={2} sx={{ fontWeight: 'bold' }} variant="h5">
                 {t(`${translationKey}.otherServices.title`)}

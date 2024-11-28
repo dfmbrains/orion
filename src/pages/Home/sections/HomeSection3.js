@@ -21,10 +21,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { createDesiredArrays } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
-  padding: '0 0 80px',
+  padding: '0 0 140px',
   background: '#EEF8FF',
-  [theme.breakpoints.down('lg')]: { padding: '0 0 60px' },
-  [theme.breakpoints.down('md')]: { padding: '0 0 50px' },
+  [theme.breakpoints.down('lg')]: { padding: '0 0 120px' },
+  [theme.breakpoints.down('md')]: { padding: '0 0 30px' },
 }));
 
 const StyledContentBox = styled('div')(({ theme }) => ({
@@ -41,19 +41,19 @@ const StyledContentBox = styled('div')(({ theme }) => ({
   '& .mapBg': {
     position: 'absolute',
     left: '50%',
-    transform: 'translate(-50%)',
-    top: 0,
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
     width: '100%',
     height: '100%',
     zIndex: '0',
 
     [theme.breakpoints.down('md')]: { height: '38%' },
-    [theme.breakpoints.down('sm')]: { height: '60%' },
   },
 }));
 
 const StyledSwiperBox = styled('div')(({ theme }) => ({
   position: 'relative',
+  zIndex: '1',
 
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
@@ -103,12 +103,14 @@ const StyledIntroBox = styled('div')(({ theme }) => ({
 
   [theme.breakpoints.down('lg')]: { width: '48%', padding: '60px 0' },
   [theme.breakpoints.down('md')]: { width: '100%', padding: '30px 0' },
-  [theme.breakpoints.down('sm')]: { padding: '20px 20px 25px' },
+  [theme.breakpoints.down('sm')]: { padding: '0' },
 
   '& .countriesBox': {
     display: 'flex',
     flexDirection: 'column',
     rowGap: '15px',
+    position: 'relative',
+    zIndex: '1',
 
     [theme.breakpoints.down('sm')]: {
       width: 'calc(50% - 5px)',
@@ -136,7 +138,7 @@ const StyledCalculateCard = styled(Card)(({ theme }) => ({
     right: 'unset',
     overflow: 'unset',
   },
-  [theme.breakpoints.down('sm')]: { margin: '30px 0 0' },
+  [theme.breakpoints.down('sm')]: { margin: '40px 0 0' },
 }));
 
 const StyledCalculateItem = styled('div')(({ theme }) => ({
@@ -167,7 +169,7 @@ const HomeSection3 = () => {
             <Typography mb={3} variant={'subtitle2'}>
               {t(`${translationKey}.subtitle`)}
             </Typography>
-            <Typography mb={2} variant={'subtitle2'}>
+            <Typography mb={{ sm: 2, xs: 3 }} variant={'subtitle2'}>
               {t(`${translationKey}.description`)}
             </Typography>
 
@@ -254,7 +256,7 @@ const HomeSection3 = () => {
             </StyledCalculateItem>
           </StyledCalculateCard>
 
-          <img src={MapBg} alt="map" className="mapBg" />
+          {!isMobile && <img src={MapBg} alt="map" className="mapBg" />}
         </StyledContentBox>
       </OrionContainer>
     </StyledSection>
