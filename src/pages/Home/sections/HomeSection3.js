@@ -253,6 +253,16 @@ const HomeSection3 = () => {
               sx={{ pb: { lg: 6, xs: 3 }, mt: { lg: 4, xs: 2 } }}
             >
               <CalculateForm translationKey={translationKey} />
+
+              <Typography
+                mt={2}
+                color="#8a8a8a"
+                variant="body2"
+                fontWeight="500"
+                textAlign="center"
+              >
+                {t(`${translationKey}.calculation.message`)}
+              </Typography>
             </StyledCalculateItem>
           </StyledCalculateCard>
 
