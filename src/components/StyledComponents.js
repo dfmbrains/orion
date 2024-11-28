@@ -7,6 +7,8 @@ const StyledPromoBackgroundBox = styled(FlexAllCenter)(({ bgimage }) => ({
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
+  transition: 'background-image 0.5s ease',
+  position: 'relative',
   zIndex: 1,
 
   '&:before': {
