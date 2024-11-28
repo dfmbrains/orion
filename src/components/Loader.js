@@ -15,9 +15,8 @@ const LoaderBox = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   position: 'relative',
-  zIndex: 1000,
   width: '100%',
-  height: '100vh',
+  height: '100%',
   backgroundColor: '#00000099',
 }));
 

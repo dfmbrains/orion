@@ -1,5 +1,5 @@
 import React from 'react';
-import PromoSection from '../../components/PromoSection';
+import PromoSection from '../../components/PromoSection/PromoSection';
 import ContactBg from '../../assets/images/backgrounds/contact.webp';
 import FeaturesSection from '../../components/FeaturesSection';
 import ContactContentSection from './sections/ContactContentSection';

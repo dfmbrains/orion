@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import PromoSection from '../../components/PromoSection';
+import PromoSection from '../../components/PromoSection/PromoSection';
 import EmailFormSection from '../../components/EmailFormSection';
 import PageDetailsContent from '../../components/PageDetailsContent';
 import { useParams } from 'react-router-dom';

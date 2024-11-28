@@ -1,5 +1,5 @@
 import React from 'react';
-import PromoSection from '../../components/PromoSection';
+import PromoSection from '../../components/PromoSection/PromoSection';
 import ServiceBg from '../../assets/images/backgrounds/serviceBg.webp';
 import ServiceSection1 from './sections/ServiceSection1';
 import EmailFormSection from '../../components/EmailFormSection';

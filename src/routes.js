@@ -1,16 +1,14 @@
-import React, { lazy } from 'react';
-import Loadable from './components/Loadable';
+import React from 'react';
 import LightHeaderLayout from './components/LightHeaderLayout';
 import DarkHeaderLayout from './components/DarkHeaderLayout';
-
-const Home = Loadable(lazy(() => import('./pages/Home')));
-const About = Loadable(lazy(() => import('./pages/About')));
-const Contact = Loadable(lazy(() => import('./pages/Contact')));
-const Clients = Loadable(lazy(() => import('./pages/Clients')));
-const Service = Loadable(lazy(() => import('./pages/Service')));
-const ServiceDetails = Loadable(lazy(() => import('./pages/ServiceDetails')));
-const Blog = Loadable(lazy(() => import('./pages/Blog')));
-const BlogDetails = Loadable(lazy(() => import('./pages/BlogDetails')));
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Clients from './pages/Clients';
+import Service from './pages/Service';
+import ServiceDetails from './pages/ServiceDetails';
+import Blog from './pages/Blog';
+import BlogDetails from './pages/BlogDetails';
 
 const routes = [
   {

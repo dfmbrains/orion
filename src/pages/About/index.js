@@ -1,5 +1,5 @@
 import React from 'react';
-import PromoSection from '../../components/PromoSection';
+import PromoSection from '../../components/PromoSection/PromoSection';
 import StatisticsSection from '../../components/StatisticsSection';
 import AboutBg from '../../assets/images/backgrounds/about.webp';
 import MeetTeamBg from '../../assets/images/backgrounds/meet_team.webp';

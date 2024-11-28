@@ -3,7 +3,7 @@ import Loader from './Loader';
 
 const Loadable = Component => props => {
   return (
-    <Suspense fallback={<Loader window="full" size="medium" />}>
+    <Suspense fallback={<Loader />}>
       <Component {...props} />
     </Suspense>
   );
