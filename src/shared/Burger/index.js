@@ -92,7 +92,11 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerHeader>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <ImageComponent clx="logo" src={LightLogoCompany} alt="orion" />
+              <ImageComponent
+                className="logo"
+                src={LightLogoCompany}
+                alt="orion"
+              />
 
               <IconButton onClick={handleClose} color="secondary">
                 <Icon className="closeIcon">close</Icon>
@@ -127,7 +131,11 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerMain>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <ImageComponent clx="logo" src={PrimaryLogoCompany} alt="swt" />
+              <ImageComponent
+                className="logo"
+                src={PrimaryLogoCompany}
+                alt="swt"
+              />
 
               <ChangeLangButton color="info" />
             </FlexBetweenAlignCenter>

@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import { FlexGap10 } from '../../../components/FlexBox';
 import ContainerFreight from '../../../assets/images/containerFreight.webp';
 import DefaultButton from '../../../components/DefaultButton';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',
@@ -87,7 +88,10 @@ const HomeSection2 = () => {
       <OrionContainer>
         {!isTablet && (
           <div className="containerFreightImg">
-            <img src={ContainerFreight} alt={t(`${translationKey}.title`)} />
+            <ImageComponent
+              src={ContainerFreight}
+              alt={t(`${translationKey}.title`)}
+            />
           </div>
         )}
 
@@ -96,7 +100,7 @@ const HomeSection2 = () => {
             <Grid item md={4.5} sm={5} xs={5}>
               {isTablet && (
                 <div className="containerFreightImg">
-                  <img
+                  <ImageComponent
                     src={ContainerFreight}
                     alt={t(`${translationKey}.title`)}
                   />
@@ -158,12 +162,12 @@ const HomeSection2 = () => {
           </Grid>
         </Grid>
       </OrionContainer>
-      <img
+      <ImageComponent
         className="freightTriangleBg"
         src={FreightTriangleBg}
         alt="triangle"
       />
-      <img className="ellipseBg" src={EllipseBg} alt="ellipse" />
+      <ImageComponent className="ellipseBg" src={EllipseBg} alt="ellipse" />
     </StyledSection>
   );
 };

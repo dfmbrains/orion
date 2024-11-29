@@ -13,6 +13,7 @@ import MatxLoading from '../../../components/MatxLoading';
 import { formatName } from '../../../helpers/utils';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import { Trans, useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',
@@ -99,7 +100,7 @@ const AboutSection9 = () => {
               }}
             >
               <Swiper
-                className="swiperCustomNavigation"
+                className="swiperStatic swiperCustomNavigation"
                 navigation={true}
                 modules={[Navigation]}
                 slidesPerView={2}
@@ -124,7 +125,10 @@ const AboutSection9 = () => {
                   <SwiperSlide key={idx}>
                     <div>
                       <StyledPreviewMemberBox>
-                        <img src={el.images.file} alt={el.images.name} />
+                        <ImageComponent
+                          src={el.images.file}
+                          alt={el.images.name}
+                        />
                       </StyledPreviewMemberBox>
                       <Typography mt={1} variant="subtitle1">
                         {formatName(el.firstName, el.midName, el.lastName)}

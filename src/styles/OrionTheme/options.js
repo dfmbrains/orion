@@ -75,5 +75,14 @@ export const themeOptions = theme => {
         [theme.breakpoints.down('lg')]: { fontSize: 12 },
       },
     },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          '.swiper-pagination-bullet-active': {
+            backgroundColor: '#F18200',
+          },
+        },
+      },
+    },
   };
 };

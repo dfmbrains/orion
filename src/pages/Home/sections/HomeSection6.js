@@ -22,6 +22,7 @@ import MatxLoading from '../../../components/MatxLoading';
 import { useRecoilState } from 'recoil';
 import { teamRecoil } from '../../../recoil';
 import { useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',
@@ -121,7 +122,10 @@ const HomeSection6 = () => {
 
                 <FlexGap10 my={{ md: 3, xs: 2 }}>
                   <StyledPreviewMemberBox>
-                    <img src={active.images.file} alt={active.images.name} />
+                    <ImageComponent
+                      src={active.images.file}
+                      alt={active.images.name}
+                    />
                   </StyledPreviewMemberBox>
                   <div>
                     <Typography color="#9EADB4" variant="body1">
@@ -145,7 +149,7 @@ const HomeSection6 = () => {
 
               <Grid item lg={5.95} md={5}>
                 <StyledImageBox>
-                  <img src={OfficeImg} alt="office" />
+                  <ImageComponent src={OfficeImg} alt="office" />
                 </StyledImageBox>
               </Grid>
             </Grid>
@@ -158,7 +162,7 @@ const HomeSection6 = () => {
                 {t(`${translationKey}.subtitle`)}
               </Typography>
               <Swiper
-                className="swiperCustomNavigation"
+                className="swiperStatic swiperCustomNavigation"
                 navigation={true}
                 modules={[Navigation]}
                 slidesPerView={4}
@@ -196,7 +200,10 @@ const HomeSection6 = () => {
                       }}
                     >
                       <StyledPreviewMemberBox>
-                        <img src={el.images.file} alt={el.images.name} />
+                        <ImageComponent
+                          src={el.images.file}
+                          alt={el.images.name}
+                        />
                       </StyledPreviewMemberBox>
                       <div>
                         <Typography color="#9EADB4" variant="body1">

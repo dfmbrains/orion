@@ -1,30 +1,36 @@
-import React, { useState } from 'react';
-import StaticImg from '../assets/images/logo.png';
+import React, { useEffect, useState } from 'react';
+import { ImageErrorUrl } from '../helpers/constants';
 
 const ImageComponent = ({
-  src = '',
-  alt,
-  clx = '',
-  fallbackSrc = StaticImg,
+  alt = 'ImageComponent',
+  fallbackSrc = ImageErrorUrl,
   setIsLoading,
+  src,
+  ...props
 }) => {
-  const [imageSrc, setImageSrc] = useState(src);
+  const [imageSrc, setImageSrc] = useState(src || fallbackSrc);
+
+  useEffect(() => {
+    setImageSrc(src || fallbackSrc);
+  }, [src, fallbackSrc]);
 
   const handleLoad = () => {
     if (setIsLoading) {
       setIsLoading(false);
     }
   };
+
   const handleError = () => {
     setImageSrc(fallbackSrc);
   };
 
   return (
     <img
-      onLoad={handleLoad}
-      className={clx}
-      src={imageSrc}
+      {...props}
       alt={alt}
+      src={imageSrc}
+      loading="lazy"
+      onLoad={handleLoad}
       onError={handleError}
     />
   );

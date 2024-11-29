@@ -26,6 +26,7 @@ import Tur from '../../../assets/images/countries/tur.png';
 import Uz from '../../../assets/images/countries/uz.png';
 import CompanyHistoryDialog from '../components/CompanyHistoryDialog';
 import { useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '120px 0 100px',
@@ -121,7 +122,7 @@ const AboutSection2 = () => {
               {t(`${translationKey}.subtitle2`)}
             </Typography>
             <Swiper
-              className="swiperCustomNavigation"
+              className="swiperStatic swiperCustomNavigation"
               navigation={true}
               modules={[Navigation]}
               slidesPerView={6}
@@ -151,7 +152,7 @@ const AboutSection2 = () => {
               {countries.map((el, idx) => (
                 <SwiperSlide key={idx}>
                   <StyledSwiperSlide>
-                    <img src={countriesImg[idx]} alt={el} />
+                    <ImageComponent src={countriesImg[idx]} alt={el} />
                     <Typography variant="subtitle1">{el}</Typography>
                   </StyledSwiperSlide>
                 </SwiperSlide>
@@ -161,7 +162,7 @@ const AboutSection2 = () => {
         </Box>
       </OrionContainer>
 
-      <img className="mapBg" src={MapBg} alt="map" />
+      <ImageComponent className="mapBg" src={MapBg} alt="map" />
 
       <CompanyHistoryDialog
         open={isOpenDialog}

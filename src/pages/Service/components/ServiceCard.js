@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { handleScrollToTop } from '../../../helpers/utils';
 import { useSetRecoilState } from 'recoil';
 import { serviceDetailsRecoil } from '../../../recoil';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   overflow: 'hidden',
@@ -46,7 +47,7 @@ const ServiceCard = ({ data }) => {
       }}
     >
       <StyledResponsiveImageBox className="serviceCardImg">
-        <img src={data.images.file} alt={data.images.name} />
+        <ImageComponent src={data.images.file} alt={data.images.name} />
       </StyledResponsiveImageBox>
       <Box pt={2} pb={5} px={3}>
         <Typography variant="subtitle1" mb={2}>

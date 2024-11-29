@@ -1,5 +1,7 @@
 import { atom } from 'recoil';
-import BlogImg from '../assets/images/logo.png';
+import { ImageErrorUrl } from '../helpers/constants';
+
+const BlogImg = ImageErrorUrl;
 
 export const blogRecoil = atom({
   key: 'blogRecoilState',

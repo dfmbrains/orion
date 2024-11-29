@@ -13,6 +13,7 @@ import { handleScrollToTop } from '../helpers/utils';
 import { useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil } from '../recoil';
 import { useTranslation } from 'react-i18next';
+import ImageComponent from './ImageComponent';
 
 const StyledBox = styled('div')(({ theme }) => ({
   paddingLeft: '15px',
@@ -55,7 +56,7 @@ const PostCard = ({ post }) => {
   return (
     <div className="postCard">
       <StyledResponsiveImageBox className="postCardImg">
-        <img src={post.images[0].file} alt={post.images[0].name} />
+        <ImageComponent src={post.images[0].file} alt={post.images[0].name} />
       </StyledResponsiveImageBox>
       <FlexGap10
         mt={{ lg: 3, xs: 1 }}

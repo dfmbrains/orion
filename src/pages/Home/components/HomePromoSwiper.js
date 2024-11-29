@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, EffectFade, Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import {
   StyledPromoBackgroundBox,
@@ -92,15 +92,13 @@ const HomePromoSwiper = () => {
   return (
     <Swiper
       navigation
+      effect="fade"
       centeredSlides
       spaceBetween={10}
       className="mySwiper"
-      modules={[Autoplay, Navigation]}
+      autoplay={{ delay: 10000, disableOnInteraction: false }}
+      modules={[EffectFade, Autoplay, Navigation]}
       onSlideChange={swiper => setActiveSlide(swiper.activeIndex)}
-      autoplay={{
-        delay: 10000,
-        disableOnInteraction: false,
-      }}
     >
       <SwiperMenu slides={slides} activeSlide={activeSlide} />
 

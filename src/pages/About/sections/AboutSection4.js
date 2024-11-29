@@ -3,6 +3,7 @@ import { Grid, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import OurTeamImg from '../../../assets/images/our_team.webp';
 import { Trans, useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0',
@@ -61,7 +62,11 @@ const AboutSection4 = () => {
             </Typography>
           </Grid>
           <Grid item md={6} xs={12}>
-            <img className="aboutSection4Img" src={OurTeamImg} alt="our team" />
+            <ImageComponent
+              className="aboutSection4Img"
+              src={OurTeamImg}
+              alt="our team"
+            />
           </Grid>
         </Grid>
       </OrionContainer>

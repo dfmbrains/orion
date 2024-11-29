@@ -19,6 +19,7 @@ import {
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { createDesiredArrays } from '../../../helpers/utils';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '0 0 140px',
@@ -194,7 +195,7 @@ const HomeSection3 = () => {
                   slidesPerView={3}
                   spaceBetween={15}
                   modules={[Navigation]}
-                  className="swiperCustomNavigation"
+                  className="swiperStatic swiperCustomNavigation"
                   breakpoints={{
                     600: {
                       spaceBetween: 15,
@@ -264,7 +265,9 @@ const HomeSection3 = () => {
             </StyledCalculateItem>
           </StyledCalculateCard>
 
-          {!isMobile && <img src={MapBg} alt="map" className="mapBg" />}
+          {!isMobile && (
+            <ImageComponent src={MapBg} alt="map" className="mapBg" />
+          )}
         </StyledContentBox>
       </OrionContainer>
     </StyledSection>

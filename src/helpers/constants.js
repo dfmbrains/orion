@@ -24,3 +24,6 @@ export const HEADER_BURGER_MENU = [
   { title: 'menu.blogs', link: '/blog' },
   { title: 'menu.contact', link: '/contact?form=0' },
 ];
+
+export const ImageErrorUrl =
+  'https://placehold.co/1920x1080/webp?font=roboto&text=Error';

@@ -20,6 +20,7 @@ import { useRecoilState } from 'recoil';
 import { partnersRecoil } from '../../../recoil';
 import MatxLoading from '../../../components/MatxLoading';
 import { Trans, useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 160px',
@@ -108,7 +109,7 @@ const ClientsSection1 = () => {
               slidesPerView={4}
               spaceBetween={20}
               modules={[Navigation]}
-              className="swiperCustomNavigation"
+              className="swiperStatic swiperCustomNavigation"
             >
               <StyledSwiperButtonsPosition>
                 <SwiperButtons />
@@ -117,7 +118,7 @@ const ClientsSection1 = () => {
               {partnersList.map(el => (
                 <SwiperSlide key={el.id}>
                   <StyledImageBox>
-                    <img src={el.images.file} alt={el.images.name} />
+                    <ImageComponent src={el.images.file} alt={el.images.name} />
                   </StyledImageBox>
                 </SwiperSlide>
               ))}

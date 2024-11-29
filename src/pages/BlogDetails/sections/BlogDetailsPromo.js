@@ -4,6 +4,7 @@ import OrionContainer from '../../../components/OrionContainer';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { StyledResponsiveImageBox } from '../../../components/StyledComponents';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(() => ({
   padding: '130px 0 0',
@@ -32,16 +33,16 @@ const BlogDetailsPromo = ({ images }) => {
     <StyledSection>
       <OrionContainer>
         <Swiper
+          navigation
+          centeredSlides
           spaceBetween={10}
-          centeredSlides={true}
-          navigation={true}
-          modules={[Navigation]}
           className="mySwiper"
+          modules={[Navigation]}
         >
           {images.map((img, ind) => (
             <SwiperSlide key={ind}>
               <StyledSlideBox>
-                <img src={img.file} alt={img.name} />
+                <ImageComponent src={img.file} alt={img.name} />
               </StyledSlideBox>
             </SwiperSlide>
           ))}

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { anchorLinkHandler } from '../../../helpers/utils';
 import { Trans, useTranslation } from 'react-i18next';
 import DefaultButton from '../../../components/DefaultButton';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -70,7 +71,11 @@ const AboutSection3 = () => {
             </FlexGap10>
           </Grid>
           <Grid item md={6} xs={12}>
-            <img className="aboutSection3Img" src={ClientsImg} alt="clients" />
+            <ImageComponent
+              alt="clients"
+              src={ClientsImg}
+              className="aboutSection3Img"
+            />
           </Grid>
         </Grid>
       </OrionContainer>

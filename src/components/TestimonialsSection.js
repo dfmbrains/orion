@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
 
           {reviews ? (
             <Swiper
-              className="swiperCustomNavigation"
+              className="swiperStatic swiperCustomNavigation"
               navigation={true}
               modules={[Navigation]}
               slidesPerView={2}

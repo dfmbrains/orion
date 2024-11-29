@@ -11,6 +11,7 @@ import OrionContainer from '../../../components/OrionContainer';
 import TeamImg from '../../../assets/images/team.webp';
 import { FlexBox } from '../../../components/FlexBox';
 import { Trans, useTranslation } from 'react-i18next';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '50px 0',
@@ -71,7 +72,11 @@ const AboutSection5 = () => {
                   {t(`${translationKey}.subtitle`)}
                 </Typography>
                 <Divider />
-                <img className="aboutSection5Img" src={TeamImg} alt="team" />
+                <ImageComponent
+                  alt="team"
+                  src={TeamImg}
+                  className="aboutSection5Img"
+                />
               </div>
               {!isTablet && <Divider orientation={'vertical'} flexItem />}
             </FlexBox>
