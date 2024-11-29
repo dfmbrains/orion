@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { handleScrollToTop } from '../../../helpers/utils';
 import ProvisionImg from '../../../assets/images/provision.webp';
 import { useTranslation } from 'react-i18next';
+import { FlexGap10 } from '../../../components/FlexBox';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',
@@ -37,34 +38,45 @@ const HomeSection4 = () => {
   return (
     <StyledSection>
       <OrionContainer>
-        <Grid container spacing={{ sm: 8, xs: 6 }} alignItems={'center'}>
+        <Grid container spacing={{ sm: 8, xs: 6 }} alignItems="center">
           <Grid item lg={5.5} md={6}>
-            <Typography mb={3} pr={6} variant={'h2'}>
+            <Typography mb={3} pr={6} variant="h2">
               {t(`${translationKey}.title`)}
             </Typography>
-            <Typography mb={3} pr={6} variant={'subtitle2'}>
+            <Typography mb={3} pr={6} variant="subtitle2">
               {t(`${translationKey}.subtitle`)}
             </Typography>
 
             <Divider />
 
-            <Button
-              onClick={() => {
-                handleScrollToTop();
-                navigate('/services');
-              }}
-              variant={'contained'}
-              color={'primary'}
-              sx={{ mt: { lg: 5, sm: 3, xs: 2 }, width: '60%' }}
-              size={isLaptop ? 'medium' : 'large'}
-            >
-              {t('buttons.ourServices')}
-            </Button>
+            <FlexGap10 sx={{ mt: { lg: 5, sm: 3, xs: 2 } }}>
+              <Button
+                color="primary"
+                variant="contained"
+                size={isLaptop ? 'medium' : 'large'}
+                onClick={() => {
+                  handleScrollToTop();
+                  navigate('/services');
+                }}
+              >
+                {t('buttons.learnMore')}
+              </Button>
 
-            {/*  @Todo button to get in touch*/}
+              <Button
+                color="primary"
+                variant="outlined"
+                size={isLaptop ? 'medium' : 'large'}
+                onClick={() => {
+                  handleScrollToTop();
+                  navigate('/contact?form=1');
+                }}
+              >
+                {t('buttons.order')}
+              </Button>
+            </FlexGap10>
           </Grid>
 
-          <Divider flexItem orientation={'vertical'} />
+          <Divider flexItem orientation="vertical" />
 
           <Grid item lg={6} md={5.95}>
             <img src={ProvisionImg} alt="provision" className="provisionImg" />
