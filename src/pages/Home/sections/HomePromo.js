@@ -8,12 +8,13 @@ const HomePromoSwiper = Loadable(
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',
-  height: 'calc(100vh - 32px)',
+  // height: 'calc(100vh - 32px)',
+  height: '100vh',
   backgroundColor: '#252525',
 
-  [theme.breakpoints.down('lg')]: { height: 'calc(100vh - 27.15px)' },
-  [theme.breakpoints.down('md')]: { height: 'calc(100vh - 26px)' },
-  [theme.breakpoints.down('sm')]: { height: 'calc(75vh)' },
+  // [theme.breakpoints.down('lg')]: { height: 'calc(100vh - 27.15px)' },
+  // [theme.breakpoints.down('md')]: { height: 'calc(100vh - 26px)' },
+  // [theme.breakpoints.down('sm')]: { height: 'calc(75vh)' },
 
   '& .mySwiperSlide': {
     '& .MuiTypography-root': {

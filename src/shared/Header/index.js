@@ -2,7 +2,15 @@ import React, { useState } from 'react';
 import HeaderTop from './components/HeaderTop';
 import HeaderGeneral from './components/HeaderGeneral';
 import Burger from '../Burger';
-import { useMediaQuery, useTheme } from '@mui/material';
+import { styled, useMediaQuery, useTheme } from '@mui/material';
+
+const StyledHeader = styled('header')(() => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  zIndex: 10,
+  width: '100%',
+}));
 
 const Header = ({ color }) => {
   const theme = useTheme();
@@ -12,10 +20,10 @@ const Header = ({ color }) => {
 
   return (
     <>
-      <header id="header">
+      <StyledHeader id="header">
         <HeaderTop />
         <HeaderGeneral openBurger={() => setIsBurgerOpen(true)} color={color} />
-      </header>
+      </StyledHeader>
 
       {!isLaptop && (
         <Burger
