@@ -128,7 +128,7 @@ const HomeSection6 = () => {
                     />
                   </StyledPreviewMemberBox>
                   <div>
-                    <Typography color="#9EADB4" variant="body1">
+                    <Typography color="#4E5865" variant="body1">
                       {active.position}
                     </Typography>
                     <Typography variant="subtitle1">
@@ -206,7 +206,7 @@ const HomeSection6 = () => {
                         />
                       </StyledPreviewMemberBox>
                       <div>
-                        <Typography color="#9EADB4" variant="body1">
+                        <Typography color="#4E5865" variant="body1">
                           {el.position}
                         </Typography>
                         <Typography
