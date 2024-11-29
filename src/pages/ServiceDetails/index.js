@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { serviceDetailsRecoil, serviceRecoil } from '../../recoil';
 import { Styled100vhLoadingBox } from '../../components/StyledComponents';
-import MatxLoading from '../../components/MatxLoading';
+import OrionLoading from '../../components/OrionLoading';
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -36,7 +36,7 @@ const ServiceDetails = () => {
         </>
       ) : (
         <Styled100vhLoadingBox sx={{ background: '#252525' }}>
-          <MatxLoading />
+          <OrionLoading />
         </Styled100vhLoadingBox>
       )}
       <EmailFormSection />

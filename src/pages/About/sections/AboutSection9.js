@@ -9,7 +9,7 @@ import {
 } from '../../../components/SwiperButtons';
 import { useRecoilState } from 'recoil';
 import { teamRecoil } from '../../../recoil';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import { formatName } from '../../../helpers/utils';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import { Trans, useTranslation } from 'react-i18next';
@@ -147,7 +147,7 @@ const AboutSection9 = () => {
           </>
         ) : (
           <Styled50vhLoadingBox>
-            <MatxLoading />
+            <OrionLoading />
           </Styled50vhLoadingBox>
         )}
       </OrionContainer>

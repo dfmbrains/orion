@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FlexAllCenter } from '../../../components/FlexBox';
 import { useRecoilState } from 'recoil';
 import { partnersRecoil } from '../../../recoil';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import { Trans, useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
 
@@ -126,7 +126,7 @@ const ClientsSection1 = () => {
           </Box>
         ) : (
           <Styled50vhLoadingBox>
-            <MatxLoading />
+            <OrionLoading />
           </Styled50vhLoadingBox>
         )}
       </OrionContainer>

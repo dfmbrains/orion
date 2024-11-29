@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { useRecoilState } from 'recoil';
 import { reviewsRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -100,7 +100,7 @@ const HomeSection5 = () => {
           </>
         ) : (
           <Styled50vhLoadingBox>
-            <MatxLoading />
+            <OrionLoading />
           </Styled50vhLoadingBox>
         )}
       </OrionContainer>

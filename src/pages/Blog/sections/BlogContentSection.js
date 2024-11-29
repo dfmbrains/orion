@@ -5,7 +5,7 @@ import PostCard from '../../../components/PostCard';
 import { FlexBox } from '../../../components/FlexBox';
 import { useRecoilState } from 'recoil';
 import { blogRecoil } from '../../../recoil';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0 80px',
@@ -48,7 +48,7 @@ const BlogContentSection = () => {
           </StyledFlexBox>
         </OrionContainer>
       ) : (
-        <MatxLoading />
+        <OrionLoading />
       )}
     </StyledSection>
   );

@@ -7,7 +7,7 @@ import ContactForm from '../components/ContactForm';
 import { useRecoilState } from 'recoil';
 import { companyRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import CreateReviewForm from '../../../components/CreateReviewForm';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -128,7 +128,7 @@ const ContactContentSection = () => {
           </Grid>
         ) : (
           <Styled50vhLoadingBox>
-            <MatxLoading />
+            <OrionLoading />
           </Styled50vhLoadingBox>
         )}
       </OrionContainer>

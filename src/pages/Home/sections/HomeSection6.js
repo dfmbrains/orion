@@ -18,7 +18,7 @@ import {
   StyledSwiperButtonsPosition,
 } from '../../../components/StyledComponents';
 import { anchorLinkHandler, formatName } from '../../../helpers/utils';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import { useRecoilState } from 'recoil';
 import { teamRecoil } from '../../../recoil';
 import { useTranslation } from 'react-i18next';
@@ -224,7 +224,7 @@ const HomeSection6 = () => {
           </>
         ) : (
           <Styled50vhLoadingBox>
-            <MatxLoading />
+            <OrionLoading />
           </Styled50vhLoadingBox>
         )}
       </OrionContainer>

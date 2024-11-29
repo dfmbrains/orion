@@ -5,7 +5,7 @@ import BlogDetailsPromo from './sections/BlogDetailsPromo';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { blogDetailsRecoil, blogRecoil } from '../../recoil';
 import { useParams } from 'react-router-dom';
-import MatxLoading from '../../components/MatxLoading';
+import OrionLoading from '../../components/OrionLoading';
 import { Styled100vhLoadingBox } from '../../components/StyledComponents';
 
 const BlogDetails = () => {
@@ -33,7 +33,7 @@ const BlogDetails = () => {
         </>
       ) : (
         <Styled100vhLoadingBox>
-          <MatxLoading />
+          <OrionLoading />
         </Styled100vhLoadingBox>
       )}
       <EmailFormSection />

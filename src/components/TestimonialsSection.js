@@ -10,7 +10,7 @@ import {
 import SwiperButtons from './SwiperButtons';
 import { useRecoilState } from 'recoil';
 import { reviewsRecoil } from '../recoil';
-import MatxLoading from './MatxLoading';
+import OrionLoading from './OrionLoading';
 import { useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
             </Swiper>
           ) : (
             <Styled50vhLoadingBox>
-              <MatxLoading />
+              <OrionLoading />
             </Styled50vhLoadingBox>
           )}
         </Box>

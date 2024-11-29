@@ -10,7 +10,7 @@ import OrionContainer from '../../../components/OrionContainer';
 import PostCard from '../../../components/PostCard';
 import { useRecoilState } from 'recoil';
 import { blogRecoil } from '../../../recoil';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import { useTranslation } from 'react-i18next';
 
@@ -62,7 +62,7 @@ const HomeSection7 = () => {
         </OrionContainer>
       ) : (
         <Styled50vhLoadingBox>
-          <MatxLoading />
+          <OrionLoading />
         </Styled50vhLoadingBox>
       )}
     </StyledSection>

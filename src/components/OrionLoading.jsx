@@ -21,7 +21,7 @@ const StyledLoading = styled(FlexAlignCenter)(() => ({
   },
 }));
 
-const Loading = () => {
+const OrionLoading = () => {
   return (
     <StyledLoading>
       <Box position="relative">
@@ -32,4 +32,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default OrionLoading;

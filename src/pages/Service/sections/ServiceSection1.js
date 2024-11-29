@@ -6,7 +6,7 @@ import { FlexBox } from '../../../components/FlexBox';
 import { useRecoilState } from 'recoil';
 import { serviceRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import MatxLoading from '../../../components/MatxLoading';
+import OrionLoading from '../../../components/OrionLoading';
 import { Trans, useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({
@@ -95,7 +95,7 @@ const ServiceSection1 = () => {
             ))
           ) : (
             <Styled50vhLoadingBox>
-              <MatxLoading />
+              <OrionLoading />
             </Styled50vhLoadingBox>
           )}
         </StyledFlexBox>
