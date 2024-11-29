@@ -76,24 +76,24 @@
   ],
   "statisticsSection": [
     {
-      "title": "Shipped Tons Per Month",
-      "value": "10,000",
-      "valueTag": ""
+      "title": "Volume of Cargo Transported per Year",
+      "value": "3.6",
+      "valueTag": "million tons"
     },
     {
-      "title": "Shipped Tons Per Month",
-      "value": "10+",
-      "valueTag": ""
+      "title": "Number of Wagons Transported",
+      "value": "60",
+      "valueTag": "thousand/year"
     },
     {
-      "title": "Shipped Tons Per Month",
-      "value": "10",
-      "valueTag": "Years"
+      "title": "In the Market",
+      "value": "12",
+      "valueTag": "years"
     },
     {
-      "title": "Shipped Tons Per Month",
-      "value": "8",
-      "valueTag": "Years"
+      "title": "Companies Trust Us",
+      "value": "50",
+      "valueTag": "+"
     }
   ],
   "emailFormSection": {

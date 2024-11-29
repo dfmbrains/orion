@@ -28,17 +28,18 @@
     "requiredEmail": "Email is required!"
   },
   "countries": [
-    "China",
-    "Kazakhstan",
-    "Uzbekistan",
-    "Russia",
-    "Turkmenistan",
-    "Tajikistan",
-    "Eastern Europe",
-    "Afghanistan",
-    "Iran",
-    "Baltic Countries",
-    "Azerbaijan"
+    "Китай",
+    "Кыргызстан",
+    "Казахстан",
+    "Узбекистан",
+    "Россия",
+    "Туркменистан",
+    "Таджикистан",
+    "Восточная европа",
+    "Афганистан",
+    "Иран",
+    "Страны Балтики",
+    "Азербайджан"
   ],
   "menu": {
     "home": "Главная",
@@ -76,34 +77,24 @@
   ],
   "statisticsSection": [
     {
-      "title": "Перевезенных тонн грузов в месяц",
-      "value": "60,000",
-      "valueTag": ""
+      "title": "Объем перевезенного груза в год",
+      "value": "3,6",
+      "valueTag": "млн тонн"
     },
     {
-      "title": "Перевезенных груженых вагонов в месяц",
-      "value": "10+",
-      "valueTag": ""
+      "title": "Количество перевезенных вагонов",
+      "value": "60",
+      "valueTag": "тыс/год"
     },
     {
-      "title": "Перевезенных порожних вагонов в месяц",
-      "value": "10",
-      "valueTag": ""
+      "title": "На рынке",
+      "value": "12",
+      "valueTag": "лет"
     },
     {
-      "title": "на рынке",
-      "value": "8",
-      "valueTag": "Лет"
-    },
-    {
-      "title": "Довольных клиентов и партнеров",
-      "value": "200+",
-      "valueTag": ""
-    },
-    {
-      "title": "Лучших экспертов в области логистики в Кыргызстане",
-      "value": "10",
-      "valueTag": "Лет"
+      "title": "Компании нам доверяют",
+      "value": "50",
+      "valueTag": "+"
     }
   ],
   "emailFormSection": {

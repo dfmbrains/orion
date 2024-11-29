@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, styled, Typography, useTheme } from '@mui/material';
+import { Grid, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from './OrionContainer';
 import { FlexGap10 } from './FlexBox';
 import { useTranslation } from 'react-i18next';
@@ -16,6 +16,24 @@ const StyledSection = styled('section')(({ bgcolor, theme }) => ({
   },
 }));
 
+const StyledBox = styled('div')(({ theme, bgcolor }) => ({
+  position: 'relative',
+  padding: '8px 0',
+
+  '&::after': {
+    content: "''",
+    position: 'absolute',
+    top: 0,
+    left: '-24px',
+    width: '1px',
+    height: '100%',
+    zIndex: 1,
+    backgroundColor: bgcolor ? '#282519' : '#FFFFFF',
+  },
+
+  [theme.breakpoints.down('sm')]: { padding: '3px 0' },
+}));
+
 const StatisticsSection = ({ bgcolor }) => {
   const { t } = useTranslation();
 
@@ -29,13 +47,7 @@ const StatisticsSection = ({ bgcolor }) => {
         <Grid container spacing={{ lg: 10, md: 6, sm: 6, xs: 4 }}>
           {data.map((el, idx) => (
             <Grid item md={3} xs={6} key={idx}>
-              <Box
-                sx={{
-                  borderLeft: `1px solid ${bgcolor ? '#282519' : '#FFFFFF'}`,
-                }}
-                pl={{ lg: 5, sm: 2, xs: 1 }}
-                py={{ sm: 1, xs: 0.3 }}
-              >
+              <StyledBox bgcolor={bgcolor}>
                 <Typography variant={'body1'}>{el.title}</Typography>
                 <FlexGap10>
                   <Typography variant={'h1'} component={'h5'}>
@@ -45,7 +57,7 @@ const StatisticsSection = ({ bgcolor }) => {
                     {el.valueTag}
                   </Typography>
                 </FlexGap10>
-              </Box>
+              </StyledBox>
             </Grid>
           ))}
         </Grid>
