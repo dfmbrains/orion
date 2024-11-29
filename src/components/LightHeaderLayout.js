@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const LightHeaderLayout = () => {
   return (
     <>
-      <Header color={'light'} />
+      <Header color="light" />
       <main>
         <Outlet />
       </main>

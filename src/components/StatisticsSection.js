@@ -63,7 +63,7 @@ const ValueComponent = ({ item, bgcolor }) => {
             decimals={item.value % 1 !== 0 ? 1 : 0}
           />
         </Typography>
-        <Typography variant="h4" component="h5" mt={{sm: 2, xs: 1}}>
+        <Typography variant="h4" component="h5" mt={{ sm: 2, xs: 1 }}>
           {item.valueTag}
         </Typography>
       </FlexGap10>

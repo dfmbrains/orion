@@ -51,7 +51,7 @@ const AboutSection5 = () => {
           <Grid item md={6} xs={12}>
             <FlexBox sx={{ height: '100%' }}>
               <div>
-                <Typography mb={{ lg: 3, xs: 2 }} variant={'h3'}>
+                <Typography mb={{ lg: 3, xs: 2 }} variant="h3">
                   <Trans
                     i18nKey={`${translationKey}.title1`}
                     components={{
@@ -66,7 +66,7 @@ const AboutSection5 = () => {
                 <Typography
                   pb={{ lg: 3, xs: 2 }}
                   width={{ sm: '80%', xs: '100%' }}
-                  variant={'subtitle2'}
+                  variant="subtitle2"
                 >
                   {t(`${translationKey}.subtitle`)}
                 </Typography>
@@ -77,7 +77,7 @@ const AboutSection5 = () => {
             </FlexBox>
           </Grid>
           <Grid item md={6} xs={12}>
-            <Typography mb={{ lg: 3, xs: 2 }} variant={'h3'}>
+            <Typography mb={{ lg: 3, xs: 2 }} variant="h3">
               <Trans
                 i18nKey={`${translationKey}.title2`}
                 components={{
@@ -92,9 +92,9 @@ const AboutSection5 = () => {
 
             {objectives.map((el, ind) => (
               <Typography
-                className={'aboutSection5Objectives'}
-                variant={'subtitle1'}
                 key={ind}
+                variant="subtitle1"
+                className="aboutSection5Objectives"
               >
                 {el}
               </Typography>

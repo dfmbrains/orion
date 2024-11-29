@@ -13,12 +13,12 @@ const FeatureCard = ({ data }) => {
         mt={{ lg: 2, sm: 1, xs: 0.5 }}
         mb={{ lg: 1, xs: 0.5 }}
         sx={{ fontWeight: 'bold' }}
-        variant={'subtitle1'}
+        variant="subtitle1"
       >
         {data.title}
       </Typography>
       {data?.subtitle && (
-        <Typography variant={'subtitle2'}>{data.subtitle}</Typography>
+        <Typography variant="subtitle2">{data.subtitle}</Typography>
       )}
     </div>
   );

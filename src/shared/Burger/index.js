@@ -94,8 +94,8 @@ const Burger = ({ isOpen, handleClose }) => {
             <FlexBetweenAlignCenter>
               <ImageComponent clx="logo" src={LightLogoCompany} alt="orion" />
 
-              <IconButton onClick={handleClose} color={'secondary'}>
-                <Icon className={'closeIcon'}>close</Icon>
+              <IconButton onClick={handleClose} color="secondary">
+                <Icon className="closeIcon">close</Icon>
               </IconButton>
             </FlexBetweenAlignCenter>
           </OrionContainer>
@@ -107,8 +107,8 @@ const Burger = ({ isOpen, handleClose }) => {
               <LoadingButton
                 fullWidth
                 loading={!company}
-                color={'primary'}
-                variant={'contained'}
+                color="primary"
+                variant="contained"
                 href={`mailto:${company?.about?.email}`}
                 startIcon={<Icon>email</Icon>}
               >
@@ -116,7 +116,7 @@ const Burger = ({ isOpen, handleClose }) => {
                   {t('contact.content.writeUs')}
                 </Typography>
               </LoadingButton>
-              {/*<Button href={`tel:${phoneNumber}`} fullWidth variant={"contained"} color={"primary"}*/}
+              {/*<Button href={`tel:${phoneNumber}`} fullWidth variant="contained" color="primary"*/}
               {/*        startIcon={<Icon>phone</Icon>}>*/}
               {/*   <Typography variant="subtitle1">{t('contacts.call')}</Typography>*/}
               {/*</Button>*/}
@@ -129,7 +129,7 @@ const Burger = ({ isOpen, handleClose }) => {
             <FlexBetweenAlignCenter>
               <ImageComponent clx="logo" src={PrimaryLogoCompany} alt="swt" />
 
-              <ChangeLangButton color={'info'} />
+              <ChangeLangButton color="info" />
             </FlexBetweenAlignCenter>
 
             <Typography
@@ -140,7 +140,7 @@ const Burger = ({ isOpen, handleClose }) => {
                 borderBottom: `3px solid ${theme.palette.primary.light}`,
               }}
               color={theme.palette.primary.main}
-              variant={'h3'}
+              variant="h3"
             >
               {t('words.menu')}
             </Typography>
@@ -152,7 +152,7 @@ const Burger = ({ isOpen, handleClose }) => {
                   className="item"
                   onClick={handleClose}
                 >
-                  <Typography variant={'h5'}>{t(item.title)}</Typography>
+                  <Typography variant="h5">{t(item.title)}</Typography>
                   <Icon>chevron_right</Icon>
                 </NavLink>
               ))}
@@ -163,12 +163,7 @@ const Burger = ({ isOpen, handleClose }) => {
         <EmailFormSection background={'#FFF'} />
 
         <Divider />
-        <Typography
-          mt={1}
-          pb={2}
-          variant={'body2'}
-          sx={{ textAlign: 'center' }}
-        >
+        <Typography mt={1} pb={2} variant="body2" sx={{ textAlign: 'center' }}>
           Copyright © {new Date().getFullYear()} Orion Trans{' '}
           {t('footer.privacy.right')}
         </Typography>

@@ -69,14 +69,10 @@ const EmailFormSection = ({ background }) => {
     <StyledSection background={background} className="emailFormSection">
       <FlexAllCenter>
         <StyledBox>
-          <Typography mb={1} variant={'h4'} color={'#1B1B1B'}>
+          <Typography mb={1} variant="h4" color="#1B1B1B">
             {t('emailFormSection.title')}
           </Typography>
-          <Typography
-            mb={{ lg: 6, md: 4, xs: 2 }}
-            variant={'h5'}
-            color={'#8A8A8A'}
-          >
+          <Typography mb={{ lg: 6, md: 4, xs: 2 }} variant="h5" color="#8A8A8A">
             {t('emailFormSection.subtitle')}
           </Typography>
 
@@ -84,7 +80,7 @@ const EmailFormSection = ({ background }) => {
             <FlexGap10 sx={{ justifyContent: 'center' }}>
               <TextField
                 fullWidth
-                size={'small'}
+                size="small"
                 type="text"
                 name="email"
                 label={t('emailFormSection.placeholder')}
@@ -96,9 +92,9 @@ const EmailFormSection = ({ background }) => {
 
               <LoadingButton
                 loading={loading}
-                variant={'contained'}
-                color={'primary'}
-                type={'submit'}
+                variant="contained"
+                color="primary"
+                type="submit"
               >
                 {t('buttons.send')}
               </LoadingButton>

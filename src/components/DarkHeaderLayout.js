@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const DarkHeaderLayout = () => {
   return (
     <>
-      <Header color={'dark'} />
+      <Header color="dark" />
       <main>
         <Outlet />
       </main>

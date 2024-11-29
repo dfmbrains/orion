@@ -30,7 +30,7 @@ const AboutSection1 = () => {
   return (
     <StyledSection>
       <StyledFlexAllCenter>
-        <Typography variant={'h3'} mb={{ sm: 4, xs: 3 }}>
+        <Typography variant="h3" mb={{ sm: 4, xs: 3 }}>
           <Trans
             i18nKey={`${translationKey}.title`}
             components={{
@@ -42,7 +42,7 @@ const AboutSection1 = () => {
             }}
           />
         </Typography>
-        <Typography variant={'subtitle2'}>
+        <Typography variant="subtitle2">
           {t(`${translationKey}.subtitle`)}
         </Typography>
       </StyledFlexAllCenter>

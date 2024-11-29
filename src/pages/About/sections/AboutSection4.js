@@ -26,9 +26,9 @@ const AboutSection4 = () => {
   return (
     <StyledSection>
       <OrionContainer>
-        <Grid container spacing={{ lg: 8, md: 6, xs: 4 }} alignItems={'center'}>
+        <Grid container spacing={{ lg: 8, md: 6, xs: 4 }} alignItems="center">
           <Grid item md={6} xs={12}>
-            <Typography mb={{ lg: 2, xs: 1 }} variant={'h3'}>
+            <Typography mb={{ lg: 2, xs: 1 }} variant="h3">
               <Trans
                 i18nKey={`${translationKey}.title1`}
                 components={{
@@ -40,11 +40,11 @@ const AboutSection4 = () => {
                 }}
               />
             </Typography>
-            <Typography mb={{ lg: 4, xs: 3 }} variant={'subtitle2'}>
+            <Typography mb={{ lg: 4, xs: 3 }} variant="subtitle2">
               {t(`${translationKey}.subtitle1`)}
             </Typography>
 
-            <Typography mb={{ lg: 2, xs: 1 }} variant={'h3'}>
+            <Typography mb={{ lg: 2, xs: 1 }} variant="h3">
               <Trans
                 i18nKey={`${translationKey}.title2`}
                 components={{
@@ -56,7 +56,7 @@ const AboutSection4 = () => {
                 }}
               />
             </Typography>
-            <Typography variant={'subtitle2'}>
+            <Typography variant="subtitle2">
               {t(`${translationKey}.subtitle2`)}
             </Typography>
           </Grid>

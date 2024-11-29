@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Box,
-  Button,
   Card,
   Divider,
   Grid,
@@ -13,11 +12,10 @@ import {
 import FreightTriangleBg from '../../../assets/images/freightTriangle.webp';
 import EllipseBg from '../../../assets/images/ellipse.webp';
 import OrionContainer from '../../../components/OrionContainer';
-import { useNavigate } from 'react-router-dom';
-import { handleScrollToTop } from '../../../helpers/utils';
 import { useTranslation } from 'react-i18next';
 import { FlexGap10 } from '../../../components/FlexBox';
 import ContainerFreight from '../../../assets/images/containerFreight.webp';
+import DefaultButton from '../../../components/DefaultButton';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',
@@ -75,7 +73,6 @@ const StyledSection = styled('section')(({ theme }) => ({
 const HomeSection2 = () => {
   const translationKey = 'home.section2';
 
-  const navigate = useNavigate();
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -84,8 +81,6 @@ const HomeSection2 = () => {
 
   const otherServicesList =
     t(`${translationKey}.otherServices.list`, { returnObjects: true }) || [];
-
-  const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <StyledSection>
@@ -115,7 +110,7 @@ const HomeSection2 = () => {
               <Typography mb={{ xs: 1, sm: 2, md: 3, lg: 6 }} variant="h2">
                 {t(`${translationKey}.title`)}
               </Typography>
-              <Typography mb={{ xs: 1, lg: 3 }} color={'primary'} variant="h4">
+              <Typography mb={{ xs: 1, lg: 3 }} color="primary" variant="h4">
                 {t(`${translationKey}.subtitle`)}
               </Typography>
               <Typography mb={{ xs: 1, lg: 3 }} variant="body1">
@@ -124,32 +119,14 @@ const HomeSection2 = () => {
 
               <Divider />
 
-              <FlexGap10>
-                <Button
-                  color="primary"
-                  variant="contained"
-                  sx={{ mt: { md: 3, xs: 2 } }}
-                  size={isLaptop ? 'medium' : 'large'}
-                  onClick={() => {
-                    handleScrollToTop();
-                    navigate('/services');
-                  }}
-                >
+              <FlexGap10 sx={{ mt: { md: 3, xs: 2 } }}>
+                <DefaultButton variant="contained" linkTo="/services">
                   {t('buttons.learnMore')}
-                </Button>
+                </DefaultButton>
 
-                <Button
-                  color="primary"
-                  variant="outlined"
-                  sx={{ mt: { md: 3, xs: 2 } }}
-                  size={isLaptop ? 'medium' : 'large'}
-                  onClick={() => {
-                    handleScrollToTop();
-                    navigate('/contact?form=1');
-                  }}
-                >
+                <DefaultButton variant="outlined" linkTo="/contact?form=1">
                   {t('buttons.order')}
-                </Button>
+                </DefaultButton>
               </FlexGap10>
             </Box>
           </Grid>

@@ -37,22 +37,22 @@ const ServiceCard = ({ data }) => {
 
   return (
     <StyledCard
+      theme={theme}
+      className="serviceCard"
       onClick={() => {
         setServiceDetails(data);
         handleScrollToTop();
         navigate(`/services/${data.id}`);
       }}
-      theme={theme}
-      className={'serviceCard'}
     >
       <StyledResponsiveImageBox className="serviceCardImg">
         <img src={data.images.file} alt={data.images.name} />
       </StyledResponsiveImageBox>
       <Box pt={2} pb={5} px={3}>
-        <Typography variant={'subtitle1'} mb={2}>
+        <Typography variant="subtitle1" mb={2}>
           {data.title}
         </Typography>
-        <Typography variant={'subtitle2'} color={'#6C6C6C'}>
+        <Typography variant="subtitle2" color="#6C6C6C">
           {data.subtitle}
         </Typography>
       </Box>

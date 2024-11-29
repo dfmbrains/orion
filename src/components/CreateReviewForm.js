@@ -59,7 +59,7 @@ const ContactForm = ({ translationKey }) => {
               container
               spacing={6}
               justifyContent={'space-between'}
-              alignItems={'center'}
+              alignItems="center"
             >
               <Grid item xs={6}>
                 <TextField
@@ -107,11 +107,11 @@ const ContactForm = ({ translationKey }) => {
             <LoadingButton
               sx={{ mt: 7, mb: 1 }}
               size={'large'}
-              color={'primary'}
-              variant={'contained'}
+              color="primary"
+              variant="contained"
               fullWidth
               loading={loading}
-              type={'submit'}
+              type="submit"
             >
               {t('buttons.send')}
             </LoadingButton>

@@ -105,7 +105,7 @@ const HomePromoSwiper = () => {
       <SwiperMenu slides={slides} activeSlide={activeSlide} />
 
       {slides.map((el, idx) => (
-        <SwiperSlide key={idx} className={'mySwiperSlide'}>
+        <SwiperSlide key={idx} className="mySwiperSlide">
           <StyledPromoBackgroundBox bgimage={slidesImgs[idx]}>
             <StylePromoColumn>
               <Typography my={3} variant="h1">

@@ -32,12 +32,12 @@ const AboutSection8 = () => {
   return (
     <StyledSection>
       <OrionContainer>
-        <Grid container alignItems={'center'} spacing={{ md: 3, xs: 4 }}>
+        <Grid container alignItems="center" spacing={{ md: 3, xs: 4 }}>
           <Grid item md={4} xs={12}>
             <Typography
               color={theme.palette.primary.main}
               textAlign={{ md: 'left', xs: 'center' }}
-              variant={'h3'}
+              variant="h3"
             >
               {t(`${translationKey}.title`)}
             </Typography>

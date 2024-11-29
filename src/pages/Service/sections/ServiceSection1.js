@@ -52,7 +52,7 @@ const ServiceSection1 = () => {
           mb={{ md: 15, sm: 10, xs: 5 }}
         >
           <Grid item md={6} xs={12}>
-            <Typography variant={'h2'}>
+            <Typography variant="h2">
               <Trans
                 i18nKey={`${translationKey}.title`}
                 components={{
@@ -76,11 +76,11 @@ const ServiceSection1 = () => {
                 borderBottom: `5px solid ${theme.palette.primary.main}`,
                 display: 'inline',
               }}
-              variant={'subtitle2'}
+              variant="subtitle2"
             >
               {t('orionTrans')}.
             </Typography>
-            <Typography variant={'subtitle2'} mt={3}>
+            <Typography variant="subtitle2" mt={3}>
               {t(`${translationKey}.subtitle`)}
             </Typography>
           </Grid>

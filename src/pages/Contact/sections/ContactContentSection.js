@@ -56,7 +56,7 @@ const ContactContentSection = () => {
               </Typography>
               <Typography
                 variant="body1"
-                color={'#9EADB4'}
+                color="#9EADB4"
                 textTransform={'capitalize'}
               >
                 {t(`${translationKey}.supportCenter`)} 24 / 7
@@ -77,7 +77,7 @@ const ContactContentSection = () => {
 
               <StyledFlexGap10 my={3}>
                 <div>
-                  <Typography variant="body1" color={'#9EADB4'}>
+                  <Typography variant="body1" color="#9EADB4">
                     {t(`${translationKey}.ourLocation`)}
                   </Typography>
                   <Typography variant="subtitle2">
@@ -85,7 +85,7 @@ const ContactContentSection = () => {
                   </Typography>
                 </div>
                 <div>
-                  <Typography variant="body1" color={'#9EADB4'}>
+                  <Typography variant="body1" color="#9EADB4">
                     {t(`${translationKey}.writeUs`)}
                   </Typography>
                   <a href="mailto:office.oriontrans@gmail.com">
@@ -96,10 +96,10 @@ const ContactContentSection = () => {
                 </div>
               </StyledFlexGap10>
 
-              <Typography variant="body1" color={'#9EADB4'}>
+              <Typography variant="body1" color="#9EADB4">
                 {t(`${translationKey}.inSocialMedia`)}
               </Typography>
-              <SocialMediaButtons color={'info'} />
+              <SocialMediaButtons color="info" />
             </Grid>
             <Grid item md={6} xs={12}>
               <FlexBox sx={{ justifyContent: 'flex-end' }}>

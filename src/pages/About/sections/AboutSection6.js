@@ -29,15 +29,15 @@ const AboutSection6 = () => {
     <StyledSection theme={theme}>
       <FlexAllCenter>
         <Box>
-          <Typography variant={'h2'} mb={2}>
+          <Typography variant="h2" mb={2}>
             {t(`${translationKey}.title`)}
           </Typography>
           <Typography
             width={{ sm: '100%', xs: '80%' }}
             mx={{ sm: '0', xs: 'auto' }}
-            variant={'subtitle1'}
+            variant="subtitle1"
           >
-            <Typography variant={'h4'} component={'span'}>
+            <Typography variant="h4" component={'span'}>
               200+{' '}
             </Typography>
             {t(`${translationKey}.subtitle1`)}
@@ -46,9 +46,9 @@ const AboutSection6 = () => {
             width={{ sm: '100%', xs: '80%' }}
             mx={{ sm: '0', xs: 'auto' }}
             mt={{ md: 0, xs: 1 }}
-            variant={'subtitle1'}
+            variant="subtitle1"
           >
-            <Typography variant={'h4'} component={'span'}>
+            <Typography variant="h4" component={'span'}>
               10{' '}
             </Typography>
             {t(`${translationKey}.subtitle2`)}

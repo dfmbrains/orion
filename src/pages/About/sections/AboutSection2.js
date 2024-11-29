@@ -89,11 +89,11 @@ const AboutSection2 = () => {
       <OrionContainer>
         <Box sx={{ position: 'relative', zIndex: 2 }}>
           <Box sx={{ width: { md: '50%' } }}>
-            <Typography variant={'h2'} color={theme.palette.primary.main}>
+            <Typography variant="h2" color={theme.palette.primary.main}>
               {t('orionTrans')}
             </Typography>
             <Typography
-              variant={'subtitle2'}
+              variant="subtitle2"
               mt={{ sm: 3, xs: 2 }}
               mb={{ sm: 4, xs: 3 }}
             >
@@ -103,8 +103,8 @@ const AboutSection2 = () => {
             <Button
               onClick={() => setIsOpenDialog(true)}
               size={isMobile ? 'medium' : 'large'}
-              variant={'outlined'}
-              color={'primary'}
+              variant="outlined"
+              color="primary"
               sx={{ width: '50%' }}
             >
               {t('buttons.readOurStory')}
@@ -113,7 +113,7 @@ const AboutSection2 = () => {
 
           <Box sx={{ position: 'relative' }}>
             <Typography
-              variant={'subtitle1'}
+              variant="subtitle1"
               mt={4}
               mb={{ sm: 6, xs: 4 }}
               fontWeight={'bold'}
@@ -152,7 +152,7 @@ const AboutSection2 = () => {
                 <SwiperSlide key={idx}>
                   <StyledSwiperSlide>
                     <img src={countriesImg[idx]} alt={el} />
-                    <Typography variant={'subtitle1'}>{el}</Typography>
+                    <Typography variant="subtitle1">{el}</Typography>
                   </StyledSwiperSlide>
                 </SwiperSlide>
               ))}

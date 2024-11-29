@@ -54,25 +54,25 @@ const ClientsSection1 = () => {
         <ButtonGroup>
           <Button
             color={part === 'clients' ? 'primary' : 'info'}
-            variant={'text'}
+            variant="text"
             onClick={() => setPart('clients')}
           >
             {t(`${translationKey}.clients`)}.
           </Button>
           <Button
             color={part === 'partners' ? 'primary' : 'info'}
-            variant={'text'}
+            variant="text"
             onClick={() => setPart('partners')}
           >
             {t(`${translationKey}.partners`)}.
           </Button>
-          <Button href={'#testimonialsSection'} color={'info'} variant={'text'}>
+          <Button href={'#testimonialsSection'} color="info" variant="text">
             {t(`${translationKey}.testimonials`)}.
           </Button>
         </ButtonGroup>
 
         <Typography
-          variant={'h2'}
+          variant="h2"
           mt={{ md: 4, sm: 3, xs: 2 }}
           mb={{ md: 5, sm: 4, xs: 3 }}
         >
@@ -93,7 +93,7 @@ const ClientsSection1 = () => {
           />
         </Typography>
 
-        <Typography variant={'subtitle2'}>
+        <Typography variant="subtitle2">
           {t(`${translationKey}.subtitle`)}
         </Typography>
 

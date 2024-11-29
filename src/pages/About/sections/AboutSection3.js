@@ -1,18 +1,12 @@
 import React from 'react';
-import {
-  Button,
-  Grid,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Grid, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import { FlexGap10 } from '../../../components/FlexBox';
 import ClientsImg from '../../../assets/images/partners_and_clients.webp';
 import { useNavigate } from 'react-router-dom';
-import { anchorLinkHandler, handleScrollToTop } from '../../../helpers/utils';
+import { anchorLinkHandler } from '../../../helpers/utils';
 import { Trans, useTranslation } from 'react-i18next';
+import DefaultButton from '../../../components/DefaultButton';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -38,14 +32,12 @@ const AboutSection3 = () => {
     await anchorLinkHandler('homeSection3');
   };
 
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-
   return (
     <StyledSection>
       <OrionContainer>
-        <Grid container spacing={{ lg: 8, md: 6, xs: 5 }} alignItems={'center'}>
+        <Grid container spacing={{ lg: 8, md: 6, xs: 5 }} alignItems="center">
           <Grid item md={6} xs={12}>
-            <Typography mb={{ lg: 5, md: 4, xs: 3 }} variant={'h3'}>
+            <Typography mb={{ lg: 5, md: 4, xs: 3 }} variant="h3">
               <Trans
                 i18nKey={`${translationKey}.title`}
                 components={{
@@ -57,33 +49,24 @@ const AboutSection3 = () => {
                 }}
               />
             </Typography>
-            <Typography mb={{ lg: 4, md: 2, xs: 1 }} variant={'subtitle2'}>
+            <Typography mb={{ lg: 4, md: 2, xs: 1 }} variant="subtitle2">
               {t(`${translationKey}.subtitle1`)}
             </Typography>
-            <Typography mb={{ lg: 5, md: 4, xs: 3 }} variant={'subtitle2'}>
+            <Typography mb={{ lg: 5, md: 4, xs: 3 }} variant="subtitle2">
               {t(`${translationKey}.subtitle2`)}
             </Typography>
 
             <FlexGap10>
-              <Button
-                onClick={() => {
-                  handleScrollToTop();
-                  navigate('/contact');
-                }}
-                variant={'contained'}
-                color={'primary'}
-                size={isTablet ? 'medium' : 'large'}
-              >
+              <DefaultButton variant="contained" linkTo="/contact?form=0">
                 {t('buttons.contactUs')}
-              </Button>
-              <Button
+              </DefaultButton>
+
+              <DefaultButton
+                variant="outlined"
                 onClick={navigateToCalculationForm}
-                variant={'outlined'}
-                color={'primary'}
-                size={isTablet ? 'medium' : 'large'}
               >
                 {t('buttons.calculateRailTariff')}
-              </Button>
+              </DefaultButton>
             </FlexGap10>
           </Grid>
           <Grid item md={6} xs={12}>

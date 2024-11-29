@@ -1,19 +1,10 @@
 import React from 'react';
-import {
-  Button,
-  Divider,
-  Grid,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Divider, Grid, styled, Typography } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
-import { useNavigate } from 'react-router-dom';
-import { handleScrollToTop } from '../../../helpers/utils';
 import ProvisionImg from '../../../assets/images/provision.webp';
 import { useTranslation } from 'react-i18next';
 import { FlexGap10 } from '../../../components/FlexBox';
+import DefaultButton from '../../../components/DefaultButton';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',
@@ -30,11 +21,6 @@ const HomeSection4 = () => {
   const translationKey = 'home.section4';
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
-  const theme = useTheme();
-
-  const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
-
   return (
     <StyledSection>
       <OrionContainer>
@@ -50,29 +36,13 @@ const HomeSection4 = () => {
             <Divider />
 
             <FlexGap10 sx={{ mt: { lg: 5, sm: 3, xs: 2 } }}>
-              <Button
-                color="primary"
-                variant="contained"
-                size={isLaptop ? 'medium' : 'large'}
-                onClick={() => {
-                  handleScrollToTop();
-                  navigate('/services');
-                }}
-              >
+              <DefaultButton variant="contained" linkTo="/services">
                 {t('buttons.learnMore')}
-              </Button>
+              </DefaultButton>
 
-              <Button
-                color="primary"
-                variant="outlined"
-                size={isLaptop ? 'medium' : 'large'}
-                onClick={() => {
-                  handleScrollToTop();
-                  navigate('/contact?form=1');
-                }}
-              >
+              <DefaultButton variant="outlined" linkTo="/contact?form=1">
                 {t('buttons.order')}
-              </Button>
+              </DefaultButton>
             </FlexGap10>
           </Grid>
 

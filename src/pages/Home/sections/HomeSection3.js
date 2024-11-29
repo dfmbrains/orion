@@ -163,13 +163,13 @@ const HomeSection3 = () => {
       <OrionContainer>
         <StyledContentBox>
           <StyledIntroBox>
-            <Typography mb={3} variant={'h3'}>
+            <Typography mb={3} variant="h3">
               {t(`${translationKey}.title`)}
             </Typography>
-            <Typography mb={3} variant={'subtitle2'}>
+            <Typography mb={3} variant="subtitle2">
               {t(`${translationKey}.subtitle`)}
             </Typography>
-            <Typography mb={{ sm: 2, xs: 3 }} variant={'subtitle2'}>
+            <Typography mb={{ sm: 2, xs: 3 }} variant="subtitle2">
               {t(`${translationKey}.description`)}
             </Typography>
 
@@ -178,12 +178,12 @@ const HomeSection3 = () => {
                 countries.flat('').map((item, idx) => (
                   <div className="countriesBox">
                     <StyledCountryItem key={idx}>
-                      <Typography variant={'subtitle2'}>{item[0]}</Typography>
+                      <Typography variant="subtitle2">{item[0]}</Typography>
                     </StyledCountryItem>
 
                     {item[1] && (
                       <StyledCountryItem key={idx}>
-                        <Typography variant={'subtitle2'}>{item[1]}</Typography>
+                        <Typography variant="subtitle2">{item[1]}</Typography>
                       </StyledCountryItem>
                     )}
                   </div>
@@ -215,14 +215,12 @@ const HomeSection3 = () => {
                     <SwiperSlide key={idx}>
                       <div className="countriesBox">
                         <StyledCountryItem key={idx}>
-                          <Typography variant={'subtitle2'}>
-                            {item[0]}
-                          </Typography>
+                          <Typography variant="subtitle2">{item[0]}</Typography>
                         </StyledCountryItem>
 
                         {item[1] && (
                           <StyledCountryItem key={idx}>
-                            <Typography variant={'subtitle2'}>
+                            <Typography variant="subtitle2">
                               {item[1]}
                             </Typography>
                           </StyledCountryItem>
@@ -242,12 +240,12 @@ const HomeSection3 = () => {
                 mb: { lg: 4, sm: 2, xs: 1 },
               }}
             >
-              <Typography variant={'h5'}>
+              <Typography variant="h5">
                 {t(`${translationKey}.calculation.title`)}
               </Typography>
             </StyledCalculateItem>
 
-            <Divider color={'#F18200'} />
+            <Divider color="#F18200" />
 
             <StyledCalculateItem
               sx={{ pb: { lg: 6, xs: 3 }, mt: { lg: 4, xs: 2 } }}

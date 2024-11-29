@@ -1,9 +1,15 @@
 import React from 'react';
 import i18next from 'i18next';
-import { Button, Icon, Typography, useMediaQuery, useTheme } from '@mui/material';
+import {
+  Button,
+  Icon,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-const ChangeLangButton = ({color}) => {
+const ChangeLangButton = ({ color }) => {
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -14,7 +20,7 @@ const ChangeLangButton = ({color}) => {
       onClick={() =>
         i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')
       }
-      variant={'text'}
+      variant="text"
       color={color || 'secondary'}
       size={isLaptop ? 'small' : 'medium'}
       startIcon={<Icon>language</Icon>}

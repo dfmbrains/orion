@@ -19,7 +19,7 @@ const Home = () => {
       <HomeSection4 />
       <FeaturesSection />
       <HomeSection5 />
-      <StatisticsSection bgcolor={'#F7F7F7'} />
+      <StatisticsSection bgcolor="#F7F7F7" />
       <HomeSection6 />
       <HomeSection7 />
       <EmailFormSection />

@@ -25,9 +25,9 @@ export const SwiperButtonPrev = () => {
 
   return (
     <StyledIconButton
-      className={'swiperButtonPrev'}
+      className="swiperButtonPrev"
       onClick={() => swiper.slidePrev()}
-      size={'small'}
+      size="small"
     >
       <Icon>keyboard_arrow_left</Icon>
     </StyledIconButton>
@@ -39,9 +39,9 @@ export const SwiperButtonNext = () => {
 
   return (
     <StyledIconButton
-      className={'swiperButtonNext'}
+      size="small"
+      className="swiperButtonNext"
       onClick={() => swiper.slideNext()}
-      size={'small'}
     >
       <Icon>keyboard_arrow_right</Icon>
     </StyledIconButton>

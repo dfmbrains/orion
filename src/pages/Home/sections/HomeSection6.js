@@ -109,11 +109,11 @@ const HomeSection6 = () => {
           <>
             <Grid
               container
-              alignItems={'center'}
+              alignItems="center"
               spacing={{ lg: 5, md: 3, xs: 2 }}
             >
               <Grid item lg={5.95} md={6.95}>
-                <Typography mb={{ md: 5, sm: 3, xs: 2 }} variant={'h2'}>
+                <Typography mb={{ md: 5, sm: 3, xs: 2 }} variant="h2">
                   {t(`${translationKey}.title`)}
                 </Typography>
 
@@ -124,10 +124,10 @@ const HomeSection6 = () => {
                     <img src={active.images.file} alt={active.images.name} />
                   </StyledPreviewMemberBox>
                   <div>
-                    <Typography color={'#9EADB4'} variant={'body1'}>
+                    <Typography color="#9EADB4" variant="body1">
                       {active.position}
                     </Typography>
-                    <Typography variant={'subtitle1'}>
+                    <Typography variant="subtitle1">
                       {formatName(
                         active.firstName,
                         active.midName,
@@ -136,7 +136,7 @@ const HomeSection6 = () => {
                     </Typography>
                   </div>
                 </FlexGap10>
-                <Typography mb={3} variant={'subtitle2'} color={'#332C2C'}>
+                <Typography mb={3} variant="subtitle2" color="#332C2C">
                   {active.about}
                 </Typography>
               </Grid>
@@ -154,7 +154,7 @@ const HomeSection6 = () => {
               mt={{ lg: 8, md: 6, sm: 4, xs: 3 }}
               sx={{ position: 'relative' }}
             >
-              <Typography variant={'h2'} mb={{ md: 5, xs: 3 }}>
+              <Typography variant="h2" mb={{ md: 5, xs: 3 }}>
                 {t(`${translationKey}.subtitle`)}
               </Typography>
               <Swiper
@@ -199,11 +199,11 @@ const HomeSection6 = () => {
                         <img src={el.images.file} alt={el.images.name} />
                       </StyledPreviewMemberBox>
                       <div>
-                        <Typography color={'#9EADB4'} variant={'body1'}>
+                        <Typography color="#9EADB4" variant="body1">
                           {el.position}
                         </Typography>
                         <Typography
-                          variant={'subtitle1'}
+                          variant="subtitle1"
                           sx={{ wordBreak: 'break-all' }}
                         >
                           {formatName(el.firstName, '', el.lastName)}

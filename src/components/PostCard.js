@@ -66,32 +66,32 @@ const PostCard = ({ post }) => {
       >
         {isTablet ? (
           <FlexGap10 sx={{ alignItems: 'flex-end' }}>
-            <Typography variant={'h2'} component={'h5'}>
+            <Typography variant="h2" component={'h5'}>
               {date.getDate()}
             </Typography>
-            <Typography variant={'subtitle1'}>
+            <Typography variant="subtitle1">
               {months[date.getMonth()]}
             </Typography>
-            <Typography variant={'subtitle1'}>{date.getFullYear()}</Typography>
+            <Typography variant="subtitle1">{date.getFullYear()}</Typography>
           </FlexGap10>
         ) : (
           <div>
-            <Typography variant={'h2'} component={'h5'}>
+            <Typography variant="h2" component={'h5'}>
               {date.getDate()}
             </Typography>
-            <Typography variant={'subtitle1'}>
+            <Typography variant="subtitle1">
               {months[date.getMonth()]}
             </Typography>
-            <Typography variant={'subtitle1'}>{date.getFullYear()}</Typography>
+            <Typography variant="subtitle1">{date.getFullYear()}</Typography>
           </div>
         )}
         <StyledBox>
-          <Typography variant={'h5'} fontWeight={'400'} mb={{ lg: 1.5, xs: 1 }}>
+          <Typography variant="h5" fontWeight={'400'} mb={{ lg: 1.5, xs: 1 }}>
             {post.title}
           </Typography>
           <Typography
-            variant={'subtitle2'}
-            color={'##6C6C6C'}
+            variant="subtitle2"
+            color="##6C6C6C"
             mb={{ lg: 3, xs: 2 }}
           >
             {post.subtitle}
@@ -103,8 +103,8 @@ const PostCard = ({ post }) => {
               handleScrollToTop();
               navigate(`/blog/${post.id}`);
             }}
-            color={'primary'}
-            variant={'contained'}
+            color="primary"
+            variant="contained"
             size={isTablet ? 'small' : 'medium'}
           >
             {t('buttons.readMore')}

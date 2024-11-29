@@ -53,7 +53,7 @@ const ServiceSection2 = () => {
     <StyledSection>
       <OrionContainer>
         <Typography
-          variant={'h3'}
+          variant="h3"
           mb={{ md: 8, sm: 6, xs: 4 }}
           textAlign={'center'}
         >

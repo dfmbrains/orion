@@ -68,7 +68,7 @@ const AboutSection9 = () => {
       <OrionContainer>
         {team ? (
           <>
-            <Typography variant={'h3'}>
+            <Typography variant="h3">
               <Trans
                 i18nKey={`${translationKey}.title`}
                 components={{
@@ -83,7 +83,7 @@ const AboutSection9 = () => {
             <Typography
               width={{ lg: '50%', md: '80%', xs: '100%' }}
               mx={'auto'}
-              variant={'subtitle2'}
+              variant="subtitle2"
               mt={1}
             >
               {t(`${translationKey}.subtitle`)}
@@ -126,13 +126,13 @@ const AboutSection9 = () => {
                       <StyledPreviewMemberBox>
                         <img src={el.images.file} alt={el.images.name} />
                       </StyledPreviewMemberBox>
-                      <Typography mt={1} variant={'subtitle1'}>
+                      <Typography mt={1} variant="subtitle1">
                         {formatName(el.firstName, el.midName, el.lastName)}
                       </Typography>
-                      <Typography my={1} variant={'body1'}>
+                      <Typography my={1} variant="body1">
                         {el.about}
                       </Typography>
-                      <Typography color={'#9EADB4'} variant={'body2'}>
+                      <Typography color="#9EADB4" variant="body2">
                         {el.position}
                       </Typography>
                     </div>

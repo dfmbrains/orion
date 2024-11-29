@@ -57,17 +57,15 @@ const HomeSection5 = () => {
   return (
     <StyledSection>
       <OrionContainer>
-        <Typography variant={'h3'}>{t(`${translationKey}.title`)}</Typography>
+        <Typography variant="h3">{t(`${translationKey}.title`)}</Typography>
 
         {reviews && reviews?.length > 0 ? (
           <>
-            <Typography my={{ lg: 2, xs: 1 }} variant={'h5'}>
+            <Typography my={{ lg: 2, xs: 1 }} variant="h5">
               {reviews[counter].text}
             </Typography>
-            <Typography variant={'subtitle2'}>
-              {reviews[counter].name}
-            </Typography>
-            <Typography variant={'h5'}>{reviews[counter].company}</Typography>
+            <Typography variant="subtitle2">{reviews[counter].name}</Typography>
+            <Typography variant="h5">{reviews[counter].company}</Typography>
 
             {reviews.length > 1 && (
               <Box mt={{ lg: 3, sm: 2, xs: 1 }}>
@@ -81,7 +79,7 @@ const HomeSection5 = () => {
                             : '#D6D6D6',
                       }}
                       key={el.id}
-                      size={'small'}
+                      size="small"
                       onClick={() => setCounter(ind)}
                     >
                       <Icon sx={{ fontSize: '12px' }}>fiber_manual_record</Icon>
@@ -92,10 +90,10 @@ const HomeSection5 = () => {
             )}
 
             <Button
+              color="secondary"
+              variant="contained"
               onClick={navigateToClientsTestimonials}
               sx={{ mt: { lg: 5, md: 4, sm: 3, xs: 2 } }}
-              variant={'contained'}
-              color={'secondary'}
             >
               {t('buttons.readOthers')}
             </Button>

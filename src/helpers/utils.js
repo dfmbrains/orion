@@ -30,7 +30,7 @@ export const getAllCollectionsWithImg = async (path, multiFile) => {
   });
 };
 
-export const createDesiredArrays = (arr) => {
+export const createDesiredArrays = arr => {
   const pairedValues = [];
   for (let i = 0; i < arr.length; i += 2) {
     pairedValues.push(arr.slice(i, i + 2));

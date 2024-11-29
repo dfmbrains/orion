@@ -16,9 +16,9 @@ import {
   EMAIL_JS_SERVICE_ID,
   EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
 } from '../../../helpers/constants';
-import { LoadingButton } from '@mui/lab';
 import { useSnackbar } from 'notistack';
 import { useTranslation } from 'react-i18next';
+import DefaultButton from '../../../components/DefaultButton';
 
 const StyledIconBox = styled(FlexBox)(({ theme }) => ({
   flexDirection: 'column',
@@ -102,7 +102,7 @@ const CalculateForm = ({ translationKey }) => {
               container
               rowSpacing={{ sm: 3, xs: 2 }}
               justifyContent={'space-between'}
-              alignItems={'center'}
+              alignItems="center"
             >
               <Grid item xs={5.5}>
                 <TextField
@@ -124,10 +124,10 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={1}>
                 <StyledIconBox>
-                  <Icon className={'icon'} fontSize={'small'}>
+                  <Icon className="icon" fontSize="small">
                     west
                   </Icon>
-                  <Icon className={'icon'} fontSize={'small'}>
+                  <Icon className="icon" fontSize="small">
                     east
                   </Icon>
                 </StyledIconBox>
@@ -265,17 +265,18 @@ const CalculateForm = ({ translationKey }) => {
                 />
               </Grid>
             </Grid>
-            <LoadingButton
+
+            <DefaultButton
               sx={{ mt: { sm: 4, xs: 3 } }}
-              size={isLaptop ? 'medium' : 'large'}
-              variant={'contained'}
-              color={'primary'}
-              type={'submit'}
               fullWidth
+              type="submit"
+              color="primary"
+              isLoadingButton
               loading={loading}
+              variant="contained"
             >
               {t('buttons.calculate')}
-            </LoadingButton>
+            </DefaultButton>
           </form>
         );
       }}

@@ -59,7 +59,7 @@ const HeaderTop = () => {
       <OrionContainer>
         <FlexBetweenAlignCenter>
           <FlexGap10 className="flexGap10">
-            <Icon className="icon" fontSize={'small'}>
+            <Icon className="icon" fontSize="small">
               support_agent
             </Icon>
             <StyledBody2 variant="body2" theme={'false'}>
@@ -67,7 +67,7 @@ const HeaderTop = () => {
             </StyledBody2>
           </FlexGap10>
           <FlexGap10 className="flexGap10">
-            <Icon className="icon" fontSize={'small'}>
+            <Icon className="icon" fontSize="small">
               phone
             </Icon>
             <a href={`tel:${company?.about.phoneNumber1 || ''}`}>

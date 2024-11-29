@@ -46,7 +46,7 @@ const HomeSection7 = () => {
     <StyledSection>
       {blogList ? (
         <OrionContainer>
-          <Typography variant={'h2'} mb={{ lg: 5, sm: 4, xs: 3 }}>
+          <Typography variant="h2" mb={{ lg: 5, sm: 4, xs: 3 }}>
             {t(`${translationKey}.title`)}
           </Typography>
 

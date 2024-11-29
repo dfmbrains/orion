@@ -110,8 +110,8 @@ const Footer = () => {
               {footerMenu.map((el, idx) => (
                 <Grid item md={3} sm={4} key={idx}>
                   <Typography
-                    variant={'subtitle2'}
-                    color={'#FFFFFF'}
+                    variant="subtitle2"
+                    color="#FFFFFF"
                     mb={{ lg: 2, xs: 1 }}
                   >
                     {el.title}
@@ -120,9 +120,9 @@ const Footer = () => {
                   {el.elements.map((item, index) => (
                     <Typography
                       key={index}
+                      variant="body1"
+                      color="#919191"
                       className="footerLink"
-                      variant={'body1'}
-                      color={'#919191'}
                       onClick={() =>
                         anchorLink(
                           item.hash,
@@ -156,13 +156,13 @@ const Footer = () => {
                 mb: { xs: 1, sm: 0 },
                 textAlign: { xs: 'center', sm: 'unset' },
               }}
-              variant={'body2'}
-              color={'#FFFFFF'}
+              variant="body2"
+              color="#FFFFFF"
             >
               {t('footer.privacy.left')} ©{new Date().getFullYear()}{' '}
               {t('footer.privacy.right')} oriontrans.kg
             </Typography>
-            <SocialMediaButtons color={'secondary'} />
+            <SocialMediaButtons color="secondary" />
           </FlexBetweenAlignCenter>
         </OrionContainer>
       </StyledBottomBox>

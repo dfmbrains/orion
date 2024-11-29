@@ -88,7 +88,7 @@ const HeaderGeneral = ({ openBurger, color }) => {
             <ChangeLangButton />
 
             {isTablet && (
-              <IconButton onClick={openBurger} color={'secondary'}>
+              <IconButton onClick={openBurger} color="secondary">
                 <Icon>menu</Icon>
               </IconButton>
             )}
