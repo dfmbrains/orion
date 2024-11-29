@@ -7,8 +7,12 @@ import {
 } from '../../../components/StyledComponents';
 import { styled, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import PromoSlide1 from '../../../assets/images/main.webp';
 import OrionContainer from '../../../components/OrionContainer';
+
+import PromoSlide1 from '../../../assets/images/backgrounds/home_promo1.webp';
+import PromoSlide2 from '../../../assets/images/backgrounds/home_promo2.webp';
+import PromoSlide3 from '../../../assets/images/backgrounds/home_promo3.webp';
+import PromoSlide4 from '../../../assets/images/backgrounds/home_promo4.webp';
 
 const StyledSwiperMenu = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -83,8 +87,7 @@ const HomePromoSwiper = () => {
 
   const slides = t('home.promo.slides', { returnObjects: true });
 
-  //@Todo картинки поменять для каждого слайда
-  const slidesImgs = [PromoSlide1, PromoSlide1, PromoSlide1, PromoSlide1];
+  const slidesImgs = [PromoSlide1, PromoSlide2, PromoSlide3, PromoSlide4];
 
   return (
     <Swiper
