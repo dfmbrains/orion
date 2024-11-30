@@ -186,9 +186,9 @@ export const companyRecoil = atom({
     },
     id: 'Fi9so2860hoIwqzhdBKO',
     about: {
-      address: 'г. Бишкек, ул. Фёдорова 67',
-      email: 'maxabdurasulov@gmail.com',
-      phoneNumber2: '+996707567676',
+      address: 'Кыргызстан, Бишкек, ул. Турусбекова 109/3',
+      email: 'office.oriontrans@gmail.com',
+      phoneNumber2: '+996554333293',
       phoneNumber1: '+996705006088',
     },
   },

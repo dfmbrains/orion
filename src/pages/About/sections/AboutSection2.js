@@ -71,6 +71,7 @@ const AboutSection2 = () => {
   const countries = t('countries', { returnObjects: true });
   const countriesImg = [
     China,
+    '',
     Kz,
     Uz,
     Rus,
@@ -162,7 +163,12 @@ const AboutSection2 = () => {
         </Box>
       </OrionContainer>
 
-      <ImageComponent className="mapBg" src={MapBg} alt="map" />
+      <ImageComponent
+        alt="map"
+        src={MapBg}
+        className="mapBg"
+        style={{ userSelect: 'none' }}
+      />
 
       <CompanyHistoryDialog
         open={isOpenDialog}
