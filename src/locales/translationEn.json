@@ -195,7 +195,7 @@
     }
   },
   "about": {
-    "promo1": "About us",
+    "promo1": "About Us",
     "promo2": "Meet our Team",
     "section1": {
       "title": "We are <span>Orion-Trans</span> Providing You with the most actionable Rail Freight Service",
@@ -302,7 +302,7 @@
     }
   },
   "service": {
-    "promo": "services",
+    "promo": "Services",
     "section1": {
       "title": "Service That Lead The Way To Better <span>Business</span>",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac quam tellus. Etiam commodo diam nec tempus sagittis. Aliquam erat volutpat. Suspendisse ultricies lacus et sem tincidunt condimentum. Mauris at sem vel ex luctus pharetra. Sed nec lobortis tellus. Duis eget cons"
@@ -359,7 +359,7 @@
     "promo": "Blogs & News"
   },
   "contact": {
-    "promo": "Contact us",
+    "promo": "Contact Us",
     "content": {
       "title": "Get in touch with us",
       "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe.",

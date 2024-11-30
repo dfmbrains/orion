@@ -9,9 +9,7 @@ const PromoSectionContent = ({ title, bgImage }) => {
   return (
     <StyledPromoBackgroundBox bgimage={bgImage}>
       <StylePromoColumn>
-        <Typography variant="h1" textTransform="capitalize">
-          {title}
-        </Typography>
+        <Typography variant="h1">{title}</Typography>
       </StylePromoColumn>
     </StyledPromoBackgroundBox>
   );

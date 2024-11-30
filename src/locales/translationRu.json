@@ -51,7 +51,7 @@
     "contact": "Контакты",
     "getInTouch": "Написать нам",
     "leaveReview": "Оставить отзыв",
-    "clientsAndPartners": "Клиенты и Партнеры"
+    "clientsAndPartners": "Клиенты и партнеры"
   },
   "featuresSection": [
     {
@@ -344,7 +344,7 @@
     }
   },
   "clients": {
-    "promo": "Клиенты и Партнеры",
+    "promo": "Клиенты и партнеры",
     "section1": {
       "clients": "Клиенты",
       "partners": "Партнеры",
@@ -356,7 +356,7 @@
     }
   },
   "blog": {
-    "promo": "Статьи и Новости"
+    "promo": "Статьи и новости"
   },
   "contact": {
     "promo": "Контакты",
