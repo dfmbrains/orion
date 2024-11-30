@@ -302,7 +302,7 @@
     }
   },
   "service": {
-    "promo": "services",
+    "promo": "Услуги",
     "section1": {
       "title": "Service That Lead The Way To Better <span>Business</span>",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac quam tellus. Etiam commodo diam nec tempus sagittis. Aliquam erat volutpat. Suspendisse ultricies lacus et sem tincidunt condimentum. Mauris at sem vel ex luctus pharetra. Sed nec lobortis tellus. Duis eget cons"
@@ -344,47 +344,49 @@
     }
   },
   "clients": {
-    "promo": "Clients & Partners",
+    "promo": "Клиенты и Партнеры",
     "section1": {
-      "clients": "clients",
-      "partners": "partners",
-      "testimonials": "testimonials",
-      "title": "We Work With The <br/> Best <span>{{item}}</span>",
-      "subtitle": "The use of railroads and trains to convey cargo on land is known as rail freight transport. Rail transport is popular, especially in continents with extensive journey durations, such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo, including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods, standardized shipping containers, or particularly constructed carriages for a specific sort of freight can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It costs more than sea freight, but less than air freight. Moving high-value industrial products like automobiles, electronics, and computer equipment, as well as promotional items, by train is ideal."
+      "clients": "Клиенты",
+      "partners": "Партнеры",
+      "testimonials": "Отзывы",
+      "title": "Мы работаем с <br/> лучшими <span>{{item}}</span>",
+      "selectedClients": "клиентами",
+      "selectedPartners": "партнерами",
+      "subtitle": "Использование железных дорог и поездов для перевозки грузов по суше известно как железнодорожные грузовые перевозки. Железнодорожный транспорт популярен, особенно на континентах с продолжительными расстояниями, таких как Китай, Россия, США и Европа. Грузовые поезда могут перевозить разнообразные товары, включая контейнеры, автомобили, скот, зерно, уголь, минералы и металлы. Грузовые поезда могут транспортировать сыпучие товары, стандартизированные контейнеры или специально построенные вагоны для определённого типа груза. Железнодорожные грузовые перевозки намного быстрее морских. Они стоят дороже, чем морские перевозки, но дешевле воздушных. Перевозка высокоценных промышленных товаров, таких как автомобили, электроника и компьютерное оборудование, а также рекламных материалов по железной дороге является оптимальным решением."
     }
   },
   "blog": {
-    "promo": "Blogs & News"
+    "promo": "Статьи и Новости"
   },
   "contact": {
-    "promo": "Contact us",
+    "promo": "Контакты",
     "content": {
-      "title": "Get in touch with us",
-      "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe.",
-      "supportCenter": "support center",
-      "ourLocation": "Our Location",
-      "writeUs": "Write to us",
-      "inSocialMedia": "We are on social media",
+      "title": "Свяжитесь с нами",
+      "subtitle": "Мы — профессиональные специалисты в области логистики, увлечённые качеством и эффективностью. Мы верим в честность, доверие и постоянное совершенствование. Мы обещаем выслушать вас и предоставить надёжные услуги по перевозке грузов по всему миру.",
+      "supportCenter": "Центр поддержки",
+      "ourLocation": "Наш адрес",
+      "writeUs": "Напишите нам",
+      "inSocialMedia": "Мы в социальных сетях",
       "forms": {
         "placeholders": {
-          "name": "Name",
+          "name": "Имя",
           "email": "Email",
-          "phoneNumber": "Phone Number",
-          "message": "Message",
-          "company": "Your Company",
-          "review": "Review"
+          "phoneNumber": "Номер телефона",
+          "message": "Сообщение",
+          "company": "Ваша компания",
+          "review": "Отзыв"
         },
         "contact": {
-          "title": "Contact"
+          "title": "Контакты"
         },
         "review": {
-          "title": "Leave a review"
+          "title": "Оставить отзыв"
         },
         "errors": {
-          "nameRequired": "Name is required!",
-          "emailRequired": "Email is required!",
-          "messageRequired": "Message is required!",
-          "messageMaxLength": "Maximum length exceeded"
+          "nameRequired": "Имя обязательно!",
+          "emailRequired": "Email обязателен!",
+          "messageRequired": "Сообщение обязательно!",
+          "messageMaxLength": "Превышена максимальная длина"
         }
       }
     }

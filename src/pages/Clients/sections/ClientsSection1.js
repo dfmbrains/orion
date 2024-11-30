@@ -45,7 +45,7 @@ const ClientsSection1 = () => {
 
   const theme = useTheme();
 
-  const [part, setPart] = useState('clients');
+  const [part, setPart] = useState(0);
 
   const [partnersList] = useRecoilState(partnersRecoil);
 
@@ -54,16 +54,16 @@ const ClientsSection1 = () => {
       <OrionContainer>
         <ButtonGroup>
           <Button
-            color={part === 'clients' ? 'primary' : 'info'}
+            color={part === 0 ? 'primary' : 'info'}
             variant="text"
-            onClick={() => setPart('clients')}
+            onClick={() => setPart(0)}
           >
             {t(`${translationKey}.clients`)}.
           </Button>
           <Button
-            color={part === 'partners' ? 'primary' : 'info'}
+            color={part === 1 ? 'primary' : 'info'}
             variant="text"
-            onClick={() => setPart('partners')}
+            onClick={() => setPart(1)}
           >
             {t(`${translationKey}.partners`)}.
           </Button>
@@ -89,7 +89,10 @@ const ClientsSection1 = () => {
                 ></span>
               ),
               br: <br />,
-              item: part,
+              item:
+                (part === 0
+                  ? t(`${translationKey}.selectedClients`)
+                  : t(`${translationKey}.selectedPartners`)) || '',
             }}
           />
         </Typography>
