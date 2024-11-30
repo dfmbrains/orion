@@ -1,8 +1,8 @@
 {
   "currentLanguage": "ru",
-  "orionTrans": "Orion-Trans",
+  "orionTrans": "Орион-Транс",
   "words": {
-    "menu": "Menu"
+    "menu": "Меню"
   },
   "buttons": {
     "learnMore": "Подробнее",
@@ -12,20 +12,20 @@
     "readOthers": "Прочитать все отзывы",
     "readMore": "Читать подробнее",
     "send": "Отправить",
-    "readOurStory": "Read Our Story",
-    "contactUs": "Contact Us",
+    "readOurStory": "Узнать нашу историю",
+    "contactUs": "Связаться с нами",
     "calculateRailTariff": "Расчет ж/д тарифа",
-    "cancel": "Cancel"
+    "cancel": "Назад"
   },
   "snackbarTexts": {
-    "letter": "The letter was sent",
-    "review": "The review was sent",
-    "error": "Try again later"
+    "letter": "Письмо отправлено",
+    "review": "Отзыв отправлен",
+    "error": "Попробуйте снова позже"
   },
   "validation": {
-    "requiredName": "Name is required!",
-    "requiredPhoneNumber": "Phone number is required!",
-    "requiredEmail": "Email is required!"
+    "requiredName": "Имя обязательно!",
+    "requiredPhoneNumber": "Номер телефона обязателен!",
+    "requiredEmail": "Email обязателен!"
   },
   "countries": [
     "Китай",
@@ -103,7 +103,7 @@
     "placeholder": "Ваш Email"
   },
   "testimonialsSection": {
-    "title": "Testimonials"
+    "title": "Отзывы"
   },
   "header": {
     "support": "Поддержка"
@@ -188,117 +188,117 @@
     "section6": {
       "title": "Надежные перевозки",
       "description": "Команда профессионалов работают над тем, чтобы каждая перевозка была успешной, а каждый клиент остался доволен",
-      "subtitle": "Встречайте нашу команду"
+      "subtitle": "Наша команда"
     },
     "section7": {
       "title": "Последние статьи"
     }
   },
   "about": {
-    "promo1": "About us",
-    "promo2": "Meet our Team",
+    "promo1": "О нас",
+    "promo2": "Наша команда",
     "section1": {
-      "title": "We are <span>Orion-Trans</span> Providing You with the most actionable Rail Freight Service",
-      "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe."
+      "title": "Мы - компания <span>ОсОО “Орион-Транс”</span>, обеспечиваем Вас необходимыми железнодорожными услугами",
+      "subtitle": "Мы специализируемся на предоставлении качественных и эффективных экспедиторских услуг. Честность, доверие и постоянное совершенствование - наши ключевые принципы. С нами вы получаете профессионализм, надежность и внимание к каждой детали."
     },
     "section2": {
-      "subtitle1": "Orion-Trans is an international modern company of rail freight forwarding services, based in Kyrgyzstan, Bishkek. We met up to make logistics services in more than 20 nations over the globe and have been operating on the market since 2012, thereby have proved to our clients and partners our level of professionalism in the logistics field.",
-      "subtitle2": "Countries we're carrying out international freight forwarding services:"
+      "subtitle1": "Орион-Транс — современная международная компания, основанная в Бишкеке, Кыргызстан, предоставляющая железнодорожные экспедиторские услуги с 2010 года. Мы успешно\nработаем более 10 лет, обслуживая клиентов в 10+ странах, и доказали свой высокий профессионализм в сфере логистики.",
+      "subtitle2": "Страны, где мы предоставляем международные железнодорожные экспедиторские услуги:"
     },
     "section3": {
-      "title": "What we <span>offer</span>",
-      "subtitle1": "We offer to our clients the most actionable solutions in freight-forwarding services. Our team of professional logistics specialists will develop a plan of the whole transportation arrangement for your business.",
-      "subtitle2": "We will calculate for you all of the necessary rail freight-forwarding tariffs across more than 20 countries, by import, export, transit and internal consignment and find for you a needed rolling stock to ship your cargo."
+      "title": "Что мы <span>предлагаем</span>",
+      "subtitle1": "Мы предлагаем эффективные решения по организации железнодорожных перевозок и экспедированию грузов. Наша команда опытных логистов разработает индивидуальный план перевозки и обеспечит полный цикл транспортировки вашего груза.",
+      "subtitle2": "Мы быстро рассчитаем тарифы на ж/д перевозки, включая импорт, экспорт, транзит и внутренние перевозки. Также мы подберем подходящий подвижной состав для безопасной доставки вашего груза."
     },
     "section4": {
-      "title1": "Our <span>Mission</span>",
-      "subtitle1": "To ensure businesses with all the necessary freight-forwarding services on the market: to be the most secure and trusted freight-forwarding company for the businesses, and to continuously improve the quality level of the services and work approach for the sake of the businesses.",
-      "title2": "Our <span>Vision</span>",
-      "subtitle2": "We see ourselves as the number one secure freight-forwarding company on the logistics market, who ensure new innovative logistics services to our clients and partners and create and develop convenient workplaces our team."
+      "title1": "Наша <span>Миссия</span>",
+      "subtitle1": "Обеспечивать бизнесы качественными транспортно-экспедиторскими услугами, становясь одной из самых надежных компаний в отрасли и непрерывно совершенствуя качество предоставляемых услуг.",
+      "title2": "Наше <span>Видение</span>",
+      "subtitle2": "Стать ведущей транспортно-экспедиторской компанией, которая не только эффективно обслуживает клиентов и партнеров, но и создает комфортные условия для своей команды."
     },
     "section5": {
-      "title1": "Our <span>Goal</span>",
-      "subtitle": "Efficiently organize and accompany rail freight transportation, creating a fast, convenient and accessible rail freight.",
-      "title2": "Our <span>Objectives</span>",
+      "title1": "Наша <span>Цель</span>",
+      "subtitle": "Обеспечить быстрые, удобные и доступные железнодорожные перевозки, предлагая клиентам высококачественные логистические решения.",
+      "title2": "Наши <span>Задачи</span>",
       "objectives": [
-        "Create an efficient chain of partnership with the railways, transport companies, and other freight-forwarding companies.",
-        "Continuously improve the quality level of professionalism and skills of our team - logistics specialists.",
-        "Enhance the quality of customer services and meet their requests",
-        "Integrating and developing the modern innovative technology to create more efficient and accessible freight-forwarding solutions for our clients and partners."
+        "Строить эффективные партнерства с железными дорогами, транспортно-экспедиторскими компаниями.",
+        "Повышать уровень обслуживания клиентов и оперативно удовлетворять их запросы.",
+        "Постоянно развивать профессиональные навыки нашей команды.",
+        "Внедрять инновации для создания более эффективных транспортно-экспедиторских решений."
       ]
     },
     "section6": {
-      "title": "Why us?",
-      "subtitle1": "clients make use of our services for more than",
-      "subtitle2": "years, and our partners work with us up to this day."
+      "title": "Почему мы?",
+      "subtitle1": "компаний доверяют нашим услугам на протяжении",
+      "subtitle2": "лет партнеры продолжают работать с нами, на выгодных условиях"
     },
     "section7": {
-      "title": "Our Benefits",
+      "title": "Преимущества",
       "list": [
         {
-          "title": "Cost Effective Solutions",
-          "subtitle": "Competitive and cost-effective rail tariffs amongst freight-forwarding organizations.",
+          "title": "Эффективные решения",
+          "subtitle": "Конкурентоспособные и экономически эффективные железнодорожные тарифы среди организаций по перевозке грузов.",
           "icon": "credit_score"
         },
         {
-          "title": "Quick Response",
-          "subtitle": "Our team processes service requests in less than 10 minutes",
+          "title": "Быстрая обратная связь",
+          "subtitle": "Мы обрабатываем заявки менее чем за 20 минут, предоставляя вам необходимую информацию без задержек.",
           "icon": "quickreply"
         },
         {
-          "title": "Professional Specialists",
-          "subtitle": "Orion-Trans has a high-qualified logistics specialists with more than 8 - 10 years of experience in providing freight-forwarding services.",
+          "title": "Опытные Логисты",
+          "subtitle": "Орион-Транс имеет высококвалифицированных специалистов, с опытом работы в данной сфере более чем 8 лет.",
           "icon": "badge"
         },
         {
-          "title": "We Are With You 24/7",
-          "subtitle": "Quick response from our logistics specialists on any issue - 24/7",
+          "title": "Мы с вами 24/7",
+          "subtitle": "Наши специалисты всегда готовы предоставить консультации, помочь с выбором оптимального решения и оперативно реагировать на любые запросы, обеспечивая индивидуальный подход к каждому клиенту.",
           "icon": "support_agent"
         },
         {
-          "title": "Efficiency",
-          "subtitle": "Our team’s professionalism will ensure a fast and reliable transport organization.",
+          "title": "Качество и надежность",
+          "subtitle": "Профессионализм нашей команды обеспечивает быстрое и надежное выполнение всех этапов перевозки гарантируя минимальные риски и максимальную надежность.",
           "icon": "group_work"
         },
         {
-          "title": "Direct Agreements With Railways",
-          "subtitle": "We cooperate directly with railways of Kyrgyz Republic and the official railways representatives of Kazakhstan, Uzbekistan, Tadjikistan, Turkmenistan, Russia, Afghanistan and Iran.",
+          "title": "Надежные партнеры",
+          "subtitle": "Мы являемся официальными представителями Кыргыз Темир Жолу и имеем прямые договоры с железными дорогами Казахстана, Таджикистана, Туркменистана Узбекистана и России. Это позволяет нам работать без сложностей и завоевывать доверие множества клиентов.",
           "icon": "gavel"
         }
       ]
     },
     "section8": {
-      "title": "Our Core Values",
+      "title": "Наши ценности",
       "list": [
         {
-          "title": "Integrity & Honesty",
+          "title": "Честность",
           "icon": "health_and_safety"
         },
         {
-          "title": "Exceptional Customer Service",
+          "title": "Исключительное обслуживание клиентов",
           "icon": "support_agent"
         },
         {
-          "title": "Value Our People",
+          "title": "Ценим наших сотрудников",
           "icon": "groups"
         },
         {
-          "title": "Continuous Improvement",
+          "title": "Постоянное улучшение",
           "icon": "self_improvement"
         },
         {
-          "title": "Value Teamwork",
+          "title": "Командная работа",
           "icon": "group_work"
         },
         {
-          "title": "Direct Agreements With Railways",
+          "title": "Прямые соглашения с железными дорогами",
           "icon": "gavel"
         }
       ]
     },
     "section9": {
-      "title": "<span>Our team </span>is a crucial value of our company.",
-      "subtitle": "They are growth for a company, where each of a team member has its special strong personal qualities, and willingness to work and create."
+      "title": "<span>Наша команда</span> — основа успеха компании.",
+      "subtitle": "Каждый сотрудник приносит уникальные качества и готовность развиваться, работать и создавать. Мы уверены, что именно их вклад способствует росту и процветанию Орион-Транс."
     }
   },
   "service": {
