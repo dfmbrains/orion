@@ -54,6 +54,7 @@ export const themeOptions = theme => {
       subtitle1: {
         fontSize: 20,
         fontWeight: '300',
+        lineHeight: '1.3',
         [theme.breakpoints.down('lg')]: { fontSize: 18 },
         [theme.breakpoints.down('md')]: { fontSize: 16 },
       },

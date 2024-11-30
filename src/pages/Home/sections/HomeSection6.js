@@ -114,9 +114,14 @@ const HomeSection6 = () => {
               spacing={{ lg: 5, md: 3, xs: 2 }}
             >
               <Grid item lg={5.95} md={6.95}>
-                <Typography mb={{ md: 5, sm: 3, xs: 2 }} variant="h2">
-                  {t(`${translationKey}.title`)}
-                </Typography>
+                <Box mb={{ md: 5, sm: 3, xs: 2 }} pr={2}>
+                  <Typography variant="h2">
+                    {t(`${translationKey}.title`)}
+                  </Typography>
+                  <Typography mt={1} variant="subtitle1" fontWeight="500">
+                    {t(`${translationKey}.description`)}
+                  </Typography>
+                </Box>
 
                 <Divider />
 
