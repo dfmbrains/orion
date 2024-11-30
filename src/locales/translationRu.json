@@ -10,8 +10,8 @@
     "calculate": "Рассчитать",
     "ourServices": "Наши услуги",
     "readOthers": "Прочитать все отзывы",
-    "readMore": "read more",
-    "send": "send",
+    "readMore": "Читать подробнее",
+    "send": "Отправить",
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
     "calculateRailTariff": "Расчет ж/д тарифа",
@@ -49,8 +49,8 @@
     "partners": "Партнеры",
     "blogs": "Статьи",
     "contact": "Контакты",
-    "getInTouch": "Get In Touch",
-    "leaveReview": "Leave a review",
+    "getInTouch": "Написать нам",
+    "leaveReview": "Оставить отзыв",
     "clientsAndPartners": "Клиенты и Партнеры"
   },
   "featuresSection": [
@@ -98,9 +98,9 @@
     }
   ],
   "emailFormSection": {
-    "title": "Leave your email.",
-    "subtitle": "We will definitely contact you",
-    "placeholder": "Your email"
+    "title": "Оставьте ваш email",
+    "subtitle": "Мы обязательно с вами свяжемся",
+    "placeholder": "Ваш Email"
   },
   "testimonialsSection": {
     "title": "Testimonials"
@@ -110,8 +110,8 @@
   },
   "footer": {
     "menu": {
-      "column1": "Our Divisions",
-      "column2": "Contact Us"
+      "column1": "Наши подразделения",
+      "column2": "Свяжитесь с нами"
     },
     "privacy": {
       "left": "Copyright",
