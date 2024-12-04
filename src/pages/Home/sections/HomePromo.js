@@ -14,7 +14,7 @@ const StyledSection = styled('section')(({ theme }) => ({
 
   // [theme.breakpoints.down('lg')]: { height: 'calc(100vh - 27.15px)' },
   // [theme.breakpoints.down('md')]: { height: 'calc(100vh - 26px)' },
-  // [theme.breakpoints.down('sm')]: { height: 'calc(75vh)' },
+  [theme.breakpoints.down('sm')]: { height: 'calc(75vh)' },
 
   '& .mySwiperSlide': {
     '& .MuiTypography-root': {
