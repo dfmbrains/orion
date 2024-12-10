@@ -1,13 +1,11 @@
 import React from 'react';
 import i18next from 'i18next';
-import {
-  Button,
-  Icon,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Icon, Typography, useMediaQuery, useTheme } from '@mui/material';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import { useTranslation } from 'react-i18next';
+import { languages } from '../helpers/constants';
 
 const ChangeLangButton = ({ color }) => {
   const theme = useTheme();
@@ -15,20 +13,68 @@ const ChangeLangButton = ({ color }) => {
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleCloseOnScroll = () => {
+    setAnchorEl(null);
+    window.removeEventListener('scroll', handleCloseOnScroll);
+  };
+
+  const handleChangeLanguage = language => {
+    i18next.changeLanguage(language);
+    setAnchorEl(null);
+    window.removeEventListener('scroll', handleCloseOnScroll);
+  };
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+    window.addEventListener('scroll', handleCloseOnScroll);
+  };
+
   return (
-    <Button
-      onClick={() =>
-        i18next.changeLanguage(t('currentLanguage') === 'ru' ? 'en' : 'ru')
-      }
-      variant="text"
-      color={color || 'secondary'}
-      size={isLaptop ? 'small' : 'medium'}
-      startIcon={<Icon>language</Icon>}
-    >
-      <Typography variant="subtitle2">
-        {t('currentLanguage').toUpperCase()}
-      </Typography>
-    </Button>
+    <div>
+      <Button
+        variant="text"
+        id="basic-button"
+        aria-haspopup="true"
+        onClick={handleClick}
+        color={color || 'secondary'}
+        startIcon={<Icon>language</Icon>}
+        size={isLaptop ? 'small' : 'medium'}
+        aria-expanded={open ? 'true' : undefined}
+        aria-controls={open ? 'basic-menu' : undefined}
+      >
+        <Typography variant="subtitle2">
+          {t('currentLanguage').toUpperCase()}
+        </Typography>
+      </Button>
+      <Menu
+        open={open}
+        id="basic-menu"
+        disableScrollLock
+        anchorEl={anchorEl}
+        onClose={() => setAnchorEl(null)}
+        MenuListProps={{ 'aria-labelledby': 'basic-button' }}
+        sx={{
+          '& .MuiPaper-root': {
+            backgroundColor: theme.palette.primary.light,
+          },
+        }}
+      >
+        {languages.map((language, idx) => (
+          <MenuItem
+            key={idx}
+            sx={{ color: 'white' }}
+            onClick={() => handleChangeLanguage(language.value)}
+          >
+            <Typography variant="body1" fontWeight="500">
+              {language.title}
+            </Typography>
+          </MenuItem>
+        ))}
+      </Menu>
+    </div>
   );
 };
 

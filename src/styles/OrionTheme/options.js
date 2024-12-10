@@ -3,6 +3,7 @@ export const themeOptions = theme => {
     palette: {
       primary: {
         main: '#F18200',
+        light: '#fd9c2c',
         contrastText: '#FFFFFF',
       },
       secondary: {

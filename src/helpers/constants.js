@@ -15,6 +15,14 @@ export const reviewsFirebasePath = 'reviews';
 export const partnersFirebasePath = 'partners';
 
 export const defaultAppLanguage = 'ru';
+export const languages = [
+  { value: 'ru', title: 'Русский' },
+  { value: 'en', title: 'English' },
+  {
+    value: 'cn',
+    title: '简体中文',
+  },
+];
 
 export const HEADER_BURGER_MENU = [
   { title: 'menu.home', link: '/' },
