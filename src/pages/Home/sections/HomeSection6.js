@@ -136,7 +136,7 @@ const HomeSection6 = () => {
                     <Typography color="#4E5865" variant="body1">
                       {active.position}
                     </Typography>
-                    <Typography variant="subtitle1">
+                    <Typography fontWeight="500" variant="subtitle1">
                       {formatName(
                         active.firstName,
                         active.midName,
@@ -215,6 +215,7 @@ const HomeSection6 = () => {
                           {el.position}
                         </Typography>
                         <Typography
+                          fontWeight="500"
                           variant="subtitle1"
                           sx={{ wordBreak: 'break-all' }}
                         >

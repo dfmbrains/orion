@@ -87,7 +87,7 @@ const PostCard = ({ post }) => {
           </div>
         )}
         <StyledBox>
-          <Typography variant="h5" fontWeight={'400'} mb={{ lg: 1.5, xs: 1 }}>
+          <Typography variant="h5" fontWeight="500" mb={{ lg: 1.5, xs: 1 }}>
             {post.title}
           </Typography>
           <Typography

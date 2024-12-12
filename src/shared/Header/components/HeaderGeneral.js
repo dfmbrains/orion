@@ -61,6 +61,9 @@ const StyledLink = styled(NavLink)(({ theme }) => ({
     color: theme.palette.primary.main,
     transition: '0.3s',
   },
+  h6: {
+    fontWeight: '500',
+  },
 }));
 
 const HeaderGeneral = ({ openBurger, color }) => {

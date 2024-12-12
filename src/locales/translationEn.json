@@ -12,6 +12,7 @@
     "readOthers": "read others",
     "readMore": "read more",
     "send": "send",
+    "otherServices": "other services",
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
     "calculateRailTariff": "Calculate A Rail Tariff",
@@ -88,12 +89,12 @@
     },
     {
       "title": "In the Market",
-      "value": "12",
+      "value": "15",
       "valueTag": "years"
     },
     {
       "title": "Companies Trust Us",
-      "value": "50",
+      "value": "150",
       "valueTag": "+"
     }
   ],
@@ -153,8 +154,7 @@
           "Provision of Rolling Stock",
           "Multimodal Freight Transport",
           "Container Freight Transport",
-          "Rail freight",
-          "And way more"
+          "Rail freight"
         ]
       }
     },

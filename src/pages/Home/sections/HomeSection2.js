@@ -144,7 +144,8 @@ const HomeSection2 = () => {
           >
             <Card
               sx={{
-                py: { lg: 4, sm: 2, xs: 4 },
+                pt: { lg: 4, sm: 2, xs: 4 },
+                pb: { xs: 1 },
                 px: { lg: 4, sm: 2, xs: 4 },
                 mb: { lg: 10, sm: 0 },
               }}
@@ -158,6 +159,15 @@ const HomeSection2 = () => {
                   {el}
                 </Typography>
               ))}
+
+              <DefaultButton
+                fullWidth
+                linkTo="/services"
+                variant="text"
+                sx={{ mt: 2 }}
+              >
+                {t('buttons.otherServices')}
+              </DefaultButton>
             </Card>
           </Grid>
         </Grid>

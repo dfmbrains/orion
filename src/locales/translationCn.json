@@ -12,6 +12,7 @@
     "readOthers": "阅读所有评论",
     "readMore": "了解更多",
     "send": "提交",
+    "otherServices": "其他服务",
     "readOurStory": "了解我们的历史",
     "contactUs": "联系我们",
     "calculateRailTariff": "铁路运费计算",
@@ -88,12 +89,12 @@
     },
     {
       "title": "在市场",
-      "value": "12",
+      "value": "15",
       "valueTag": "年"
     },
     {
       "title": "Компании нам доверяют",
-      "value": "50",
+      "value": "150",
       "valueTag": "+"
     }
   ],
@@ -152,8 +153,7 @@
         "list": [
           "国际铁路货运",
           "货物运输：出口、进口及过境运输的铁路运费计算与支付",
-          "提供机动设备",
-          "以及更多"
+          "提供机动设备"
         ]
       }
     },
@@ -198,7 +198,7 @@
     "promo1": "关于我们",
     "promo2": "我们的团队",
     "section1": {
-      "title": "有限公司<span>Orion Trans</span>我们为您提供所需的铁路运输服务",
+      "title": "有限公司 <span>Orion Trans</span> 我们为您提供所需的铁路运输服务",
       "subtitle": "我们专注于提供高质量和高效的货运代理服务。诚实、信任和持续改进是我们的核心原则。与我们合作，您将获得专业性、可靠性和对每个细节的关注"
     },
     "section2": {
