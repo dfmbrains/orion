@@ -38,3 +38,9 @@ export const createDesiredArrays = arr => {
 
   return pairedValues;
 };
+
+export const filterArrByLanguage = (arr = [], language = '') => {
+  return arr.filter(
+    item => item?.language?.toLowerCase() === language.toLowerCase(),
+  );
+};

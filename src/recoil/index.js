@@ -7,9 +7,14 @@ import ServiceImg5 from '../assets/images/services/service5.png';
 import ServiceImg6 from '../assets/images/services/service6.png';
 import ServiceImg7 from '../assets/images/services/service7.png';
 import ServiceImg8 from '../assets/images/services/service8.png';
-import { ImageErrorUrl } from '../helpers/constants';
+import { defaultAppLanguage, ImageErrorUrl } from '../helpers/constants';
 
 const BlogImg = ImageErrorUrl;
+
+export const selectedLanguageRecoil = atom({
+  key: 'selectedLanguageRecoilState',
+  default: localStorage.getItem('i18nextLng') || defaultAppLanguage,
+});
 
 export const blogRecoil = atom({
   key: 'blogRecoilState',
@@ -345,11 +350,57 @@ export const reviewsRecoil = atom({
   key: 'reviewsRecoilState',
   default: [
     {
-      text: '“The most distinctive features of “Orion-Trans LLC ” is their business approach, a high staff professionalism and a strong team spirit. This company is a reliable, responsible and highly qualified partner. “Orenbi Trading LLC ” totally recommend to the businesses “Orion-Trans  LLC” as a reliable and stable partner.”',
-      name: 'Alina',
+      text: 'Мы высоко ценим наши наши хорошие взаимно партнерские отношения и наше взаимопонимание меду нашими компании. Мы бы хотели подчеркнуть уровень профессионализма ваших специалистов и выражаем огромную благодарность за оперативность во всех вопросах.',
+      name: 'Калдыбеков Е.',
       id: '4oHQ8O5LXsrOO8RN2JD2',
       created: '11/25/2024',
-      company: 'Orenbi',
+      company: 'Greenlights LLP',
+      language: 'ru',
+      status: true,
+    },
+    {
+      text: 'The most distinctive features of “Orion-Trans LLC ” is their business approach, a high staff professionalism and a strong team spirit. This company is a reliable, responsible and highly qualified partner. “Orenbi Trading LLC ” totally recommend to the businesses “Orion-Trans  LLC” as a reliable and stable partner.',
+      name: 'Kaldybekov E.',
+      id: '4oHQ8O5LXsrOO8RN2JD2',
+      created: '11/25/2024',
+      company: 'Greenlights LLP',
+      language: 'en',
+      status: true,
+    },
+    {
+      text: '我们高度重视我们之间良好的合作关系和公司之间的相互理解。我们想强调贵公司专家的专业水平，并对在所有事务中的高效处理表示衷心的感谢',
+      name: 'Kaldybekov E.',
+      id: '4oHQ8O5LXsrOO8RN2JD2',
+      created: '11/25/2024',
+      company: 'Greenlights LLP',
+      language: 'cn',
+      status: true,
+    },
+    {
+      text: '2Мы высоко ценим наши наши хорошие взаимно партнерские отношения и наше взаимопонимание меду нашими компании. Мы бы хотели подчеркнуть уровень профессионализма ваших специалистов и выражаем огромную благодарность за оперативность во всех вопросах.',
+      name: 'Калдыбеков Е.',
+      id: '4oHQ8O5LXsrOO8RN2JD3',
+      created: '11/25/2024',
+      company: 'Greenlights LLP',
+      language: 'ru',
+      status: true,
+    },
+    {
+      text: '2The most distinctive features of “Orion-Trans LLC ” is their business approach, a high staff professionalism and a strong team spirit. This company is a reliable, responsible and highly qualified partner. “Orenbi Trading LLC ” totally recommend to the businesses “Orion-Trans  LLC” as a reliable and stable partner.',
+      name: 'Kaldybekov E.',
+      id: '4oHQ8O5LXsrOO8RN2JD3',
+      created: '11/25/2024',
+      company: 'Greenlights LLP',
+      language: 'en',
+      status: true,
+    },
+    {
+      text: '2我们高度重视我们之间良好的合作关系和公司之间的相互理解。我们想强调贵公司专家的专业水平，并对在所有事务中的高效处理表示衷心的感谢',
+      name: 'Kaldybekov E.',
+      id: '4oHQ8O5LXsrOO8RN2JD3',
+      created: '11/25/2024',
+      company: 'Greenlights LLP',
+      language: 'cn',
       status: true,
     },
   ],

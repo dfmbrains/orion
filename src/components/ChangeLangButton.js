@@ -6,12 +6,16 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useTranslation } from 'react-i18next';
 import { languages } from '../helpers/constants';
+import { useSetRecoilState } from 'recoil';
+import { selectedLanguageRecoil } from '../recoil';
 
 const ChangeLangButton = ({ color }) => {
   const theme = useTheme();
   const { t } = useTranslation();
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
+
+  const setSelectedLang = useSetRecoilState(selectedLanguageRecoil);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -21,8 +25,10 @@ const ChangeLangButton = ({ color }) => {
     window.removeEventListener('scroll', handleCloseOnScroll);
   };
 
-  const handleChangeLanguage = language => {
-    i18next.changeLanguage(language);
+  const handleChangeLanguage = async language => {
+    await i18next.changeLanguage(language);
+    setSelectedLang(language);
+
     setAnchorEl(null);
     window.removeEventListener('scroll', handleCloseOnScroll);
   };

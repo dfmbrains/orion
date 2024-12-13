@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
@@ -12,12 +12,14 @@ import {
 import ReviewsBg from '../../../assets/images/backgrounds/reviews.webp';
 import OrionContainer from '../../../components/OrionContainer';
 import { useNavigate } from 'react-router-dom';
-import { anchorLinkHandler } from '../../../helpers/utils';
+import { anchorLinkHandler, filterArrByLanguage } from '../../../helpers/utils';
 import { useTranslation } from 'react-i18next';
-import { useRecoilState } from 'recoil';
-import { reviewsRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { reviewsRecoil, selectedLanguageRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import OrionLoading from '../../../components/OrionLoading';
+import { FlexGap10 } from '../../../components/FlexBox';
+import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -39,52 +41,113 @@ const StyledSection = styled('section')(({ theme }) => ({
   },
 }));
 
+const StyledImageBox = styled('div')(({ theme }) => ({
+  width: '80px',
+  height: '80px',
+  borderRadius: '50%',
+  overflow: 'hidden',
+  position: 'relative',
+  minWidth: '80.0px',
+
+  [theme.breakpoints.down('md')]: {
+    minWidth: '70px',
+    width: '70px',
+    height: '70px',
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    minWidth: '60px',
+    width: '60px',
+    height: '60px',
+  },
+
+  '& img': {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    minWidth: '100%',
+    minHeight: '100%',
+    maxWidth: '130%',
+    maxHeight: '130%',
+  },
+}));
+
 const HomeSection5 = () => {
   const translationKey = 'home.section5';
   const { t } = useTranslation();
 
+  const reviews = useRecoilValue(reviewsRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
+
   const theme = useTheme();
   const navigate = useNavigate();
 
-  const [counter, setCounter] = useState(0);
-  const [reviews] = useRecoilState(reviewsRecoil);
+  const [data, setData] = useState([]);
+  const [selectedReview, setSelectedReview] = useState(null);
 
   const navigateToClientsTestimonials = async () => {
     await navigate('/clients-&-partners');
     await anchorLinkHandler('testimonialsSection');
   };
 
+  useEffect(() => {
+    if (language && reviews) {
+      const filteredReviews = filterArrByLanguage(reviews, language);
+
+      setData(filteredReviews);
+      setSelectedReview(filteredReviews[0]);
+    }
+  }, [language, reviews]);
+
   return (
     <StyledSection>
       <OrionContainer>
         <Typography variant="h3">{t(`${translationKey}.title`)}</Typography>
 
-        {reviews && reviews?.length > 0 ? (
+        {selectedReview ? (
           <>
             <Typography my={{ lg: 2, xs: 1 }} variant="h5">
-              {reviews[counter].text}
+              {selectedReview.text}
             </Typography>
-            <Typography variant="subtitle2">{reviews[counter].name}</Typography>
-            <Typography variant="h5">{reviews[counter].company}</Typography>
 
-            {reviews.length > 1 && (
+            <FlexGap10>
+              <StyledImageBox>
+                <ImageComponent
+                  src={selectedReview?.companyLogo}
+                  alt={selectedReview.company}
+                />
+              </StyledImageBox>
+              <div style={{ flex: 'auto' }}>
+                <Typography variant="subtitle2">
+                  {selectedReview.name}
+                </Typography>
+                <Typography variant="h5">{selectedReview.company}</Typography>
+              </div>
+            </FlexGap10>
+
+            {data.length > 1 && (
               <Box mt={{ lg: 3, sm: 2, xs: 1 }}>
                 <ButtonGroup>
-                  {reviews.slice(0, 3).map((el, ind) => (
-                    <IconButton
-                      sx={{
-                        color:
-                          counter === el
+                  {data.map(item => {
+                    const isSelected = item.id === selectedReview.id;
+                    return (
+                      <IconButton
+                        size="small"
+                        key={item.id}
+                        onClick={() => setSelectedReview(item)}
+                        sx={{
+                          color: isSelected
                             ? theme.palette.primary.main
                             : '#D6D6D6',
-                      }}
-                      key={el.id}
-                      size="small"
-                      onClick={() => setCounter(ind)}
-                    >
-                      <Icon sx={{ fontSize: '12px' }}>fiber_manual_record</Icon>
-                    </IconButton>
-                  ))}
+                        }}
+                      >
+                        <Icon sx={{ fontSize: '14px' }}>
+                          {isSelected ? 'star' : 'fiber_manual_record'}
+                        </Icon>
+                      </IconButton>
+                    );
+                  })}
                 </ButtonGroup>
               </Box>
             )}
