@@ -63,7 +63,6 @@ const ServiceSection1 = () => {
                   ),
                 }}
               />
-              +
             </Typography>
           </Grid>
 
