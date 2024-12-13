@@ -5,6 +5,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({
   height: 'calc(50vh - 32px)',
+  [theme.breakpoints.down('xl')]: { height: 'auto', padding: '80px 0' },
   [theme.breakpoints.down('lg')]: { height: 'auto', padding: '50px 0' },
   [theme.breakpoints.down('sm')]: { padding: '40px 0 50px' },
 

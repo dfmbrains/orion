@@ -44,6 +44,9 @@ const StyledSection = styled('section')(({ theme }) => ({
     width: '55%',
     [theme.breakpoints.down('md')]: { width: '100%' },
   },
+  '& .MuiButton-outlinedSizeLarge': {
+    borderWidth: '2px',
+  },
 }));
 
 const StyledSwiperSlide = styled('div')(({ theme }) => ({
@@ -103,20 +106,24 @@ const AboutSection2 = () => {
             </Typography>
 
             <Button
-              onClick={() => setIsOpenDialog(true)}
-              size={isMobile ? 'medium' : 'large'}
-              variant="outlined"
               color="primary"
-              sx={{ width: '50%' }}
+              variant="outlined"
+              fullWidth={isMobile}
+              size="large"
+              onClick={() => setIsOpenDialog(true)}
+              sx={
+                isMobile
+                  ? {}
+                  : { width: '50%', padding: '12px 24px', borderWidth: 2 }
+              }
             >
               {t('buttons.readOurStory')}
             </Button>
           </Box>
 
-          <Box sx={{ position: 'relative' }}>
+          <Box mt={4} sx={{ position: 'relative' }}>
             <Typography
               variant="subtitle1"
-              mt={4}
               mb={{ sm: 6, xs: 4 }}
               fontWeight={'bold'}
             >

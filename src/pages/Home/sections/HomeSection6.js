@@ -23,6 +23,8 @@ import { useRecoilState } from 'recoil';
 import { teamRecoil } from '../../../recoil';
 import { useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
+import DefaultButton from '../../../components/DefaultButton';
+import { useNavigate } from 'react-router-dom';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',
@@ -92,10 +94,16 @@ const HomeSection6 = () => {
   const { t } = useTranslation();
 
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const [team] = useRecoilState(teamRecoil);
 
   const [active, setActive] = useState(null);
+
+  const navigateToOurTeam = () => {
+    navigate('/about');
+    setTimeout(() => anchorLinkHandler('aboutSection9'), 0);
+  };
 
   useEffect(() => {
     if (team) {
@@ -118,7 +126,8 @@ const HomeSection6 = () => {
                   <Typography variant="h2">
                     {t(`${translationKey}.title`)}
                   </Typography>
-                  <Typography mt={1} variant="subtitle1" fontWeight="500">
+                  {/*<Typography mt={1} variant="subtitle1" fontWeight="500">*/}
+                  <Typography mt={1} variant="h2">
                     {t(`${translationKey}.description`)}
                   </Typography>
                 </Box>
@@ -145,9 +154,17 @@ const HomeSection6 = () => {
                     </Typography>
                   </div>
                 </FlexGap10>
-                <Typography mb={3} variant="subtitle2" color="#332C2C">
+                <Typography variant="subtitle2" color="#332C2C">
                   {active.about}
                 </Typography>
+
+                <DefaultButton
+                  sx={{ my: 2 }}
+                  variant="outlined"
+                  onClick={navigateToOurTeam}
+                >
+                  {t('buttons.learnMore')}
+                </DefaultButton>
               </Grid>
 
               <Divider orientation={'vertical'} flexItem />

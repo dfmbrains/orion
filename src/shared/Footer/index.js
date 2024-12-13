@@ -49,8 +49,8 @@ const Footer = () => {
       title: t('footer.menu.column1'),
       elements: [
         { title: t('menu.home'), link: '/', hash: 'header' },
-        { title: t('menu.company'), link: '/about', hash: 'header' },
         { title: t('menu.services'), link: '/services', hash: 'header' },
+        { title: t('menu.company'), link: '/about', hash: 'header' },
         {
           title: `${t('menu.clients')} & ${t('menu.partners')}`,
           link: '/clients-&-partners',

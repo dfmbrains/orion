@@ -26,8 +26,8 @@ export const languages = [
 
 export const HEADER_BURGER_MENU = [
   { title: 'menu.home', link: '/' },
-  { title: 'menu.company', link: '/about' },
   { title: 'menu.services', link: '/services' },
+  { title: 'menu.company', link: '/about' },
   { title: 'menu.clientsAndPartners', link: '/clients-&-partners' },
   { title: 'menu.blogs', link: '/blog' },
   { title: 'menu.contact', link: '/contact?form=0' },

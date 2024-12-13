@@ -49,7 +49,7 @@ const AboutSection6 = () => {
             variant="subtitle1"
           >
             <Typography variant="h4" component={'span'}>
-              10+{' '}
+              15+{' '}
             </Typography>
             {t(`${translationKey}.subtitle2`)}
           </Typography>

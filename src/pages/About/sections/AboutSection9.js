@@ -65,7 +65,7 @@ const AboutSection9 = () => {
   const [team] = useRecoilState(teamRecoil);
 
   return (
-    <StyledSection>
+    <StyledSection id="aboutSection9">
       <OrionContainer>
         {team ? (
           <>
