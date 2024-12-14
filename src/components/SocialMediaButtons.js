@@ -4,6 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useRecoilState } from 'recoil';
 import { companyRecoil } from '../recoil';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const SocialMediaButtons = ({ color }) => {
   const [company] = useRecoilState(companyRecoil);
@@ -11,30 +12,37 @@ const SocialMediaButtons = ({ color }) => {
   return (
     <ButtonGroup>
       <IconButton
-        href={company?.socialMedia.facebook.link || ''}
-        target={'_blank'}
         color={color}
+        target="_blank"
+        href={company?.socialMedia.facebook.link || ''}
       >
         <Icon>facebook</Icon>
       </IconButton>
       <IconButton
-        href={company?.socialMedia.instagram.link || ''}
-        target={'_blank'}
         color={color}
+        target="_blank"
+        href={company?.socialMedia.instagram.link || ''}
       >
         <InstagramIcon />
       </IconButton>
       <IconButton
-        href={`https://wa.me/${company?.socialMedia.whatsapp.link || ''}`}
-        target={'_blank'}
         color={color}
+        target="_blank"
+        href={company?.socialMedia.linkedIn.link || ''}
+      >
+        <LinkedInIcon />
+      </IconButton>
+      <IconButton
+        color={color}
+        target={'_blank'}
+        href={`https://wa.me/${company?.socialMedia.whatsapp.link || ''}`}
       >
         <WhatsAppIcon />
       </IconButton>
       <IconButton
-        href={`https://t.me/${company?.socialMedia.telegram.link || ''}`}
-        target={'_blank'}
         color={color}
+        target="_blank"
+        href={`https://t.me/${company?.socialMedia.telegram.link || ''}`}
       >
         <Icon>telegram</Icon>
       </IconButton>

@@ -277,6 +277,10 @@ export const companyRecoil = atom({
         id: '1',
         link: 'real link',
       },
+      linkedIn: {
+        id: '6',
+        link: 'real link',
+      },
       skype: {
         id: '3',
         link: 'skype link',
