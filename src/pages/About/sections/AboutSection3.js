@@ -28,9 +28,9 @@ const AboutSection3 = () => {
   const theme = useTheme();
   const navigate = useNavigate();
 
-  const navigateToCalculationForm = async () => {
-    await navigate('/');
-    await anchorLinkHandler('homeSection3');
+  const navigateToCalculationForm = () => {
+    navigate('/');
+    setTimeout(() => anchorLinkHandler('homeSection3'), 0);
   };
 
   return (

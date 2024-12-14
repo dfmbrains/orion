@@ -86,9 +86,9 @@ const HomeSection5 = () => {
   const [data, setData] = useState([]);
   const [selectedReview, setSelectedReview] = useState(null);
 
-  const navigateToClientsTestimonials = async () => {
-    await navigate('/clients-&-partners');
-    await anchorLinkHandler('testimonialsSection');
+  const navigateToClientsTestimonials = () => {
+    navigate('/clients-&-partners');
+    setTimeout(() => anchorLinkHandler('testimonialsSection'), 0);
   };
 
   useEffect(() => {
