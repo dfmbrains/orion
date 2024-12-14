@@ -1,20 +1,30 @@
 import React from 'react';
-import ImageComponent from '../../../components/ImageComponent';
-import { styled, Typography } from '@mui/material';
+import { Avatar, styled, Typography } from '@mui/material';
 import { formatName } from '../../../helpers/utils';
 import { useRecoilValue } from 'recoil';
 import { selectedLanguageRecoil } from '../../../recoil';
 
-const StyledPreviewMemberBox = styled('div')(() => ({
+const StyledBox = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+}));
+
+const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: '100px',
   height: '100px',
-  borderRadius: '50%',
-  overflow: 'hidden',
-  margin: '0 auto',
 
-  '& img': {
-    width: '100%',
-    height: '100%',
+  [theme.breakpoints.down('lg')]: {
+    width: '80px',
+    height: '80px',
+  },
+  [theme.breakpoints.down('md')]: {
+    width: '70px',
+    height: '70px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '60px',
+    height: '60px',
   },
 }));
 
@@ -22,10 +32,8 @@ const TeamMemberCard = ({ member }) => {
   const language = useRecoilValue(selectedLanguageRecoil);
 
   return (
-    <div>
-      <StyledPreviewMemberBox>
-        <ImageComponent src={member.images.file} alt={member.images.name} />
-      </StyledPreviewMemberBox>
+    <StyledBox>
+      <StyledAvatar src={member.images.file} alt={member.images.name} />
 
       <Typography mt={1} variant="subtitle1">
         {formatName(
@@ -43,7 +51,7 @@ const TeamMemberCard = ({ member }) => {
       <Typography color="#9EADB4" variant="body2">
         {member.position}
       </Typography>
-    </div>
+    </StyledBox>
   );
 };
 

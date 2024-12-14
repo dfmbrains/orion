@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
+  Avatar,
   Box,
   Divider,
   Grid,
@@ -44,38 +45,39 @@ const StyledImageBox = styled('div')(() => ({
   },
 }));
 
-const StyledPreviewMemberBox = styled('div')(({ theme }) => ({
+const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: '100px',
   height: '100px',
-  borderRadius: '50%',
-  overflow: 'hidden',
-  position: 'relative',
-  minWidth: '100px',
+
   [theme.breakpoints.down('lg')]: {
-    minWidth: '80px',
     width: '80px',
     height: '80px',
   },
   [theme.breakpoints.down('md')]: {
-    minWidth: '70px',
     width: '70px',
     height: '70px',
   },
   [theme.breakpoints.down('sm')]: {
-    minWidth: '60px',
     width: '60px',
     height: '60px',
   },
+}));
 
-  '& img': {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    minWidth: '100%',
-    minHeight: '100%',
-    maxWidth: '130%',
-    maxHeight: '130%',
+const StyledAvatarSmall = styled(Avatar)(({ theme }) => ({
+  width: '80px',
+  height: '80px',
+
+  [theme.breakpoints.down('lg')]: {
+    width: '70px',
+    height: '70px',
+  },
+  [theme.breakpoints.down('md')]: {
+    width: '60px',
+    height: '60px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '50px',
+    height: '50px',
   },
 }));
 
@@ -144,12 +146,10 @@ const HomeSection6 = () => {
                 <Divider />
 
                 <FlexGap10 my={{ md: 3, xs: 2 }}>
-                  <StyledPreviewMemberBox>
-                    <ImageComponent
-                      src={active.images.file}
-                      alt={active.images.name}
-                    />
-                  </StyledPreviewMemberBox>
+                  <StyledAvatar
+                    src={active.images.file}
+                    alt={active.images.name}
+                  />
                   <div>
                     <Typography color="#4E5865" variant="body1">
                       {active.position}
@@ -231,12 +231,10 @@ const HomeSection6 = () => {
                         setActive(el);
                       }}
                     >
-                      <StyledPreviewMemberBox>
-                        <ImageComponent
-                          src={el.images.file}
-                          alt={el.images.name}
-                        />
-                      </StyledPreviewMemberBox>
+                      <StyledAvatarSmall
+                        src={el.images.file}
+                        alt={el.images.name}
+                      />
                       <div>
                         <Typography color="#4E5865" variant="body1">
                           {el.position}
