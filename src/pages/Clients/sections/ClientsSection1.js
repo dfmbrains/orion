@@ -16,7 +16,7 @@ import {
 import SwiperButtons from '../../../components/SwiperButtons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FlexAllCenter } from '../../../components/FlexBox';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { partnersRecoil } from '../../../recoil';
 import OrionLoading from '../../../components/OrionLoading';
 import { Trans, useTranslation } from 'react-i18next';
@@ -45,9 +45,9 @@ const ClientsSection1 = () => {
 
   const theme = useTheme();
 
-  const [part, setPart] = useState(0);
+  const partnersList = useRecoilValue(partnersRecoil);
 
-  const [partnersList] = useRecoilState(partnersRecoil);
+  const [part, setPart] = useState(0);
 
   return (
     <StyledSection>

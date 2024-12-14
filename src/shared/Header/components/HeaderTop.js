@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FlexBetweenAlignCenter, FlexGap10 } from '../../../components/FlexBox';
 import { Box, Icon, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { companyRecoil } from '../../../recoil';
 import { useTranslation } from 'react-i18next';
 
@@ -42,7 +42,7 @@ const HeaderTop = () => {
   const theme = useTheme();
   const { t } = useTranslation();
 
-  const [company] = useRecoilState(companyRecoil);
+  const company = useRecoilValue(companyRecoil);
 
   const [active, setActive] = useState(false);
 

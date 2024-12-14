@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import PostCard from '../../../components/PostCard';
 import { FlexBox } from '../../../components/FlexBox';
-import { useRecoilState } from 'recoil';
-import { blogRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { blogRecoil, selectedLanguageRecoil } from '../../../recoil';
 import OrionLoading from '../../../components/OrionLoading';
+import { filterArrByLanguage } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0 80px',
@@ -35,15 +36,26 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
 }));
 
 const BlogContentSection = () => {
-  const [blogList] = useRecoilState(blogRecoil);
+  const blogList = useRecoilValue(blogRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (language && blogList) {
+      const filteredReviews = filterArrByLanguage(blogList, language);
+
+      setData(filteredReviews);
+    }
+  }, [language, blogList]);
 
   return (
     <StyledSection>
       {blogList ? (
         <OrionContainer>
           <StyledFlexBox>
-            {blogList.map((el, idx) => (
-              <PostCard key={idx} post={el} />
+            {data.map(post => (
+              <PostCard key={post.id} post={post} />
             ))}
           </StyledFlexBox>
         </OrionContainer>

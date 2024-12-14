@@ -2,12 +2,12 @@ import React from 'react';
 import { ButtonGroup, Icon, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { companyRecoil } from '../recoil';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const SocialMediaButtons = ({ color }) => {
-  const [company] = useRecoilState(companyRecoil);
+  const company = useRecoilValue(companyRecoil);
 
   return (
     <ButtonGroup>
