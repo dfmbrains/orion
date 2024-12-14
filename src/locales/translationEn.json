@@ -4,6 +4,20 @@
   "words": {
     "menu": "Menu"
   },
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
   "buttons": {
     "learnMore": "learn more",
     "order": "create order",

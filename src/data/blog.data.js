@@ -1,0 +1,122 @@
+import Blog1Img from '../assets/images/data/blog1.jpg';
+import Blog2Img from '../assets/images/data/blog2.jpg';
+import Blog3Img from '../assets/images/data/blog3.jpg';
+
+export const blogData = [
+  {
+    subtitle: 'Логистика сегодня: тренды и новости',
+    id: '1',
+    created: '12/12/2024',
+    language: 'ru',
+    title: 'Логистика сегодня: тренды и новости',
+    content: [
+      // {
+      //   title: 'Rail Transportation: An Overview',
+      //   text: 'The use of railroads and trains to convey cargo on land is known as rail freight transport. Rail transport is popular, especially in continents with extensive journey durations, such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo, including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods, standardized shipping containers, or particularly constructed carriages for a specific sort of freight can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It costs more than sea freight, but less than air freight. Moving high-value industrial products like automobiles, electronics, and computer equipment, as well as promotional items, by train is ideal.',
+      // }
+    ],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '2',
+    created: '12/12/2024',
+    language: 'en',
+    title: '',
+    content: [],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '3',
+    created: '12/12/2024',
+    language: 'cn',
+    title: '',
+    content: [],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+
+  {
+    subtitle: 'Все о международных железнодорожных перевозках',
+    id: '4',
+    created: '12/18/2024',
+    language: 'ru',
+    title: 'Все о международных железнодорожных перевозках',
+    content: [],
+    images: [{ file: Blog2Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '5',
+    created: '12/18/2024',
+    language: 'en',
+    title: '',
+    content: [],
+    images: [{ file: Blog2Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '6',
+    created: '12/18/2024',
+    language: 'cn',
+    title: '',
+    content: [],
+    images: [{ file: Blog2Img, name: 'blogImg' }],
+  },
+
+  {
+    subtitle: 'Орион-Транс: наши новости достижения',
+    id: '10',
+    created: '12/29/2024',
+    language: 'ru',
+    title: 'Орион-Транс: наши новости достижения',
+    content: [],
+    images: [{ file: Blog3Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '11',
+    created: '12/29/2024',
+    language: 'en',
+    title: '',
+    content: [],
+    images: [{ file: Blog3Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '12',
+    created: '12/29/2024',
+    language: 'cn',
+    title: '',
+    content: [],
+    images: [{ file: Blog3Img, name: 'blogImg' }],
+  },
+
+  {
+    subtitle: 'Интересные факты о Логистике',
+    id: '7',
+    created: '12/25/2024',
+    language: 'ru',
+    title: 'Интересные факты о Логистике',
+    content: [],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '8',
+    created: '12/25/2024',
+    language: 'en',
+    title: '',
+    content: [],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+  {
+    subtitle: '',
+    id: '9',
+    created: '12/25/2024',
+    language: 'cn',
+    title: '',
+    content: [],
+    images: [{ file: Blog1Img, name: 'blogImg' }],
+  },
+];

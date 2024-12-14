@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Grid,
   styled,
@@ -8,11 +8,12 @@ import {
 } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import PostCard from '../../../components/PostCard';
-import { useRecoilState } from 'recoil';
-import { blogRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { blogRecoil, selectedLanguageRecoil } from '../../../recoil';
 import OrionLoading from '../../../components/OrionLoading';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import { useTranslation } from 'react-i18next';
+import { filterArrByLanguage } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '45px 0 90px',
@@ -37,10 +38,21 @@ const HomeSection7 = () => {
   const { t } = useTranslation();
   const theme = useTheme();
 
-  const [blogList] = useRecoilState(blogRecoil);
+  const blogList = useRecoilValue(blogRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (language && blogList) {
+      const filteredReviews = filterArrByLanguage(blogList, language);
+
+      setData(filteredReviews.slice(0, isMobile ? 3 : isLaptop ? 2 : 3));
+    }
+  }, [language, blogList, isLaptop, isMobile]);
 
   return (
     <StyledSection>
@@ -51,13 +63,11 @@ const HomeSection7 = () => {
           </Typography>
 
           <Grid container spacing={{ md: 5, xs: 2 }}>
-            {blogList
-              .slice(0, isMobile ? 3 : isLaptop ? 2 : 3)
-              .map((el, ind) => (
-                <StyledGridItem key={ind} item lg={4} sm={6} xs={12}>
-                  <PostCard post={el} />
-                </StyledGridItem>
-              ))}
+            {data.map((el, ind) => (
+              <StyledGridItem key={ind} item lg={4} sm={6} xs={12}>
+                <PostCard post={el} />
+              </StyledGridItem>
+            ))}
           </Grid>
         </OrionContainer>
       ) : (
