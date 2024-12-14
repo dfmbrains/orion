@@ -2,6 +2,7 @@ export const reviewsData = [
   {
     text: 'Мы высоко ценим наши наши хорошие взаимно партнерские отношения и наше взаимопонимание меду нашими компании. Мы бы хотели подчеркнуть уровень профессионализма ваших специалистов и выражаем огромную благодарность за оперативность во всех вопросах.',
     name: 'Калдыбеков Е.',
+    position: 'Генеральный Директор',
     id: 1,
     created: '11/25/2024',
     company: 'ООО Greenlights',
@@ -11,6 +12,7 @@ export const reviewsData = [
   {
     text: '',
     name: 'Kaldybekov E.',
+    position: 'General Director',
     id: 2,
     created: '11/25/2024',
     company: 'Greenlights LLP',
@@ -18,8 +20,9 @@ export const reviewsData = [
     status: true,
   },
   {
-    text: '',
+    text: '我们高度重视我们之间良好的合作关系和公司之间的相互理解。我们想强调贵公司专家的专业水平，并对在所有事务中的高效处理表示衷心的感谢',
     name: 'Kaldybekov E.',
+    position: '首席执行官',
     id: 3,
     created: '11/25/2024',
     company: '有限责任合伙公司 Greenlights',
@@ -46,7 +49,7 @@ export const reviewsData = [
     status: true,
   },
   {
-    text: '我们高度重视我们之间良好的合作关系和公司之间的相互理解。我们想强调贵公司专家的专业水平，并对在所有事务中的高效处理表示衷心的感谢',
+    text: 'ORION-Trans’有限责任公司的工作特点是务实的态度、高水平的专业素养和强大的团队精神。该公司是一个值得信赖、负责任且高素质的合作伙伴。我们公司对与‘ORION-Trans’有限责任公司的合作成果感到非常满意，并推荐该公司作为一个可靠和稳定的商业伙伴',
     name: 'Bukreeva A.',
     id: 6,
     created: '11/25/2024',
