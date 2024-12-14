@@ -301,10 +301,15 @@ export const companyRecoil = atom({
     },
     id: 'Fi9so2860hoIwqzhdBKO',
     about: {
-      address: 'Кыргызстан, Бишкек, ул. Турусбекова 109/3',
+      address: {
+        ru: 'Кыргызстан, Бишкек, ул. Турусбекова 109/3',
+        en: 'Turusbekova 109/3, Bishkek, Kyrgyzstan',
+        cn: '吉尔吉斯共和国比什凯克市图鲁斯别扩挖路109/13号办公室401/6号',
+      },
       email: 'office.oriontrans@gmail.com',
       phoneNumber2: '+996554333293',
       phoneNumber1: '+996705006088',
+      coordinates: [74.586007, 42.87983],
     },
   },
 });

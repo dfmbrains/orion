@@ -4,13 +4,14 @@ import OrionContainer from '../../../components/OrionContainer';
 import { FlexBox, FlexGap10 } from '../../../components/FlexBox';
 import SocialMediaButtons from '../../../components/SocialMediaButtons';
 import ContactForm from '../components/ContactForm';
-import { useRecoilState } from 'recoil';
-import { companyRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { companyRecoil, selectedLanguageRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import OrionLoading from '../../../components/OrionLoading';
 import CreateReviewForm from '../../../components/CreateReviewForm';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { getMapLinkByLocaleAndCoordinates } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '50px 0 120px',
@@ -36,7 +37,8 @@ const ContactContentSection = () => {
   const { t } = useTranslation();
   const translationKey = 'contact.content';
 
-  const [company] = useRecoilState(companyRecoil);
+  const company = useRecoilValue(companyRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [formVariant, setFormVariant] = useSearchParams();
 
@@ -57,7 +59,7 @@ const ContactContentSection = () => {
               <Typography
                 variant="body1"
                 color="#9EADB4"
-                textTransform={'capitalize'}
+                textTransform="capitalize"
               >
                 {t(`${translationKey}.supportCenter`)} 24 / 7
               </Typography>
@@ -78,15 +80,24 @@ const ContactContentSection = () => {
               <StyledFlexGap10 my={3}>
                 <div>
                   <Typography variant="body1" color="#9EADB4">
-                    {t(`${translationKey}.ourLocation`)}
+                    {t(`${translationKey}.ourLocation`)}:
                   </Typography>
-                  <Typography variant="subtitle2">
-                    {company.about.address}
-                  </Typography>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={getMapLinkByLocaleAndCoordinates(
+                      language,
+                      company.about.coordinates,
+                    )}
+                  >
+                    <Typography variant="subtitle2">
+                      {company.about.address[language]}
+                    </Typography>
+                  </a>
                 </div>
                 <div>
                   <Typography variant="body1" color="#9EADB4">
-                    {t(`${translationKey}.writeUs`)}
+                    {t(`${translationKey}.writeUs`)}:
                   </Typography>
                   <a href="mailto:office.oriontrans@gmail.com">
                     <Typography variant="subtitle2" color="#1B1B1B">

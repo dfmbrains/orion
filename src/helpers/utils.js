@@ -56,3 +56,12 @@ export const filterArrByLanguage = (arr = [], language = '') => {
     item => item?.language?.toLowerCase() === language.toLowerCase(),
   );
 };
+
+export const getMapLinkByLocaleAndCoordinates = (language, coordinates) => {
+  if (language === 'ru') {
+    const joinedCoordinates = coordinates.join(',');
+    return `https://2gis.kg/bishkek/search/${joinedCoordinates}/geo/${joinedCoordinates}`;
+  } else {
+    return `https://www.google.com/maps?q=${coordinates[1]},${coordinates[0]}`;
+  }
+};
