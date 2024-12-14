@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,13 +7,16 @@ import {
   SwiperButtonNext,
   SwiperButtonPrev,
 } from '../../../components/SwiperButtons';
-import { useRecoilState } from 'recoil';
-import { teamRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, teamRecoil } from '../../../recoil';
 import OrionLoading from '../../../components/OrionLoading';
-import { formatName } from '../../../helpers/utils';
+import {
+  createDesiredArrays,
+  filterArrByLanguage,
+} from '../../../helpers/utils';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import { Trans, useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
+import TeamMemberCard from '../components/TeamMemberCard';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',
@@ -43,26 +46,24 @@ const StyledSection = styled('section')(({ theme }) => ({
   },
 }));
 
-const StyledPreviewMemberBox = styled('div')(() => ({
-  width: '100px',
-  height: '100px',
-  borderRadius: '50%',
-  overflow: 'hidden',
-  margin: '0 auto',
-
-  '& img': {
-    width: '100%',
-    height: '100%',
-  },
-}));
-
 const AboutSection9 = () => {
   const translationKey = 'about.section9';
   const { t } = useTranslation();
 
   const theme = useTheme();
 
-  const [team] = useRecoilState(teamRecoil);
+  const team = useRecoilValue(teamRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (team) {
+      const filteredTeam = filterArrByLanguage(team, language);
+
+      setData(createDesiredArrays(filteredTeam));
+    }
+  }, [team, language]);
 
   return (
     <StyledSection id="aboutSection9">
@@ -100,20 +101,14 @@ const AboutSection9 = () => {
               }}
             >
               <Swiper
-                className="swiperStatic swiperCustomNavigation"
-                navigation={true}
-                modules={[Navigation]}
-                slidesPerView={2}
+                navigation
                 spaceBetween={50}
+                slidesPerView={2}
+                modules={[Navigation]}
+                className="swiperStatic swiperCustomNavigation"
                 breakpoints={{
-                  900: {
-                    spaceBetween: 50,
-                    slidesPerView: 2,
-                  },
-                  0: {
-                    spaceBetween: 30,
-                    slidesPerView: 1,
-                  },
+                  900: { spaceBetween: 50, slidesPerView: 2 },
+                  0: { spaceBetween: 30, slidesPerView: 1 },
                 }}
               >
                 <>
@@ -121,25 +116,19 @@ const AboutSection9 = () => {
                   <SwiperButtonNext />
                 </>
 
-                {team.map((el, idx) => (
+                {data.map((membersArr, idx) => (
                   <SwiperSlide key={idx}>
-                    <div>
-                      <StyledPreviewMemberBox>
-                        <ImageComponent
-                          src={el.images.file}
-                          alt={el.images.name}
-                        />
-                      </StyledPreviewMemberBox>
-                      <Typography mt={1} variant="subtitle1">
-                        {formatName(el.firstName, el.midName, el.lastName)}
-                      </Typography>
-                      <Typography my={1} variant="body1">
-                        {el.about}
-                      </Typography>
-                      <Typography color="#9EADB4" variant="body2">
-                        {el.position}
-                      </Typography>
-                    </div>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        rowGap: '20px',
+                      }}
+                    >
+                      {membersArr.map(member => (
+                        <TeamMemberCard key={member.id} member={member} />
+                      ))}
+                    </Box>
                   </SwiperSlide>
                 ))}
               </Swiper>

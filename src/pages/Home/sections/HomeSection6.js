@@ -156,9 +156,10 @@ const HomeSection6 = () => {
                     </Typography>
                     <Typography fontWeight="500" variant="subtitle1">
                       {formatName(
+                        language,
+                        active.lastName,
                         active.firstName,
                         active.midName,
-                        active.lastName,
                       )}
                     </Typography>
                   </div>
@@ -245,7 +246,7 @@ const HomeSection6 = () => {
                           variant="subtitle1"
                           sx={{ wordBreak: 'break-all' }}
                         >
-                          {formatName(el.firstName, el.lastName)}
+                          {formatName(language, el.lastName, el.firstName)}
                         </Typography>
                       </div>
                     </StyledFlexGap10>

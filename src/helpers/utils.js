@@ -13,12 +13,18 @@ export const anchorLinkHandler = elementId => {
 export const handleScrollToTop = () =>
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
-export const formatName = (lastName, firstName, midName) => {
+export const formatName = (locale, lastName, firstName, midName) => {
   let fio = '';
 
   if (lastName) fio += lastName;
-  if (firstName) fio += fio ? ` ${firstName}` : firstName;
-  if (midName) fio += fio ? ` ${midName}` : midName;
+  if (firstName) {
+    if (locale === 'ru') {
+      fio += fio ? ` ${firstName}` : firstName;
+    } else {
+      fio = fio ? `${firstName} ` + fio : firstName;
+    }
+  }
+  if (midName && locale === 'ru') fio += fio ? ` ${midName}` : midName;
 
   if (fio) return fio;
   else return '--- --- ---';

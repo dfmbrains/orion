@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import OrionContainer from '../../../components/OrionContainer';
 import {
   Card,
@@ -155,9 +155,17 @@ const HomeSection3 = () => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const countries = createDesiredArrays(
-    t('countries', { returnObjects: true }) || [],
-  );
+  const [countriesList, setCountriesList] = useState([]);
+
+  const countries = t('countries', { returnObjects: true }) || [];
+
+  useEffect(() => {
+    if (isMobile) {
+      setCountriesList(countries);
+    } else {
+      setCountriesList(createDesiredArrays(countries));
+    }
+  }, [countries]);
 
   return (
     <StyledSection id={'homeSection3'}>
@@ -176,7 +184,7 @@ const HomeSection3 = () => {
 
             <StyledSwiperBox>
               {isMobile ? (
-                countries.flat('').map((item, idx) => (
+                countriesList.map((item, idx) => (
                   <div className="countriesBox">
                     <StyledCountryItem key={idx}>
                       <Typography variant="subtitle2">{item[0]}</Typography>
@@ -212,7 +220,7 @@ const HomeSection3 = () => {
                     <SwiperButtonNext />
                   </>
 
-                  {countries.map((item, idx) => (
+                  {countriesList.map((item, idx) => (
                     <SwiperSlide key={idx}>
                       <div className="countriesBox">
                         <StyledCountryItem key={idx}>
