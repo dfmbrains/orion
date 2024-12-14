@@ -90,7 +90,7 @@ const ContactContentSection = () => {
                       company.about.coordinates,
                     )}
                   >
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" color="#1B1B1B">
                       {company.about.address[language]}
                     </Typography>
                   </a>
