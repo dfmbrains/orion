@@ -30,7 +30,7 @@ import { useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
 import DefaultButton from '../../../components/DefaultButton';
 import { useNavigate } from 'react-router-dom';
-import { StyledAvatar } from '../../../components/MUI';
+import { StyledAvatar } from '../../../components/StyledComponents';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',

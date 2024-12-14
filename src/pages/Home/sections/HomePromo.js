@@ -1,10 +1,6 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { styled } from '@mui/material';
-import Loadable from '../../../components/Loadable';
-
-const HomePromoSwiper = Loadable(
-  lazy(() => import('../components/HomePromoSwiper')),
-);
+import HomePromoSwiper from '../components/HomePromoSwiper';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',

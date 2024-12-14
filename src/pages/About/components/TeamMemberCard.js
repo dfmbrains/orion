@@ -3,7 +3,7 @@ import { styled, Typography } from '@mui/material';
 import { formatName } from '../../../helpers/utils';
 import { useRecoilValue } from 'recoil';
 import { selectedLanguageRecoil } from '../../../recoil';
-import { StyledAvatar } from '../../../components/MUI';
+import { StyledAvatar } from '../../../components/StyledComponents';
 
 const StyledBox = styled('div')(() => ({
   display: 'flex',
