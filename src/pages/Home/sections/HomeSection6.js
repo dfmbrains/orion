@@ -17,10 +17,14 @@ import {
   Styled50vhLoadingBox,
   StyledSwiperButtonsPosition,
 } from '../../../components/StyledComponents';
-import { anchorLinkHandler, formatName } from '../../../helpers/utils';
+import {
+  anchorLinkHandler,
+  filterArrByLanguage,
+  formatName,
+} from '../../../helpers/utils';
 import OrionLoading from '../../../components/OrionLoading';
-import { useRecoilState } from 'recoil';
-import { teamRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, teamRecoil } from '../../../recoil';
 import { useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
 import DefaultButton from '../../../components/DefaultButton';
@@ -96,9 +100,11 @@ const HomeSection6 = () => {
   const theme = useTheme();
   const navigate = useNavigate();
 
-  const [team] = useRecoilState(teamRecoil);
+  const team = useRecoilValue(teamRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [active, setActive] = useState(null);
+  const [data, setData] = useState([]);
 
   const navigateToOurTeam = () => {
     navigate('/about');
@@ -107,14 +113,17 @@ const HomeSection6 = () => {
 
   useEffect(() => {
     if (team) {
-      setActive(team[0]);
+      const filteredTeam = filterArrByLanguage(team, language);
+
+      setData(filteredTeam);
+      setActive(filteredTeam[0]);
     }
-  }, [team]);
+  }, [team, language]);
 
   return (
     <StyledSection id="homeTeamSection">
       <OrionContainer>
-        {team && active ? (
+        {active ? (
           <>
             <Grid
               container
@@ -212,7 +221,7 @@ const HomeSection6 = () => {
                   <SwiperButtons />
                 </StyledSwiperButtonsPosition>
 
-                {team.map((el, idx) => (
+                {data.map((el, idx) => (
                   <SwiperSlide key={idx}>
                     <StyledFlexGap10
                       theme={theme}
@@ -236,7 +245,7 @@ const HomeSection6 = () => {
                           variant="subtitle1"
                           sx={{ wordBreak: 'break-all' }}
                         >
-                          {formatName(el.firstName, '', el.lastName)}
+                          {formatName(el.firstName, el.lastName)}
                         </Typography>
                       </div>
                     </StyledFlexGap10>

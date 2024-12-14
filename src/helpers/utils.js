@@ -13,9 +13,15 @@ export const anchorLinkHandler = elementId => {
 export const handleScrollToTop = () =>
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
-export const formatName = (firstName, middleName, lastName) => {
-  let fullName = `${lastName} ${firstName} ${middleName}`;
-  return fullName.trim().replace(/\s+/g, ' ');
+export const formatName = (lastName, firstName, midName) => {
+  let fio = '';
+
+  if (lastName) fio += lastName;
+  if (firstName) fio += fio ? ` ${firstName}` : firstName;
+  if (midName) fio += fio ? ` ${midName}` : midName;
+
+  if (fio) return fio;
+  else return '--- --- ---';
 };
 
 export const getAllCollectionsWithImg = async (path, multiFile) => {
