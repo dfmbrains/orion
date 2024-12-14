@@ -24,6 +24,7 @@ import Rus from '../../../assets/images/countries/ru.png';
 import Tj from '../../../assets/images/countries/tj.png';
 import Tur from '../../../assets/images/countries/tur.png';
 import Uz from '../../../assets/images/countries/uz.png';
+import Kg from '../../../assets/images/countries/kg.png';
 import CompanyHistoryDialog from '../components/CompanyHistoryDialog';
 import { useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
@@ -45,7 +46,11 @@ const StyledSection = styled('section')(({ theme }) => ({
     [theme.breakpoints.down('md')]: { width: '100%' },
   },
   '& .MuiButton-outlinedSizeLarge': {
-    borderWidth: '2px',
+    [theme.breakpoints.up('sm')]: {
+      width: '50%',
+      padding: '12px 24px',
+      borderWidth: '2px !important',
+    },
   },
 }));
 
@@ -74,7 +79,7 @@ const AboutSection2 = () => {
   const countries = t('countries', { returnObjects: true });
   const countriesImg = [
     China,
-    '',
+    Kg,
     Kz,
     Uz,
     Rus,
@@ -111,11 +116,6 @@ const AboutSection2 = () => {
               fullWidth={isMobile}
               size="large"
               onClick={() => setIsOpenDialog(true)}
-              sx={
-                isMobile
-                  ? {}
-                  : { width: '50%', padding: '12px 24px', borderWidth: 2 }
-              }
             >
               {t('buttons.readOurStory')}
             </Button>
