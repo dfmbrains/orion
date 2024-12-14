@@ -1,31 +1,14 @@
 import React from 'react';
-import { Avatar, styled, Typography } from '@mui/material';
+import { styled, Typography } from '@mui/material';
 import { formatName } from '../../../helpers/utils';
 import { useRecoilValue } from 'recoil';
 import { selectedLanguageRecoil } from '../../../recoil';
+import { StyledAvatar } from '../../../components/MUI';
 
 const StyledBox = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-}));
-
-const StyledAvatar = styled(Avatar)(({ theme }) => ({
-  width: '100px',
-  height: '100px',
-
-  [theme.breakpoints.down('lg')]: {
-    width: '80px',
-    height: '80px',
-  },
-  [theme.breakpoints.down('md')]: {
-    width: '70px',
-    height: '70px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    width: '60px',
-    height: '60px',
-  },
 }));
 
 const TeamMemberCard = ({ member }) => {

@@ -30,6 +30,7 @@ import { useTranslation } from 'react-i18next';
 import ImageComponent from '../../../components/ImageComponent';
 import DefaultButton from '../../../components/DefaultButton';
 import { useNavigate } from 'react-router-dom';
+import { StyledAvatar } from '../../../components/MUI';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',
@@ -42,24 +43,6 @@ const StyledSection = styled('section')(({ theme }) => ({
 const StyledImageBox = styled('div')(() => ({
   '& img': {
     width: '100%',
-  },
-}));
-
-const StyledAvatar = styled(Avatar)(({ theme }) => ({
-  width: '100px',
-  height: '100px',
-
-  [theme.breakpoints.down('lg')]: {
-    width: '80px',
-    height: '80px',
-  },
-  [theme.breakpoints.down('md')]: {
-    width: '70px',
-    height: '70px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    width: '60px',
-    height: '60px',
   },
 }));
 
