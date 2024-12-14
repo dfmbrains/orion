@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid, styled, Typography, useTheme } from '@mui/material';
 import OrionContainer from '../../../components/OrionContainer';
 import ServiceCard from '../components/ServiceCard';
 import { FlexBox } from '../../../components/FlexBox';
-import { useRecoilState } from 'recoil';
-import { serviceRecoil } from '../../../recoil';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, serviceRecoil } from '../../../recoil';
 import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
 import OrionLoading from '../../../components/OrionLoading';
 import { Trans, useTranslation } from 'react-i18next';
+import { filterArrByLanguage } from '../../../helpers/utils';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '120px 0',
@@ -41,7 +42,17 @@ const ServiceSection1 = () => {
 
   const theme = useTheme();
 
-  const [serviceList] = useRecoilState(serviceRecoil);
+  const serviceList = useRecoilValue(serviceRecoil);
+  const language = useRecoilValue(selectedLanguageRecoil);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (serviceList) {
+      const filtered = filterArrByLanguage(serviceList, language);
+      setData(filtered);
+    }
+  }, [serviceList, language]);
 
   return (
     <StyledSection>
@@ -87,9 +98,9 @@ const ServiceSection1 = () => {
 
         <StyledFlexBox>
           {serviceList ? (
-            serviceList.map(el => (
-              <React.Fragment key={el.id}>
-                <ServiceCard data={el} />
+            data.map(service => (
+              <React.Fragment key={service.id}>
+                <ServiceCard data={service} />
               </React.Fragment>
             ))
           ) : (

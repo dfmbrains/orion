@@ -47,7 +47,7 @@ const ServiceCard = ({ data }) => {
       }}
     >
       <StyledResponsiveImageBox className="serviceCardImg">
-        <ImageComponent src={data.images.file} alt={data.images.name} />
+        <ImageComponent src={data?.images?.file} alt={data?.images?.name} />
       </StyledResponsiveImageBox>
       <Box pt={2} pb={5} px={3}>
         <Typography variant="subtitle1" mb={2}>
