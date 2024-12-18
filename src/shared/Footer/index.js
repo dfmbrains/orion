@@ -1,11 +1,11 @@
-import React from 'react';
-import OrionContainer from '../../components/OrionContainer';
 import { Grid, styled, Typography } from '@mui/material';
-import { FlexBetweenAlignCenter } from '../../components/FlexBox';
-import { Logo } from '../../components/Logo';
-import { useLocation, useNavigate } from 'react-router-dom';
-import SocialMediaButtons from '../../components/SocialMediaButtons';
+import { FlexBetweenAlignCenter } from 'components/FlexBox';
+import { Logo } from 'components/Logo';
+import OrionContainer from 'components/OrionContainer';
+import SocialMediaButtons from 'components/SocialMediaButtons';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const StyledFooter = styled('footer')(({ theme }) => ({
   padding: '60px 0 15px',

@@ -1,9 +1,9 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 import {
   StyledPromoBackgroundBox,
   StylePromoColumn,
 } from '../StyledComponents';
-import { Typography } from '@mui/material';
 
 const PromoSectionContent = ({ title, bgImage }) => {
   return (

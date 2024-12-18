@@ -1,9 +1,9 @@
-import React from 'react';
 import { styled } from '@mui/material';
-import OrionContainer from './OrionContainer';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import FeatureCard from './FeatureCard';
 import { FlexBox } from './FlexBox';
-import { useTranslation } from 'react-i18next';
+import OrionContainer from './OrionContainer';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',

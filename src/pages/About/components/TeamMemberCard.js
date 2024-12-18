@@ -1,9 +1,9 @@
-import React from 'react';
 import { styled, Typography } from '@mui/material';
-import { formatName } from '../../../helpers/utils';
+import { StyledAvatar } from 'components/StyledComponents';
+import { formatName } from 'helpers/utils';
+import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil } from '../../../recoil';
-import { StyledAvatar } from '../../../components/StyledComponents';
+import { selectedLanguageRecoil } from 'store';
 
 const StyledBox = styled('div')(() => ({
   display: 'flex',

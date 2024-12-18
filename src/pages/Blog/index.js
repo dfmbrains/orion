@@ -1,8 +1,8 @@
+import BlogImg from 'assets/images/backgrounds/news.webp';
+import PromoSection from 'components/PromoSection/PromoSection';
 import React from 'react';
-import PromoSection from '../../components/PromoSection/PromoSection';
-import BlogImg from '../../assets/images/backgrounds/news.webp';
-import BlogContentSection from './sections/BlogContentSection';
 import { useTranslation } from 'react-i18next';
+import BlogContentSection from './sections/BlogContentSection';
 
 const Blog = () => {
   const { t } = useTranslation();

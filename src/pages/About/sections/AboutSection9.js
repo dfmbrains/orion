@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
 import { Box, styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import {
-  SwiperButtonNext,
-  SwiperButtonPrev,
-} from '../../../components/SwiperButtons';
-import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, teamRecoil } from '../../../recoil';
-import OrionLoading from '../../../components/OrionLoading';
-import {
-  createDesiredArrays,
-  filterArrByLanguage,
-} from '../../../helpers/utils';
-import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
+import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
+import { createDesiredArrays, filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, teamRecoil } from 'store';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import TeamMemberCard from '../components/TeamMemberCard';
 
 const StyledSection = styled('section')(({ theme }) => ({

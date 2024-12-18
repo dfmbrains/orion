@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -7,27 +6,28 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import MapBg from '../../../assets/images/mapTransparent.webp';
-import { Navigation } from 'swiper';
-import { StyledSwiperButtonsPosition } from '../../../components/StyledComponents';
-import SwiperButtons from '../../../components/SwiperButtons';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Baltic from '../../../assets/images/countries/baltic.png';
-import Afganistan from '../../../assets/images/countries/af.png';
-import Azer from '../../../assets/images/countries/az.png';
-import China from '../../../assets/images/countries/cn.png';
-import Europe from '../../../assets/images/countries/eu.png';
-import Iran from '../../../assets/images/countries/ir.png';
-import Kz from '../../../assets/images/countries/kz.png';
-import Rus from '../../../assets/images/countries/ru.png';
-import Tj from '../../../assets/images/countries/tj.png';
-import Tur from '../../../assets/images/countries/tur.png';
-import Uz from '../../../assets/images/countries/uz.png';
-import Kg from '../../../assets/images/countries/kg.png';
-import CompanyHistoryDialog from '../components/CompanyHistoryDialog';
+import Afghanistan from 'assets/images/countries/af.png';
+import Azer from 'assets/images/countries/az.png';
+import Baltic from 'assets/images/countries/baltic.png';
+import China from 'assets/images/countries/cn.png';
+import Europe from 'assets/images/countries/eu.png';
+import Iran from 'assets/images/countries/ir.png';
+import Kg from 'assets/images/countries/kg.png';
+import Kz from 'assets/images/countries/kz.png';
+import Rus from 'assets/images/countries/ru.png';
+import Tj from 'assets/images/countries/tj.png';
+import Tur from 'assets/images/countries/tur.png';
+import Uz from 'assets/images/countries/uz.png';
+import MapBg from 'assets/images/mapTransparent.webp';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { StyledSwiperButtonsPosition } from 'components/StyledComponents';
+import SwiperButtons from 'components/SwiperButtons';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import CompanyHistoryDialog from '../components/CompanyHistoryDialog';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '120px 0 100px',
@@ -86,7 +86,7 @@ const AboutSection2 = () => {
     Tur,
     Tj,
     Europe,
-    Afganistan,
+    Afghanistan,
     Iran,
     Baltic,
     Azer,

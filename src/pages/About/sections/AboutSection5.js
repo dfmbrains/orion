@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Divider,
   Grid,
@@ -7,11 +6,12 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import TeamImg from '../../../assets/images/team.webp';
-import { FlexBox } from '../../../components/FlexBox';
+import TeamImg from 'assets/images/team.webp';
+import { FlexBox } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '50px 0',

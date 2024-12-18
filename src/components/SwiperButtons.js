@@ -1,7 +1,7 @@
-import React from 'react';
 import { Icon, IconButton, styled } from '@mui/material';
-import { FlexBox } from './FlexBox';
+import React from 'react';
 import { useSwiper } from 'swiper/react';
+import { FlexBox } from './FlexBox';
 
 const StyledSwiperButtonsBox = styled(FlexBox)(() => ({
   alignItems: 'center',

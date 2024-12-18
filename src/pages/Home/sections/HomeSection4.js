@@ -1,23 +1,19 @@
-import React from 'react';
 import { Divider, Grid, styled, Typography } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
+import ContainerImg from 'assets/images/wagons/container.png';
+import FridgeImg from 'assets/images/wagons/fridge.png';
+import GondolaImg from 'assets/images/wagons/gondola.png';
+import HopperImg from 'assets/images/wagons/hopper.png';
+import PlatformImg from 'assets/images/wagons/platform.png';
+import TankImg from 'assets/images/wagons/tank.png';
+import DefaultButton from 'components/DefaultButton';
+import { FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlexGap10 } from '../../../components/FlexBox';
-import DefaultButton from '../../../components/DefaultButton';
 import { Autoplay, Navigation, Pagination } from 'swiper';
-import {
-  SwiperButtonNext,
-  SwiperButtonPrev,
-} from '../../../components/SwiperButtons';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ImageComponent from '../../../components/ImageComponent';
-
-import GondolaImg from '../../../assets/images/wagons/gondola.png';
-import PlatformImg from '../../../assets/images/wagons/platform.png';
-import TankImg from '../../../assets/images/wagons/tank.png';
-import ContainerImg from '../../../assets/images/wagons/container.png';
-import HopperImg from '../../../assets/images/wagons/hopper.png';
-import FridgeImg from '../../../assets/images/wagons/fridge.png';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0',

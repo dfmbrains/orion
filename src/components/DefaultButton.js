@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
-import { handleScrollToTop } from '../helpers/utils';
-import { Button, useMediaQuery, useTheme } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import { LoadingButton } from '@mui/lab';
+import { Button, useMediaQuery, useTheme } from '@mui/material';
+import { handleScrollToTop } from 'helpers/utils';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const DefaultButton = ({
   linkTo,

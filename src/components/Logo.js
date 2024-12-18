@@ -1,6 +1,6 @@
-import React from 'react';
-import LogoWhite from '../assets/images/logoWhite.png';
 import { styled } from '@mui/material';
+import LogoWhite from 'assets/images/logoWhite.png';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const StyledLink = styled(Link)(() => ({

@@ -1,7 +1,7 @@
-import React from 'react';
 import { Grid, styled, Typography } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import FeatureCard from '../../../components/FeatureCard';
+import FeatureCard from 'components/FeatureCard';
+import OrionContainer from 'components/OrionContainer';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({

@@ -1,13 +1,13 @@
+import App from 'App';
+import i18n from 'locales/index';
+import { SnackbarProvider } from 'notistack';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import OrionTheme from './styles/OrionTheme';
-import { SnackbarProvider } from 'notistack';
-import { RecoilRoot } from 'recoil';
+import 'index.css';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './locales/index';
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import OrionTheme from 'styles/OrionTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

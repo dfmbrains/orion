@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -7,20 +6,21 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import { Navigation } from 'swiper';
+import { FlexAllCenter } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
 import {
   Styled50vhLoadingBox,
   StyledSwiperButtonsPosition,
-} from '../../../components/StyledComponents';
-import SwiperButtons from '../../../components/SwiperButtons';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FlexAllCenter } from '../../../components/FlexBox';
-import { useRecoilValue } from 'recoil';
-import { partnersRecoil } from '../../../recoil';
-import OrionLoading from '../../../components/OrionLoading';
+} from 'components/StyledComponents';
+import SwiperButtons from 'components/SwiperButtons';
+import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
+import { useRecoilValue } from 'recoil';
+import { partnersRecoil } from 'store';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 160px',

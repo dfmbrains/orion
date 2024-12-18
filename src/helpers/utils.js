@@ -1,5 +1,5 @@
-import { getAllCollection } from '../firebase/firestoreFirebase';
-import { getFileFromFirebase } from '../firebase/fileFirebase';
+import { getFileFromFirebase } from 'helpers/firebase/fileFirebase';
+import { getAllCollection } from 'helpers/firebase/firestoreFirebase';
 
 export const anchorLinkHandler = elementId => {
   const target = document.getElementById(elementId);

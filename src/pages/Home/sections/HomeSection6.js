@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import {
   Avatar,
   Box,
@@ -8,29 +7,30 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import OfficeImg from '../../../assets/images/officePhoto.webp';
-import { FlexGap10 } from '../../../components/FlexBox';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import SwiperButtons from '../../../components/SwiperButtons';
+import OfficeImg from 'assets/images/officePhoto.webp';
+import DefaultButton from 'components/DefaultButton';
+import { FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
 import {
   Styled50vhLoadingBox,
+  StyledAvatar,
   StyledSwiperButtonsPosition,
-} from '../../../components/StyledComponents';
+} from 'components/StyledComponents';
+import SwiperButtons from 'components/SwiperButtons';
 import {
   anchorLinkHandler,
   filterArrByLanguage,
   formatName,
-} from '../../../helpers/utils';
-import OrionLoading from '../../../components/OrionLoading';
-import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, teamRecoil } from '../../../recoil';
+} from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
-import DefaultButton from '../../../components/DefaultButton';
 import { useNavigate } from 'react-router-dom';
-import { StyledAvatar } from '../../../components/StyledComponents';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, teamRecoil } from 'store';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',

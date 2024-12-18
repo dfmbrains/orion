@@ -1,9 +1,9 @@
-import React from 'react';
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import OurTeamImg from '../../../assets/images/our_team.webp';
+import OurTeamImg from 'assets/images/our_team.webp';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0',

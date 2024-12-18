@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import {
-  IconButton,
   Icon,
+  IconButton,
   styled,
-  useTheme,
   useMediaQuery,
+  useTheme,
 } from '@mui/material';
-import { handleScrollToTop } from '../helpers/utils';
+import { handleScrollToTop } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 
 const StyledIconButton = styled(IconButton)(({ theme, status }) => ({
   position: 'fixed',

@@ -1,5 +1,5 @@
-import React from 'react';
 import { styled, Typography } from '@mui/material';
+import React from 'react';
 import OrionContainer from './OrionContainer';
 
 const StyledSection = styled('section')(({ theme }) => ({

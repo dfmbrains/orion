@@ -1,8 +1,8 @@
-import React from 'react';
-import OrionContainer from '../../../components/OrionContainer';
 import { styled, Typography, useTheme } from '@mui/material';
-import { FlexBox } from '../../../components/FlexBox';
-import FeatureCard from '../../../components/FeatureCard';
+import FeatureCard from 'components/FeatureCard';
+import { FlexBox } from 'components/FlexBox';
+import OrionContainer from 'components/OrionContainer';
+import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({

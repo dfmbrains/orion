@@ -1,13 +1,13 @@
-import React from 'react';
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import { FlexGap10 } from '../../../components/FlexBox';
-import ClientsImg from '../../../assets/images/partners_and_clients.webp';
-import { useNavigate } from 'react-router-dom';
-import { anchorLinkHandler } from '../../../helpers/utils';
+import ClientsImg from 'assets/images/partners_and_clients.webp';
+import DefaultButton from 'components/DefaultButton';
+import { FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { anchorLinkHandler } from 'helpers/utils';
+import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import DefaultButton from '../../../components/DefaultButton';
-import ImageComponent from '../../../components/ImageComponent';
+import { useNavigate } from 'react-router-dom';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { LoadingButton } from '@mui/lab';
 import { styled, TextField, Typography } from '@mui/material';
-import { FlexAllCenter, FlexGap10 } from './FlexBox';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
   EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
-} from '../helpers/constants';
-import emailjs from '@emailjs/browser';
-import { LoadingButton } from '@mui/lab';
+} from 'helpers/constants';
 import { useSnackbar } from 'notistack';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FlexAllCenter, FlexGap10 } from './FlexBox';
 
 const StyledSection = styled('section')(({ theme, background }) => ({
   padding: '60px 0',

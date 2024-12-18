@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import OrionContainer from '../../../components/OrionContainer';
 import {
   Card,
   Divider,
@@ -8,18 +6,17 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import CalculateForm from '../components/CalculateForm';
-import MapBg from '../../../assets/images/map.webp';
+import MapBg from 'assets/images/map.webp';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
+import { createDesiredArrays } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  SwiperButtonNext,
-  SwiperButtonPrev,
-} from '../../../components/SwiperButtons';
 
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { createDesiredArrays } from '../../../helpers/utils';
-import ImageComponent from '../../../components/ImageComponent';
+import CalculateForm from '../components/CalculateForm';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '0 0 140px',
@@ -157,15 +154,15 @@ const HomeSection3 = () => {
 
   const [countriesList, setCountriesList] = useState([]);
 
-  const countries = t('countries', { returnObjects: true }) || [];
-
   useEffect(() => {
+    const countries = t('countries', { returnObjects: true }) || [];
+
     if (isMobile) {
       setCountriesList(countries);
     } else {
       setCountriesList(createDesiredArrays(countries));
     }
-  }, [countries]);
+  }, [isMobile, t]);
 
   return (
     <StyledSection id={'homeSection3'}>

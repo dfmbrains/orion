@@ -1,11 +1,11 @@
+import { blogData } from 'data/blog.data';
+import { companyData } from 'data/company.data';
+import { partnersData } from 'data/partners.data';
+import { reviewsData } from 'data/reviews.data';
+import { servicesData } from 'data/services.data';
+import { teamData } from 'data/team.data';
+import { defaultAppLanguage } from 'helpers/constants';
 import { atom } from 'recoil';
-import { defaultAppLanguage } from '../helpers/constants';
-import { teamData } from '../data/team.data';
-import { blogData } from '../data/blog.data';
-import { reviewsData } from '../data/reviews.data';
-import { servicesData } from '../data/services.data';
-import { partnersData } from '../data/partners.data';
-import { companyData } from '../data/company.data';
 
 export const selectedLanguageRecoil = atom({
   key: 'selectedLanguageRecoilState',

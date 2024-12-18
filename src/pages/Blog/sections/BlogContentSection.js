@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import PostCard from '../../../components/PostCard';
-import { FlexBox } from '../../../components/FlexBox';
+import { FlexBox } from 'components/FlexBox';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import PostCard from 'components/PostCard';
+import { filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
-import { blogRecoil, selectedLanguageRecoil } from '../../../recoil';
-import OrionLoading from '../../../components/OrionLoading';
-import { filterArrByLanguage } from '../../../helpers/utils';
+import { blogRecoil, selectedLanguageRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0 80px',

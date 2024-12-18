@@ -1,13 +1,13 @@
-import React from 'react';
-import i18next from 'i18next';
 import { Icon, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { languages } from 'helpers/constants';
+import i18next from 'i18next';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { languages } from '../helpers/constants';
 import { useSetRecoilState } from 'recoil';
-import { selectedLanguageRecoil } from '../recoil';
+import { selectedLanguageRecoil } from 'store';
 
 const ChangeLangButton = ({ color }) => {
   const theme = useTheme();

@@ -1,6 +1,6 @@
 import { Box, CircularProgress, styled } from '@mui/material';
+import OrionLogo from 'assets/images/logo.png';
 import React from 'react';
-import OrionLogo from '../assets/images/logo.png';
 
 const FlexAlignCenter = styled(Box)(() => ({
   display: 'flex',

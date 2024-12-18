@@ -1,10 +1,8 @@
+import ScrollTop from 'components/ScrollTop';
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
-
-//components
-import ScrollTop from './components/ScrollTop';
-import Footer from './shared/Footer';
-import routes from './routes';
+import routes from 'routes';
+import Footer from 'shared/Footer';
 
 //swiper
 import 'swiper/css';

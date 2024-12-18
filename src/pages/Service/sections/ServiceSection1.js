@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import ServiceCard from '../components/ServiceCard';
-import { FlexBox } from '../../../components/FlexBox';
-import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, serviceRecoil } from '../../../recoil';
-import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import OrionLoading from '../../../components/OrionLoading';
+import { FlexBox } from 'components/FlexBox';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
+import { filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { filterArrByLanguage } from '../../../helpers/utils';
+import { useRecoilValue } from 'recoil';
+import { selectedLanguageRecoil, serviceRecoil } from 'store';
+import ServiceCard from '../components/ServiceCard';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '120px 0',

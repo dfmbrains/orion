@@ -1,8 +1,8 @@
+import ContactBg from 'assets/images/backgrounds/contact.webp';
+import PromoSection from 'components/PromoSection/PromoSection';
 import React from 'react';
-import PromoSection from '../../components/PromoSection/PromoSection';
-import ContactBg from '../../assets/images/backgrounds/contact.webp';
-import ContactContentSection from './sections/ContactContentSection';
 import { useTranslation } from 'react-i18next';
+import ContactContentSection from './sections/ContactContentSection';
 
 const Contact = () => {
   const { t } = useTranslation();

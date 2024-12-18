@@ -1,9 +1,9 @@
-import React from 'react';
 import { styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from './OrionContainer';
-import { FlexGap10 } from './FlexBox';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
+import { FlexGap10 } from './FlexBox';
+import OrionContainer from './OrionContainer';
 
 const StyledSection = styled('section')(({ bgcolor, theme }) => ({
   padding: '120px 0',

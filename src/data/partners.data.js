@@ -1,4 +1,4 @@
-import { ImageErrorUrl } from '../helpers/constants';
+import { ImageErrorUrl } from 'helpers/constants';
 
 const BlogImg = ImageErrorUrl;
 

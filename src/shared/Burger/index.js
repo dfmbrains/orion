@@ -1,4 +1,4 @@
-import React from 'react';
+import { LoadingButton } from '@mui/lab';
 import {
   Divider,
   Drawer,
@@ -8,23 +8,19 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import ImageComponent from '../../components/ImageComponent';
-import LightLogoCompany from '../../assets/images/logoWhite.png';
-import PrimaryLogoCompany from '../../assets/images/logo.png';
-import {
-  FlexBetweenAlignCenter,
-  FlexBox,
-  FlexGap10,
-} from '../../components/FlexBox';
-import ChangeLangButton from '../../components/ChangeLangButton';
+import PrimaryLogoCompany from 'assets/images/logo.png';
+import LightLogoCompany from 'assets/images/logoWhite.png';
+import ChangeLangButton from 'components/ChangeLangButton';
+import EmailFormSection from 'components/EmailFormSection';
+import { FlexBetweenAlignCenter, FlexBox, FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { HEADER_BURGER_MENU } from 'helpers/constants';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { companyRecoil } from '../../recoil';
-import OrionContainer from '../../components/OrionContainer';
-import EmailFormSection from '../../components/EmailFormSection';
-import { LoadingButton } from '@mui/lab';
-import { HEADER_BURGER_MENU } from '../../helpers/constants';
+import { companyRecoil } from 'store';
 
 const StyledBurger = styled('div')(() => ({
   width: '100vw',

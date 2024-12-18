@@ -1,5 +1,5 @@
+import { ImageErrorUrl } from 'helpers/constants';
 import React, { useEffect, useState } from 'react';
-import { ImageErrorUrl } from '../helpers/constants';
 
 const ImageComponent = ({
   alt = 'ImageComponent',

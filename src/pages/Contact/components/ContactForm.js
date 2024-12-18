@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
-import { Grid, TextField } from '@mui/material';
-import { useSnackbar } from 'notistack';
 import emailjs from '@emailjs/browser';
+import { LoadingButton } from '@mui/lab';
+import { Grid, TextField } from '@mui/material';
+import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
   EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
-} from '../../../helpers/constants';
-import { LoadingButton } from '@mui/lab';
+} from 'helpers/constants';
+import { useSnackbar } from 'notistack';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import * as Yup from 'yup';
 
 const initialValues = {
   name: '',

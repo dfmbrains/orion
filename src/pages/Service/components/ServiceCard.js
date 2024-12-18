@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyledResponsiveImageBox } from '../../../components/StyledComponents';
 import { Box, Card, styled, Typography, useTheme } from '@mui/material';
+import ImageComponent from 'components/ImageComponent';
+import { StyledResponsiveImageBox } from 'components/StyledComponents';
+import { handleScrollToTop } from 'helpers/utils';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { handleScrollToTop } from '../../../helpers/utils';
 import { useSetRecoilState } from 'recoil';
-import { serviceDetailsRecoil } from '../../../recoil';
-import ImageComponent from '../../../components/ImageComponent';
+import { serviceDetailsRecoil } from 'store';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   overflow: 'hidden',

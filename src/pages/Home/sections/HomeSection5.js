@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
@@ -9,17 +8,18 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import ReviewsBg from '../../../assets/images/backgrounds/reviews.webp';
-import OrionContainer from '../../../components/OrionContainer';
-import { useNavigate } from 'react-router-dom';
-import { anchorLinkHandler, filterArrByLanguage } from '../../../helpers/utils';
+import ReviewsBg from 'assets/images/backgrounds/reviews.webp';
+import { FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
+import { anchorLinkHandler, filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { reviewsRecoil, selectedLanguageRecoil } from '../../../recoil';
-import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import OrionLoading from '../../../components/OrionLoading';
-import { FlexGap10 } from '../../../components/FlexBox';
-import ImageComponent from '../../../components/ImageComponent';
+import { reviewsRecoil, selectedLanguageRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',

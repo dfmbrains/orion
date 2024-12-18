@@ -1,6 +1,6 @@
-import Blog1Img from '../assets/images/data/blog1.jpg';
-import Blog2Img from '../assets/images/data/blog2.jpg';
-import Blog3Img from '../assets/images/data/blog3.jpg';
+import Blog1Img from 'assets/images/data/blog1.jpg';
+import Blog2Img from 'assets/images/data/blog2.jpg';
+import Blog3Img from 'assets/images/data/blog3.jpg';
 
 // [
 // {

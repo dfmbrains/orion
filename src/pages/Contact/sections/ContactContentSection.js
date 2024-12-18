@@ -1,17 +1,17 @@
-import React from 'react';
 import { Grid, styled, Tab, Tabs, Typography } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import { FlexBox, FlexGap10 } from '../../../components/FlexBox';
-import SocialMediaButtons from '../../../components/SocialMediaButtons';
-import ContactForm from '../components/ContactForm';
-import { useRecoilValue } from 'recoil';
-import { companyRecoil, selectedLanguageRecoil } from '../../../recoil';
-import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
-import OrionLoading from '../../../components/OrionLoading';
-import CreateReviewForm from '../../../components/CreateReviewForm';
-import { useSearchParams } from 'react-router-dom';
+import CreateReviewForm from 'components/CreateReviewForm';
+import { FlexBox, FlexGap10 } from 'components/FlexBox';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import SocialMediaButtons from 'components/SocialMediaButtons';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
+import { getMapLinkByLocaleAndCoordinates } from 'helpers/utils';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getMapLinkByLocaleAndCoordinates } from '../../../helpers/utils';
+import { useSearchParams } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
+import { companyRecoil, selectedLanguageRecoil } from 'store';
+import ContactForm from '../components/ContactForm';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '50px 0 120px',

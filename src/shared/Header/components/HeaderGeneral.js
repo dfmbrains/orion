@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Icon,
@@ -8,17 +7,18 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import ChangeLangButton from 'components/ChangeLangButton';
 import {
   FlexAllCenter,
   FlexBetweenAlignCenter,
   FlexGap10,
-} from '../../../components/FlexBox';
-import { Logo } from '../../../components/Logo';
-import { NavLink } from 'react-router-dom';
-import OrionContainer from '../../../components/OrionContainer';
+} from 'components/FlexBox';
+import { Logo } from 'components/Logo';
+import OrionContainer from 'components/OrionContainer';
+import { HEADER_BURGER_MENU } from 'helpers/constants';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import ChangeLangButton from '../../../components/ChangeLangButton';
-import { HEADER_BURGER_MENU } from '../../../helpers/constants';
+import { NavLink } from 'react-router-dom';
 
 const StyledBox = styled(Box)(({ theme, color }) => ({
   backgroundColor: color === 'dark' ? '#252525' : 'transparent',

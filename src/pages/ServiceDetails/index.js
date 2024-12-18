@@ -1,12 +1,12 @@
+import EmailFormSection from 'components/EmailFormSection';
+import OrionLoading from 'components/OrionLoading';
+import PageDetailsContent from 'components/PageDetailsContent';
+import PromoSection from 'components/PromoSection/PromoSection';
+import { Styled100vhLoadingBox } from 'components/StyledComponents';
 import React, { useEffect } from 'react';
-import PromoSection from '../../components/PromoSection/PromoSection';
-import EmailFormSection from '../../components/EmailFormSection';
-import PageDetailsContent from '../../components/PageDetailsContent';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { serviceDetailsRecoil, serviceRecoil } from '../../recoil';
-import { Styled100vhLoadingBox } from '../../components/StyledComponents';
-import OrionLoading from '../../components/OrionLoading';
+import { serviceDetailsRecoil, serviceRecoil } from 'store';
 
 const ServiceDetails = () => {
   const { id } = useParams();

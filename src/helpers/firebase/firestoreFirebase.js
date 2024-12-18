@@ -5,10 +5,10 @@ import {
   getDocs,
   getFirestore,
   query,
-  where,
   setDoc,
+  where,
 } from 'firebase/firestore';
-import { firebaseApp } from './index';
+import { firebaseApp } from 'helpers/firebase/index';
 
 const db = getFirestore(firebaseApp);
 

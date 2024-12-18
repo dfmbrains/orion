@@ -1,12 +1,12 @@
+import EmailFormSection from 'components/EmailFormSection';
+import OrionLoading from 'components/OrionLoading';
+import PageDetailsContent from 'components/PageDetailsContent';
+import { Styled100vhLoadingBox } from 'components/StyledComponents';
 import React, { useEffect } from 'react';
-import PageDetailsContent from '../../components/PageDetailsContent';
-import EmailFormSection from '../../components/EmailFormSection';
-import BlogDetailsPromo from './sections/BlogDetailsPromo';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { blogDetailsRecoil, blogRecoil } from '../../recoil';
 import { useParams } from 'react-router-dom';
-import OrionLoading from '../../components/OrionLoading';
-import { Styled100vhLoadingBox } from '../../components/StyledComponents';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { blogDetailsRecoil, blogRecoil } from 'store';
+import BlogDetailsPromo from './sections/BlogDetailsPromo';
 
 const BlogDetails = () => {
   const { id } = useParams();

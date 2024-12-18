@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Button,
   styled,
@@ -6,14 +5,15 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { FlexGap10 } from './FlexBox';
-import { StyledResponsiveImageBox } from './StyledComponents';
-import { useNavigate } from 'react-router-dom';
-import { handleScrollToTop } from '../helpers/utils';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { blogDetailsRecoil, monthsRecoil } from '../recoil';
+import { handleScrollToTop } from 'helpers/utils';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { blogDetailsRecoil, monthsRecoil } from 'store';
+import { FlexGap10 } from './FlexBox';
 import ImageComponent from './ImageComponent';
+import { StyledResponsiveImageBox } from './StyledComponents';
 
 const StyledBox = styled('div')(({ theme }) => ({
   paddingLeft: '15px',

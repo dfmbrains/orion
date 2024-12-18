@@ -1,5 +1,5 @@
-import React from 'react';
 import { Icon, Typography, useMediaQuery, useTheme } from '@mui/material';
+import React from 'react';
 
 const FeatureCard = ({ data }) => {
   const theme = useTheme();

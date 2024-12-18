@@ -1,5 +1,5 @@
-import React, { lazy, useState } from 'react';
 import { styled } from '@mui/material';
+import React, { lazy, useState } from 'react';
 import Loadable from '../Loadable';
 import Loader from '../Loader';
 

@@ -1,10 +1,10 @@
-import React from 'react';
 import { styled } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import { StyledResponsiveImageBox } from 'components/StyledComponents';
+import React from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { StyledResponsiveImageBox } from '../../../components/StyledComponents';
-import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(() => ({
   padding: '130px 0 0',

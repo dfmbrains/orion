@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import { Autoplay, EffectFade, Navigation } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { styled, Typography } from '@mui/material';
+import PromoSlide1 from 'assets/images/backgrounds/home_promo1.webp';
+import PromoSlide2 from 'assets/images/backgrounds/home_promo2.webp';
+import PromoSlide3 from 'assets/images/backgrounds/home_promo3.webp';
+import PromoSlide4 from 'assets/images/backgrounds/home_promo4.webp';
+import OrionContainer from 'components/OrionContainer';
 import {
   StyledPromoBackgroundBox,
   StylePromoColumn,
-} from '../../../components/StyledComponents';
-import { styled, Typography } from '@mui/material';
+} from 'components/StyledComponents';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import OrionContainer from '../../../components/OrionContainer';
-
-import PromoSlide1 from '../../../assets/images/backgrounds/home_promo1.webp';
-import PromoSlide2 from '../../../assets/images/backgrounds/home_promo2.webp';
-import PromoSlide3 from '../../../assets/images/backgrounds/home_promo3.webp';
-import PromoSlide4 from '../../../assets/images/backgrounds/home_promo4.webp';
+import { Autoplay, EffectFade, Navigation } from 'swiper';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 
 const StyledSwiperMenu = styled('div')(({ theme }) => ({
   position: 'absolute',

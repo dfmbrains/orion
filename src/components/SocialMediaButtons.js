@@ -1,10 +1,10 @@
-import React from 'react';
-import { ButtonGroup, Icon, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { useRecoilValue } from 'recoil';
-import { companyRecoil } from '../recoil';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { ButtonGroup, Icon, IconButton } from '@mui/material';
+import React from 'react';
+import { useRecoilValue } from 'recoil';
+import { companyRecoil } from 'store';
 
 const SocialMediaButtons = ({ color }) => {
   const company = useRecoilValue(companyRecoil);

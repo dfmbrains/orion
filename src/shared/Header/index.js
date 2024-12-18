@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import HeaderTop from './components/HeaderTop';
-import HeaderGeneral from './components/HeaderGeneral';
-import Burger from '../Burger';
 import { styled, useMediaQuery, useTheme } from '@mui/material';
+import React, { useState } from 'react';
+import Burger from '../Burger';
+import HeaderGeneral from './components/HeaderGeneral';
+import HeaderTop from './components/HeaderTop';
 
 const StyledHeader = styled('header')(() => ({
   position: 'absolute',

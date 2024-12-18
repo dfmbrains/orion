@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import {
   Grid,
   styled,
@@ -6,14 +5,15 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import PostCard from '../../../components/PostCard';
-import { useRecoilValue } from 'recoil';
-import { blogRecoil, selectedLanguageRecoil } from '../../../recoil';
-import OrionLoading from '../../../components/OrionLoading';
-import { Styled50vhLoadingBox } from '../../../components/StyledComponents';
+import OrionContainer from 'components/OrionContainer';
+import OrionLoading from 'components/OrionLoading';
+import PostCard from 'components/PostCard';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
+import { filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { filterArrByLanguage } from '../../../helpers/utils';
+import { useRecoilValue } from 'recoil';
+import { blogRecoil, selectedLanguageRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '45px 0 90px',

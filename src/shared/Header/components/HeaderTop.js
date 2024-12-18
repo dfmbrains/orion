@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { FlexBetweenAlignCenter, FlexGap10 } from '../../../components/FlexBox';
 import { Box, Icon, styled, Typography, useTheme } from '@mui/material';
-import OrionContainer from '../../../components/OrionContainer';
-import { useRecoilValue } from 'recoil';
-import { companyRecoil } from '../../../recoil';
+import { FlexBetweenAlignCenter, FlexGap10 } from 'components/FlexBox';
+import OrionContainer from 'components/OrionContainer';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useRecoilValue } from 'recoil';
+import { companyRecoil } from 'store';
 
 const StyledBox = styled(Box)(({ theme, active }) => ({
   backgroundColor: '#252525',

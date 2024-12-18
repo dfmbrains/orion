@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Formik } from 'formik';
+import emailjs from '@emailjs/browser';
 import {
   Grid,
   Icon,
@@ -8,17 +7,18 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { FlexBox } from '../../../components/FlexBox';
-import * as Yup from 'yup';
-import emailjs from '@emailjs/browser';
+import DefaultButton from 'components/DefaultButton';
+import { FlexBox } from 'components/FlexBox';
+import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
   EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
-} from '../../../helpers/constants';
+} from 'helpers/constants';
 import { useSnackbar } from 'notistack';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import DefaultButton from '../../../components/DefaultButton';
+import * as Yup from 'yup';
 
 const StyledIconBox = styled(FlexBox)(({ theme }) => ({
   flexDirection: 'column',

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Box,
   Card,
@@ -9,14 +8,15 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import FreightTriangleBg from '../../../assets/images/freightTriangle.webp';
-import EllipseBg from '../../../assets/images/ellipse.webp';
-import OrionContainer from '../../../components/OrionContainer';
+import ContainerFreight from 'assets/images/containerFreight.webp';
+import EllipseBg from 'assets/images/ellipse.webp';
+import FreightTriangleBg from 'assets/images/freightTriangle.webp';
+import DefaultButton from 'components/DefaultButton';
+import { FlexGap10 } from 'components/FlexBox';
+import ImageComponent from 'components/ImageComponent';
+import OrionContainer from 'components/OrionContainer';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlexGap10 } from '../../../components/FlexBox';
-import ContainerFreight from '../../../assets/images/containerFreight.webp';
-import DefaultButton from '../../../components/DefaultButton';
-import ImageComponent from '../../../components/ImageComponent';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',

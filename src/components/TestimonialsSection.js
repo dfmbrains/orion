@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
 import { Box, styled, Typography } from '@mui/material';
+import { filterArrByLanguage } from 'helpers/utils';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRecoilValue } from 'recoil';
+import { reviewsRecoil, selectedLanguageRecoil } from 'store';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import OrionContainer from './OrionContainer';
-import { Styled50vhLoadingBox } from './StyledComponents';
-import { SwiperButtonNext, SwiperButtonPrev } from './SwiperButtons';
-import { useRecoilValue } from 'recoil';
-import { reviewsRecoil, selectedLanguageRecoil } from '../recoil';
-import OrionLoading from './OrionLoading';
-import { useTranslation } from 'react-i18next';
-import { filterArrByLanguage } from '../helpers/utils';
 import { FlexGap10 } from './FlexBox';
 import ImageComponent from './ImageComponent';
+import OrionContainer from './OrionContainer';
+import OrionLoading from './OrionLoading';
+import { Styled50vhLoadingBox } from './StyledComponents';
+import { SwiperButtonNext, SwiperButtonPrev } from './SwiperButtons';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '70px 0 90px',

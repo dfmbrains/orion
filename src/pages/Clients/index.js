@@ -1,9 +1,9 @@
+import ClientsBg from 'assets/images/backgrounds/clients.webp';
+import PromoSection from 'components/PromoSection/PromoSection';
+import TestimonialsSection from 'components/TestimonialsSection';
 import React from 'react';
-import PromoSection from '../../components/PromoSection/PromoSection';
-import ClientsBg from '../../assets/images/backgrounds/clients.webp';
-import ClientsSection1 from './sections/ClientsSection1';
-import TestimonialsSection from '../../components/TestimonialsSection';
 import { useTranslation } from 'react-i18next';
+import ClientsSection1 from './sections/ClientsSection1';
 
 const Clients = () => {
   const { t } = useTranslation();

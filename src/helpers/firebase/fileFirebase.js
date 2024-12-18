@@ -1,5 +1,5 @@
-import { getStorage, ref, getDownloadURL, listAll } from 'firebase/storage';
-import { firebaseApp } from './index';
+import { getDownloadURL, getStorage, listAll, ref } from 'firebase/storage';
+import { firebaseApp } from 'helpers/firebase/index';
 
 const storage = getStorage(firebaseApp);
 

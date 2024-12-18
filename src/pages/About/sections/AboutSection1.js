@@ -1,6 +1,6 @@
-import React from 'react';
 import { styled, Typography, useTheme } from '@mui/material';
-import { FlexAllCenter } from '../../../components/FlexBox';
+import { FlexAllCenter } from 'components/FlexBox';
+import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 const StyledSection = styled('section')(({ theme }) => ({
