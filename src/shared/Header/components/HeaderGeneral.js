@@ -3,7 +3,6 @@ import {
   Icon,
   IconButton,
   styled,
-  Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -17,8 +16,7 @@ import { Logo } from 'components/Logo';
 import OrionContainer from 'components/OrionContainer';
 import { HEADER_BURGER_MENU } from 'helpers/constants';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import HeaderLink from 'shared/Header/components/HeaderLink';
 
 const StyledBox = styled(Box)(({ theme, color }) => ({
   backgroundColor: color === 'dark' ? '#252525' : 'transparent',
@@ -35,40 +33,10 @@ const StyledBox = styled(Box)(({ theme, color }) => ({
   '& .material-icons': {
     color: '#FFFFFF',
   },
-  '.active': {
-    position: 'relative',
-
-    '&:after': {
-      content: "''",
-      position: 'absolute',
-      top: '100%',
-      left: '0',
-      backgroundColor: '#F6803D',
-      height: 2,
-      width: '100%',
-      borderRadius: 5,
-    },
-  },
-}));
-
-const StyledLink = styled(NavLink)(({ theme }) => ({
-  padding: '0 15px',
-  color: '#FFFFFF',
-  transition: '0.3s',
-  [theme.breakpoints.down('lg')]: { padding: '0 10px' },
-
-  '&:hover': {
-    color: theme.palette.primary.main,
-    transition: '0.3s',
-  },
-  h6: {
-    fontWeight: '500',
-  },
 }));
 
 const HeaderGeneral = ({ openBurger, color }) => {
   const theme = useTheme();
-  const { t } = useTranslation();
 
   const isLaptopOrDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
@@ -80,10 +48,8 @@ const HeaderGeneral = ({ openBurger, color }) => {
           <Logo />
           {isLaptopOrDesktop && (
             <FlexAllCenter>
-              {HEADER_BURGER_MENU.map((el, idx) => (
-                <StyledLink theme={theme} to={el.link} key={idx}>
-                  <Typography variant="subtitle2">{t(el.title)}</Typography>
-                </StyledLink>
+              {HEADER_BURGER_MENU.map((item, idx) => (
+                <HeaderLink key={idx} headerLink={item} />
               ))}
             </FlexAllCenter>
           )}

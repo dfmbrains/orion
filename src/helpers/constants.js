@@ -26,10 +26,57 @@ export const languages = [
 
 export const HEADER_BURGER_MENU = [
   { title: 'menu.home', link: '/' },
-  { title: 'menu.services', link: '/services' },
-  { title: 'menu.company', link: '/about' },
-  { title: 'menu.clientsAndPartners', link: '/clients-&-partners' },
-  { title: 'menu.blogs', link: '/blog' },
+  {
+    title: 'menu.services',
+    link: '/services',
+    subLinks: [
+      { link: '/services', title: 'subMenuServices.subMenu1' },
+      { link: '/services', title: 'subMenuServices.subMenu2' },
+      { link: '/services', title: 'subMenuServices.subMenu3' },
+      { link: '/services', title: 'subMenuServices.subMenu4' },
+      { link: '/services', title: 'subMenuServices.subMenu5' },
+      { link: '/services', title: 'subMenuServices.subMenu6' },
+      { link: '/services', title: 'subMenuServices.subMenu7' },
+      { link: '/services', title: 'subMenuServices.subMenu8' },
+      { link: '/services', title: 'subMenuServices.subMenu9' },
+    ],
+  },
+  {
+    title: 'menu.company',
+    link: '/about',
+    subLinks: [
+      { link: '/about', title: 'subMenuCompany.subMenu1' },
+      { link: '/about', title: 'subMenuCompany.subMenu2' },
+      { link: '/about', title: 'subMenuCompany.subMenu3' },
+    ],
+  },
+  {
+    title: 'menu.clientsAndPartners',
+    link: '/clients-&-partners',
+    subLinks: [
+      {
+        link: '/clients-&-partners',
+        title: 'subMenuClientsAndPartners.subMenu1',
+      },
+      {
+        link: '/clients-&-partners',
+        title: 'subMenuClientsAndPartners.subMenu2',
+      },
+      {
+        link: '/clients-&-partners',
+        title: 'subMenuClientsAndPartners.subMenu3',
+      },
+    ],
+  },
+  {
+    title: 'menu.blogs',
+    link: '/blog',
+    subLinks: [
+      { link: '/blog', title: 'subMenuBlogs.subMenu1' },
+      { link: '/blog', title: 'subMenuBlogs.subMenu2' },
+      { link: '/blog', title: 'subMenuBlogs.subMenu3' },
+    ],
+  },
   { title: 'menu.contact', link: '/contact?form=0' },
 ];
 
