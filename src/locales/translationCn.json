@@ -2,7 +2,7 @@
   "currentLanguage": "cn",
   "orionTrans": "Orion-Trans",
   "words": {
-    "menu": "列表"
+    "menu": "菜单"
   },
   "months": [
     "一月",
@@ -151,7 +151,7 @@
   },
   "footer": {
     "menu": {
-      "column1": "网站列表",
+      "column1": "菜单",
       "column2": "联系我们"
     },
     "privacy": {
