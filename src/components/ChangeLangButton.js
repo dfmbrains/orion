@@ -29,6 +29,8 @@ const ChangeLangButton = ({ color }) => {
     await i18next.changeLanguage(language);
     setSelectedLang(language);
 
+    document.documentElement.lang = language;
+
     setAnchorEl(null);
     window.removeEventListener('scroll', handleCloseOnScroll);
   };

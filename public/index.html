@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-   <meta charset="utf-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-   <meta name="description" content="Orion trans logistic company"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
-   <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-   <title>Orion Trans</title>
+  <link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/">
+  <link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/">
+  <link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/">
+
+  <!--  добавить на разные страницы разное описание и на разных языках -->
+  <title>Orion Trans</title>
+  <meta name="description" content="Orion trans logistic company" />
+  <meta property="og:title" content="Orion - Home">
+  <meta property="og:description" content="This is the homepage in English.">
+
+  <script>
+    const language = localStorage.getItem('i18nextLng');
+
+    if (language) {
+      document.documentElement.lang = language;
+    }
+  </script>
 </head>
 
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 
 <div id="root"></div>
+
 </body>
 </html>
