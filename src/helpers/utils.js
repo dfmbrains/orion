@@ -1,6 +1,3 @@
-import { getFileFromFirebase } from 'helpers/firebase/fileFirebase';
-import { getAllCollection } from 'helpers/firebase/firestoreFirebase';
-
 export const anchorLinkHandler = elementId => {
   const target = document.getElementById(elementId);
   if (target) {
@@ -28,18 +25,6 @@ export const formatName = (locale, lastName, firstName, midName) => {
 
   if (fio) return fio;
   else return '--- --- ---';
-};
-
-export const getAllCollectionsWithImg = async (path, multiFile) => {
-  return await getAllCollection(path).then(data => {
-    const createdData = data.map(item => {
-      return getFileFromFirebase(`${path}/${item.id}`).then(files => ({
-        ...item,
-        images: multiFile ? files : files[0],
-      }));
-    });
-    return Promise.all(createdData);
-  });
 };
 
 export const createDesiredArrays = arr => {

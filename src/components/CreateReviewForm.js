@@ -30,12 +30,6 @@ const ContactForm = ({ translationKey }) => {
     setLoading(true);
 
     try {
-      // await createCollectionDocument(reviewsFirebasePath, {
-      //   ...values,
-      //   id: uuidv4(),
-      //   created: new Date(),
-      //   status: false,
-      // });
       enqueueSnackbar(t('snackbarTexts.review'), { variant: 'success' });
     } catch (e) {
       enqueueSnackbar(t('snackbarTexts.error'), { variant: 'error' });

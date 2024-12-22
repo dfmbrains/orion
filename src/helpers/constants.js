@@ -7,13 +7,6 @@ export const EMAIL_JS_TEMPLATE_ID_FOR_CALCULATION =
 export const EMAIL_JS_TEMPLATE_ID_FOR_CONTACT =
   process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_CONTACT;
 
-export const teamFirebasePath = 'team';
-export const blogFirebasePath = 'blog';
-export const companyFirebasePath = 'company';
-export const serviceFirebasePath = 'service';
-export const reviewsFirebasePath = 'reviews';
-export const partnersFirebasePath = 'partners';
-
 export const defaultAppLanguage = 'ru';
 export const languages = [
   { value: 'ru', title: 'Русский' },
