@@ -32,6 +32,7 @@ const StyledContentBox = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: '0 50px',
   width: '100%',
+  overflow: 'hidden',
 
   [theme.breakpoints.down('lg')]: { padding: '0 30px' },
   [theme.breakpoints.down('md')]: { flexWrap: 'wrap' },
@@ -192,63 +193,61 @@ const HomeSection3 = () => {
             </Typography>
 
             <StyledSwiperBox>
-              <img className="ellipse" src={EllipseBg} alt="ellipseBg" />
-
               {isMobile ? (
-                countriesList.map((item, idx) => (
+                countriesList.map((country, idx) => (
                   <div className="countriesBox">
                     <StyledCountryItem key={idx}>
-                      <Typography variant="subtitle2">{item[0]}</Typography>
+                      <Typography variant="subtitle2">{country}</Typography>
                     </StyledCountryItem>
-
-                    {item[1] && (
-                      <StyledCountryItem key={idx}>
-                        <Typography variant="subtitle2">{item[1]}</Typography>
-                      </StyledCountryItem>
-                    )}
                   </div>
                 ))
               ) : (
-                <Swiper
-                  navigation
-                  slidesPerView={3}
-                  spaceBetween={15}
-                  modules={[Navigation]}
-                  className="swiperStatic swiperCustomNavigation"
-                  breakpoints={{
-                    600: {
-                      spaceBetween: 15,
-                      slidesPerView: 3,
-                    },
-                    0: {
-                      spaceBetween: 15,
-                      slidesPerView: 2,
-                    },
-                  }}
-                >
-                  <>
-                    <SwiperButtonPrev />
-                    <SwiperButtonNext />
-                  </>
+                <>
+                  <img className="ellipse" src={EllipseBg} alt="ellipseBg" />
 
-                  {countriesList.map((item, idx) => (
-                    <SwiperSlide key={idx}>
-                      <div className="countriesBox">
-                        <StyledCountryItem key={idx}>
-                          <Typography variant="subtitle2">{item[0]}</Typography>
-                        </StyledCountryItem>
+                  <Swiper
+                    navigation
+                    slidesPerView={3}
+                    spaceBetween={15}
+                    modules={[Navigation]}
+                    className="swiperStatic swiperCustomNavigation"
+                    breakpoints={{
+                      600: {
+                        spaceBetween: 15,
+                        slidesPerView: 3,
+                      },
+                      0: {
+                        spaceBetween: 15,
+                        slidesPerView: 2,
+                      },
+                    }}
+                  >
+                    <>
+                      <SwiperButtonPrev />
+                      <SwiperButtonNext />
+                    </>
 
-                        {item[1] && (
+                    {countriesList.map((item, idx) => (
+                      <SwiperSlide key={idx}>
+                        <div className="countriesBox">
                           <StyledCountryItem key={idx}>
                             <Typography variant="subtitle2">
-                              {item[1]}
+                              {item[0]}
                             </Typography>
                           </StyledCountryItem>
-                        )}
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+
+                          {item[1] && (
+                            <StyledCountryItem key={idx}>
+                              <Typography variant="subtitle2">
+                                {item[1]}
+                              </Typography>
+                            </StyledCountryItem>
+                          )}
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </>
               )}
             </StyledSwiperBox>
           </StyledIntroBox>
