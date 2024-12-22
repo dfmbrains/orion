@@ -1,0 +1,14 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+    <path
+            d="M 50 150 C 150 50, 450 50, 550 150"
+            fill="none"
+            stroke="orange"
+            stroke-width="3"
+            stroke-dasharray="10, 10"/>
+    <path
+            d="M 50 150 C 150 250, 450 250, 550 150"
+            fill="none"
+            stroke="orange"
+            stroke-width="3"
+            stroke-dasharray="10, 10"/>
+</svg>

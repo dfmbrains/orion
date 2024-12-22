@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import EllipseBg from 'assets/images/ellipse-small.svg';
 import MapBg from 'assets/images/map.webp';
 import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
@@ -13,7 +14,6 @@ import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
 import { createDesiredArrays } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CalculateForm from '../components/CalculateForm';
@@ -21,6 +21,7 @@ import CalculateForm from '../components/CalculateForm';
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '0 0 140px',
   background: '#EEF8FF',
+
   [theme.breakpoints.down('lg')]: { padding: '0 0 120px' },
   [theme.breakpoints.down('md')]: { padding: '0 0 30px' },
 }));
@@ -59,6 +60,16 @@ const StyledSwiperBox = styled('div')(({ theme }) => ({
     flexWrap: 'wrap',
     gap: '10px',
     width: '100%',
+  },
+
+  '& .ellipse': {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 'calc(130% + 20px)',
+    height: '100%',
+    zIndex: '1',
   },
 
   '& .swiperButtonPrev, & .swiperButtonNext': {
@@ -142,6 +153,7 @@ const StyledCalculateCard = styled(Card)(({ theme }) => ({
 const StyledCalculateItem = styled('div')(({ theme }) => ({
   paddingLeft: '32px',
   paddingRight: '32px',
+
   [theme.breakpoints.down('lg')]: { paddingLeft: '16px', paddingRight: '16px' },
 }));
 
@@ -180,6 +192,8 @@ const HomeSection3 = () => {
             </Typography>
 
             <StyledSwiperBox>
+              <img className="ellipse" src={EllipseBg} alt="ellipseBg" />
+
               {isMobile ? (
                 countriesList.map((item, idx) => (
                   <div className="countriesBox">
