@@ -66,7 +66,8 @@
     "contact": "Контакты",
     "getInTouch": "Написать нам",
     "leaveReview": "Оставить отзыв",
-    "clientsAndPartners": "Клиенты и партнеры"
+    "clientsAndPartners": "Клиенты и партнеры",
+    "career": "Вакансии"
   },
   "subMenuCompany": {
     "subMenu1": "О нас",
@@ -152,7 +153,11 @@
   "footer": {
     "menu": {
       "column1": "Наши подразделения",
-      "column2": "Свяжитесь с нами"
+      "column2": "Свяжитесь с нами",
+      "column3": "Услуги компании"
+    },
+    "activeText": {
+      "career": "Нанимаем"
     },
     "privacy": {
       "left": "Copyright",

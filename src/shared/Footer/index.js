@@ -1,5 +1,5 @@
-import { Grid, styled, Typography } from '@mui/material';
-import { FlexBetweenAlignCenter } from 'components/FlexBox';
+import { Box, Grid, styled, Typography } from '@mui/material';
+import { FlexBetweenAlignCenter, FlexGap10 } from 'components/FlexBox';
 import { Logo } from 'components/Logo';
 import OrionContainer from 'components/OrionContainer';
 import SocialMediaButtons from 'components/SocialMediaButtons';
@@ -10,12 +10,29 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const StyledFooter = styled('footer')(({ theme }) => ({
   padding: '60px 0 15px',
   backgroundColor: '#1B1B1B',
+
   [theme.breakpoints.down('lg')]: { padding: '40px 0 10px' },
   [theme.breakpoints.down('md')]: { padding: '30px 0 10px' },
   [theme.breakpoints.down('sm')]: { padding: '30px 0 20px' },
+}));
 
-  '& .footerLink': {
-    transition: '0.2s',
+const StyledColumn = styled(Box)(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  rowGap: '10px',
+}));
+
+const StyledLink = styled(FlexGap10)(() => ({
+  '& .activeText': {
+    background: '#fff017',
+    borderRadius: '6px',
+    padding: '2px 8px 3px',
+    fontWeight: '500',
+    userSelect: 'none',
+  },
+
+  '& .link': {
+    transition: '0.15s',
     cursor: 'pointer',
 
     '&:hover': {
@@ -28,6 +45,7 @@ const StyledBottomBox = styled('div')(({ theme }) => ({
   padding: '15px 20px 0 0',
   borderTop: '1px solid #2F2F2F',
   margin: '32px 0 0',
+
   [theme.breakpoints.down('lg')]: {
     margin: '24px 0 0',
     padding: '10px 20px 0 0',
@@ -44,6 +62,9 @@ const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // const services = useRecoilValue(serviceRecoil);
+  // const language = useRecoilValue(selectedLanguageRecoil);
+
   const footerMenu = [
     {
       title: t('footer.menu.column1'),
@@ -52,14 +73,28 @@ const Footer = () => {
         { title: t('menu.services'), link: '/services', hash: 'header' },
         { title: t('menu.company'), link: '/about', hash: 'header' },
         {
-          title: `${t('menu.clients')} & ${t('menu.partners')}`,
+          title: t('menu.clientsAndPartners'),
           link: '/clients-&-partners',
           hash: 'header',
         },
         { title: t('menu.blogs'), link: '/blog', hash: 'header' },
         { title: t('menu.contact'), link: '/contact', hash: 'header' },
+        {
+          title: t('menu.career'),
+          link: '/career',
+          hash: 'header',
+          active: t('footer.activeText.career'),
+        },
       ],
     },
+    // {
+    //   title: t('footer.menu.column3'),
+    //   elements: filterArrByLanguage(services, language).map(service => ({
+    //     title: service.title,
+    //     link: '/services',
+    //     hash: 'header',
+    //   })),
+    // },
     {
       title: t('footer.menu.column2'),
       elements: [
@@ -80,17 +115,20 @@ const Footer = () => {
   const anchorLink = async (hash, page, behavior) => {
     await navigate(page);
 
-    const target = document.getElementById(hash);
-    if (target) {
-      const { top: nodeTop, height: nodeHeight } =
-        target.getBoundingClientRect();
+    if (hash) {
+      const target = document.getElementById(hash);
 
-      const offsetTop = nodeTop > 0 ? nodeTop : window.pageYOffset + nodeTop;
+      if (target) {
+        const { top: nodeTop, height: nodeHeight } =
+          target.getBoundingClientRect();
 
-      window.scrollTo({
-        top: offsetTop - nodeHeight / 5,
-        behavior,
-      });
+        const offsetTop = nodeTop > 0 ? nodeTop : window.pageYOffset + nodeTop;
+
+        window.scrollTo({
+          top: offsetTop - nodeHeight / 5,
+          behavior,
+        });
+      }
     }
   };
 
@@ -104,37 +142,52 @@ const Footer = () => {
           <Grid item sm={9} xs={12}>
             <Grid
               container
-              justifyContent={{ sm: 'flex-end', xs: 'center' }}
               spacing={2}
+              justifyContent={{ sm: 'flex-end', xs: 'center' }}
             >
-              {footerMenu.map((el, idx) => (
+              {footerMenu.map((column, idx) => (
                 <Grid item md={3} sm={4} key={idx}>
                   <Typography
-                    variant="subtitle2"
                     color="#FFFFFF"
+                    variant="subtitle2"
                     mb={{ lg: 2, xs: 1 }}
                   >
-                    {el.title}
+                    {column.title}
                   </Typography>
 
-                  {el.elements.map((item, index) => (
-                    <Typography
-                      key={index}
-                      variant="body1"
-                      color="#919191"
-                      className="footerLink"
-                      onClick={() =>
-                        anchorLink(
-                          item.hash,
-                          item.link,
-                          location.pathname === el.link ? 'smooth' : 'auto',
-                        )
-                      }
-                      mb={{ lg: 2, xs: 0.6 }}
-                    >
-                      {item.title}
-                    </Typography>
-                  ))}
+                  <StyledColumn>
+                    {column.elements.map((item, index) => (
+                      <StyledLink>
+                        <Typography
+                          key={index}
+                          color="#919191"
+                          variant="body1"
+                          className="link"
+                          onClick={() =>
+                            anchorLink(
+                              item.hash,
+                              item.link,
+                              location.pathname === item.link
+                                ? 'smooth'
+                                : 'auto',
+                            )
+                          }
+                        >
+                          {item.title}
+                        </Typography>
+
+                        {item?.active && (
+                          <Typography
+                            key={index}
+                            variant="body2"
+                            className="activeText"
+                          >
+                            {item.active}
+                          </Typography>
+                        )}
+                      </StyledLink>
+                    ))}
+                  </StyledColumn>
                 </Grid>
               ))}
             </Grid>

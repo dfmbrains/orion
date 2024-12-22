@@ -66,7 +66,8 @@
     "contact": "Contact",
     "getInTouch": "Get In Touch",
     "leaveReview": "Leave a review",
-    "clientsAndPartners": "Clients & Partners"
+    "clientsAndPartners": "Clients & Partners",
+    "career": "Career"
   },
   "subMenuCompany": {
     "subMenu1": "О нас",
@@ -152,7 +153,11 @@
   "footer": {
     "menu": {
       "column1": "Our Divisions",
-      "column2": "Contact Us"
+      "column2": "Contact Us",
+      "column3": "Services"
+    },
+    "activeText": {
+      "career": "We Are Hiring"
     },
     "privacy": {
       "left": "Copyright",

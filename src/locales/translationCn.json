@@ -66,7 +66,8 @@
     "contact": "联系方式",
     "getInTouch": "免费咨询",
     "leaveReview": "评价",
-    "clientsAndPartners": "客户与合作伙伴"
+    "clientsAndPartners": "客户与合作伙伴",
+    "career": "职业"
   },
   "subMenuCompany": {
     "subMenu1": "О нас",
@@ -152,7 +153,11 @@
   "footer": {
     "menu": {
       "column1": "菜单",
-      "column2": "联系我们"
+      "column2": "联系我们",
+      "column3": "服务行业"
+    },
+    "activeText": {
+      "career": "我们正在招聘"
     },
     "privacy": {
       "left": "Copyright",
