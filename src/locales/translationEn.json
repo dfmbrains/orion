@@ -30,7 +30,8 @@
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
     "calculateRailTariff": "Calculate A Rail Tariff",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "goBack": "Go Back"
   },
   "snackbarTexts": {
     "letter": "The letter was sent",
@@ -436,6 +437,10 @@
         }
       }
     }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist. It might have been removed or you might have mistyped the address."
   },
   "companyStory": {
     "title": "Our Story"

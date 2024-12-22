@@ -1,3 +1,4 @@
+import NotFound from 'pages/NotFound';
 import React from 'react';
 import DarkHeaderLayout from './components/DarkHeaderLayout';
 import LightHeaderLayout from './components/LightHeaderLayout';
@@ -25,6 +26,7 @@ const routes = [
           { element: <Service />, path: '/services' },
           { element: <ServiceDetails />, path: '/services/:id' },
           { element: <Blog />, path: '/blog' },
+          { element: <NotFound />, path: '*' },
         ],
       },
       {
