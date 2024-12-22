@@ -3,9 +3,9 @@ import { defaultAppLanguage } from 'helpers/constants';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
-import translationCn from './translationCn.json';
 import translationEn from './translationEn.json';
 import translationRu from './translationRu.json';
+import translationZh from './translationZh.json';
 
 const resources = {
   ru: {
@@ -14,8 +14,8 @@ const resources = {
   en: {
     translation: translationEn,
   },
-  cn: {
-    translation: translationCn,
+  zh: {
+    translation: translationZh,
   },
 };
 
@@ -23,7 +23,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['ru', 'en', 'cn'],
+    supportedLngs: ['ru', 'en', 'zh'],
     fallbackLng: defaultAppLanguage,
     detection: i18DetectionConfigs,
     resources,

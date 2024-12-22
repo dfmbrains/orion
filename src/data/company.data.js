@@ -30,7 +30,7 @@ export const companyData = {
     address: {
       ru: 'Кыргызстан, Бишкек, ул. Турусбекова 109/3',
       en: 'Turusbekova 109/3, Bishkek, Kyrgyzstan',
-      cn: '吉尔吉斯共和国比什凯克市图鲁斯别扩挖路109/13号办公室401/6号',
+      zh: '吉尔吉斯共和国比什凯克市图鲁斯别扩挖路109/13号办公室401/6号',
     },
     email: 'office.oriontrans@gmail.com',
     phoneNumber2: '+996554333293',

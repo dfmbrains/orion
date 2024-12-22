@@ -9,7 +9,7 @@ import {
 import Afghanistan from 'assets/images/countries/af.png';
 import Azer from 'assets/images/countries/az.png';
 import Baltic from 'assets/images/countries/baltic.png';
-import China from 'assets/images/countries/cn.png';
+import China from 'assets/images/countries/zh.png';
 import Europe from 'assets/images/countries/eu.png';
 import Iran from 'assets/images/countries/ir.png';
 import Kg from 'assets/images/countries/kg.png';

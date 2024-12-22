@@ -26,7 +26,7 @@ export const reviewsData = [
     id: 3,
     created: '11/25/2024',
     company: '有限责任合伙公司 Greenlights',
-    language: 'cn',
+    language: 'zh',
     status: true,
   },
 
@@ -54,7 +54,7 @@ export const reviewsData = [
     id: 6,
     created: '11/25/2024',
     company: '有限责任公司 Orenbi Trading',
-    language: 'cn',
+    language: 'zh',
     status: true,
   },
 ];

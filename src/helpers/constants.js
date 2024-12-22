@@ -12,7 +12,7 @@ export const languages = [
   { value: 'ru', title: 'Русский' },
   { value: 'en', title: 'English' },
   {
-    value: 'cn',
+    value: 'zh',
     title: '简体中文',
   },
 ];

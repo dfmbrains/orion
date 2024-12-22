@@ -61,7 +61,7 @@ export const servicesData = [
   },
   {
     id: '10',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: 'Orion Trans  国际铁路货物运输',
     subtitle: '',
@@ -145,7 +145,7 @@ export const servicesData = [
   },
   {
     id: '12',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '货运代理：出口、进口及过境运输的铁路运费计算与支付',
     subtitle: '',
@@ -224,7 +224,7 @@ export const servicesData = [
   },
   {
     id: '14',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '提供铁路运输车辆',
     subtitle: '',
@@ -326,7 +326,7 @@ export const servicesData = [
   },
   {
     id: '16',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '铁路集装箱运输',
     subtitle: '',
@@ -393,7 +393,7 @@ export const servicesData = [
   },
   {
     id: '18',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '',
     subtitle: '',
@@ -436,7 +436,7 @@ export const servicesData = [
   },
   {
     id: '20',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '',
     subtitle: '',
@@ -480,7 +480,7 @@ export const servicesData = [
   },
   {
     id: '22',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '',
     subtitle: '',
@@ -523,7 +523,7 @@ export const servicesData = [
   },
   {
     id: '24',
-    language: 'cn',
+    language: 'zh',
     created: '11/25/2024',
     title: '',
     subtitle: '',
