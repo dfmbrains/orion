@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import EllipseBg from 'assets/images/ellipse-small.svg';
+// import EllipseBg from 'assets/images/ellipse-small.svg';
 import MapBg from 'assets/images/map.webp';
 import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
@@ -32,7 +32,6 @@ const StyledContentBox = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: '0 50px',
   width: '100%',
-  overflow: 'hidden',
 
   [theme.breakpoints.down('lg')]: { padding: '0 30px' },
   [theme.breakpoints.down('md')]: { flexWrap: 'wrap' },
@@ -63,15 +62,15 @@ const StyledSwiperBox = styled('div')(({ theme }) => ({
     width: '100%',
   },
 
-  '& .ellipse': {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 'calc(130% + 20px)',
-    height: '100%',
-    zIndex: '1',
-  },
+  // '& .ellipse': {
+  //   position: 'absolute',
+  //   left: '50%',
+  //   top: '50%',
+  //   transform: 'translate(-50%, -50%)',
+  //   width: 'calc(130% + 20px)',
+  //   height: '100%',
+  //   zIndex: '1',
+  // },
 
   '& .swiperButtonPrev, & .swiperButtonNext': {
     minWidth: 'auto',
@@ -203,7 +202,7 @@ const HomeSection3 = () => {
                 ))
               ) : (
                 <>
-                  <img className="ellipse" src={EllipseBg} alt="ellipseBg" />
+                  {/*<img className="ellipse" src={EllipseBg} alt="ellipseBg" />*/}
 
                   <Swiper
                     navigation
