@@ -120,8 +120,8 @@ const HomeSection6 = () => {
                   <Typography variant="h2">
                     {t(`${translationKey}.title`)}
                   </Typography>
-                  {/*<Typography mt={1} variant="subtitle1" fontWeight="500">*/}
-                  <Typography mt={1} variant="h2">
+                  <Typography mt={1} variant="subtitle1" fontWeight="500">
+                    {/*<Typography mt={1} variant="h2">*/}
                     {t(`${translationKey}.description`)}
                   </Typography>
                 </Box>
@@ -160,7 +160,7 @@ const HomeSection6 = () => {
                 </DefaultButton>
               </Grid>
 
-              <Divider orientation={'vertical'} flexItem />
+              <Divider orientation="vertical" flexItem />
 
               <Grid item lg={5.95} md={5}>
                 <StyledImageBox>
@@ -205,34 +205,41 @@ const HomeSection6 = () => {
                   <SwiperButtons />
                 </StyledSwiperButtonsPosition>
 
-                {data.map((el, idx) => (
-                  <SwiperSlide key={idx}>
-                    <StyledFlexGap10
-                      theme={theme}
-                      onClick={() => {
-                        anchorLinkHandler('homeTeamSection');
-                        setActive(el);
-                      }}
-                    >
-                      <StyledAvatarSmall
-                        src={el.images.file}
-                        alt={el.images.name}
-                      />
-                      <div>
-                        <Typography color="#4E5865" variant="body1">
-                          {el.position}
-                        </Typography>
-                        <Typography
-                          fontWeight="500"
-                          variant="subtitle1"
-                          sx={{ wordBreak: 'break-all' }}
+                {data.map(
+                  (member, idx) =>
+                    member.id !== active.id && (
+                      <SwiperSlide key={idx}>
+                        <StyledFlexGap10
+                          theme={theme}
+                          onClick={() => {
+                            anchorLinkHandler('homeTeamSection');
+                            setActive(member);
+                          }}
                         >
-                          {formatName(language, el.lastName, el.firstName)}
-                        </Typography>
-                      </div>
-                    </StyledFlexGap10>
-                  </SwiperSlide>
-                ))}
+                          <StyledAvatarSmall
+                            src={member.images.file}
+                            alt={member.images.name}
+                          />
+                          <div>
+                            <Typography color="#4E5865" variant="body1">
+                              {member.position}
+                            </Typography>
+                            <Typography
+                              fontWeight="500"
+                              variant="subtitle1"
+                              sx={{ wordBreak: 'break-all' }}
+                            >
+                              {formatName(
+                                language,
+                                member.lastName,
+                                member.firstName,
+                              )}
+                            </Typography>
+                          </div>
+                        </StyledFlexGap10>
+                      </SwiperSlide>
+                    ),
+                )}
               </Swiper>
             </Box>
           </>
