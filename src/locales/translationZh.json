@@ -105,17 +105,17 @@
     {
       "title": "可靠的合作伙伴",
       "subtitle": "我们是吉尔吉斯铁道公司的官方代表，并与哈萨克斯坦、塔吉克斯坦、土库曼斯坦、乌兹别克斯坦和俄罗斯的铁路公司有直接合同。这使我们能够顺利运营，并赢得众多客户的信任",
-      "icon": "health_and_safety"
+      "icon": "gpp_good"
     },
     {
       "title": "安全保障",
       "subtitle": "您的个人物流专家将确保货物按时送达且完好无损，并在运输的每个环节进行跟踪",
-      "icon": "access_time"
+      "icon": "thumb_up_alt"
     },
     {
       "title": "物流领域的专业咨询",
       "subtitle": "我们的专家始终准备提供咨询，帮助选择最佳解决方案，并迅速响应任何需求，确保为每位客户提供个性化的服务",
-      "icon": "monetization_on"
+      "icon": "speed"
     }
   ],
   "statisticsSection": [
@@ -304,12 +304,12 @@
         {
           "title": "质量和可靠性",
           "subtitle": "我们团队的专业能力确保了运输各个环节的快速和可靠执行，保证了最小的风险和最大的可靠性",
-          "icon": "group_work"
+          "icon": "thumb_up_alt"
         },
         {
           "title": "可靠的合作伙伴",
           "subtitle": "我们是吉尔吉斯铁道公司的官方代表，并与哈萨克斯坦、塔吉克斯坦、土库曼斯坦、乌兹别克斯坦和俄罗斯的铁路公司有直接合同。这使我们能够顺利运营，并赢得众多客户的信任.",
-          "icon": "gavel"
+          "icon": "gpp_good"
         }
       ]
     },
@@ -322,23 +322,23 @@
         },
         {
           "title": "卓越的客户服务",
-          "icon": "support_agent"
+          "icon": "account_tree"
         },
         {
           "title": "我们珍视我们的员工",
-          "icon": "groups"
+          "icon": "auto_mode"
         },
         {
           "title": "持续改进",
-          "icon": "self_improvement"
+          "icon": "tips_and_updates"
         },
         {
           "title": "团队合作",
-          "icon": "group_work"
+          "icon": "diversity_3"
         },
         {
           "title": "与铁路公司直接签订合同",
-          "icon": "gavel"
+          "icon": "self_improvement"
         }
       ]
     },
@@ -354,37 +354,37 @@
       "subtitle": "我们提供全方位的铁路物流服务，确保可靠性和及时性。我们的专家将为您提供最优的价格和专业咨询，个性化的服务将帮助解决您的任何需求。选择奥里昂-特兰斯，您将获得经过时间验证的质量和可靠性"
     },
     "section2": {
-      "title": "For whom are our <span>services?</span>",
+      "title": "我们的<span>服务</span>面向谁",
       "list": [
         {
-          "title": "Logistics Companies",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "business"
+          "title": "物流公司",
+          "subtitle": "",
+          "icon": "local_shipping"
         },
         {
-          "title": "Construction Companies",
+          "title": "建筑工程公司",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "icon": "construction"
         },
         {
-          "title": "Industrial And Manufacturing Enterprises",
+          "title": "工业制造企业",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "icon": "factory"
+        },
+        {
+          "title": "个体工商户",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "icon": "work_outline"
         },
         {
-          "title": "Individual Entrepreneurs",
+          "title": "进出口贸易商",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "hail"
+          "icon": "import_export"
         },
         {
-          "title": "Importers And Exporters",
+          "title": "汽车物流公司",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "local_shipping"
-        },
-        {
-          "title": "Car Shippers",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "directions_car"
+          "icon": "garage"
         }
       ]
     }

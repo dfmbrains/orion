@@ -105,17 +105,17 @@
     {
       "title": "Надежные партнеры",
       "subtitle": "Мы имеем прямые договоры с железными дорогами Кыргызстана, Казахстана, Таджикистана, Туркменистана Узбекистана и России.",
-      "icon": "health_and_safety"
+      "icon": "gpp_good"
     },
     {
       "title": "Комфорт и прозрачность",
       "subtitle": "Мы всегда готовы проконсультировать и помочь с выбором оптимального решения, обеспечивая индивидуальный подход к каждому клиенту.",
-      "icon": "access_time"
+      "icon": "thumb_up_alt"
     },
     {
       "title": "Быстрая обратная связь",
       "subtitle": "Мы обрабатываем заявки от 20 минут, предоставляя вам необходимую информацию без задержек.",
-      "icon": "monetization_on"
+      "icon": "speed"
     }
   ],
   "statisticsSection": [
@@ -305,12 +305,12 @@
         {
           "title": "Качество и надежность",
           "subtitle": "Наши специалисты всегда готовы предоставить консультации, помочь с выбором оптимального решения и оперативно реагировать на любые запросы, обеспечивая индивидуальный подход к каждому клиенту.",
-          "icon": "group_work"
+          "icon": "thumb_up_alt"
         },
         {
           "title": "Надежные партнеры",
           "subtitle": "Мы имеем прямое соглашение с железными дорогами Кыргызстана, Таджикистана, России, Казахстана, а также сотрудничаем с официальным представителями железных дорог Узбекистана, Туркменистана, Афганистана, Азербайджана и Грузии.",
-          "icon": "gavel"
+          "icon": "gpp_good"
         }
       ]
     },
@@ -323,23 +323,23 @@
         },
         {
           "title": "Клиентоориентированность",
-          "icon": "support_agent"
+          "icon": "account_tree"
         },
         {
           "title": "Инновации",
-          "icon": "groups"
+          "icon": "auto_mode"
         },
         {
           "title": "Креативность",
-          "icon": "self_improvement"
+          "icon": "tips_and_updates"
         },
         {
           "title": "Командная работа",
-          "icon": "group_work"
+          "icon": "diversity_3"
         },
         {
           "title": "Постоянное совершенствование",
-          "icon": "gavel"
+          "icon": "self_improvement"
         }
       ]
     },
@@ -355,37 +355,37 @@
       "subtitle": "Мы предоставляем полный спектр услуг по железнодорожной логистике, обеспечиваем надежность и своевременность. Наши специалисты предложат вам оптимальные тарифы и профессиональные консультации, а индивидуальный подход позволит решить любой ваш запрос. Выбирая Орион-Транс, вы получаете качество и надежность, проверенные временем."
     },
     "section2": {
-      "title": "For whom are our <span>services?</span>",
+      "title": "Для кого наши <span>услуги?</span>",
       "list": [
         {
-          "title": "Logistics Companies",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "business"
-        },
-        {
-          "title": "Construction Companies",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "construction"
-        },
-        {
-          "title": "Industrial And Manufacturing Enterprises",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "work_outline"
-        },
-        {
-          "title": "Individual Entrepreneurs",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "hail"
-        },
-        {
-          "title": "Importers And Exporters",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "title": "Логистические компании",
+          "subtitle": "",
           "icon": "local_shipping"
         },
         {
-          "title": "Car Shippers",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "directions_car"
+          "title": "Строительные компании",
+          "subtitle": "",
+          "icon": "construction"
+        },
+        {
+          "title": "Промышленные и производственные предприятия",
+          "subtitle": "",
+          "icon": "factory"
+        },
+        {
+          "title": "Индивидуальные предприниматели",
+          "subtitle": "",
+          "icon": "work_outline"
+        },
+        {
+          "title": "Импортеры и экспортеры",
+          "subtitle": "",
+          "icon": "import_export"
+        },
+        {
+          "title": "Перевозка автомобилей",
+          "subtitle": "",
+          "icon": "garage"
         }
       ]
     }

@@ -105,17 +105,17 @@
     {
       "title": "Trusted Partners",
       "subtitle": "We have a direct agreement with the railways of CIS countries, and we work with the official representatives of the other countries Railways",
-      "icon": "health_and_safety"
+      "icon": "gpp_good"
     },
     {
       "title": "Just In Time Shipments",
       "subtitle": "You will achieve your desired shipment times with our rail freight services",
-      "icon": "access_time"
+      "icon": "thumb_up_alt"
     },
     {
       "title": "Financial Protection",
       "subtitle": "Opportunity of the Rail rates payment, when there is a long-term engagement",
-      "icon": "monetization_on"
+      "icon": "speed"
     }
   ],
   "statisticsSection": [
@@ -305,12 +305,12 @@
         {
           "title": "Efficiency",
           "subtitle": "Our team’s professionalism will ensure a fast and reliable transport organization.",
-          "icon": "group_work"
+          "icon": "thumb_up_alt"
         },
         {
           "title": "Direct Agreements With Railways",
           "subtitle": "We cooperate directly with railways of Kyrgyz Republic and the official railways representatives of Kazakhstan, Uzbekistan, Tadjikistan, Turkmenistan, Russia, Afghanistan and Iran.",
-          "icon": "gavel"
+          "icon": "gpp_good"
         }
       ]
     },
@@ -323,23 +323,23 @@
         },
         {
           "title": "Exceptional Customer Service",
-          "icon": "support_agent"
+          "icon": "account_tree"
         },
         {
           "title": "Value Our People",
-          "icon": "groups"
+          "icon": "auto_mode"
         },
         {
           "title": "Continuous Improvement",
-          "icon": "self_improvement"
+          "icon": "tips_and_updates"
         },
         {
           "title": "Value Teamwork",
-          "icon": "group_work"
+          "icon": "diversity_3"
         },
         {
           "title": "Direct Agreements With Railways",
-          "icon": "gavel"
+          "icon": "self_improvement"
         }
       ]
     },
@@ -359,33 +359,33 @@
       "list": [
         {
           "title": "Logistics Companies",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "business"
+          "subtitle": "",
+          "icon": "local_shipping"
         },
         {
           "title": "Construction Companies",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "subtitle": "",
           "icon": "construction"
         },
         {
           "title": "Industrial And Manufacturing Enterprises",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "work_outline"
+          "subtitle": "",
+          "icon": "factory"
         },
         {
           "title": "Individual Entrepreneurs",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "hail"
+          "subtitle": "",
+          "icon": "work_outline"
         },
         {
           "title": "Importers And Exporters",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "local_shipping"
+          "subtitle": "",
+          "icon": "import_export"
         },
         {
           "title": "Car Shippers",
-          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "icon": "directions_car"
+          "subtitle": "",
+          "icon": "garage"
         }
       ]
     }
