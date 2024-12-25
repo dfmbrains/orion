@@ -49,7 +49,9 @@ const StyledBox = styled('div')(({ theme, bgcolor }) => ({
 const ValueComponent = ({ item, bgcolor }) => {
   return (
     <StyledBox bgcolor={bgcolor}>
-      <Typography variant="body1">{item.title}</Typography>
+      <Typography fontWeight="500" variant="body1">
+        {item.title}
+      </Typography>
       <FlexGap10>
         <Typography variant="h1" component="h5">
           <CountUp
