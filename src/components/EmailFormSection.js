@@ -43,6 +43,7 @@ const EmailFormSection = ({ background }) => {
           EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
           {
             email: email,
+            'g-recaptcha-response': CAPTCHAResult,
           },
           EMAIL_JS_PUBLIC_KEY,
         )
