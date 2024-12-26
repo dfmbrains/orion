@@ -13,7 +13,7 @@ import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
-  EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+  EMAIL_JS_TEMPLATE_ID_FOR_CALCULATION,
 } from 'helpers/constants';
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
@@ -62,7 +62,7 @@ const CalculateForm = ({ translationKey }) => {
     emailjs
       .send(
         EMAIL_JS_SERVICE_ID,
-        EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+        EMAIL_JS_TEMPLATE_ID_FOR_CALCULATION,
         values,
         EMAIL_JS_PUBLIC_KEY,
       )

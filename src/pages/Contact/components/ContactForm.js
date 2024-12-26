@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
-  EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+  EMAIL_JS_TEMPLATE_ID_FOR_CONTACT,
 } from 'helpers/constants';
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
@@ -41,7 +41,7 @@ const ContactForm = ({ translationKey }) => {
     emailjs
       .send(
         EMAIL_JS_SERVICE_ID,
-        EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+        EMAIL_JS_TEMPLATE_ID_FOR_CONTACT,
         values,
         EMAIL_JS_PUBLIC_KEY,
       )

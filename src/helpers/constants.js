@@ -6,6 +6,8 @@ export const EMAIL_JS_TEMPLATE_ID_FOR_CALCULATION =
   process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_CALCULATION;
 export const EMAIL_JS_TEMPLATE_ID_FOR_CONTACT =
   process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_CONTACT;
+export const EMAIL_JS_TEMPLATE_ID_FOR_REVIEW =
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_REVIEW;
 
 export const defaultAppLanguage = 'ru';
 export const languages = [

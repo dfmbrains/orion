@@ -1,6 +1,12 @@
+import emailjs from '@emailjs/browser';
 import { LoadingButton } from '@mui/lab';
 import { Grid, TextField } from '@mui/material';
 import { Formik } from 'formik';
+import {
+  EMAIL_JS_PUBLIC_KEY,
+  EMAIL_JS_SERVICE_ID,
+  EMAIL_JS_TEMPLATE_ID_FOR_REVIEW,
+} from 'helpers/constants';
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +15,7 @@ import * as Yup from 'yup';
 const initialValues = {
   name: '',
   company: '',
+  email: '',
   text: '',
 };
 
@@ -17,6 +24,7 @@ const ContactForm = ({ translationKey }) => {
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().required(t(`${translationKey}.errors.nameRequired`)),
+    email: Yup.string().required(t(`${translationKey}.errors.emailRequired`)),
     text: Yup.string()
       .required(t(`${translationKey}.errors.messageRequired`))
       .max(400, t(`${translationKey}.errors.messageMaxLength`)),
@@ -26,16 +34,34 @@ const ContactForm = ({ translationKey }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmitForm = async () => {
+  const handleSubmitForm = async values => {
     setLoading(true);
 
-    try {
-      enqueueSnackbar(t('snackbarTexts.review'), { variant: 'success' });
-    } catch (e) {
-      enqueueSnackbar(t('snackbarTexts.error'), { variant: 'error' });
-      console.log(e);
-    }
-    setLoading(false);
+    emailjs
+      .send(
+        EMAIL_JS_SERVICE_ID,
+        EMAIL_JS_TEMPLATE_ID_FOR_REVIEW,
+        values,
+        EMAIL_JS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setLoading(false);
+          enqueueSnackbar(t('snackbarTexts.review'), { variant: 'success' });
+        },
+        error => {
+          setLoading(false);
+          console.error(error);
+
+          enqueueSnackbar(t('snackbarTexts.error'), { variant: 'error' });
+        },
+      )
+      .catch(error => {
+        setLoading(false);
+        console.error(error);
+
+        enqueueSnackbar(t('snackbarTexts.error'), { variant: 'error' });
+      });
   };
 
   return (
@@ -55,7 +81,7 @@ const ContactForm = ({ translationKey }) => {
               justifyContent={'space-between'}
               alignItems="center"
             >
-              <Grid item xs={6}>
+              <Grid item md={4} xs={12}>
                 <TextField
                   fullWidth
                   type="text"
@@ -68,7 +94,7 @@ const ContactForm = ({ translationKey }) => {
                   error={Boolean(errors.name && touched.name)}
                 />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item md={4} xs={12}>
                 <TextField
                   fullWidth
                   type="text"
@@ -79,6 +105,19 @@ const ContactForm = ({ translationKey }) => {
                   onChange={handleChange}
                   helperText={touched.company && errors.company}
                   error={Boolean(errors.company && touched.company)}
+                />
+              </Grid>
+              <Grid item md={4} xs={12}>
+                <TextField
+                  fullWidth
+                  type="text"
+                  name="email"
+                  label={t(`${translationKey}.placeholders.email`)}
+                  variant="standard"
+                  value={values.email}
+                  onChange={handleChange}
+                  helperText={touched.email && errors.email}
+                  error={Boolean(errors.email && touched.email)}
                 />
               </Grid>
               <Grid item xs={12}>
