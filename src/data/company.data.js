@@ -2,27 +2,23 @@ export const companyData = {
   socialMedia: {
     instagram: {
       id: '1',
-      link: 'real link',
+      link: 'https://www.instagram.com/orion_trans?igsh=MXUzNGw1MnV4ZnA2aA==',
     },
     linkedIn: {
-      id: '6',
-      link: 'real link',
-    },
-    skype: {
-      id: '3',
-      link: 'skype link',
+      id: '2',
+      link: '',
     },
     whatsapp: {
-      id: '5',
-      link: 'asdasd',
+      id: '3',
+      link: 'https://wa.me/996509006088',
     },
     facebook: {
-      id: '2',
-      link: 'faceboook link',
+      id: '4',
+      link: '',
     },
     telegram: {
-      id: '4',
-      link: 'assad',
+      id: '5',
+      link: 'https://t.me/+393517169453',
     },
   },
   id: 'Fi9so2860hoIwqzhdBKO',
@@ -34,7 +30,7 @@ export const companyData = {
     },
     email: 'office.oriontrans@gmail.com',
     phoneNumber2: '+996554333293',
-    phoneNumber1: '+996705006088',
+    phoneNumber1: '+996509006088',
     coordinates: [74.586007, 42.87983],
   },
 };

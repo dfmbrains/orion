@@ -14,35 +14,35 @@ const SocialMediaButtons = ({ color }) => {
       <IconButton
         color={color}
         target="_blank"
-        href={company?.socialMedia.facebook.link || ''}
+        href={company?.socialMedia.facebook.link || '#'}
       >
         <Icon>facebook</Icon>
       </IconButton>
       <IconButton
         color={color}
         target="_blank"
-        href={company?.socialMedia.instagram.link || ''}
+        href={company?.socialMedia.instagram.link || '#'}
       >
         <InstagramIcon />
       </IconButton>
       <IconButton
         color={color}
         target="_blank"
-        href={company?.socialMedia.linkedIn.link || ''}
+        href={company?.socialMedia.linkedIn.link || '#'}
       >
         <LinkedInIcon />
       </IconButton>
       <IconButton
         color={color}
         target={'_blank'}
-        href={`https://wa.me/${company?.socialMedia.whatsapp.link || ''}`}
+        href={company?.socialMedia.whatsapp.link || '#'}
       >
         <WhatsAppIcon />
       </IconButton>
       <IconButton
         color={color}
         target="_blank"
-        href={`https://t.me/${company?.socialMedia.telegram.link || ''}`}
+        href={company?.socialMedia.telegram.link || '#'}
       >
         <Icon>telegram</Icon>
       </IconButton>
