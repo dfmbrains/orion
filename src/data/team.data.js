@@ -1,3 +1,14 @@
+import AkimImg from 'assets/images/team/size-120/akim120.png';
+import AnnaImg from 'assets/images/team/size-120/anna120.png';
+import AnvarImg from 'assets/images/team/size-120/anvar120.png';
+import AzimImg from 'assets/images/team/size-120/azim120.png';
+import KarinaImg from 'assets/images/team/size-120/karina120.png';
+import MadinaImg from 'assets/images/team/size-120/madina120.png';
+import NurlanImg from 'assets/images/team/size-120/nurlan120.png';
+import OlgaImg from 'assets/images/team/size-120/olga120.png';
+import SaraImg from 'assets/images/team/size-120/sara120.png';
+import VovaImg from 'assets/images/team/size-120/vova120.png';
+
 export const teamData = [
   {
     lastName: 'Малянчинов',
@@ -18,7 +29,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '1',
     firstName: 'Анвар',
-    images: { name: 'anvar', file: '' },
+    images: { name: 'anvar', file: AnvarImg },
   },
   {
     lastName: 'Malianchinov',
@@ -38,7 +49,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '2',
     firstName: 'Anvar',
-    images: { name: 'anvar', file: '' },
+    images: { name: 'anvar', file: AnvarImg },
   },
   {
     lastName: 'Malianchinov',
@@ -58,7 +69,7 @@ export const teamData = [
     address: '比什凯克',
     id: '3',
     firstName: 'Anvar',
-    images: { name: 'anvar', file: '' },
+    images: { name: 'anvar', file: AnvarImg },
   },
 
   {
@@ -79,7 +90,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '4',
     firstName: 'Мадина',
-    images: { name: 'madina', file: '' },
+    images: { name: 'madina', file: MadinaImg },
   },
   {
     lastName: 'Abdurasulova',
@@ -99,7 +110,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '5',
     firstName: 'Madina',
-    images: { name: 'madina', file: '' },
+    images: { name: 'madina', file: MadinaImg },
   },
   {
     lastName: 'Abdurasulova',
@@ -119,7 +130,7 @@ export const teamData = [
     address: '比什凯克',
     id: '6',
     firstName: 'Madina',
-    images: { name: 'madina', file: '' },
+    images: { name: 'madina', file: MadinaImg },
   },
 
   {
@@ -141,7 +152,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '10',
     firstName: 'Аким',
-    images: { name: 'akim', file: '' },
+    images: { name: 'akim', file: AkimImg },
   },
   {
     lastName: 'Marat uulu',
@@ -161,7 +172,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '11',
     firstName: 'Akim',
-    images: { name: 'akim', file: '' },
+    images: { name: 'akim', file: AkimImg },
   },
   {
     lastName: 'Marat uulu',
@@ -181,7 +192,7 @@ export const teamData = [
     address: '比什凯克',
     id: '12',
     firstName: 'Akim',
-    images: { name: 'akim', file: '' },
+    images: { name: 'akim', file: AkimImg },
   },
 
   {
@@ -202,7 +213,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '13',
     firstName: 'Карина',
-    images: { name: 'karina', file: '' },
+    images: { name: 'karina', file: KarinaImg },
   },
   {
     lastName: 'Radzhabova',
@@ -222,7 +233,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '14',
     firstName: 'Karina',
-    images: { name: 'karina', file: '' },
+    images: { name: 'karina', file: KarinaImg },
   },
   {
     lastName: 'Radzhabova',
@@ -242,7 +253,7 @@ export const teamData = [
     address: '比什凯克',
     id: '15',
     firstName: 'Karina',
-    images: { name: 'karina', file: '' },
+    images: { name: 'karina', file: KarinaImg },
   },
 
   {
@@ -264,7 +275,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '19',
     firstName: 'Бюбюсара',
-    images: { name: 'bubusara', file: '' },
+    images: { name: 'bubusara', file: SaraImg },
   },
   {
     lastName: 'Asankanova',
@@ -284,7 +295,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '20',
     firstName: 'Bubusara',
-    images: { name: 'bubusara', file: '' },
+    images: { name: 'bubusara', file: SaraImg },
   },
   {
     lastName: 'Asankanova',
@@ -304,7 +315,7 @@ export const teamData = [
     address: '比什凯克',
     id: '21',
     firstName: 'Bubusara',
-    images: { name: 'bubusara', file: '' },
+    images: { name: 'bubusara', file: SaraImg },
   },
 
   {
@@ -325,7 +336,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '16',
     firstName: 'Азим',
-    images: { name: 'azim', file: '' },
+    images: { name: 'azim', file: AzimImg },
   },
   {
     lastName: 'Mamatov',
@@ -345,7 +356,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '17',
     firstName: 'Azim',
-    images: { name: 'karina', file: '' },
+    images: { name: 'azim', file: AzimImg },
   },
   {
     lastName: 'Mamatov',
@@ -365,7 +376,7 @@ export const teamData = [
     address: '比什凯克',
     id: '18',
     firstName: 'Azim',
-    images: { name: 'azim', file: '' },
+    images: { name: 'azim', file: AzimImg },
   },
 
   {
@@ -386,7 +397,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '25',
     firstName: 'Владимир',
-    images: { name: 'vladimir', file: '' },
+    images: { name: 'vladimir', file: VovaImg },
   },
   {
     lastName: 'Dmintriev',
@@ -406,7 +417,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '26',
     firstName: 'Vladimir',
-    images: { name: 'vladimir', file: '' },
+    images: { name: 'vladimir', file: VovaImg },
   },
   {
     lastName: 'Dmintriev',
@@ -426,7 +437,7 @@ export const teamData = [
     address: '比什凯克',
     id: '27',
     firstName: 'Vladimir',
-    images: { name: 'vladimir', file: '' },
+    images: { name: 'vladimir', file: VovaImg },
   },
 
   {
@@ -508,7 +519,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '7',
     firstName: 'Анна',
-    images: { name: 'anna', file: '' },
+    images: { name: 'anna', file: AnnaImg },
   },
   {
     lastName: 'Dmintrieva',
@@ -528,7 +539,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '8',
     firstName: 'Anna',
-    images: { name: 'anna', file: '' },
+    images: { name: 'anna', file: AnnaImg },
   },
   {
     lastName: 'Dmintrieva',
@@ -548,7 +559,7 @@ export const teamData = [
     address: '比什凯克',
     id: '9',
     firstName: 'Anna',
-    images: { name: 'anna', file: '' },
+    images: { name: 'anna', file: AnnaImg },
   },
 
   {
@@ -569,7 +580,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '28',
     firstName: 'Ольга',
-    images: { name: 'olga', file: '' },
+    images: { name: 'olga', file: OlgaImg },
   },
   {
     lastName: 'Shitkina',
@@ -589,7 +600,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '29',
     firstName: 'Olga',
-    images: { name: 'olga', file: '' },
+    images: { name: 'olga', file: OlgaImg },
   },
   {
     lastName: 'Shitkina',
@@ -609,7 +620,7 @@ export const teamData = [
     address: '比什凯克',
     id: '30',
     firstName: 'Olga',
-    images: { name: 'olga', file: '' },
+    images: { name: 'olga', file: OlgaImg },
   },
 
   {
@@ -630,7 +641,7 @@ export const teamData = [
     address: 'Бишкек',
     id: '31',
     firstName: 'Нурлан',
-    images: { name: 'nurlan', file: '' },
+    images: { name: 'nurlan', file: NurlanImg },
   },
   {
     lastName: 'Myrzataev',
@@ -650,7 +661,7 @@ export const teamData = [
     address: 'Bishkek',
     id: '32',
     firstName: 'Nurlan',
-    images: { name: 'nurlan', file: '' },
+    images: { name: 'nurlan', file: NurlanImg },
   },
   {
     lastName: 'Myrzataev',
@@ -670,6 +681,6 @@ export const teamData = [
     address: '比什凯克',
     id: '33',
     firstName: 'Nurlan',
-    images: { name: 'nurlan', file: '' },
+    images: { name: 'nurlan', file: NurlanImg },
   },
 ];
