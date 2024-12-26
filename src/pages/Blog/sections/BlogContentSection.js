@@ -25,7 +25,7 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: { gap: '40px' },
 
   '& .postCard': {
-    width: 'calc(100% / 3 - 40px * 2 / 3)',
+    width: 'calc(100% / 3 - 60px * 2 / 3)',
 
     [theme.breakpoints.down('md')]: { width: 'calc(100% / 2 - 40px / 2)' },
     [theme.breakpoints.down('sm')]: { width: '100%' },
