@@ -53,12 +53,12 @@ const EmailFormSection = ({ background }) => {
 
             setEmail('');
           },
-            error => {
-              setLoading(false);
-              console.error(error);
+          error => {
+            setLoading(false);
+            console.error(error);
 
-              enqueueSnackbar('Попробуйте позже', { variant: 'error' });
-            };,
+            enqueueSnackbar('Попробуйте позже', { variant: 'error' });
+          },
         )
         .catch(error => {
           setLoading(false);
