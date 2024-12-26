@@ -9,6 +9,9 @@ export const EMAIL_JS_TEMPLATE_ID_FOR_CONTACT =
 export const EMAIL_JS_TEMPLATE_ID_FOR_REVIEW =
   process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_REVIEW;
 
+export const CAPTCHA_SITE_KEY = process.env.REACT_APP_CAPTCHA_SITE_KEY;
+export const CAPTCHA_SECRET_KEY = process.env.REACT_APP_CAPTCHA_SEKRET_KEY;
+
 export const defaultAppLanguage = 'ru';
 export const languages = [
   { value: 'ru', title: 'Русский' },

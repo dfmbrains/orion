@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { LoadingButton } from '@mui/lab';
 import { styled, TextField, Typography } from '@mui/material';
+import ReCAPTCHAComponent from 'components/ReCAPTCHA';
 import {
   EMAIL_JS_PUBLIC_KEY,
   EMAIL_JS_SERVICE_ID,
@@ -29,40 +30,43 @@ const EmailFormSection = ({ background }) => {
 
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
+  const [CAPTCHAResult, setCAPTCHAResult] = useState(false);
 
   const handleSubmit = e => {
-    e.preventDefault();
-    setLoading(true);
+    if (CAPTCHAResult) {
+      e.preventDefault();
+      setLoading(true);
 
-    emailjs
-      .send(
-        EMAIL_JS_SERVICE_ID,
-        EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
-        {
-          email: email,
-        },
-        EMAIL_JS_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          setLoading(false);
-          enqueueSnackbar('Ваша почта отправлена', { variant: 'success' });
+      emailjs
+        .send(
+          EMAIL_JS_SERVICE_ID,
+          EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+          {
+            email: email,
+          },
+          EMAIL_JS_PUBLIC_KEY,
+        )
+        .then(
+          () => {
+            setLoading(false);
+            enqueueSnackbar('Ваша почта отправлена', { variant: 'success' });
 
-          setEmail('');
-        },
-        error => {
+            setEmail('');
+          },
+            error => {
+              setLoading(false);
+              console.error(error);
+
+              enqueueSnackbar('Попробуйте позже', { variant: 'error' });
+            };,
+        )
+        .catch(error => {
           setLoading(false);
           console.error(error);
 
           enqueueSnackbar('Попробуйте позже', { variant: 'error' });
-        },
-      )
-      .catch(error => {
-        setLoading(false);
-        console.error(error);
-
-        enqueueSnackbar('Попробуйте позже', { variant: 'error' });
-      });
+        });
+    }
   };
 
   return (
@@ -79,26 +83,29 @@ const EmailFormSection = ({ background }) => {
           <form onSubmit={handleSubmit}>
             <FlexGap10 sx={{ justifyContent: 'center' }}>
               <TextField
+                required
                 fullWidth
-                size="small"
                 type="text"
+                size="small"
                 name="email"
-                label={t('emailFormSection.placeholder')}
-                variant="outlined"
                 value={email}
-                required={true}
+                variant="outlined"
+                label={t('emailFormSection.placeholder')}
                 onChange={e => setEmail(e.target.value)}
               />
 
               <LoadingButton
+                type="submit"
+                color="primary"
                 loading={loading}
                 variant="contained"
-                color="primary"
-                type="submit"
+                disabled={!CAPTCHAResult}
               >
                 {t('buttons.send')}
               </LoadingButton>
             </FlexGap10>
+
+            <ReCAPTCHAComponent setResult={setCAPTCHAResult} />
           </form>
         </StyledBox>
       </FlexAllCenter>
