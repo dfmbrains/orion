@@ -1,5 +1,5 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import ClientsImg from 'assets/images/partners_and_clients.webp';
+import ClientsImg from 'assets/images/what_we_offer.jpg';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import ImageComponent from 'components/ImageComponent';
@@ -17,6 +17,7 @@ const StyledSection = styled('section')(({ theme }) => ({
 
   '& .aboutSection3Img': {
     width: '80%',
+    borderRadius: '16px',
     [theme.breakpoints.down('lg')]: { width: '100%' },
   },
 }));

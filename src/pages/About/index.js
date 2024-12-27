@@ -1,4 +1,4 @@
-import AboutBg from 'assets/images/backgrounds/about.webp';
+import AboutBg from 'assets/images/backgrounds/about2.jpg';
 import MeetTeamBg from 'assets/images/backgrounds/meet_team.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
 import StatisticsSection from 'components/StatisticsSection';

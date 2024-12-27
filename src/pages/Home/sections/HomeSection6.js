@@ -7,7 +7,7 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import OfficeImg from 'assets/images/officePhoto.webp';
+import OfficeImg from 'assets/images/office.jpg';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import ImageComponent from 'components/ImageComponent';
@@ -35,6 +35,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 120px',
   position: 'relative',
+
   [theme.breakpoints.down('lg')]: { padding: '70px 0' },
   [theme.breakpoints.down('md')]: { padding: '60px 0' },
   [theme.breakpoints.down('sm')]: { padding: '50px 0' },
@@ -43,6 +44,7 @@ const StyledSection = styled('section')(({ theme }) => ({
 const StyledImageBox = styled('div')(() => ({
   '& img': {
     width: '100%',
+    borderRadius: '16px',
   },
 }));
 

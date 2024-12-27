@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import TeamImg from 'assets/images/team.webp';
+import TeamImg from 'assets/images/goal.jpg';
 import { FlexBox } from 'components/FlexBox';
 import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
@@ -19,9 +19,12 @@ const StyledSection = styled('section')(({ theme }) => ({
   '& .aboutSection5Img': {
     width: '80%',
     marginTop: '28px',
+    borderRadius: '16px',
+
     [theme.breakpoints.down('lg')]: { width: '95%', marginTop: '20px' },
     [theme.breakpoints.down('md')]: { width: '100%' },
   },
+
   '& .aboutSection5Objectives': {
     backgroundColor: '#F7F7F7',
     padding: '15px 30px',

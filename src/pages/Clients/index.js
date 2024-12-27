@@ -1,4 +1,4 @@
-import ClientsBg from 'assets/images/backgrounds/clients.webp';
+import ClientsBg from 'assets/images/backgrounds/clients.jpg';
 import PromoSection from 'components/PromoSection/PromoSection';
 import TestimonialsSection from 'components/TestimonialsSection';
 import React from 'react';

@@ -1,5 +1,5 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OurTeamImg from 'assets/images/our_team.webp';
+import OurTeamImg from 'assets/images/mission2.jpg';
 import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
@@ -14,6 +14,7 @@ const StyledSection = styled('section')(({ theme }) => ({
 
   '& .aboutSection4Img': {
     width: '80%',
+    borderRadius: '16px',
     [theme.breakpoints.down('lg')]: { width: '100%' },
   },
 }));
