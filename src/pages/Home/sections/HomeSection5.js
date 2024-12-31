@@ -44,10 +44,8 @@ const StyledSection = styled('section')(({ theme }) => ({
 const StyledImageBox = styled('div')(({ theme }) => ({
   width: '80px',
   height: '80px',
-  borderRadius: '50%',
-  overflow: 'hidden',
   position: 'relative',
-  minWidth: '80.0px',
+  minWidth: '80px',
 
   [theme.breakpoints.down('md')]: {
     minWidth: '70px',
@@ -61,7 +59,15 @@ const StyledImageBox = styled('div')(({ theme }) => ({
     height: '60px',
   },
 
-  '& img': {
+  '& .box': {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    borderRadius: '50%',
+  },
+
+  '& .img': {
     position: 'absolute',
     left: '50%',
     top: '50%',
@@ -70,6 +76,16 @@ const StyledImageBox = styled('div')(({ theme }) => ({
     minHeight: '100%',
     maxWidth: '130%',
     maxHeight: '130%',
+  },
+
+  '& .child': {
+    position: 'absolute',
+    right: '0',
+    top: '0',
+    transform: 'translate(25%, -25%)',
+    width: '50%',
+    height: '50%',
+    borderRadius: '50%',
   },
 }));
 
@@ -113,11 +129,21 @@ const HomeSection5 = () => {
 
             <FlexGap10>
               <StyledImageBox>
+                <div className="box">
+                  <ImageComponent
+                    className="img"
+                    src={selectedReview?.img}
+                    alt={selectedReview?.name}
+                  />
+                </div>
+
                 <ImageComponent
+                  className="child"
                   src={selectedReview?.companyLogo}
                   alt={selectedReview.company}
                 />
               </StyledImageBox>
+
               <div style={{ flex: 'auto' }}>
                 <Typography variant="subtitle2">
                   {selectedReview.name}

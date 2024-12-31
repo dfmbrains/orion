@@ -8,7 +8,7 @@ import Blog3Img from 'assets/images/data/blog3.jpg';
 //     'International Rail Freight: Everything you need to know about Rail Freight',
 //   id: 'xpluFbTsaBdpkItXavHB',
 //   postId: 'xpluFbTsaBdpkItXavHB',
-//   created: '11/25/2024',
+//   created: '11/25/2025',
 //   title: 'Everything About Freight Transportation',
 //   content: [
 //     {
@@ -32,7 +32,7 @@ export const blogData = [
   {
     subtitle: 'Логистика сегодня: тренды и новости',
     id: '1',
-    created: '12/12/2024',
+    created: '01/12/2025',
     language: 'ru',
     title: 'Логистика сегодня: тренды и новости',
     content: [],
@@ -41,7 +41,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '2',
-    created: '12/12/2024',
+    created: '01/12/2025',
     language: 'en',
     title: '',
     content: [],
@@ -50,7 +50,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '3',
-    created: '12/12/2024',
+    created: '01/12/2025',
     language: 'zh',
     title: '',
     content: [],
@@ -60,7 +60,7 @@ export const blogData = [
   {
     subtitle: 'Все о международных железнодорожных перевозках',
     id: '4',
-    created: '12/18/2024',
+    created: '01/18/2025',
     language: 'ru',
     title: 'Все о международных железнодорожных перевозках',
     content: [],
@@ -69,7 +69,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '5',
-    created: '12/18/2024',
+    created: '01/18/2025',
     language: 'en',
     title: '',
     content: [],
@@ -78,7 +78,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '6',
-    created: '12/18/2024',
+    created: '01/18/2025',
     language: 'zh',
     title: '',
     content: [],
@@ -88,7 +88,7 @@ export const blogData = [
   {
     subtitle: 'Орион-Транс: наши новости достижения',
     id: '10',
-    created: '12/29/2024',
+    created: '01/29/2025',
     language: 'ru',
     title: 'Орион-Транс: наши новости достижения',
     content: [],
@@ -97,7 +97,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '11',
-    created: '12/29/2024',
+    created: '01/29/2025',
     language: 'en',
     title: '',
     content: [],
@@ -106,7 +106,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '12',
-    created: '12/29/2024',
+    created: '01/29/2025',
     language: 'zh',
     title: '',
     content: [],
@@ -116,7 +116,7 @@ export const blogData = [
   {
     subtitle: 'Интересные факты о Логистике',
     id: '7',
-    created: '12/25/2024',
+    created: '01/25/2025',
     language: 'ru',
     title: 'Интересные факты о Логистике',
     content: [],
@@ -125,7 +125,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '8',
-    created: '12/25/2024',
+    created: '01/25/2025',
     language: 'en',
     title: '',
     content: [],
@@ -134,7 +134,7 @@ export const blogData = [
   {
     subtitle: '',
     id: '9',
-    created: '12/25/2024',
+    created: '01/25/2025',
     language: 'zh',
     title: '',
     content: [],
