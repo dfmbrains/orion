@@ -16,7 +16,7 @@ const ServiceDetails = () => {
     useRecoilState(serviceDetailsRecoil);
 
   useEffect(() => {
-    if (!serviceDetailsData) {
+    if (!serviceDetailsData || id !== serviceDetailsData.id) {
       setServiceDetailsData(servicesList.find(item => item.id === id));
     }
   }, [id, serviceDetailsData, servicesList, setServiceDetailsData]);

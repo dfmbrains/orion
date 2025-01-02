@@ -15,7 +15,7 @@ const BlogDetails = () => {
   const [blog, setBlog] = useRecoilState(blogDetailsRecoil);
 
   useEffect(() => {
-    if (!blog) {
+    if (!blog || id !== blog.id) {
       setBlog(blogList.find(item => item.id === id));
     }
   }, [blog, blogList, id, setBlog]);

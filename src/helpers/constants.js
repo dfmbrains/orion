@@ -28,15 +28,15 @@ export const HEADER_BURGER_MENU = [
     title: 'menu.services',
     link: '/services',
     subLinks: [
-      { link: '/services', title: 'subMenuServices.subMenu1' },
-      { link: '/services', title: 'subMenuServices.subMenu2' },
-      { link: '/services', title: 'subMenuServices.subMenu3' },
-      { link: '/services', title: 'subMenuServices.subMenu4' },
-      { link: '/services', title: 'subMenuServices.subMenu5' },
-      { link: '/services', title: 'subMenuServices.subMenu6' },
-      { link: '/services', title: 'subMenuServices.subMenu7' },
-      { link: '/services', title: 'subMenuServices.subMenu8' },
-      { link: '/services', title: 'subMenuServices.subMenu9' },
+      { link: '/services/1', title: 'subMenuServices.subMenu1' },
+      { link: '/services/2', title: 'subMenuServices.subMenu2' },
+      { link: '/services/3', title: 'subMenuServices.subMenu3' },
+      { link: '/services/4', title: 'subMenuServices.subMenu4' },
+      { link: '/services/5', title: 'subMenuServices.subMenu5' },
+      { link: '/services/6', title: 'subMenuServices.subMenu6' },
+      { link: '/services/9', title: 'subMenuServices.subMenu7' },
+      { link: '/services/7', title: 'subMenuServices.subMenu8' },
+      { link: '/services/8', title: 'subMenuServices.subMenu9' },
     ],
   },
   {
@@ -44,8 +44,8 @@ export const HEADER_BURGER_MENU = [
     link: '/about',
     subLinks: [
       { link: '/about', title: 'subMenuCompany.subMenu1' },
-      { link: '/about', title: 'subMenuCompany.subMenu2' },
-      { link: '/about', title: 'subMenuCompany.subMenu3' },
+      { link: '/about#aboutSection6', title: 'subMenuCompany.subMenu2' },
+      { link: '/about#aboutSection9', title: 'subMenuCompany.subMenu3' },
     ],
   },
   {
@@ -53,15 +53,15 @@ export const HEADER_BURGER_MENU = [
     link: '/clients-&-partners',
     subLinks: [
       {
-        link: '/clients-&-partners',
+        link: '/clients-&-partners?part=0',
         title: 'subMenuClientsAndPartners.subMenu1',
       },
       {
-        link: '/clients-&-partners',
+        link: '/clients-&-partners?part=1',
         title: 'subMenuClientsAndPartners.subMenu2',
       },
       {
-        link: '/clients-&-partners',
+        link: '/clients-&-partners#testimonialsSection',
         title: 'subMenuClientsAndPartners.subMenu3',
       },
     ],
@@ -70,12 +70,25 @@ export const HEADER_BURGER_MENU = [
     title: 'menu.blogs',
     link: '/blog',
     subLinks: [
-      { link: '/blog', title: 'subMenuBlogs.subMenu1' },
-      { link: '/blog', title: 'subMenuBlogs.subMenu2' },
-      { link: '/blog', title: 'subMenuBlogs.subMenu3' },
+      { link: '/blog/4', title: 'subMenuBlogs.subMenu1' },
+      { link: '/blog/1', title: 'subMenuBlogs.subMenu2' },
+      { link: '/blog/10', title: 'subMenuBlogs.subMenu3' },
     ],
   },
-  { title: 'menu.contact', link: '/contact?form=0' },
+  {
+    title: 'menu.contact',
+    link: '/contact?form=0',
+    subLinks: [
+      {
+        link: '/contact?form=0#contactContentSection',
+        title: 'menu.getInTouch',
+      },
+      {
+        link: '/contact?form=1#contactContentSection',
+        title: 'menu.leaveReview',
+      },
+    ],
+  },
 ];
 
 export const ImageErrorUrl =

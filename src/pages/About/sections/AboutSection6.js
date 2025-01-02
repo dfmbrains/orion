@@ -26,7 +26,7 @@ const AboutSection6 = () => {
   const theme = useTheme();
 
   return (
-    <StyledSection theme={theme}>
+    <StyledSection id="aboutSection6" theme={theme}>
       <FlexAllCenter>
         <Box>
           <Typography variant="h2" mb={2}>

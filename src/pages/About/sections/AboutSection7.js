@@ -28,7 +28,7 @@ const AboutSection7 = () => {
         <Typography
           mb={{ lg: 10, md: 8, sm: 6, xs: 4 }}
           variant="h2"
-          textAlign={'center'}
+          textAlign="center"
         >
           {t(`${translationKey}.title`)}
         </Typography>

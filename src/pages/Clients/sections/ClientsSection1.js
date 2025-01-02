@@ -15,8 +15,9 @@ import {
   StyledSwiperButtonsPosition,
 } from 'components/StyledComponents';
 import SwiperButtons from 'components/SwiperButtons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { partnersRecoil } from 'store';
 import { Navigation } from 'swiper';
@@ -48,22 +49,29 @@ const ClientsSection1 = () => {
   const partnersList = useRecoilValue(partnersRecoil);
 
   const [part, setPart] = useState(0);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.has('part')) {
+      setPart(+searchParams.get('part'));
+    }
+  }, [searchParams]);
 
   return (
     <StyledSection>
       <OrionContainer>
         <ButtonGroup>
           <Button
-            color={part === 0 ? 'primary' : 'info'}
             variant="text"
             onClick={() => setPart(0)}
+            color={part === 0 ? 'primary' : 'info'}
           >
             {t(`${translationKey}.clients`)}.
           </Button>
           <Button
-            color={part === 1 ? 'primary' : 'info'}
             variant="text"
             onClick={() => setPart(1)}
+            color={part === 1 ? 'primary' : 'info'}
           >
             {t(`${translationKey}.partners`)}.
           </Button>

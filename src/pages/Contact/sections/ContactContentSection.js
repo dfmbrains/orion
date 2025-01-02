@@ -45,7 +45,7 @@ const ContactContentSection = () => {
   const handleChange = (event, newValue) => setFormVariant({ form: newValue });
 
   return (
-    <StyledSection id="getInTouch">
+    <StyledSection id="contactContentSection">
       <OrionContainer>
         {company ? (
           <Grid container spacing={{ md: 8, sm: 6, xs: 4 }}>

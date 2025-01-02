@@ -1,3 +1,4 @@
+import HashAutoScroll from 'components/Layouts/HashAutoScroll';
 import ScrollTop from 'components/ScrollTop';
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
@@ -14,11 +15,11 @@ function App() {
   const content = useRoutes(routes);
 
   return (
-    <>
+    <HashAutoScroll>
       {content}
       <Footer />
       <ScrollTop />
-    </>
+    </HashAutoScroll>
   );
 }
 

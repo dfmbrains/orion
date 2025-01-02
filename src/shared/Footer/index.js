@@ -101,12 +101,12 @@ const Footer = () => {
         {
           title: t('menu.getInTouch'),
           link: '/contact?form=0',
-          hash: 'getInTouch',
+          hash: 'contactContentSection',
         },
         {
           title: t('menu.leaveReview'),
           link: '/contact?form=1',
-          hash: 'getInTouch',
+          hash: 'contactContentSection',
         },
       ],
     },
