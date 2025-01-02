@@ -26,7 +26,7 @@ export default function CompanyHistoryDialog({ open, handleClose }) {
     <Dialog
       open={open}
       onClose={handleClose}
-      scroll={'paper'}
+      scroll="paper"
       aria-labelledby="scroll-dialog-title"
       aria-describedby="scroll-dialog-description"
     >

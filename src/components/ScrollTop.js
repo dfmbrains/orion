@@ -40,10 +40,10 @@ const ScrollTop = () => {
 
   return (
     <StyledIconButton
-      status={active}
-      onClick={handleScrollToTop}
-      size={isLaptop ? 'medium' : 'large'}
       theme={theme}
+      status={active}
+      size={isLaptop ? 'medium' : 'large'}
+      onClick={() => handleScrollToTop('smooth')}
     >
       <Icon>arrow_upward</Icon>
     </StyledIconButton>

@@ -17,6 +17,7 @@ import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const StyledSection = styled('section')(({ theme }) => ({
   position: 'relative',
@@ -124,11 +125,19 @@ const HomeSection2 = () => {
               <Divider />
 
               <FlexGap10 sx={{ mt: { md: 3, xs: 2 } }}>
-                <DefaultButton variant="contained" linkTo="/services">
+                <DefaultButton
+                  to="/services"
+                  component={Link}
+                  variant="contained"
+                >
                   {t('buttons.learnMore')}
                 </DefaultButton>
 
-                <DefaultButton variant="outlined" linkTo="/contact?form=1">
+                <DefaultButton
+                  component={Link}
+                  variant="outlined"
+                  to="/contact?form=0#contactContentSection"
+                >
                   {t('buttons.order')}
                 </DefaultButton>
               </FlexGap10>
@@ -162,9 +171,10 @@ const HomeSection2 = () => {
 
               <DefaultButton
                 fullWidth
-                linkTo="/services"
-                variant="text"
                 sx={{ mt: 2 }}
+                to="/services"
+                variant="text"
+                component={Link}
               >
                 {t('buttons.otherServices')}
               </DefaultButton>

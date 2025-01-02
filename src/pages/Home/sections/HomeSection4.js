@@ -12,6 +12,7 @@ import OrionContainer from 'components/OrionContainer';
 import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -62,11 +63,19 @@ const HomeSection4 = () => {
             <Divider />
 
             <FlexGap10 sx={{ mt: { lg: 5, sm: 3, xs: 2 } }}>
-              <DefaultButton variant="contained" linkTo="/services">
+              <DefaultButton
+                to="/services"
+                component={Link}
+                variant="contained"
+              >
                 {t('buttons.learnMore')}
               </DefaultButton>
 
-              <DefaultButton variant="outlined" linkTo="/contact?form=1">
+              <DefaultButton
+                component={Link}
+                variant="outlined"
+                to="/contact?form=0#contactContentSection"
+              >
                 {t('buttons.order')}
               </DefaultButton>
             </FlexGap10>

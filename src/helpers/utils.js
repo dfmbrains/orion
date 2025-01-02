@@ -1,14 +1,12 @@
-export const anchorLinkHandler = elementId => {
-  const target = document.getElementById(elementId);
-  if (target) {
-    window.scrollTo({
-      top: target.offsetTop,
-    });
+export const scrollIntoView = (elementId, behavior = 'instant') => {
+  const element = document.querySelector(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: behavior });
   }
 };
 
-export const handleScrollToTop = () =>
-  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+export const handleScrollToTop = (behavior = 'instant') =>
+  window.scrollTo({ top: 0, left: 0, behavior });
 
 export const formatName = (locale, lastName, firstName, midName) => {
   let fio = '';

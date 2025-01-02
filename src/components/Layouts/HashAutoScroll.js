@@ -1,3 +1,4 @@
+import { handleScrollToTop, scrollIntoView } from 'helpers/utils';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -6,10 +7,9 @@ const HashAutoScroll = ({ children }) => {
 
   useEffect(() => {
     if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollIntoView(location.hash);
+    } else {
+      handleScrollToTop();
     }
   }, [location]);
 

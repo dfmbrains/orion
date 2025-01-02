@@ -19,14 +19,10 @@ import {
   StyledSwiperButtonsPosition,
 } from 'components/StyledComponents';
 import SwiperButtons from 'components/SwiperButtons';
-import {
-  anchorLinkHandler,
-  filterArrByLanguage,
-  formatName,
-} from 'helpers/utils';
+import { scrollIntoView, filterArrByLanguage, formatName } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { selectedLanguageRecoil, teamRecoil } from 'store';
 import { Navigation } from 'swiper';
@@ -85,18 +81,12 @@ const HomeSection6 = () => {
   const { t } = useTranslation();
 
   const theme = useTheme();
-  const navigate = useNavigate();
 
   const team = useRecoilValue(teamRecoil);
   const language = useRecoilValue(selectedLanguageRecoil);
 
   const [active, setActive] = useState(null);
   const [data, setData] = useState([]);
-
-  const navigateToOurTeam = () => {
-    navigate('/about');
-    setTimeout(() => anchorLinkHandler('aboutSection9'), 0);
-  };
 
   useEffect(() => {
     if (team) {
@@ -155,8 +145,9 @@ const HomeSection6 = () => {
 
                 <DefaultButton
                   sx={{ my: 2 }}
+                  component={Link}
                   variant="outlined"
-                  onClick={navigateToOurTeam}
+                  to="/about#aboutSection9"
                 >
                   {t('buttons.learnMore')}
                 </DefaultButton>
@@ -214,7 +205,7 @@ const HomeSection6 = () => {
                         <StyledFlexGap10
                           theme={theme}
                           onClick={() => {
-                            anchorLinkHandler('homeTeamSection');
+                            scrollIntoView('#homeTeamSection');
                             setActive(member);
                           }}
                         >

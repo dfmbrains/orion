@@ -4,10 +4,9 @@ import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
-import { anchorLinkHandler } from 'helpers/utils';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -27,12 +26,6 @@ const AboutSection3 = () => {
   const { t } = useTranslation();
 
   const theme = useTheme();
-  const navigate = useNavigate();
-
-  const navigateToCalculationForm = () => {
-    navigate('/');
-    setTimeout(() => anchorLinkHandler('homeSection3'), 0);
-  };
 
   return (
     <StyledSection>
@@ -59,13 +52,18 @@ const AboutSection3 = () => {
             </Typography>
 
             <FlexGap10>
-              <DefaultButton variant="contained" linkTo="/contact?form=0">
+              <DefaultButton
+                component={Link}
+                variant="contained"
+                to="/contact?form=0#contactContentSection"
+              >
                 {t('buttons.contactUs')}
               </DefaultButton>
 
               <DefaultButton
+                component={Link}
                 variant="outlined"
-                onClick={navigateToCalculationForm}
+                to="/#homeSection3"
               >
                 {t('buttons.calculateRailTariff')}
               </DefaultButton>

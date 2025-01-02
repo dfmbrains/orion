@@ -5,7 +5,7 @@ import OrionContainer from 'components/OrionContainer';
 import SocialMediaButtons from 'components/SocialMediaButtons';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const StyledFooter = styled('footer')(({ theme }) => ({
   padding: '60px 0 15px',
@@ -59,9 +59,6 @@ const StyledBottomBox = styled('div')(({ theme }) => ({
 const Footer = () => {
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
-  const location = useLocation();
-
   // const services = useRecoilValue(serviceRecoil);
   // const language = useRecoilValue(selectedLanguageRecoil);
 
@@ -69,20 +66,18 @@ const Footer = () => {
     {
       title: t('footer.menu.column1'),
       elements: [
-        { title: t('menu.home'), link: '/', hash: 'header' },
-        { title: t('menu.services'), link: '/services', hash: 'header' },
-        { title: t('menu.company'), link: '/about', hash: 'header' },
+        { title: t('menu.home'), link: '/#header' },
+        { title: t('menu.services'), link: '/services#header' },
+        { title: t('menu.company'), link: '/about#header' },
         {
           title: t('menu.clientsAndPartners'),
-          link: '/clients-&-partners',
-          hash: 'header',
+          link: '/clients-&-partners#header',
         },
-        { title: t('menu.blogs'), link: '/blog', hash: 'header' },
-        { title: t('menu.contact'), link: '/contact', hash: 'header' },
+        { title: t('menu.blogs'), link: '/blog#header' },
+        { title: t('menu.contact'), link: '/contact#header' },
         {
           title: t('menu.career'),
-          link: '/career',
-          hash: 'header',
+          link: '/career#header',
           active: t('footer.activeText.career'),
         },
       ],
@@ -100,37 +95,15 @@ const Footer = () => {
       elements: [
         {
           title: t('menu.getInTouch'),
-          link: '/contact?form=0',
-          hash: 'contactContentSection',
+          link: '/contact?form=0#contactContentSection',
         },
         {
           title: t('menu.leaveReview'),
-          link: '/contact?form=1',
-          hash: 'contactContentSection',
+          link: '/contact?form=1#contactContentSection',
         },
       ],
     },
   ];
-
-  const anchorLink = async (hash, page, behavior) => {
-    await navigate(page);
-
-    if (hash) {
-      const target = document.getElementById(hash);
-
-      if (target) {
-        const { top: nodeTop, height: nodeHeight } =
-          target.getBoundingClientRect();
-
-        const offsetTop = nodeTop > 0 ? nodeTop : window.pageYOffset + nodeTop;
-
-        window.scrollTo({
-          top: offsetTop - nodeHeight / 5,
-          behavior,
-        });
-      }
-    }
-  };
 
   return (
     <StyledFooter>
@@ -157,24 +130,16 @@ const Footer = () => {
 
                   <StyledColumn>
                     {column.elements.map((item, index) => (
-                      <StyledLink>
-                        <Typography
-                          key={index}
-                          color="#919191"
-                          variant="body1"
-                          className="link"
-                          onClick={() =>
-                            anchorLink(
-                              item.hash,
-                              item.link,
-                              location.pathname === item.link
-                                ? 'smooth'
-                                : 'auto',
-                            )
-                          }
-                        >
-                          {item.title}
-                        </Typography>
+                      <StyledLink key={index}>
+                        <Link to={item.link}>
+                          <Typography
+                            color="#919191"
+                            variant="body1"
+                            className="link"
+                          >
+                            {item.title}
+                          </Typography>
+                        </Link>
 
                         {item?.active && (
                           <Typography

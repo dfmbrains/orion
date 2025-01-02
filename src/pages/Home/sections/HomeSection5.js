@@ -14,10 +14,10 @@ import ImageComponent from 'components/ImageComponent';
 import OrionContainer from 'components/OrionContainer';
 import OrionLoading from 'components/OrionLoading';
 import { Styled50vhLoadingBox } from 'components/StyledComponents';
-import { anchorLinkHandler, filterArrByLanguage } from 'helpers/utils';
+import { filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { reviewsRecoil, selectedLanguageRecoil } from 'store';
 
@@ -97,15 +97,9 @@ const HomeSection5 = () => {
   const language = useRecoilValue(selectedLanguageRecoil);
 
   const theme = useTheme();
-  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
   const [selectedReview, setSelectedReview] = useState(null);
-
-  const navigateToClientsTestimonials = () => {
-    navigate('/clients-&-partners');
-    setTimeout(() => anchorLinkHandler('testimonialsSection'), 0);
-  };
 
   useEffect(() => {
     if (language && reviews) {
@@ -179,10 +173,11 @@ const HomeSection5 = () => {
             )}
 
             <Button
+              component={Link}
               color="secondary"
               variant="contained"
-              onClick={navigateToClientsTestimonials}
               sx={{ mt: { lg: 5, md: 4, sm: 3, xs: 2 } }}
+              to="/clients-&-partners#testimonialsSection"
             >
               {t('buttons.readOthers')}
             </Button>

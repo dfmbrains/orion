@@ -5,10 +5,9 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { handleScrollToTop } from 'helpers/utils';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil, monthsRecoil } from 'store';
 import { FlexGap10 } from './FlexBox';
@@ -29,7 +28,6 @@ const StyledBox = styled('div')(({ theme }) => ({
 
 const PostCard = ({ post }) => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const theme = useTheme();
 
   const date = new Date(post.created);
@@ -85,13 +83,11 @@ const PostCard = ({ post }) => {
           </Typography>
 
           <Button
-            onClick={() => {
-              setBlog(post);
-              handleScrollToTop();
-              navigate(`/blog/${post.id}`);
-            }}
             color="primary"
+            component={Link}
             variant="contained"
+            to={`/blog/${post.id}`}
+            onClick={() => setBlog(post)}
             size={isTablet ? 'small' : 'medium'}
           >
             {t('buttons.readMore')}

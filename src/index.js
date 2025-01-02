@@ -14,8 +14,8 @@ root.render(
   <BrowserRouter>
     <RecoilRoot>
       <SnackbarProvider
-        autoHideDuration={3000}
         maxSnack={3}
+        autoHideDuration={3000}
         anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
       >
         <OrionTheme>
