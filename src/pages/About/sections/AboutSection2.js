@@ -14,6 +14,7 @@ import Europe from 'assets/images/countries/eu.png';
 import Iran from 'assets/images/countries/ir.png';
 import Kg from 'assets/images/countries/kg.png';
 import Kz from 'assets/images/countries/kz.png';
+import Ge from 'assets/images/countries/ge.png';
 import Rus from 'assets/images/countries/ru.png';
 import Tj from 'assets/images/countries/tj.png';
 import Tur from 'assets/images/countries/tur.png';
@@ -90,6 +91,7 @@ const AboutSection2 = () => {
     Iran,
     Baltic,
     Azer,
+    Ge,
   ];
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

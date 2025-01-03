@@ -398,8 +398,14 @@
       "partners": "partners",
       "testimonials": "testimonials",
       "title": "We Work With The <br/> Best <span>{{item}}</span>",
-      "selectedClients": "clients",
-      "selectedPartners": "partners",
+      "selectedClients": {
+        "title": "clients",
+        "subtitle": "Наши клиенты — это лидеры в своих отраслях, которые доверяют нам важные и ответственные задачи, включая организацию железнодорожных грузоперевозок и экспедирование. Мы ценим их выбор и всегда стремимся оправдать их ожидания, предлагая оптимальные решения для бизнеса и обеспечивая надежность, безопасность и оперативность на всех этапах транспортировки."
+      },
+      "selectedPartners": {
+        "title": "partners",
+        "subtitle": "Наши партнеры — это официальные представительства железных дорог и напрямую сами железные дороги, такие как РЖД, Казахстанские железные дороги (КТЖ), Кыргыз Темир Жолу, Узбекская железная дорога, Таджикская железная дорога, с которыми мы поддерживаем долгосрочные и надежные отношения. Кроме того, мы активно сотрудничаем с ведущими экспедиторами железных дорог, которые доверяют именно нашей компании, что позволяет нам оперативно решать любые задачи, обеспечивая надежность и эффективность перевозок."
+      },
       "subtitle": "The use of railroads and trains to convey cargo on land is known as rail freight transport. Rail transport is popular, especially in continents with extensive journey durations, such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo, including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods, standardized shipping containers, or particularly constructed carriages for a specific sort of freight can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It costs more than sea freight, but less than air freight. Moving high-value industrial products like automobiles, electronics, and computer equipment, as well as promotional items, by train is ideal."
     }
   },

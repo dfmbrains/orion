@@ -48,11 +48,13 @@ const ClientsSection1 = () => {
 
   const partnersList = useRecoilValue(partnersRecoil);
 
-  const [part, setPart] = useState(0);
   const [searchParams] = useSearchParams();
+  const [part, setPart] = useState(
+    searchParams.has('part') ? searchParams.get('part') : 0,
+  );
 
   useEffect(() => {
-    if (searchParams.has('part')) {
+    if (searchParams.has('part') && +searchParams.get('part') !== part) {
       setPart(+searchParams.get('part'));
     }
   }, [searchParams]);
@@ -99,14 +101,16 @@ const ClientsSection1 = () => {
               br: <br />,
               item:
                 (part === 0
-                  ? t(`${translationKey}.selectedClients`)
-                  : t(`${translationKey}.selectedPartners`)) || '',
+                  ? t(`${translationKey}.selectedClients.title`)
+                  : t(`${translationKey}.selectedPartners.title`)) || '',
             }}
           />
         </Typography>
 
         <Typography variant="subtitle2">
-          {t(`${translationKey}.subtitle`)}
+          {part === 0
+            ? t(`${translationKey}.selectedClients.subtitle`)
+            : t(`${translationKey}.selectedPartners.subtitle`)}
         </Typography>
 
         {partnersList ? (

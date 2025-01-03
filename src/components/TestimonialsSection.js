@@ -69,16 +69,19 @@ const StyledImgBox = styled('div')(({ theme }) => ({
   overflow: 'hidden',
   position: 'relative',
   minWidth: '100px',
+
   [theme.breakpoints.down('lg')]: {
     minWidth: '80px',
     width: '80px',
     height: '80px',
   },
+
   [theme.breakpoints.down('md')]: {
     minWidth: '70px',
     width: '70px',
     height: '70px',
   },
+
   [theme.breakpoints.down('sm')]: {
     minWidth: '60px',
     width: '60px',
@@ -90,10 +93,8 @@ const StyledImgBox = styled('div')(({ theme }) => ({
     left: '50%',
     top: '50%',
     transform: 'translate(-50%, -50%)',
-    minWidth: '100%',
-    minHeight: '100%',
-    maxWidth: '130%',
-    maxHeight: '130%',
+    width: '100%',
+    height: '100%',
   },
 }));
 
@@ -142,8 +143,8 @@ const TestimonialsSection = () => {
                     <FlexGap10 sx={{ columnGap: '30px' }}>
                       <StyledImgBox>
                         <ImageComponent
-                          src={el?.image?.file}
-                          alt={el?.image?.name}
+                          src={el?.companyLogo}
+                          alt={el?.company}
                         />
                       </StyledImgBox>
 

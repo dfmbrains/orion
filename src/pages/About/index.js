@@ -1,5 +1,5 @@
 import AboutBg from 'assets/images/backgrounds/about2.jpg';
-import MeetTeamBg from 'assets/images/backgrounds/meet_team.webp';
+import OurTeamBg from 'assets/images/backgrounds/our_team.jpg';
 import PromoSection from 'components/PromoSection/PromoSection';
 import StatisticsSection from 'components/StatisticsSection';
 import TestimonialsSection from 'components/TestimonialsSection';
@@ -31,7 +31,7 @@ const About = () => {
       <AboutSection7 />
       <AboutSection8 />
       <TestimonialsSection />
-      <PromoSection title={t('about.promo2')} bgImage={MeetTeamBg} />
+      <PromoSection title={t('about.promo2')} bgImage={OurTeamBg} />
       <AboutSection9 />
     </>
   );
