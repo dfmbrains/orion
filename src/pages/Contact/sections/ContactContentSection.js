@@ -84,7 +84,7 @@ const ContactContentSection = () => {
                   </Typography>
                   <a
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href={getMapLinkByLocaleAndCoordinates(
                       language,
                       company.about.coordinates,

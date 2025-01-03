@@ -7,11 +7,7 @@ import {
   useTheme,
 } from '@mui/material';
 import ChangeLangButton from 'components/ChangeLangButton';
-import {
-  FlexAllCenter,
-  FlexBetweenAlignCenter,
-  FlexGap10,
-} from 'components/FlexBox';
+import { FlexBetweenAlignCenter, FlexGap10 } from 'components/FlexBox';
 import { Logo } from 'components/Logo';
 import OrionContainer from 'components/OrionContainer';
 import { HEADER_BURGER_MENU } from 'helpers/constants';
@@ -35,6 +31,12 @@ const StyledBox = styled(Box)(({ theme, color }) => ({
   },
 }));
 
+const StyledNavList = styled('ul')(() => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
 const HeaderGeneral = ({ openBurger, color }) => {
   const theme = useTheme();
 
@@ -47,11 +49,13 @@ const HeaderGeneral = ({ openBurger, color }) => {
         <FlexBetweenAlignCenter>
           <Logo />
           {isLaptopOrDesktop && (
-            <FlexAllCenter>
-              {HEADER_BURGER_MENU.map((item, idx) => (
-                <HeaderLink key={idx} headerLink={item} />
-              ))}
-            </FlexAllCenter>
+            <nav>
+              <StyledNavList>
+                {HEADER_BURGER_MENU.map((item, idx) => (
+                  <HeaderLink key={idx} headerLink={item} />
+                ))}
+              </StyledNavList>
+            </nav>
           )}
           <FlexGap10>
             <ChangeLangButton />

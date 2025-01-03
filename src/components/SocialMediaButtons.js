@@ -14,6 +14,7 @@ const SocialMediaButtons = ({ color }) => {
       <IconButton
         color={color}
         target="_blank"
+        rel="noopener noreferrer"
         href={company?.socialMedia.facebook.link || '#'}
       >
         <Icon>facebook</Icon>
@@ -21,6 +22,7 @@ const SocialMediaButtons = ({ color }) => {
       <IconButton
         color={color}
         target="_blank"
+        rel="noopener noreferrer"
         href={company?.socialMedia.instagram.link || '#'}
       >
         <InstagramIcon />
@@ -28,13 +30,15 @@ const SocialMediaButtons = ({ color }) => {
       <IconButton
         color={color}
         target="_blank"
+        rel="noopener noreferrer"
         href={company?.socialMedia.linkedIn.link || '#'}
       >
         <LinkedInIcon />
       </IconButton>
       <IconButton
         color={color}
-        target={'_blank'}
+        target="_blank"
+        rel="noopener noreferrer"
         href={company?.socialMedia.whatsapp.link || '#'}
       >
         <WhatsAppIcon />
@@ -42,6 +46,7 @@ const SocialMediaButtons = ({ color }) => {
       <IconButton
         color={color}
         target="_blank"
+        rel="noopener noreferrer"
         href={company?.socialMedia.telegram.link || '#'}
       >
         <Icon>telegram</Icon>

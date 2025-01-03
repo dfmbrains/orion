@@ -1,9 +1,9 @@
-import { Box, MenuItem, styled, Typography, useTheme } from '@mui/material';
+import { MenuItem, styled, Typography, useTheme } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
 
-const StyledBox = styled(Box)(({ theme }) => ({
+const StyledBox = styled('li')(({ theme }) => ({
   padding: '12px 15px',
   position: 'relative',
 
@@ -42,7 +42,7 @@ const StyledLink = styled(NavLink)(() => ({
   },
 }));
 
-const StyledMenu = styled(Box)(({ isActive }) => ({
+const StyledMenu = styled('ol')(({ isActive }) => ({
   background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4))',
   color: '#FFFFFF',
   borderRadius: '8px',
@@ -86,20 +86,32 @@ const HeaderLink = ({ headerLink }) => {
 
   return (
     <StyledBox onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>
-      <StyledLink className="link" theme={theme} to={headerLink.link}>
+      <StyledLink
+        className="link"
+        theme={theme}
+        to={headerLink.link}
+        title={headerLink.subtitle}
+        aria-label={headerLink.ariaLabel}
+      >
         <Typography variant="subtitle2">{t(headerLink.title)}</Typography>
       </StyledLink>
 
       {headerLink?.subLinks && (
-        <StyledMenu isActive={anchorEl} onClose={handleMenuClose}>
-          {headerLink.subLinks.map((subLink, index) => (
-            <StyledMenuItem key={index} onClick={handleMenuClose}>
-              <Link to={subLink.link} style={{ color: '#FFF' }}>
-                <Typography variant="body1">{t(subLink.title)}</Typography>
-              </Link>
-            </StyledMenuItem>
-          ))}
-        </StyledMenu>
+        <nav>
+          <StyledMenu isActive={anchorEl} onClose={handleMenuClose}>
+            {headerLink.subLinks.map((subLink, index) => (
+              <StyledMenuItem
+                key={index}
+                component="li"
+                onClick={handleMenuClose}
+              >
+                <Link to={subLink.link} style={{ color: '#FFF' }}>
+                  <Typography variant="body1">{t(subLink.title)}</Typography>
+                </Link>
+              </StyledMenuItem>
+            ))}
+          </StyledMenu>
+        </nav>
       )}
     </StyledBox>
   );
