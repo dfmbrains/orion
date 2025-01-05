@@ -20,10 +20,10 @@
   ],
   "buttons": {
     "learnMore": "learn more",
-    "order": "create order",
+    "order": "Get a service",
     "calculate": "calculate",
     "ourServices": "our services",
-    "readOthers": "read others",
+    "readOthers": "Read Testimonials",
     "readMore": "read more",
     "send": "send",
     "otherServices": "other services",
@@ -72,78 +72,78 @@
     "career": "Career"
   },
   "subMenuCompany": {
-    "subMenu1": "О нас",
-    "subMenu2": "Почему мы?",
-    "subMenu3": "Наша команда"
+    "subMenu1": "About us",
+    "subMenu2": "Why us",
+    "subMenu3": "Meet our team"
   },
   "subMenuServices": {
-    "subMenu1": "Международные железнодорожные грузоперевозки",
-    "subMenu2": "Экспедирование грузов: Расчет и оплата ж/д тарифов",
-    "subMenu3": "Предоставление подвижного состава",
-    "subMenu4": "Железнодорожные контейнерные перевозки",
-    "subMenu5": "Ежедневная дислокация вагонов",
-    "subMenu6": "Для кого наши услуги",
-    "subMenu7": "Другие услуги",
-    "subMenu8": "Оформление сопроводительных документов для организации перевозки грузов",
-    "subMenu9": "Индивидуальное консультирование по железнодорожным перевозкам"
+    "subMenu1": "International Rail Freight Transportation",
+    "subMenu2": "Railway Freight-Forwarding: Payment of import-export and transit rail tariffs",
+    "subMenu3": "Provision of Rolling Stock",
+    "subMenu4": "Railway Container Transportation",
+    "subMenu5": "Daily Wagon Deployment",
+    "subMenu6": "For Whom are our Services?",
+    "subMenu7": "Other services",
+    "subMenu8": "Shipping documents processing for rail freight transportation",
+    "subMenu9": "Individual consultation on railway transportation"
   },
   "subMenuClientsAndPartners": {
-    "subMenu1": "Клиенты",
-    "subMenu2": "Партнеры",
-    "subMenu3": "Отзывы"
+    "subMenu1": "Our clients",
+    "subMenu2": "Our partners",
+    "subMenu3": "Testimonials"
   },
   "subMenuBlogs": {
-    "subMenu1": "Все о железнодорожных перевозках",
-    "subMenu2": "Новости логистики",
-    "subMenu3": "Новости Орион-Транс"
+    "subMenu1": "Everything about Railway Freight Transportation",
+    "subMenu2": "Logistics Today: Latest Trends and News",
+    "subMenu3": "Orion-Trans: Our News and Achievements"
   },
   "featuresSection": [
     {
-      "title": "Cost Effective Solutions",
-      "subtitle": "You will get our safe rail forwarding services at a minimum cost compared to our competitors",
+      "title": "Cost-Effective Solutions",
+      "subtitle": "You can receive our rail freight-forwarding services at more competitive prices than our competitors.",
       "icon": "credit_score"
     },
     {
-      "title": "Trusted Partners",
-      "subtitle": "We have a direct agreement with the railways of CIS countries, and we work with the official representatives of the other countries Railways",
+      "title": "Reliable Partners",
+      "subtitle": "We have direct agreements with the railways of Kyrgyzstan, Kazakhstan, Tajikistan, Russia, and we work with the official representatives of Turkmenistan, Uzbekistan and many of the other countries' Railways.",
       "icon": "gpp_good"
     },
     {
-      "title": "Just In Time Shipments",
-      "subtitle": "You will achieve your desired shipment times with our rail freight services",
+      "title": "Comfort and Transparency",
+      "subtitle": "We are always ready to consult and assist in choosing the optimal solution, providing a personalized approach to each client.",
       "icon": "thumb_up_alt"
     },
     {
-      "title": "Financial Protection",
-      "subtitle": "Opportunity of the Rail rates payment, when there is a long-term engagement",
+      "title": "Quick Response",
+      "subtitle": "We process requests within 20 minutes, providing you with the necessary information without delays.",
       "icon": "speed"
     }
   ],
   "statisticsSection": [
     {
-      "title": "Volume of Cargo Transported per Year",
+      "title": "Cargo volume transported per year",
       "value": "3.6",
       "valueTag": "million tons"
     },
     {
-      "title": "Number of Wagons Transported",
+      "title": "Number of wagons transported",
       "value": "60",
       "valueTag": "thousand/year"
     },
     {
-      "title": "In the Market",
+      "title": "On the market",
       "value": "15",
       "valueTag": "years"
     },
     {
-      "title": "Companies Trust Us",
+      "title": "Companies trust us",
       "value": "200",
       "valueTag": "+"
     }
   ],
   "emailFormSection": {
     "title": "Leave your Email",
-    "subtitle": "We will definitely contact you",
+    "subtitle": "We will get in touch with you.",
     "placeholder": "Your Email"
   },
   "testimonialsSection": {
@@ -170,47 +170,46 @@
     "promo": {
       "slides": [
         {
-          "title": "Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "title": "Rail Freight",
           "shortTitle": "Rail freight",
-          "subtitle": "No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "subtitle": "No matter from where to where we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
         },
         {
-          "title": "2 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "title": "Rail Rate Payments",
           "shortTitle": "Rail Rate Payment",
-          "subtitle": "2 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "subtitle": "We have direct agreements with railways to provide for you the payments of import-export and transit rail tariffs inside or outside the country, as well as outside"
         },
         {
-          "title": "3 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "title": "Railway Container Transportation",
           "shortTitle": "Container Freight Transport",
-          "subtitle": "3 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "subtitle": "We carry out containerization of any level of complexity promptly and at minimum cost"
         },
         {
-          "title": "4 Rail Freight-Forwarding Company: Quality Professional Solutions",
+          "title": "Provision of Rolling Stock",
           "shortTitle": "Provision of Rolling Stock",
-          "subtitle": "4 No matter from where to where, we identify for you flexible routes and monitor your cargo movements at all stages of supplying"
+          "subtitle": "We will select the most suitable rolling stock for your cargo with a guarantee of accuracy and delivery time, thanks to our many years of partnership relationships."
         }
       ]
     },
     "section2": {
-      "title": "Container Freight",
-      "subtitle": "Fast & Convenient",
-      "description": "We create an effective transport chain monitoring of Container Freight to China and other countries. While your cargo is on its way, our logistic specialists will keep updating you whenever you need.",
+      "title": "Railway Container Transportation",
+      "subtitle": "Fast and Convenient",
+      "description": "We offer transportation of shipping containers and transport cargo in bulk. We  create an effective transport chain monitoring of Container Freight to China and some other countries. When transporting your cargo abroad, we always plan an effective way to satisfy each of your requirements. Our priority is to ensure the successful transportation of containers promptly at a minimum cost.",
       "otherServices": {
-        "title": "Our Other Services",
+        "title": "Our other services",
         "list": [
-          "Provision of Rolling Stock",
-          "Multimodal Freight Transport",
-          "Container Freight Transport",
-          "Rail freight"
+          "International Rail Freight Transport",
+          "Railway Freight-Forwarding: Payment of import-export and transit rail tariffs",
+          "Provision of Rolling Stock"
         ]
       }
     },
     "section3": {
-      "title": "Freight Forwarding: Rail Rates",
-      "subtitle": "Our Company establishes itself as leading choice at the market of rail rates payment and we have direct agreement with Railways",
-      "description": "Some of the countries that we deliver to",
+      "title": "Rail Freight-Forwarding: Calculation and Payment of Railway Rates",
+      "subtitle": "We are one of the leading companies in the market for railway tariff payment in the CIS countries, China, and Russia, thanks to long-term and reliable cooperation with the railways of regional countries and its partners.",
+      "description": "The regions, we provide our services",
       "calculation": {
-        "title": "Calculate Your Transportation",
+        "title": "Calculate Your Railway Transportation",
         "formPlaceholders": {
           "placeholder1": "Departure Station",
           "placeholder2": "Destination Station",
@@ -228,14 +227,14 @@
     },
     "section4": {
       "title": "Provision of Rolling Stock",
-      "subtitle": "We offer services on provision of rolling stock according to the customer request. Our Logistics Specialists will assign a right rolling stock specifically to your cargo."
+      "subtitle": "We offer services on the provision of rolling stock according to the customer's special requests. Our Logistics Specialists will assign the right wagon specifically to your cargo."
     },
     "section5": {
       "title": "Our Clients Say"
     },
     "section6": {
-      "title": "Dependable transportation",
-      "description": "These people work to make each freight successful and each the client satisfied.",
+      "title": "Reliable transportation",
+      "description": "A team of professionals works to ensure that every shipment is successful, and every client is satisfied.",
       "subtitle": "Meet the team"
     },
     "section7": {

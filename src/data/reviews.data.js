@@ -14,7 +14,7 @@ export const reviewsData = [
     status: true,
   },
   {
-    text: '',
+    text: 'We highly appreciate our well-established partner relationships and our mutual understanding with your company. We would like to highlight the professionalism level of your specialists and are grateful for your timeliness in all issues.',
     name: 'Kaldybekov E.',
     position: 'General Director',
     id: 2,

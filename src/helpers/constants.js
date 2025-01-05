@@ -177,7 +177,7 @@ export const HEADER_BURGER_MENU = [
     subLinks: [
       {
         link: '/contact?form=0#contactContentSection',
-        title: 'menu.getInTouch',
+        title: 'buttons.contactUs',
         subtitle: 'Reach out to us through the contact form',
         ariaLabel: 'Get in touch with us through the contact form',
       },

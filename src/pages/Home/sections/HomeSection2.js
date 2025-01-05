@@ -126,19 +126,19 @@ const HomeSection2 = () => {
 
               <FlexGap10 sx={{ mt: { md: 3, xs: 2 } }}>
                 <DefaultButton
-                  to="/services"
                   component={Link}
                   variant="contained"
-                >
-                  {t('buttons.learnMore')}
-                </DefaultButton>
-
-                <DefaultButton
-                  component={Link}
-                  variant="outlined"
                   to="/contact?form=0#contactContentSection"
                 >
                   {t('buttons.order')}
+                </DefaultButton>
+
+                <DefaultButton
+                  to="/services"
+                  component={Link}
+                  variant="outlined"
+                >
+                  {t('buttons.learnMore')}
                 </DefaultButton>
               </FlexGap10>
             </Box>
@@ -160,7 +160,7 @@ const HomeSection2 = () => {
               }}
             >
               <Typography mb={2} sx={{ fontWeight: 'bold' }} variant="h5">
-                {t(`${translationKey}.otherServices.title`)}
+                {t(`${translationKey}.otherServices.title`)}:
               </Typography>
 
               {otherServicesList.map((el, ind) => (

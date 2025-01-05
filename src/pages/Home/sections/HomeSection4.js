@@ -64,19 +64,15 @@ const HomeSection4 = () => {
 
             <FlexGap10 sx={{ mt: { lg: 5, sm: 3, xs: 2 } }}>
               <DefaultButton
-                to="/services"
                 component={Link}
                 variant="contained"
-              >
-                {t('buttons.learnMore')}
-              </DefaultButton>
-
-              <DefaultButton
-                component={Link}
-                variant="outlined"
                 to="/contact?form=0#contactContentSection"
               >
                 {t('buttons.order')}
+              </DefaultButton>
+
+              <DefaultButton to="/services" component={Link} variant="outlined">
+                {t('buttons.learnMore')}
               </DefaultButton>
             </FlexGap10>
           </Grid>

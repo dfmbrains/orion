@@ -36,7 +36,8 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: 'Executive Director',
-    about: '',
+    about:
+      "Our company's Executive Director, Anvar, began his career in 2016, where he spent many years growing and developing as a logistics professional. He distinguished himself through the quality and efficiency of his work, and as our leader, he continually inspires his team and pushes the boundaries of their potential.",
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -98,7 +99,8 @@ export const teamData = [
     birthDate: '19/08/1998',
     gender: 1,
     position: 'Commercial Director',
-    about: '',
+    about:
+      "Madina holds a unique education in business, acquired in Malaysia and Italy. She brings international experience and a strategic approach to the company's operations, achieving high results in commercial management.",
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2021',
@@ -160,7 +162,8 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: 'Head of Logistics Department (Container Transportation)',
-    about: '',
+    about:
+      'With 8 years of professional experience, Akim effectively manages containers and other types of transportation. He successfully coordinates team operations, solves complex logistics problems, and always finds optimal solutions for clients, ensuring seamless transportation.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -222,7 +225,8 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: 'Logistics Manager',
-    about: '',
+    about:
+      'Karina effectively solves problems and finds an individual approach to each client. Over the two years she has been with the company, she has shown excellent organizational skills, a systematic approach to work, and the ability to quickly adapt to changes.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -284,7 +288,8 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: 'Logistics Specialist from China to CIS countries',
-    about: '',
+    about:
+      'Her higher education in China, along with an excellent command of the Chinese language and in-depth knowledge of the country, enables her to professionally organize logistics from China to the CIS countries.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -346,7 +351,8 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: 'Logistics Manager',
-    about: '',
+    about:
+      'Azim is an experienced logistics specialist who can quickly solve tasks of any complexity. His attention to detail and ability to work in multitasking conditions make him an indispensable part of our team.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -408,7 +414,8 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: 'Logistics Manager',
-    about: '',
+    about:
+      'In a short period, Vladimir has demonstrated high professionalism and excellent analytical skills. He quickly adapted to the market specifics and showed confidence in solving any transportation-related tasks.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -470,7 +477,8 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: 'Chief Accountant',
-    about: '',
+    about:
+      'With over 10 years of experience with the company, Anna is the backbone of our financial management. She controls all financial operations, monitors the budget, and actively participates in strategic decision-making. Her excellent command of accounting and finance, coupled with years of experience, makes her an indispensable member of our team.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -532,7 +540,8 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: 'Accountant',
-    about: '',
+    about:
+      'A highly qualified accountant with attention to detail, Olga approaches her work with precision and responsibility. She ensures accurate calculations and timely reporting, playing a crucial role in the financial stability of the company.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -594,7 +603,8 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: 'Office Manager',
-    about: '',
+    about:
+      'With us since 2010, from the very start of the company. He is responsible for the efficient operation of the office, managing administrative tasks, and always keeping an eye on the needs of the team, creating a friendly atmosphere in the workplace.',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
