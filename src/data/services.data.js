@@ -41,21 +41,42 @@ export const servicesData = [
     id: '9',
     language: 'en',
     created: '11/25/2024',
-    title: 'Orion Trans',
-    subtitle: '',
+    title: 'International Rail Freight Transport',
+    subtitle: 'International Rail Freight Transport',
     images: { file: ServiceImg1, name: 'wagons' },
     content: [
       {
-        text: '',
-        title: '',
+        text: "What you need to know about Orion-Trans' international railway freight services",
+        title:
+          'Rail freight transportation is an efficient way to move goods over long distances with a good balance of price, quality, and delivery time. Orion-Trans, with over 10 years of experience in logistics and forwarding, ensures the complete transportation cycle—from tariff calculations and payments to the necessary documentation. Our specialists will offer the best solution for your cargo, considering all aspects of its transportation. Orion-Trans partners with reliable representatives of the railway networks in the CIS countries and other regions, guaranteeing safety and reliability.',
       },
       {
-        title: '',
+        title: 'Why Choose Rail Freight Transportation?',
+        text: 'Rail freight is an ideal choice for transporting heavy and oversized goods such as raw materials, equipment, and products. It offers high shipping volumes and a high level of safety. By choosing Orion-Trans, you benefit from professional support at every stage, competitive tariffs, and quality service. We work to make your logistics simple, reliable, and convenient.',
+      },
+      {
+        title: 'Why Choose Our Rail Freight Services?',
         text: '',
       },
       {
-        title: '',
-        text: '',
+        title: 'Reliable Partnerships:',
+        text: 'We have direct agreements with reliable railway service providers in multiple countries, ensuring secure and efficient transportation. Our 15 years of experience confirm our high professionalism and responsibility.',
+      },
+      {
+        title: 'Comprehensive Cargo Transport Solutions',
+        text: 'We organize the transportation of any type and volume of cargo, managing the entire process and providing up-to-date information about your cargo’s location.',
+      },
+      {
+        title: 'Free Consultation & Tariff Calculations',
+        text: 'You will receive detailed consultation on every stage of transportation. We offer free preliminary rail tariff calculations for any route.',
+      },
+      {
+        title: 'High Quality of Service',
+        text: 'Our services are consistently of high quality, thanks to our experienced specialists who are ready to assist you at any time.',
+      },
+      {
+        title: 'Tailored Wagon Selection',
+        text: 'We will provide the right type of wagon for your needs—covered wagons, gondola cars, tank wagons, platforms, or containers—and offer optimal routes for delivering your cargo.',
       },
     ],
   },
@@ -121,25 +142,35 @@ export const servicesData = [
     id: '11',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title:
+      'Railway Freight-Forwarding: Payment of import-export and transit rail tariffs',
+    subtitle:
+      'Rail Freight Forwarding: Calculation and Payment of Rail Tariffs for Export, Import, and Transit Tariffs',
     images: { name: '', file: ServiceImg2 },
     content: [
       {
-        title: '',
-        text: '',
+        title: 'What you need to know about freight forwarding',
+        text: 'Rail freight forwarding is a complex procedure that coordinates and monitors the movement of goods by rail. This process requires a professional approach to minimize delays, downtime, and additional costs. Freight forwarding is especially crucial for international and transit shipments, where accuracy and coordination are key. Today, rail freight forwarding remains one of the most cost-effective methods of transportation, suitable for a wide variety of cargo types, including empty and loaded wagons, as well as containers.',
+      },
+      {
+        title: 'What does rail freight forwarding include?',
+        text: 'Our freight forwarding services cover export, import, and transit shipments. We handle various types of cargo, including bulk, liquid, containerized, hazardous, and other goods, as well as empty and loaded wagons/containers, across territories including Uzbekistan (UTI), Kyrgyzstan (KRG), Turkmenistan (TKM), Tajikistan (TJK), Kazakhstan (KAZ), China (PRC), Afghanistan (AFG), Iran (IRN), and Russia (RZD).',
       },
       {
         title: '',
-        text: '',
+        text: 'Rail freight forwarding includes the calculation of rail transport costs, which takes into account additional fees and security expenses. For this, we use specialized software to calculate the most accurate tariff for your shipment. Since every transportation job is unique and requires a tailored approach, we consider factors such as the route, type of cargo, rolling stock, and prepare all the necessary documents for cargo accompaniment. We also coordinate the movement of goods at every stage of the journey.',
       },
       {
         title: '',
-        text: '',
+        text: 'Upon request, we can arrange cargo security through our trusted partners, which is an additional service we offer to ensure the safety of your shipment.',
       },
       {
         title: '',
-        text: '',
+        text: 'Thanks to our experience and high professionalism, we do everything possible to ensure your transport is carried out smoothly and efficiently.',
+      },
+      {
+        title: '',
+        text: 'By choosing us, you gain a reliable partner for freight forwarding at favorable terms!',
       },
     ],
   },
@@ -204,21 +235,26 @@ export const servicesData = [
     id: '13',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: 'Provision of Rolling Stock',
+    subtitle: 'Provision of Rolling Stock',
     images: { name: '', file: ServiceImg3 },
     content: [
       {
         title: '',
-        text: '',
+        text: 'Orion-Trans offers the provision of rolling stock of various types such as gondola cars, covered wagons, platforms, specialized wagons, and others. Our specialists will assign the right rolling stock specifically to your cargo.',
       },
       {
-        title: '',
-        text: '',
+        title:
+          "What you should know about Orion-Trans' provision of rolling stock services.",
+        text: 'OrionTrans offers you services for the provision of rail transportation with rolling stock of any type (gondola cars, platforms, covered wagons, specialized rolling stock) to transport your goods across nations. Our specialists, which include operators of almost all types of railway rolling stock, will select the rolling stock that is optimally suited for the transportation of your cargo and organize transportation by rail.',
       },
       {
-        title: '',
-        text: '',
+        title: 'What are the advantages of rolling stock?',
+        text: 'Rolling stock provides a planned supply of empty wagons for loading according to an agreed schedule which allows free time for loading and unloading of goods. The railway today continues to be a key carrier of bulk cargo. With the help of rail transport, 80% of industrial goods and raw materials could be delivered. Rolling stock is optimally suited for transporting in bulks and cargo, and organizing transportation by rail.',
+      },
+      {
+        title: 'Why use OrionTrans provision of rolling stock?',
+        text: "OrionTrans offers the provision of rolling stock of various types such as gondola cars, covered wagons, platforms, specialized wagons, and others. Our specialists will assign the right rolling stock specifically to your cargo. We also assist in coordinating plans for the transportation of goods within the territory of the Russian Federation, through land border crossings, and through ports. Close interaction with a wide network of owners of wagons, containers, cars allows us to guarantee the export of the planned volume according to the client's schedule and favorable rates.",
       },
     ],
   },
@@ -294,33 +330,33 @@ export const servicesData = [
     id: '15',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: 'Railway Container Transportation',
+    subtitle: 'Railway Container Transportation',
     images: { name: '', file: ServiceImg4 },
     content: [
       {
-        title: '',
-        text: '',
+        title: 'What you need to know about container transport',
+        text: 'Rail containers are the ideal solution for transporting goods over long distances. This type of transport is one of the most cost-effective, progressive, and convenient options available. The cost of container transport is significantly lower due to reduced expenses for containers and warehouse costs. Additionally, container transport offers the advantage of significant savings in loading and unloading operations. For all these reasons, container transport remains the most cost-effective method for the fast transportation of large volumes of cargo.',
+      },
+      {
+        title: 'Why choose rail containers with Orion-Trans?',
+        text: 'Rail container transport allows you to transport almost any type of cargo, regardless of its size or weight, both domestically and internationally. Container transport is particularly active for shipments from China to the CIS countries and back to China. Additionally, there is consolidated container shipping, which is a great option for smaller shipments, where the customer pays for the space occupied by their goods in the container.',
+      },
+      {
+        title: 'How is rail container transport organized?',
+        text: 'Loading and unloading of containers are carried out using specialized equipment, adapted to standard container sizes. Mechanized loading and unloading reduce delivery times and eliminate the risk of human error.',
+      },
+      {
+        title: 'Rail Container Transport as Part of Multimodal Transport',
+        text: 'Container transport is an optimal choice for multimodal transportation. One of the key advantages of using containers for transporting goods between China and the CIS countries, including Kyrgyzstan, is the ability to overcome differences in rail track gauges. In China, the standard track gauge (1435 mm) is used, while in the CIS countries, a wider gauge (1520 mm) is employed. At the border with China, at the transition points, containers are transferred from one train to another or to another form of transport, which helps minimize logistics costs and reduces idle time. This process makes container transport more convenient and efficient.',
+      },
+      {
+        title: 'Additional benefits of container transport:',
+        text: 'Versatility: Containers are suitable for transporting various types of goods, including bulk, consolidated, hazardous, and temperature-sensitive cargo. Cargo protection: Containers offer reliable protection from external factors such as weather conditions and mechanical damage. Cost savings: Container transport helps reduce costs related to loading and unloading and minimizes the risk of cargo loss or damage.Flexible routes: The ability to combine rail transport with road and other types of transportation makes container shipping particularly convenient for multimodal routes. For example, shipping goods from China to the CIS countries via road checkpoints, and then using rail transport to reach the Caspian and Black Sea ports.',
       },
       {
         title: '',
-        text: '',
-      },
-      {
-        title: '',
-        text: '',
-      },
-      {
-        title: '',
-        text: '',
-      },
-      {
-        title: '',
-        text: '',
-      },
-      {
-        title: '',
-        text: '',
+        text: 'Container transport between China and Kyrgyzstan, as well as other CIS countries, is a reliable and cost-effective way to deliver goods that meets the needs of modern businesses.',
       },
     ],
   },
@@ -381,7 +417,7 @@ export const servicesData = [
     id: '17',
     language: 'en',
     created: '11/25/2024',
-    title: '',
+    title: 'Daily Wagon Deployment',
     subtitle: '',
     images: { name: '', file: ServiceImg5 },
     content: [
@@ -424,13 +460,33 @@ export const servicesData = [
     id: '19',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: 'For Whom are our Services?',
+    subtitle: 'For whom are our services',
     images: { name: '', file: ServiceImg6 },
     content: [
       {
-        title: '',
-        text: '',
+        title: 'Logistics Companies',
+        text: 'If you are a logistics or freight forwarding company, we can become your reliable partner for organizing complex rail transport operations. By partnering with us, you will be able to improve and streamline your railway freight processes. Additionally, if you are a wagon owner and need rail codes for cargo transportation across the regions of Uzbekistan, Tajikistan, Turkmenistan, Iran, Russia, Kazakhstan, and other countries, feel free to contact us.',
+      },
+      {
+        title: 'Construction Companies',
+        text: 'Construction projects require the delivery of materials such as cement, steel, and heavy machinery. Our rail freight services offer a cost-effective and reliable solution for transporting construction materials directly to construction sites, minimizing delays and ensuring smooth operations.',
+      },
+      {
+        title: 'Industrial and Manufacturing Enterprises',
+        text: 'For industrial companies, stable supply chains are the foundation of successful operations. We specialize in transporting both raw materials and finished products, providing a constant and efficient rail freight solution that aligns with your production timelines.',
+      },
+      {
+        title: 'Entrepreneurs',
+        text: 'We support entrepreneurs by offering flexible solutions for transporting small and medium-sized goods. If you’re looking for professional support with competitive pricing to handle larger volumes, our services make large-scale logistics accessible for businesses of all sizes.',
+      },
+      {
+        title: 'Importers and Exporters',
+        text: "International trade can be complex, but with our expertise in rail logistics, we simplify the process. If you're transporting goods across borders, you’ll need a partner who is familiar with international freight regulations.",
+      },
+      {
+        title: 'Vehicle Transport',
+        text: 'Transporting vehicles requires precision and care. Our rail services ensure safe and efficient vehicle transportation, whether you are a manufacturer, dealer, or an individual sending just one vehicle. If you are looking for a cost-effective alternative to road transport for long distances, we offer safe, specialized vehicle transport services.',
       },
     ],
   },
@@ -468,13 +524,25 @@ export const servicesData = [
     id: '21',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: 'Shipping Documents Processing for Rail Freight Transportation',
+    subtitle: 'Shipping Documents Processing',
     images: { name: '', file: ServiceImg7 },
     content: [
       {
+        title: 'Meaning of Document Processing',
+        text: 'Every shipment managed has a number of paperwork that must be processed. Our team will take care of the documents processing and shipment, so you can save time and money enjoying our services.',
+      },
+      {
+        title: 'The List of Documents in Logistics',
+        text:
+          'Documents in logistics can be divided into the following categories: a) Consignment note\n' +
+          'It is the most important document in the rail freight process. This document is given by the consigner. Consignment has the basic information about the cargo, which are cargo characteristics, fee,  amount and weight. It also has the original stamps. Consignment with the original stamps are created in 4 copies. One copy is kept by the consigner, the second copy is kept by the consignee, the third copy is kept by the carrier and the last fourth copy is kept by us, further which we will send electronically to our client with an invoice for payment. b) Waybill\n' +
+          'This document contains important information about the freight deadlines and the information about trans-shipment stations. They followed the volume and deadline of the freight. This document is sent by the consigned , where the first copy accompanies until the destination station, where it should be shown to the cargo receiver. The second copy should be left at the dispatching station. c) The agreement between cosigner and consignee\n' +
+          'This document is not a compulsory one, however they should be prepared to avoid any negative circumstances and problems.',
+      },
+      {
         title: '',
-        text: '',
+        text: 'All of the foregoing documents must contain information that is consistent with one another. The information on the invoice must match the information on the transport documents and documents provided by the government. To put it another way, each document should be part of a larger image that depicts the cargo from all angles. There will be no queries from the carriers, cargo owners, or customs services in this situation.',
       },
     ],
   },
@@ -511,13 +579,29 @@ export const servicesData = [
     id: '23',
     language: 'en',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: 'Individual Consultation on Railway Transportation',
+    subtitle: 'Individual Consultation on Railway Transportation',
     images: { name: '', file: ServiceImg8 },
     content: [
       {
         title: '',
-        text: '',
+        text: 'Orion-Trans has been a trusted name in cargo transportation since 2012. Over the years, we have successfully provided expert consultations and established strong partnerships with leading transport companies worldwide. Our business processes are designed to deliver a comprehensive range of high-quality services, ensuring that we meet your every logistics need.',
+      },
+      {
+        title: '',
+        text: 'By reaching out to us, you can receive a free consultation tailored to your specific requirements.',
+      },
+      {
+        title: '',
+        text: "The pandemic has shaped our consultation services, and our team is now fully equipped to offer support both online and offline. Whether you're looking for guidance on freight transport or logistics solutions, Orion-Trans is here to provide you with reliable and expert advice.",
+      },
+      {
+        title: '',
+        text: 'To schedule your free consultation, simply fill out the form or contact us directly on WhatsApp. Our specialists will arrange a convenient time for you.',
+      },
+      {
+        title: '',
+        text: "Call or message us today, and we'll ensure your cargo reaches its destination quickly and safely!",
       },
     ],
   },

@@ -242,7 +242,7 @@
     }
   },
   "about": {
-    "promo1": "About Us",
+    "promo1": "About us",
     "promo2": "Meet our Team",
     "section1": {
       "title": "We are <span>Orion-Trans</span> Providing You with the most actionable Rail Freight Service",
@@ -259,19 +259,20 @@
     },
     "section4": {
       "title1": "Our <span>Mission</span>",
-      "subtitle1": "To ensure businesses with all the necessary freight-forwarding services on the market: to be the most secure and trusted freight-forwarding company for the businesses, and to continuously improve the quality level of the services and work approach for the sake of the businesses.",
+      "subtitle1": "To provide businesses with all the essential transport and freight forwarding services available in the market, continuously improving the quality of services and the approach to executing tasks.",
       "title2": "Our <span>Vision</span>",
-      "subtitle2": "We see ourselves as the number one secure freight-forwarding company on the logistics market, who ensure new innovative logistics services to our clients and partners and create and develop convenient workplaces our team."
+      "subtitle2": "We aim to become leaders in railway logistics by offering a complete range of services and enhancing the comfort and conditions for our employees."
     },
     "section5": {
       "title1": "Our <span>Goal</span>",
-      "subtitle": "Efficiently organize and accompany rail freight transportation, creating a fast, convenient and accessible rail freight.",
+      "subtitle": "To organize the entire process of railway logistics – safely and efficiently, implementing modern technologies. Our goal is also to build a strong corporate culture that supports both the professional development and well-being of our employees.",
       "title2": "Our <span>Objectives</span>",
       "objectives": [
-        "Create an efficient chain of partnership with the railways, transport companies, and other freight-forwarding companies.",
-        "Continuously improve the quality level of professionalism and skills of our team - logistics specialists.",
-        "Enhance the quality of customer services and meet their requests",
-        "Integrating and developing the modern innovative technology to create more efficient and accessible freight-forwarding solutions for our clients and partners."
+        "Build effective partnerships with railways and logistics companies.",
+        "Improve the speed and quality of customer service, promptly addressing their needs.",
+        "Train and develop employees to enhance their qualifications.",
+        "Continuously improve working conditions within the company.",
+        "Implement innovations to create more efficient logistics solutions."
       ]
     },
     "section6": {
@@ -289,12 +290,12 @@
         },
         {
           "title": "Quick Response",
-          "subtitle": "Our team processes service requests in less than 10 minutes",
+          "subtitle": "Our team processes requests within 20 minutes, providing you with the necessary information without delays.",
           "icon": "quickreply"
         },
         {
           "title": "Professional Specialists",
-          "subtitle": "Orion-Trans has a high-qualified logistics specialists with more than 8 - 10 years of experience in providing freight-forwarding services.",
+          "subtitle": "Orion-Trans has a high-qualified logistics specialists with more than 12 years of experience in providing freight-forwarding services.",
           "icon": "badge"
         },
         {
@@ -303,13 +304,13 @@
           "icon": "support_agent"
         },
         {
-          "title": "Efficiency",
-          "subtitle": "Our team’s professionalism will ensure a fast and reliable transport organization.",
+          "title": "Comfort and Transparency",
+          "subtitle": "Our specialists are always ready to provide consultations, assist in choosing the optimal solution, and respond quickly to any requests, ensuring a personalized approach to each client.",
           "icon": "thumb_up_alt"
         },
         {
-          "title": "Direct Agreements With Railways",
-          "subtitle": "We cooperate directly with railways of Kyrgyz Republic and the official railways representatives of Kazakhstan, Uzbekistan, Tadjikistan, Turkmenistan, Russia, Afghanistan and Iran.",
+          "title": "Reliable Partners",
+          "subtitle": "We have direct agreements with the railways of Kyrgyzstan, Tajikistan, Russia, and Kazakhstan, and also collaborate with official representatives of the railways in Uzbekistan, Turkmenistan, Afghanistan, Azerbaijan, and Georgia.",
           "icon": "gpp_good"
         }
       ]
@@ -318,7 +319,7 @@
       "title": "Our Core Values",
       "list": [
         {
-          "title": "Integrity & Honesty",
+          "title": "Honesty, Reliability and Responsibility",
           "icon": "health_and_safety"
         },
         {
@@ -326,11 +327,11 @@
           "icon": "account_tree"
         },
         {
-          "title": "Value Our People",
+          "title": "Innovation",
           "icon": "auto_mode"
         },
         {
-          "title": "Continuous Improvement",
+          "title": "Creativity",
           "icon": "tips_and_updates"
         },
         {
@@ -338,7 +339,7 @@
           "icon": "diversity_3"
         },
         {
-          "title": "Direct Agreements With Railways",
+          "title": "Continuous Improvement",
           "icon": "self_improvement"
         }
       ]
@@ -352,10 +353,10 @@
     "promo": "Services",
     "section1": {
       "title": "Service That Lead The Way To Better <span>Business</span>",
-      "subtitle": "We offer a full range of railway logistics services, ensuring reliability and timeliness. Our specialists will provide you with optimal rates and professional consultations, while our individual approach will help solve any of your requests. By choosing Orion-Trans, you receive quality and reliability proven over time."
+      "subtitle": "We provide a full range of railway logistics services, ensuring reliability and timeliness. Our specialists will offer you the best rates and professional consultations, while our personalized approach will address any of your needs. By choosing Orion-Trans, you get quality and reliability that are proven by time."
     },
     "section2": {
-      "title": "For whom are our <span>services?</span>",
+      "title": "For whom are our <span>Services?</span>",
       "list": [
         {
           "title": "Logistics Companies",
@@ -396,14 +397,14 @@
       "clients": "clients",
       "partners": "partners",
       "testimonials": "testimonials",
-      "title": "We Work With The <br/> Best <span>{{item}}</span>",
+      "title": "<span>{{item}},</span> <br/> who trust us",
       "selectedClients": {
         "title": "clients",
-        "subtitle": "Наши клиенты — это лидеры в своих отраслях, которые доверяют нам важные и ответственные задачи, включая организацию железнодорожных грузоперевозок и экспедирование. Мы ценим их выбор и всегда стремимся оправдать их ожидания, предлагая оптимальные решения для бизнеса и обеспечивая надежность, безопасность и оперативность на всех этапах транспортировки."
+        "subtitle": "Our clients are leaders in their industries who trust us with important and responsible tasks, including organizing rail freight transportation and freight forwarding. We value their choice and always strive to meet their expectations by offering optimal business solutions and ensuring reliability, safety, and efficiency at every stage of transportation."
       },
       "selectedPartners": {
         "title": "partners",
-        "subtitle": "Наши партнеры — это официальные представительства железных дорог и напрямую сами железные дороги, такие как РЖД, Казахстанские железные дороги (КТЖ), Кыргыз Темир Жолу, Узбекская железная дорога, Таджикская железная дорога, с которыми мы поддерживаем долгосрочные и надежные отношения. Кроме того, мы активно сотрудничаем с ведущими экспедиторами железных дорог, которые доверяют именно нашей компании, что позволяет нам оперативно решать любые задачи, обеспечивая надежность и эффективность перевозок."
+        "subtitle": "Our partners include official railway representatives and the railways themselves, such as Russian Railways (RZD), Kazakhstan Temir Zholy (KTZ), Kyrgyz Temir Jolu and Tajikistan Railways, with whom we maintain long-term and reliable relationships. In addition, we actively collaborate with leading railways’ representatives, which are Uzbekistan, Iran, Afghanistan, Giorgia, Azerbaijan and other regions, who trust us, enabling us to efficiently address any challenges and ensure the reliability and effectiveness of transportation services."
       },
       "subtitle": "The use of railroads and trains to convey cargo on land is known as rail freight transport. Rail transport is popular, especially in continents with extensive journey durations, such as China, Russia, the United States and Europe. Freight trains can transport a variety of cargo, including freight containers, automobiles, cattle, grains, coal, minerals and metals. Bulk goods, standardized shipping containers, or particularly constructed carriages for a specific sort of freight can all be transported by freight trains. Rail freight travels far more quickly than ocean freight. It costs more than sea freight, but less than air freight. Moving high-value industrial products like automobiles, electronics, and computer equipment, as well as promotional items, by train is ideal."
     }
@@ -415,7 +416,7 @@
     "promo": "Contact Us",
     "content": {
       "title": "Get in touch with us",
-      "subtitle": "We are professional logistics specialists with a passion for quality and efficiency. We believe in integrity, trust, and continuous improvement. We promise to listen and provide You with reliable freight forwarding services over the globe.",
+      "subtitle": "We will provide you with support in forwarding empty and loaded wagons and offer consultations on all your inquiries.",
       "supportCenter": "support center",
       "ourLocation": "Our Location",
       "writeUs": "Write to us",
