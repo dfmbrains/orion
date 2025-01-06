@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const ReCAPTCHAComponent = ({ setResult }) => {
   const { t } = useTranslation();
 
-  const [captchaError, setCaptchaError] = useState(true);
+  const [captchaError, setCaptchaError] = useState(false);
 
   const handleCaptchaChange = value => {
     if (value) {
