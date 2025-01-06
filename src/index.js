@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import App from 'App';
 import i18n from 'locales/index';
@@ -30,5 +31,6 @@ root.render(
     </BrowserRouter>
 
     <SpeedInsights />
+    <Analytics />
   </>,
 );
