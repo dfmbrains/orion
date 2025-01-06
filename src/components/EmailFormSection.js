@@ -82,7 +82,7 @@ const EmailFormSection = ({ background }) => {
           <Typography mb={1} variant="h4" color="#1B1B1B">
             {t('emailFormSection.title')}
           </Typography>
-          <Typography mb={{ lg: 6, md: 4, xs: 2 }} variant="h5" color="#8A8A8A">
+          <Typography mb={{ lg: 6, md: 4, xs: 2 }} variant="h5" color="#545454">
             {t('emailFormSection.subtitle')}
           </Typography>
 
@@ -95,7 +95,9 @@ const EmailFormSection = ({ background }) => {
                 size="small"
                 name="email"
                 value={email}
+                id="emailInput"
                 variant="outlined"
+                aria-label="Email Input"
                 label={t('emailFormSection.placeholder')}
                 onChange={e => setEmail(e.target.value)}
               />
