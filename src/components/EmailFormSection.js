@@ -30,44 +30,49 @@ const EmailFormSection = ({ background }) => {
 
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const [CAPTCHAResult, setCAPTCHAResult] = useState(false);
+  const [CAPTCHAResult, setCAPTCHAResult] = useState(null);
 
   const handleSubmit = e => {
-    if (CAPTCHAResult) {
-      e.preventDefault();
-      setLoading(true);
+    e.preventDefault();
 
-      emailjs
-        .send(
-          EMAIL_JS_SERVICE_ID,
-          EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
-          {
-            email: email,
-            'g-recaptcha-response': CAPTCHAResult,
-          },
-          EMAIL_JS_PUBLIC_KEY,
-        )
-        .then(
-          () => {
-            setLoading(false);
-            enqueueSnackbar('Ваша почта отправлена', { variant: 'success' });
+    if (!CAPTCHAResult) {
+      enqueueSnackbar(t('snackbarTexts.robot'), { variant: 'warning' });
+      return;
+    }
 
-            setEmail('');
-          },
-          error => {
-            setLoading(false);
-            console.error(error);
+    setLoading(true);
 
-            enqueueSnackbar('Попробуйте позже', { variant: 'error' });
-          },
-        )
-        .catch(error => {
+    emailjs
+      .send(
+        EMAIL_JS_SERVICE_ID,
+        EMAIL_JS_TEMPLATE_ID_FOR_EMAIL,
+        {
+          email: email,
+          'g-recaptcha-response': CAPTCHAResult,
+        },
+        EMAIL_JS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setLoading(false);
+          enqueueSnackbar('Ваша почта отправлена', { variant: 'success' });
+
+          setCAPTCHAResult(null);
+          setEmail('');
+        },
+        error => {
           setLoading(false);
           console.error(error);
 
           enqueueSnackbar('Попробуйте позже', { variant: 'error' });
-        });
-    }
+        },
+      )
+      .catch(error => {
+        setLoading(false);
+        console.error(error);
+
+        enqueueSnackbar('Попробуйте позже', { variant: 'error' });
+      });
   };
 
   return (

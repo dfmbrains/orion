@@ -34,11 +34,13 @@
     "goBack": "Вернуться назад"
   },
   "snackbarTexts": {
+    "robot": "Пожалуйста, подтвердите, что вы не робот",
     "letter": "Письмо отправлено",
     "review": "Отзыв отправлен",
     "error": "Попробуйте снова позже"
   },
   "validation": {
+    "captchaError": "Пожалуйста, пройдите проверку reCAPTCHA",
     "requiredName": "Имя обязательно!",
     "requiredPhoneNumber": "Номер телефона обязателен!",
     "requiredEmail": "Email обязателен!"

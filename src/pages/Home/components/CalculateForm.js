@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import DefaultButton from 'components/DefaultButton';
 import { FlexBox } from 'components/FlexBox';
+import ReCAPTCHAComponent from 'components/ReCAPTCHA';
 import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
@@ -55,21 +56,32 @@ const CalculateForm = ({ translationKey }) => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [CAPTCHAResult, setCAPTCHAResult] = useState(null);
 
   const handleSubmitForm = values => {
+    if (!CAPTCHAResult) {
+      enqueueSnackbar(t('snackbarTexts.robot'), { variant: 'warning' });
+      return;
+    }
+
     setLoading(true);
 
     emailjs
       .send(
         EMAIL_JS_SERVICE_ID,
         EMAIL_JS_TEMPLATE_ID_FOR_CALCULATION,
-        values,
+        {
+          ...values,
+          'g-recaptcha-response': CAPTCHAResult,
+        },
         EMAIL_JS_PUBLIC_KEY,
       )
       .then(
         () => {
           setLoading(false);
           enqueueSnackbar(t('snackbarTexts.letter'), { variant: 'success' });
+
+          setCAPTCHAResult(null);
         },
         error => {
           setLoading(false);
@@ -274,9 +286,12 @@ const CalculateForm = ({ translationKey }) => {
               isLoadingButton
               loading={loading}
               variant="contained"
+              disabled={!CAPTCHAResult}
             >
               {t('buttons.calculate')}
             </DefaultButton>
+
+            <ReCAPTCHAComponent setResult={setCAPTCHAResult} />
           </form>
         );
       }}

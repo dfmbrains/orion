@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { LoadingButton } from '@mui/lab';
 import { Grid, TextField } from '@mui/material';
+import ReCAPTCHAComponent from 'components/ReCAPTCHA';
 import { Formik } from 'formik';
 import {
   EMAIL_JS_PUBLIC_KEY,
@@ -34,21 +35,32 @@ const ContactForm = ({ translationKey }) => {
   const { enqueueSnackbar } = useSnackbar();
 
   const [loading, setLoading] = useState(false);
+  const [CAPTCHAResult, setCAPTCHAResult] = useState(null);
 
   const handleSubmitForm = values => {
+    if (!CAPTCHAResult) {
+      enqueueSnackbar(t('snackbarTexts.robot'), { variant: 'warning' });
+      return;
+    }
+
     setLoading(true);
 
     emailjs
       .send(
         EMAIL_JS_SERVICE_ID,
         EMAIL_JS_TEMPLATE_ID_FOR_CONTACT,
-        values,
+        {
+          ...values,
+          'g-recaptcha-response': CAPTCHAResult,
+        },
         EMAIL_JS_PUBLIC_KEY,
       )
       .then(
         () => {
           setLoading(false);
           enqueueSnackbar(t('snackbarTexts.letter'), { variant: 'success' });
+
+          setCAPTCHAResult(null);
         },
         error => {
           setLoading(false);
@@ -153,15 +165,18 @@ const ContactForm = ({ translationKey }) => {
 
             <LoadingButton
               sx={{ mt: 7, mb: 1 }}
-              size={'large'}
-              color="primary"
-              variant="contained"
               fullWidth
-              loading={loading}
+              size="large"
               type="submit"
+              color="primary"
+              loading={loading}
+              variant="contained"
+              disabled={!CAPTCHAResult}
             >
               {t('buttons.send')}
             </LoadingButton>
+
+            <ReCAPTCHAComponent setResult={setCAPTCHAResult} />
           </form>
         );
       }}

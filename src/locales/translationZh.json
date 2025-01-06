@@ -34,11 +34,13 @@
     "goBack": "返回"
   },
   "snackbarTexts": {
+    "robot": "请确认您不是机器人",
     "letter": "邮件已发送",
     "review": "评论已发送",
     "error": "稍后再试"
   },
   "validation": {
+    "captchaError": "请完成 reCAPTCHA 验证",
     "requiredName": "姓名是必填项！",
     "requiredPhoneNumber": "手机号是必填项！",
     "requiredEmail": "邮箱是必填项！"

@@ -34,11 +34,13 @@
     "goBack": "Go Back"
   },
   "snackbarTexts": {
+    "robot": "Please prove you are not a robot",
     "letter": "The letter was sent",
     "review": "The review was sent",
     "error": "Try again later"
   },
   "validation": {
+    "captchaError": "Please complete the CAPTCHA",
     "requiredName": "Name is required!",
     "requiredPhoneNumber": "Phone number is required!",
     "requiredEmail": "Email is required!"

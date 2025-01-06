@@ -11,7 +11,7 @@ const HashAutoScroll = ({ children }) => {
     } else {
       handleScrollToTop();
     }
-  }, [location]);
+  }, [location.pathname, location.hash]);
 
   return children;
 };
