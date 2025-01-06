@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import App from 'App';
 import i18n from 'locales/index';
 import { SnackbarProvider } from 'notistack';
@@ -11,19 +12,23 @@ import OrionTheme from 'styles/OrionTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <RecoilRoot>
-      <SnackbarProvider
-        maxSnack={3}
-        autoHideDuration={3000}
-        anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
-      >
-        <OrionTheme>
-          <I18nextProvider i18n={i18n}>
-            <App />
-          </I18nextProvider>
-        </OrionTheme>
-      </SnackbarProvider>
-    </RecoilRoot>
-  </BrowserRouter>,
+  <>
+    <BrowserRouter>
+      <RecoilRoot>
+        <SnackbarProvider
+          maxSnack={3}
+          autoHideDuration={3000}
+          anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+        >
+          <OrionTheme>
+            <I18nextProvider i18n={i18n}>
+              <App />
+            </I18nextProvider>
+          </OrionTheme>
+        </SnackbarProvider>
+      </RecoilRoot>
+    </BrowserRouter>
+
+    <SpeedInsights />
+  </>,
 );
