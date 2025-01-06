@@ -89,7 +89,7 @@ const HeaderLink = ({ headerLink }) => {
         className="link"
         to={headerLink.link}
         title={headerLink.title}
-        aria-label={headerLink.ariaLabel}
+        aria-label={t(headerLink.ariaLabel)}
       >
         <Typography variant="subtitle2">{t(headerLink.text)}</Typography>
       </StyledLink>
@@ -107,7 +107,7 @@ const HeaderLink = ({ headerLink }) => {
                   to={subLink.link}
                   title={subLink.title}
                   style={{ color: '#FFF' }}
-                  aria-label={subLink.ariaLabel}
+                  aria-label={t(subLink.ariaLabel)}
                 >
                   <Typography variant="body1">{t(subLink.text)}</Typography>
                 </Link>
