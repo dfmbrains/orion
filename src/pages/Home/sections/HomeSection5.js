@@ -149,12 +149,13 @@ const HomeSection5 = () => {
             {data.length > 1 && (
               <Box mt={{ lg: 3, sm: 2, xs: 1 }}>
                 <ButtonGroup>
-                  {data.map(item => {
+                  {data.map((item, idx) => {
                     const isSelected = item.id === selectedReview.id;
                     return (
                       <IconButton
                         size="small"
                         key={item.id}
+                        aria-label={`Go to slide #${idx + 1}`}
                         onClick={() => setSelectedReview(item)}
                         sx={{
                           color: isSelected

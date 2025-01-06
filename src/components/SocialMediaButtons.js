@@ -15,6 +15,7 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our Facebook page"
         href={company?.socialMedia.facebook.link || '#'}
       >
         <Icon>facebook</Icon>
@@ -23,6 +24,7 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our Instagram page"
         href={company?.socialMedia.instagram.link || '#'}
       >
         <InstagramIcon />
@@ -31,6 +33,7 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our LinkedIn page"
         href={company?.socialMedia.linkedIn.link || '#'}
       >
         <LinkedInIcon />
@@ -39,6 +42,7 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our Whatsapp page"
         href={company?.socialMedia.whatsapp.link || '#'}
       >
         <WhatsAppIcon />
@@ -47,6 +51,7 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our Telegram page"
         href={company?.socialMedia.telegram.link || '#'}
       >
         <Icon>telegram</Icon>

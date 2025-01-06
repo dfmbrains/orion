@@ -1,4 +1,4 @@
-import { MenuItem, styled, Typography, useTheme } from '@mui/material';
+import { MenuItem, styled, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
@@ -67,7 +67,6 @@ const StyledMenuItem = styled(MenuItem)(() => ({
 }));
 
 const HeaderLink = ({ headerLink }) => {
-  const theme = useTheme();
   const { t } = useTranslation();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -88,12 +87,11 @@ const HeaderLink = ({ headerLink }) => {
     <StyledBox onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>
       <StyledLink
         className="link"
-        theme={theme}
         to={headerLink.link}
-        title={headerLink.subtitle}
+        title={headerLink.title}
         aria-label={headerLink.ariaLabel}
       >
-        <Typography variant="subtitle2">{t(headerLink.title)}</Typography>
+        <Typography variant="subtitle2">{t(headerLink.text)}</Typography>
       </StyledLink>
 
       {headerLink?.subLinks && (
@@ -105,8 +103,13 @@ const HeaderLink = ({ headerLink }) => {
                 component="li"
                 onClick={handleMenuClose}
               >
-                <Link to={subLink.link} style={{ color: '#FFF' }}>
-                  <Typography variant="body1">{t(subLink.title)}</Typography>
+                <Link
+                  to={subLink.link}
+                  title={subLink.title}
+                  style={{ color: '#FFF' }}
+                  aria-label={subLink.ariaLabel}
+                >
+                  <Typography variant="body1">{t(subLink.text)}</Typography>
                 </Link>
               </StyledMenuItem>
             ))}

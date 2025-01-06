@@ -118,14 +118,16 @@ const CalculateForm = ({ translationKey }) => {
             >
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
-                  name="departureStation"
-                  label={t(`${placeholdersKey}.placeholder1`)}
                   variant="outlined"
-                  value={values.departureStation}
                   onChange={handleChange}
+                  name="departureStation"
+                  id="departureStationInput"
+                  value={values.departureStation}
+                  aria-label="Departure Station input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder1`)}
                   helperText={
                     touched.departureStation && errors.departureStation
                   }
@@ -146,14 +148,16 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
-                  name="destinationStation"
-                  label={t(`${placeholdersKey}.placeholder2`)}
                   variant="outlined"
-                  value={values.destinationStation}
                   onChange={handleChange}
+                  name="destinationStation"
+                  id="destinationStationInput"
+                  value={values.destinationStation}
+                  size={isLaptop ? 'small' : 'medium'}
+                  aria-label="Destination Station input"
+                  label={t(`${placeholdersKey}.placeholder2`)}
                   helperText={
                     touched.destinationStation && errors.destinationStation
                   }
@@ -164,56 +168,64 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="etsngCode"
-                  label={t(`${placeholdersKey}.placeholder3`)}
                   variant="outlined"
-                  value={values.etsngCode}
+                  id="etsngCodeInput"
                   onChange={handleChange}
+                  value={values.etsngCode}
+                  aria-label="ETSNG Code input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder3`)}
                   helperText={touched.etsngCode && errors.etsngCode}
                   error={Boolean(errors.etsngCode && touched.etsngCode)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="gngCode"
-                  label={t(`${placeholdersKey}.placeholder4`)}
+                  id="gngCodeInput"
                   variant="outlined"
                   value={values.gngCode}
                   onChange={handleChange}
+                  aria-label="GNG Code input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder4`)}
                   helperText={touched.gngCode && errors.gngCode}
                   error={Boolean(errors.gngCode && touched.gngCode)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="cargoWeight"
-                  label={t(`${placeholdersKey}.placeholder5`)}
                   variant="outlined"
-                  value={values.cargoWeight}
+                  id="cargoWeightInput"
                   onChange={handleChange}
+                  value={values.cargoWeight}
+                  aria-label="Cargo Weight input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder5`)}
                   helperText={touched.cargoWeight && errors.cargoWeight}
                   error={Boolean(errors.cargoWeight && touched.cargoWeight)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
-                  name="numberOfWagons"
-                  label={t(`${placeholdersKey}.placeholder6`)}
                   variant="outlined"
-                  value={values.numberOfWagons}
+                  name="numberOfWagons"
                   onChange={handleChange}
+                  id="numberOfWagonsInput"
+                  value={values.numberOfWagons}
+                  aria-label="Number Of Wagons input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder6`)}
                   helperText={touched.numberOfWagons && errors.numberOfWagons}
                   error={Boolean(
                     errors.numberOfWagons && touched.numberOfWagons,
@@ -222,57 +234,65 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="name"
-                  label={t(`${placeholdersKey}.placeholder7`)}
+                  id="nameInput"
                   variant="outlined"
                   value={values.name}
+                  aria-label="Name input"
                   onChange={handleChange}
+                  size={isLaptop ? 'small' : 'medium'}
                   helperText={touched.name && errors.name}
+                  label={t(`${placeholdersKey}.placeholder7`)}
                   error={Boolean(errors.name && touched.name)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="typeOfWagon"
-                  label={t(`${placeholdersKey}.placeholder8`)}
                   variant="outlined"
-                  value={values.typeOfWagon}
+                  id="typeOfWagonInput"
                   onChange={handleChange}
+                  value={values.typeOfWagon}
+                  aria-label="Type Of Wagon input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder8`)}
                   helperText={touched.typeOfWagon && errors.typeOfWagon}
                   error={Boolean(errors.typeOfWagon && touched.typeOfWagon)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="phoneNumber"
-                  label={t(`${placeholdersKey}.placeholder9`)}
                   variant="outlined"
-                  value={values.phoneNumber}
+                  id="phoneNumberInput"
                   onChange={handleChange}
+                  value={values.phoneNumber}
+                  aria-label="PhoneNumber input"
+                  size={isLaptop ? 'small' : 'medium'}
+                  label={t(`${placeholdersKey}.placeholder9`)}
                   helperText={touched.phoneNumber && errors.phoneNumber}
                   error={Boolean(errors.phoneNumber && touched.phoneNumber)}
                 />
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
-                  size={isLaptop ? 'small' : 'medium'}
                   fullWidth
                   type="text"
                   name="email"
-                  label={t(`${placeholdersKey}.placeholder10`)}
+                  id="emailInput"
                   variant="outlined"
                   value={values.email}
                   onChange={handleChange}
+                  aria-label="Email input"
+                  size={isLaptop ? 'small' : 'medium'}
                   helperText={touched.email && errors.email}
+                  label={t(`${placeholdersKey}.placeholder10`)}
                   error={Boolean(errors.email && touched.email)}
                 />
               </Grid>

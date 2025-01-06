@@ -156,7 +156,7 @@ const Burger = ({ isOpen, handleClose }) => {
                   className="item"
                   onClick={handleClose}
                 >
-                  <Typography variant="h5">{t(item.title)}</Typography>
+                  <Typography variant="h5">{t(item.text)}</Typography>
                   <Icon>chevron_right</Icon>
                 </NavLink>
               ))}

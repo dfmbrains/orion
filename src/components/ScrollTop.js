@@ -42,6 +42,8 @@ const ScrollTop = () => {
     <StyledIconButton
       theme={theme}
       status={active}
+      title="Scroll to top"
+      aria-label="Scroll to top"
       size={isLaptop ? 'medium' : 'large'}
       onClick={() => handleScrollToTop('smooth')}
     >
