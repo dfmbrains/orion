@@ -18,6 +18,12 @@
   <meta property="og:title" content="Orion - Home">
   <meta property="og:description" content="This is the homepage in English.">
 
+  <!--  preload-->
+  <link rel="preload" as="image" href="../src/assets/images/backgrounds/home_promo1.webp" type="image/webp">
+  <link rel="preload" as="image" href="../src/assets/images/backgrounds/home_promo2.webp" type="image/webp">
+  <link rel="preload" as="image" href="../src/assets/images/backgrounds/home_promo3.webp" type="image/webp">
+  <link rel="preload" as="image" href="../src/assets/images/backgrounds/home_promo4.webp" type="image/webp">
+
   <script>
     const language = localStorage.getItem('i18nextLng');
 
@@ -25,6 +31,31 @@
       document.documentElement.lang = language;
     }
   </script>
+
+  <style>
+    @import "assets/fonts/stylesheet.css";
+
+    * {
+      scroll-behavior: smooth;
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .swiperStatic {
+      position: static !important;
+    }
+
+    .swiperCustomNavigation .swiper-button-next, .swiperCustomNavigation .swiper-button-prev {
+      display: none;
+    }
+
+    .justify-text {
+      text-align: justify;
+    }
+  </style>
 </head>
 
 <body>

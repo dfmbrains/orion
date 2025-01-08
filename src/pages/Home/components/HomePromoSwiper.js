@@ -3,7 +3,6 @@ import PromoSlide1 from 'assets/images/backgrounds/home_promo1.webp';
 import PromoSlide2 from 'assets/images/backgrounds/home_promo2.webp';
 import PromoSlide3 from 'assets/images/backgrounds/home_promo3.webp';
 import PromoSlide4 from 'assets/images/backgrounds/home_promo4.webp';
-import Loader from 'components/Loader';
 import OrionContainer from 'components/OrionContainer';
 import {
   StyledPromoBackgroundBox,
@@ -84,7 +83,6 @@ const HomePromoSwiper = () => {
   const { t } = useTranslation();
 
   const [activeSlide, setActiveSlide] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const slides = t('home.promo.slides', { returnObjects: true });
 
@@ -115,15 +113,6 @@ const HomePromoSwiper = () => {
           </StyledPromoBackgroundBox>
         </SwiperSlide>
       ))}
-
-      {!isLoaded && <Loader />}
-
-      <img
-        alt="background"
-        src={PromoSlide1}
-        style={{ display: 'none' }}
-        onLoad={() => setIsLoaded(true)}
-      />
     </Swiper>
   );
 };

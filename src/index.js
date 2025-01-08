@@ -5,7 +5,6 @@ import i18n from 'locales/index';
 import { SnackbarProvider } from 'notistack';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'index.css';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';

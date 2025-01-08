@@ -3,7 +3,7 @@ import { FlexAllCenter } from './FlexBox';
 
 const StyledPromoBackgroundBox = styled(FlexAllCenter)(({ bgimage }) => ({
   height: '100%',
-  background: `url(${bgimage})`,
+  backgroundImage: `url(${bgimage})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
