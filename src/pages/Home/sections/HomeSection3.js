@@ -272,7 +272,7 @@ const HomeSection3 = () => {
 
               <Typography
                 mt={2}
-                color="#8a8a8a"
+                color="#545454"
                 variant="body2"
                 fontWeight="500"
                 textAlign="center"

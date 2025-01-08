@@ -95,8 +95,8 @@ const EmailFormSection = ({ background }) => {
                 size="small"
                 name="email"
                 value={email}
-                id="emailInput"
                 variant="outlined"
+                id="emailFormSectionInput"
                 aria-label="Email Input"
                 label={t('emailFormSection.placeholder')}
                 onChange={e => setEmail(e.target.value)}

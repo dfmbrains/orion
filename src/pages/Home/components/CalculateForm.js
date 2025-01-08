@@ -285,11 +285,11 @@ const CalculateForm = ({ translationKey }) => {
                   fullWidth
                   type="text"
                   name="email"
-                  id="emailInput"
                   variant="outlined"
                   value={values.email}
                   onChange={handleChange}
                   aria-label="Email input"
+                  id="calculateFormEmailInput"
                   size={isLaptop ? 'small' : 'medium'}
                   helperText={touched.email && errors.email}
                   label={t(`${placeholdersKey}.placeholder10`)}
