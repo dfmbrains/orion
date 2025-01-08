@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import TeamImg from 'assets/images/goal.jpg';
 import { FlexBox } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -75,7 +75,7 @@ const AboutSection5 = () => {
                   {t(`${translationKey}.subtitle`)}
                 </Typography>
                 <Divider />
-                <ImageComponent
+                <LazyImage
                   alt="team"
                   src={TeamImg}
                   className="aboutSection5Img"

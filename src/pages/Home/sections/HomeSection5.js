@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import ReviewsBg from 'assets/images/backgrounds/reviews.webp';
 import { FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import OrionLoading from 'components/OrionLoading';
 import { Styled50vhLoadingBox } from 'components/StyledComponents';
@@ -124,14 +124,14 @@ const HomeSection5 = () => {
             <FlexGap10>
               <StyledImageBox>
                 <div className="box">
-                  <ImageComponent
+                  <LazyImage
                     className="img"
                     src={selectedReview?.img}
                     alt={selectedReview?.name}
                   />
                 </div>
 
-                <ImageComponent
+                <LazyImage
                   className="child"
                   src={selectedReview?.companyLogo}
                   alt={selectedReview.company}

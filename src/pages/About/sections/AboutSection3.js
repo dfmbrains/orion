@@ -2,7 +2,7 @@ import { Grid, styled, Typography, useTheme } from '@mui/material';
 import ClientsImg from 'assets/images/what_we_offer.jpg';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -70,7 +70,7 @@ const AboutSection3 = () => {
             </FlexGap10>
           </Grid>
           <Grid item md={6} xs={12}>
-            <ImageComponent
+            <LazyImage
               alt="clients"
               src={ClientsImg}
               className="aboutSection3Img"

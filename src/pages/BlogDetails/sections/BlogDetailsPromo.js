@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { StyledResponsiveImageBox } from 'components/StyledComponents';
 import React from 'react';
@@ -42,7 +42,7 @@ const BlogDetailsPromo = ({ images }) => {
           {images.map((img, ind) => (
             <SwiperSlide key={ind}>
               <StyledSlideBox>
-                <ImageComponent src={img.file} alt={img.name} />
+                <LazyImage src={img.file} alt={img.name} />
               </StyledSlideBox>
             </SwiperSlide>
           ))}

@@ -1,6 +1,6 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
 import OurTeamImg from 'assets/images/mission2.jpg';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -63,7 +63,7 @@ const AboutSection4 = () => {
             </Typography>
           </Grid>
           <Grid item md={6} xs={12}>
-            <ImageComponent
+            <LazyImage
               className="aboutSection4Img"
               src={OurTeamImg}
               alt="our team"

@@ -7,7 +7,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { FlexAllCenter } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import OrionLoading from 'components/OrionLoading';
 import {
@@ -133,7 +133,7 @@ const ClientsSection1 = () => {
               {partnersList.map(el => (
                 <SwiperSlide key={el.id}>
                   <StyledImageBox>
-                    <ImageComponent src={el.images.file} alt={el.images.name} />
+                    <LazyImage src={el.images.file} alt={el.images.name} />
                   </StyledImageBox>
                 </SwiperSlide>
               ))}

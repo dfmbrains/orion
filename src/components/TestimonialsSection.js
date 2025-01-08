@@ -7,7 +7,7 @@ import { reviewsRecoil, selectedLanguageRecoil } from 'store';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FlexGap10 } from './FlexBox';
-import ImageComponent from './ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from './OrionContainer';
 import OrionLoading from './OrionLoading';
 import { Styled50vhLoadingBox } from './StyledComponents';
@@ -142,7 +142,7 @@ const TestimonialsSection = () => {
                   <SwiperSlide key={el.id}>
                     <FlexGap10 sx={{ columnGap: '30px' }}>
                       <StyledImgBox>
-                        <ImageComponent
+                        <LazyImage
                           src={el?.companyLogo}
                           alt={el?.company}
                         />

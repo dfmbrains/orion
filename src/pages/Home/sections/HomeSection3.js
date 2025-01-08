@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 // import EllipseBg from 'assets/images/ellipse-small.svg';
 import MapBg from 'assets/images/map.webp';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
 import { createDesiredArrays } from 'helpers/utils';
@@ -283,7 +283,7 @@ const HomeSection3 = () => {
           </StyledCalculateCard>
 
           {!isMobile && (
-            <ImageComponent src={MapBg} alt="map" className="mapBg" />
+            <LazyImage src={MapBg} alt="map" className="mapBg" />
           )}
         </StyledContentBox>
       </OrionContainer>

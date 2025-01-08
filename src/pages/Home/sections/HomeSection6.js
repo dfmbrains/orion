@@ -10,7 +10,7 @@ import {
 import OfficeImg from 'assets/images/office.jpg';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import OrionLoading from 'components/OrionLoading';
 import {
@@ -157,7 +157,7 @@ const HomeSection6 = () => {
 
               <Grid item lg={5.95} md={5}>
                 <StyledImageBox>
-                  <ImageComponent src={OfficeImg} alt="office" />
+                  <LazyImage src={OfficeImg} alt="office" />
                 </StyledImageBox>
               </Grid>
             </Grid>

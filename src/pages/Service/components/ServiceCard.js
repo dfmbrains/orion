@@ -1,5 +1,5 @@
 import { Box, Card, styled, Typography } from '@mui/material';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import { StyledResponsiveImageBox } from 'components/StyledComponents';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -40,7 +40,7 @@ const ServiceCard = ({ data }) => {
     <StyledCard className="serviceCard" onClick={() => setServiceDetails(data)}>
       <StyledLink to={`/services/${data.id}`}>
         <StyledResponsiveImageBox className="serviceCardImg">
-          <ImageComponent src={data?.images?.file} alt={data?.images?.name} />
+          <LazyImage src={data?.images?.file} alt={data?.images?.name} />
         </StyledResponsiveImageBox>
 
         <Box pt={2} pb={5} px={3}>

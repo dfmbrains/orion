@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil, monthsRecoil } from 'store';
 import { FlexGap10 } from './FlexBox';
-import ImageComponent from './ImageComponent';
+import LazyImage from 'components/LazyImage';
 import { StyledResponsiveImageBox } from './StyledComponents';
 
 const StyledBox = styled('div')(({ theme }) => ({
@@ -40,7 +40,7 @@ const PostCard = ({ post }) => {
   return (
     <div className="postCard">
       <StyledResponsiveImageBox className="postCardImg">
-        <ImageComponent src={post.images[0].file} alt={post.images[0].name} />
+        <LazyImage src={post.images[0].file} alt={post.images[0].name} />
       </StyledResponsiveImageBox>
       <FlexGap10
         mt={{ lg: 3, xs: 1 }}

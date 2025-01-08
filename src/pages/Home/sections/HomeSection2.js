@@ -13,7 +13,7 @@ import EllipseBg from 'assets/images/ellipse.webp';
 import FreightTriangleBg from 'assets/images/freightTriangle.webp';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -89,7 +89,7 @@ const HomeSection2 = () => {
       <OrionContainer>
         {!isTablet && (
           <div className="containerFreightImg">
-            <ImageComponent
+            <LazyImage
               src={ContainerFreight}
               alt={t(`${translationKey}.title`)}
             />
@@ -101,7 +101,7 @@ const HomeSection2 = () => {
             <Grid item md={4.5} sm={5} xs={5}>
               {isTablet && (
                 <div className="containerFreightImg">
-                  <ImageComponent
+                  <LazyImage
                     src={ContainerFreight}
                     alt={t(`${translationKey}.title`)}
                   />
@@ -182,12 +182,12 @@ const HomeSection2 = () => {
           </Grid>
         </Grid>
       </OrionContainer>
-      <ImageComponent
+      <LazyImage
         className="freightTriangleBg"
         src={FreightTriangleBg}
         alt="triangle"
       />
-      <ImageComponent className="ellipseBg" src={EllipseBg} alt="ellipse" />
+      <LazyImage className="ellipseBg" src={EllipseBg} alt="ellipse" />
     </StyledSection>
   );
 };

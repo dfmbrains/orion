@@ -13,7 +13,7 @@ import LightLogoCompany from 'assets/images/logoWhite.png';
 import ChangeLangButton from 'components/ChangeLangButton';
 import EmailFormSection from 'components/EmailFormSection';
 import { FlexBetweenAlignCenter, FlexBox, FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { HEADER_BURGER_MENU } from 'helpers/constants';
 import React from 'react';
@@ -88,7 +88,7 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerHeader>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <ImageComponent
+              <LazyImage
                 className="logo"
                 src={LightLogoCompany}
                 alt="orion"
@@ -127,7 +127,7 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerMain>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <ImageComponent
+              <LazyImage
                 className="logo"
                 src={PrimaryLogoCompany}
                 alt="swt"

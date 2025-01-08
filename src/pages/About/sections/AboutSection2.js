@@ -20,7 +20,7 @@ import Tj from 'assets/images/countries/tj.png';
 import Tur from 'assets/images/countries/tur.png';
 import Uz from 'assets/images/countries/uz.png';
 import MapBg from 'assets/images/mapTransparent.webp';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { StyledSwiperButtonsPosition } from 'components/StyledComponents';
 import SwiperButtons from 'components/SwiperButtons';
@@ -162,7 +162,7 @@ const AboutSection2 = () => {
               {countries.map((el, idx) => (
                 <SwiperSlide key={idx}>
                   <StyledSwiperSlide>
-                    <ImageComponent src={countriesImg[idx]} alt={el} />
+                    <LazyImage src={countriesImg[idx]} alt={el} />
                     <Typography variant="subtitle1">{el}</Typography>
                   </StyledSwiperSlide>
                 </SwiperSlide>
@@ -172,7 +172,7 @@ const AboutSection2 = () => {
         </Box>
       </OrionContainer>
 
-      <ImageComponent
+      <LazyImage
         alt="map"
         src={MapBg}
         className="mapBg"

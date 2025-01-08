@@ -7,7 +7,7 @@ import PlatformImg from 'assets/images/wagons/platform.png';
 import TankImg from 'assets/images/wagons/tank.png';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
-import ImageComponent from 'components/ImageComponent';
+import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
 import React from 'react';
@@ -94,7 +94,7 @@ const HomeSection4 = () => {
 
               {stockImages.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <ImageComponent
+                  <LazyImage
                     src={item}
                     alt="provision"
                     className="provisionImg"
