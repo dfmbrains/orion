@@ -1,16 +1,22 @@
-import NotFound from 'pages/NotFound';
-import React from 'react';
+import Loadable from 'components/Loadable';
+import React, { lazy } from 'react';
+
 import DarkHeaderLayout from './components/DarkHeaderLayout';
-import LightHeaderLayout from './components/LightHeaderLayout';
-import About from './pages/About';
-import Blog from './pages/Blog';
-import BlogDetails from './pages/BlogDetails';
-import Clients from './pages/Clients';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Service from './pages/Service';
-import ServiceDetails from './pages/ServiceDetails';
 import PrefetchProvider from './shared/PrefetchProvider';
+
+const LightHeaderLayout = Loadable(
+  lazy(() => import('./components/LightHeaderLayout')),
+);
+
+const NotFound = Loadable(lazy(() => import('pages/NotFound')));
+const About = Loadable(lazy(() => import('./pages/About')));
+const Blog = Loadable(lazy(() => import('./pages/Blog')));
+const BlogDetails = Loadable(lazy(() => import('./pages/BlogDetails')));
+const Clients = Loadable(lazy(() => import('./pages/Clients')));
+const Contact = Loadable(lazy(() => import('./pages/Contact')));
+const Home = Loadable(lazy(() => import('./pages/Home')));
+const Service = Loadable(lazy(() => import('./pages/Service')));
+const ServiceDetails = Loadable(lazy(() => import('./pages/ServiceDetails')));
 
 const routes = [
   {

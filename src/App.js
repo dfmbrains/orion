@@ -1,15 +1,17 @@
 import HashAutoScroll from 'components/Layouts/HashAutoScroll';
+import Loadable from 'components/Loadable';
 import ScrollTop from 'components/ScrollTop';
-import React from 'react';
+import React, { lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from 'routes';
-import Footer from 'shared/Footer';
 
 //swiper
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+
+const Footer = Loadable(lazy(() => import('shared/Footer')));
 
 function App() {
   const content = useRoutes(routes);

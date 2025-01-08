@@ -8,6 +8,7 @@ const LazyImage = ({ src, alt = 'LazyImage', ...props }) => {
       src={src}
       alt={alt}
       {...props}
+      loading="lazy"
       unloader={<div>Error</div>}
       loader={<CircularProgress />}
     />
