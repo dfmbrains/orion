@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import TeamImg from 'assets/images/goal.jpg';
+import TeamImg from 'assets/images/goal.webp';
 import { FlexBox } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';

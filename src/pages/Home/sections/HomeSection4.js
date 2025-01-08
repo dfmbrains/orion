@@ -1,10 +1,10 @@
 import { Divider, Grid, styled, Typography } from '@mui/material';
-import ContainerImg from 'assets/images/wagons/container.png';
-import FridgeImg from 'assets/images/wagons/fridge.png';
-import GondolaImg from 'assets/images/wagons/gondola.png';
-import HopperImg from 'assets/images/wagons/hopper.png';
-import PlatformImg from 'assets/images/wagons/platform.png';
-import TankImg from 'assets/images/wagons/tank.png';
+import ContainerImg from 'assets/images/wagons/container.webp';
+import FridgeImg from 'assets/images/wagons/fridge.webp';
+import GondolaImg from 'assets/images/wagons/gondola.webp';
+import HopperImg from 'assets/images/wagons/hopper.webp';
+import PlatformImg from 'assets/images/wagons/platform.webp';
+import TankImg from 'assets/images/wagons/tank.webp';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';

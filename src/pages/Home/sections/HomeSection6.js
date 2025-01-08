@@ -7,7 +7,7 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import OfficeImg from 'assets/images/office.jpg';
+import OfficeImg from 'assets/images/office.webp';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';

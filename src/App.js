@@ -1,6 +1,5 @@
 import HashAutoScroll from 'components/Layouts/HashAutoScroll';
 import Loadable from 'components/Loadable';
-import ScrollTop from 'components/ScrollTop';
 import React, { lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from 'routes';
@@ -19,8 +18,8 @@ function App() {
   return (
     <HashAutoScroll>
       {content}
+
       <Footer />
-      <ScrollTop />
     </HashAutoScroll>
   );
 }

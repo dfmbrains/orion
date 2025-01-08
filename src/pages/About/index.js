@@ -1,5 +1,5 @@
-import AboutBg from 'assets/images/backgrounds/about2.jpg';
-import OurTeamBg from 'assets/images/backgrounds/our_team.jpg';
+import AboutBg from 'assets/images/backgrounds/about2.webp';
+import OurTeamBg from 'assets/images/backgrounds/our_team.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
 import StatisticsSection from 'components/StatisticsSection';
 import TestimonialsSection from 'components/TestimonialsSection';

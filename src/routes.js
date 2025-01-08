@@ -1,11 +1,13 @@
 import Loadable from 'components/Loadable';
 import React, { lazy } from 'react';
 
-import DarkHeaderLayout from './components/DarkHeaderLayout';
 import PrefetchProvider from './shared/PrefetchProvider';
 
 const LightHeaderLayout = Loadable(
   lazy(() => import('./components/LightHeaderLayout')),
+);
+const DarkHeaderLayout = Loadable(
+  lazy(() => import('./components/DarkHeaderLayout')),
 );
 
 const NotFound = Loadable(lazy(() => import('pages/NotFound')));

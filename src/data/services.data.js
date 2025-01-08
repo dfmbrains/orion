@@ -1,11 +1,11 @@
-import ServiceImg1 from 'assets/images/services/service1.png';
-import ServiceImg2 from 'assets/images/services/service2.png';
-import ServiceImg3 from 'assets/images/services/service3.png';
-import ServiceImg4 from 'assets/images/services/service4.png';
-import ServiceImg5 from 'assets/images/services/service5.png';
-import ServiceImg6 from 'assets/images/services/service6.png';
-import ServiceImg7 from 'assets/images/services/service7.png';
-import ServiceImg8 from 'assets/images/services/service8.png';
+import ServiceImg1 from 'assets/images/services/service1.webp';
+import ServiceImg2 from 'assets/images/services/service2.webp';
+import ServiceImg3 from 'assets/images/services/service3.webp';
+import ServiceImg4 from 'assets/images/services/service4.webp';
+import ServiceImg5 from 'assets/images/services/service5.webp';
+import ServiceImg6 from 'assets/images/services/service6.webp';
+import ServiceImg7 from 'assets/images/services/service7.webp';
+import ServiceImg8 from 'assets/images/services/service8.webp';
 
 export const servicesData = [
   {

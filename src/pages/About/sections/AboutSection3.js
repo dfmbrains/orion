@@ -1,5 +1,5 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import ClientsImg from 'assets/images/what_we_offer.jpg';
+import ClientsImg from 'assets/images/what_we_offer.webp';
 import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
