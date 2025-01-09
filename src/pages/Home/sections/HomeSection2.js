@@ -176,7 +176,7 @@ const HomeSection2 = () => {
                 variant="text"
                 component={Link}
               >
-                {t('buttons.otherServices')}
+                {t('buttons.ourServices')}
               </DefaultButton>
             </Card>
           </Grid>
