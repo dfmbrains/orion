@@ -9,16 +9,16 @@ import {
 import Afghanistan from 'assets/images/countries/af.png';
 import Azer from 'assets/images/countries/az.png';
 import Baltic from 'assets/images/countries/baltic.png';
-import China from 'assets/images/countries/zh.png';
 import Europe from 'assets/images/countries/eu.png';
+import Ge from 'assets/images/countries/ge.png';
 import Iran from 'assets/images/countries/ir.png';
 import Kg from 'assets/images/countries/kg.png';
 import Kz from 'assets/images/countries/kz.png';
-import Ge from 'assets/images/countries/ge.png';
 import Rus from 'assets/images/countries/ru.png';
 import Tj from 'assets/images/countries/tj.png';
 import Tur from 'assets/images/countries/tur.png';
 import Uz from 'assets/images/countries/uz.png';
+import China from 'assets/images/countries/zh.png';
 import MapBg from 'assets/images/mapTransparent.webp';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
@@ -57,11 +57,16 @@ const StyledSection = styled('section')(({ theme }) => ({
 
 const StyledSwiperSlide = styled('div')(({ theme }) => ({
   '& img': {
-    width: '40px',
-    height: '40px',
+    width: '50px',
+    height: '50px',
     borderRadius: '50%',
     margin: '0 0 15px',
-    [theme.breakpoints.down('sm')]: { margin: '0 auto 10px', display: 'block' },
+    [theme.breakpoints.down('sm')]: {
+      margin: '0 auto 10px',
+      display: 'block',
+      width: '40px',
+      height: '40px',
+    },
   },
   '& h6': {
     [theme.breakpoints.down('sm')]: { textAlign: 'center' },
@@ -159,6 +164,7 @@ const AboutSection2 = () => {
               <StyledSwiperButtonsPosition>
                 <SwiperButtons />
               </StyledSwiperButtonsPosition>
+
               {countries.map((el, idx) => (
                 <SwiperSlide key={idx}>
                   <StyledSwiperSlide>
