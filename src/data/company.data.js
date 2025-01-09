@@ -20,6 +20,14 @@ export const companyData = {
       id: '5',
       link: 'https://t.me/+393517169453',
     },
+    skype: {
+      id: '6',
+      link: '',
+    },
+    wechat: {
+      id: '7',
+      link: '',
+    },
   },
   id: 'Fi9so2860hoIwqzhdBKO',
   about: {

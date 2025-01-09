@@ -108,7 +108,7 @@ const ContactContentSection = () => {
               </StyledFlexGap10>
 
               <Typography variant="body1" color="#9EADB4">
-                {t(`${translationKey}.inSocialMedia`)}
+                {t(`${translationKey}.inSocialMedia`)}:
               </Typography>
               <SocialMediaButtons color="info" />
             </Grid>
