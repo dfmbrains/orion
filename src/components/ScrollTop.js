@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react';
 
 const StyledIconButton = styled(IconButton)(({ theme, status }) => ({
   position: 'fixed',
-  bottom: '3%',
+  bottom: '55px',
   right: '1.5%',
   zIndex: theme.zIndex.mobileStepper,
   backgroundColor: theme.palette.primary.main,
