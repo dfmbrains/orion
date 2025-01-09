@@ -1,5 +1,5 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OurTeamImg from 'assets/images/mission.webp';
+import OurTeamImg from 'assets/images/mission2.webp';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
