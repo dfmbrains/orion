@@ -1,0 +1,56 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://oriontrans.kg/en/home</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/home"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/home"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/home"/>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://oriontrans.kg/en/about</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/about"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/about"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/about"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://oriontrans.kg/en/contact</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/contact"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/contact"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://oriontrans.kg/en/clients-&amp;-partners</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/clients-&amp;-partners"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/clients-&amp;-partners"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/clients-&amp;-partners"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://oriontrans.kg/en/services</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/services"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/services"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/services"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://oriontrans.kg/en/blog</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oriontrans.kg/en/blog"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://oriontrans.kg/ru/blog"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oriontrans.kg/zh/blog"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
