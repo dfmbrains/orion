@@ -5,6 +5,7 @@ import StatisticsSection from 'components/StatisticsSection';
 import TestimonialsSection from 'components/TestimonialsSection';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import MetaTags from 'seo/MetaTags';
 import AboutSection1 from './sections/AboutSection1';
 import AboutSection2 from './sections/AboutSection2';
 import AboutSection3 from './sections/AboutSection3';
@@ -20,6 +21,11 @@ const About = () => {
 
   return (
     <>
+      <MetaTags
+        titleKey="meta.about.title"
+        descriptionKey="meta.about.description"
+      />
+
       <PromoSection title={t('about.promo1')} bgImage={AboutBg} />
       <AboutSection1 />
       <AboutSection2 />

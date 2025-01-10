@@ -7,6 +7,7 @@ import {
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import MetaTags from 'seo/MetaTags';
 
 const NotFoundRoot = styled('section')(() => ({
   position: 'relative',
@@ -25,28 +26,35 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <NotFoundRoot>
-      <StyledPromoBackgroundBox bgimage={BgImg}>
-        <StylePromoColumn>
-          <Typography mt={3} variant="h1">
-            {t('notFound.title')}
-          </Typography>
-          <Typography my={3} variant="h5">
-            {t('notFound.description')}
-          </Typography>
+    <>
+      <MetaTags
+        titleKey="meta.notFound.title"
+        descriptionKey="meta.notFound.description"
+      />
 
-          <Button
-            size="large"
-            color="primary"
-            variant="contained"
-            onClick={() => navigate(-1)}
-            sx={{ textTransform: 'capitalize' }}
-          >
-            {t('buttons.goBack')}
-          </Button>
-        </StylePromoColumn>
-      </StyledPromoBackgroundBox>
-    </NotFoundRoot>
+      <NotFoundRoot>
+        <StyledPromoBackgroundBox bgimage={BgImg}>
+          <StylePromoColumn>
+            <Typography mt={3} variant="h1">
+              {t('notFound.title')}
+            </Typography>
+            <Typography my={3} variant="h5">
+              {t('notFound.description')}
+            </Typography>
+
+            <Button
+              size="large"
+              color="primary"
+              variant="contained"
+              onClick={() => navigate(-1)}
+              sx={{ textTransform: 'capitalize' }}
+            >
+              {t('buttons.goBack')}
+            </Button>
+          </StylePromoColumn>
+        </StyledPromoBackgroundBox>
+      </NotFoundRoot>
+    </>
   );
 };
 

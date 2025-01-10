@@ -2,6 +2,7 @@ import EmailFormSection from 'components/EmailFormSection';
 import FeaturesSection from 'components/FeaturesSection';
 import StatisticsSection from 'components/StatisticsSection';
 import React from 'react';
+import MetaTags from 'seo/MetaTags';
 import HomePromo from './sections/HomePromo';
 import HomeSection2 from './sections/HomeSection2';
 import HomeSection3 from './sections/HomeSection3';
@@ -13,6 +14,11 @@ import HomeSection7 from './sections/HomeSection7';
 const Home = () => {
   return (
     <>
+      <MetaTags
+        titleKey="meta.home.title"
+        descriptionKey="meta.home.description"
+      />
+
       <HomePromo />
       <HomeSection2 />
       <HomeSection3 />

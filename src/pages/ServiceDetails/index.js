@@ -6,6 +6,7 @@ import { Styled100vhLoadingBox } from 'components/StyledComponents';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import MetaTags from 'seo/MetaTags';
 import { serviceDetailsRecoil, serviceRecoil } from 'store';
 
 const ServiceDetails = () => {
@@ -26,6 +27,11 @@ const ServiceDetails = () => {
 
   return (
     <>
+      <MetaTags
+        titleKey="meta.service.title"
+        descriptionKey="meta.service.description"
+      />
+
       {serviceDetailsData ? (
         <>
           <PromoSection

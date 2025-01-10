@@ -3,6 +3,7 @@ import EmailFormSection from 'components/EmailFormSection';
 import PromoSection from 'components/PromoSection/PromoSection';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import MetaTags from 'seo/MetaTags';
 import ServiceSection1 from './sections/ServiceSection1';
 import ServiceSection2 from './sections/ServiceSection2';
 
@@ -11,6 +12,11 @@ const Service = () => {
 
   return (
     <>
+      <MetaTags
+        titleKey="meta.services.title"
+        descriptionKey="meta.services.description"
+      />
+
       <PromoSection title={t('service.promo')} bgImage={ServiceBg} />
       <ServiceSection1 />
       <ServiceSection2 />

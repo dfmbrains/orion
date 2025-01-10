@@ -5,6 +5,7 @@ import { Styled100vhLoadingBox } from 'components/StyledComponents';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import MetaTags from 'seo/MetaTags';
 import { blogDetailsRecoil, blogRecoil } from 'store';
 import BlogDetailsPromo from './sections/BlogDetailsPromo';
 
@@ -26,6 +27,11 @@ const BlogDetails = () => {
 
   return (
     <>
+      <MetaTags
+        titleKey="meta.blogs.title"
+        descriptionKey="meta.blogs.description"
+      />
+
       {blog ? (
         <>
           <BlogDetailsPromo images={blog.images} />
