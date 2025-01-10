@@ -2,12 +2,14 @@ import AkimImg from 'assets/images/team/akim2.png';
 import AnnaImg from 'assets/images/team/anna2.png';
 import AnvarImg from 'assets/images/team/anvar2.png';
 import AzimImg from 'assets/images/team/azim2.png';
+import HalmuratImg from 'assets/images/team/halmurat2.png';
 import KarinaImg from 'assets/images/team/karina2.png';
 import MadinaImg from 'assets/images/team/madina2.png';
 import NurlanImg from 'assets/images/team/nurlan2.png';
 import OlgaImg from 'assets/images/team/olga2.png';
 import SaraImg from 'assets/images/team/sara2.png';
 import VovaImg from 'assets/images/team/vova2.png';
+import MaxImg from 'assets/images/team/max.png';
 
 export const teamData = [
   {
@@ -88,7 +90,7 @@ export const teamData = [
     phoneNumber: '',
     status: true,
     language: 'ru',
-    midName: 'Раджабовна',
+    midName: '',
     address: 'Бишкек',
     id: '4',
     firstName: 'Мадина',
@@ -452,6 +454,67 @@ export const teamData = [
   },
 
   {
+    lastName: 'Саражиев',
+    birthDate: '',
+    gender: 0,
+    position: 'Системный администратор',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'ru',
+    midName: '',
+    address: 'Бишкек',
+    id: '34',
+    firstName: 'Халмурат',
+    images: { name: 'Halmurat', file: HalmuratImg },
+  },
+  {
+    lastName: 'Sarazhiev',
+    birthDate: '',
+    gender: 0,
+    position: 'SysAdmin',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'en',
+    midName: '',
+    address: 'Bishkek',
+    id: '35',
+    firstName: 'Halmurat',
+    images: { name: 'Halmurat', file: HalmuratImg },
+  },
+  {
+    lastName: 'Sarazhiev',
+    birthDate: '',
+    gender: 0,
+    position: 'SysAdmin',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'zh',
+    midName: '',
+    address: '比什凯克',
+    id: '36',
+    firstName: 'Halmurat',
+    images: { name: 'Halmurat', file: HalmuratImg },
+  },
+
+  {
     lastName: 'Дмитриева',
     birthDate: '',
     gender: 1,
@@ -638,5 +701,66 @@ export const teamData = [
     id: '33',
     firstName: 'Nurlan',
     images: { name: 'nurlan', file: NurlanImg },
+  },
+
+  {
+    lastName: 'Абдурасулов',
+    birthDate: '',
+    gender: 0,
+    position: 'Разработчик ПО',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'ru',
+    midName: '',
+    address: 'Бишкек',
+    id: '37',
+    firstName: 'Максат',
+    images: { name: 'Maksat', file: MaxImg },
+  },
+  {
+    lastName: 'Abdurasulov',
+    birthDate: '',
+    gender: 0,
+    position: 'Software Engineer',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'en',
+    midName: '',
+    address: 'Bishkek',
+    id: '38',
+    firstName: 'Maksat',
+    images: { name: 'Maksat', file: MaxImg },
+  },
+  {
+    lastName: 'Abdurasulov',
+    birthDate: '',
+    gender: 0,
+    position: 'Software Engineer',
+    about: '',
+    email: 'oriontransoffice@gmail.com',
+    workPeriod: {
+      from: '11/25/2016',
+      to: null,
+    },
+    phoneNumber: '',
+    status: true,
+    language: 'zh',
+    midName: '',
+    address: '比什凯克',
+    id: '39',
+    firstName: 'Maksat',
+    images: { name: 'Maksat', file: MaxImg },
   },
 ];
