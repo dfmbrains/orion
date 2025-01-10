@@ -1,13 +1,13 @@
-import AkimImg from 'assets/images/team/akim.png';
-import AnnaImg from 'assets/images/team/anna.png';
-import AnvarImg from 'assets/images/team/anvar.png';
-import AzimImg from 'assets/images/team/azim.png';
-import KarinaImg from 'assets/images/team/karina.png';
-import MadinaImg from 'assets/images/team/madina.png';
-import NurlanImg from 'assets/images/team/nurlan.png';
-import OlgaImg from 'assets/images/team/olga.png';
-import SaraImg from 'assets/images/team/sara.png';
-import VovaImg from 'assets/images/team/vova.png';
+import AkimImg from 'assets/images/team/akim2.png';
+import AnnaImg from 'assets/images/team/anna2.png';
+import AnvarImg from 'assets/images/team/anvar2.png';
+import AzimImg from 'assets/images/team/azim2.png';
+import KarinaImg from 'assets/images/team/karina2.png';
+import MadinaImg from 'assets/images/team/madina2.png';
+import NurlanImg from 'assets/images/team/nurlan2.png';
+import OlgaImg from 'assets/images/team/olga2.png';
+import SaraImg from 'assets/images/team/sara2.png';
+import VovaImg from 'assets/images/team/vova2.png';
 
 export const teamData = [
   {

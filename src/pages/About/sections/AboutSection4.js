@@ -1,5 +1,5 @@
 import { Grid, styled, Typography, useTheme } from '@mui/material';
-import OurTeamImg from 'assets/images/mission2.webp';
+import OurMissionImg from 'assets/images/our_mission.webp';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
@@ -64,9 +64,9 @@ const AboutSection4 = () => {
           </Grid>
           <Grid item md={6} xs={12}>
             <LazyImage
-              className="aboutSection4Img"
-              src={OurTeamImg}
               alt="our team"
+              src={OurMissionImg}
+              className="aboutSection4Img"
             />
           </Grid>
         </Grid>

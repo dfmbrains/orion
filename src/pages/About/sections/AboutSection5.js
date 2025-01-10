@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import TeamImg from 'assets/images/goal.webp';
+import OurGoalImg from 'assets/images/our_goal.webp';
 import { FlexBox } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
@@ -77,7 +77,7 @@ const AboutSection5 = () => {
                 <Divider />
                 <LazyImage
                   alt="team"
-                  src={TeamImg}
+                  src={OurGoalImg}
                   className="aboutSection5Img"
                 />
               </div>

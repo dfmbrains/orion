@@ -1,4 +1,4 @@
-import AboutBg from 'assets/images/backgrounds/about2.webp';
+import AboutBg from 'assets/images/backgrounds/about.webp';
 import OurTeamBg from 'assets/images/backgrounds/our_team.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
 import StatisticsSection from 'components/StatisticsSection';
@@ -37,7 +37,7 @@ const About = () => {
       <AboutSection7 />
       <AboutSection8 />
       <TestimonialsSection />
-      <PromoSection title={t('about.promo2')} bgImage={OurTeamBg} />
+      <PromoSection isFullHeight title={t('about.promo2')} bgImage={OurTeamBg} />
       <AboutSection9 />
     </>
   );
