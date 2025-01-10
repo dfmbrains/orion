@@ -1,17 +1,12 @@
-import {
-  Button,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { styled, Typography, useMediaQuery, useTheme } from '@mui/material';
+import DefaultButton from 'components/DefaultButton';
+import LazyImage from 'components/LazyImage';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil, monthsRecoil } from 'store';
 import { FlexGap10 } from './FlexBox';
-import LazyImage from 'components/LazyImage';
 import { StyledResponsiveImageBox } from './StyledComponents';
 
 const StyledBox = styled('div')(({ theme }) => ({
@@ -82,7 +77,7 @@ const PostCard = ({ post }) => {
             {post.subtitle}
           </Typography>
 
-          <Button
+          <DefaultButton
             color="primary"
             component={Link}
             variant="contained"
@@ -91,7 +86,7 @@ const PostCard = ({ post }) => {
             size={isTablet ? 'small' : 'medium'}
           >
             {t('buttons.readMore')}
-          </Button>
+          </DefaultButton>
         </StyledBox>
       </FlexGap10>
     </div>

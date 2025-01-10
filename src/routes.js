@@ -1,7 +1,7 @@
 import Loadable from 'components/Loadable';
 import React, { lazy } from 'react';
-
-import PrefetchProvider from './shared/PrefetchProvider';
+import { Navigate } from 'react-router-dom';
+import SettingsWrapper from 'wrappers/SettingsWrapper';
 
 const LightHeaderLayout = Loadable(
   lazy(() => import('./components/LightHeaderLayout')),
@@ -21,25 +21,27 @@ const Service = Loadable(lazy(() => import('./pages/Service')));
 const ServiceDetails = Loadable(lazy(() => import('./pages/ServiceDetails')));
 
 const routes = [
+  { element: <Navigate to="/en/home" replace />, path: '/' },
   {
-    element: <PrefetchProvider />,
+    element: <SettingsWrapper />,
+    path: '/:lang',
     children: [
       {
         element: <LightHeaderLayout />,
         children: [
-          { element: <Home />, path: '/' },
-          { element: <About />, path: '/about' },
-          { element: <Contact />, path: '/contact' },
-          { element: <Clients />, path: '/clients-&-partners' },
-          { element: <Service />, path: '/services' },
-          { element: <ServiceDetails />, path: '/services/:id' },
-          { element: <Blog />, path: '/blog' },
+          { element: <Home />, path: 'home' },
+          { element: <About />, path: 'about' },
+          { element: <Contact />, path: 'contact' },
+          { element: <Clients />, path: 'clients-&-partners' },
+          { element: <Service />, path: 'services' },
+          { element: <ServiceDetails />, path: 'services/:id' },
+          { element: <Blog />, path: 'blog' },
           { element: <NotFound />, path: '*' },
         ],
       },
       {
         element: <DarkHeaderLayout />,
-        children: [{ element: <BlogDetails />, path: '/blog/:id' }],
+        children: [{ element: <BlogDetails />, path: 'blog/:id' }],
       },
     ],
   },

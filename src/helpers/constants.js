@@ -25,7 +25,7 @@ export const languages = [
 export const HEADER_BURGER_MENU = [
   {
     text: 'menu.home',
-    link: '/',
+    link: '/home',
     title: 'Go to the homepage', // Subtitle used for the title attribute
     ariaLabel: 'menu.home',
   },

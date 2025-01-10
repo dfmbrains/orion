@@ -77,7 +77,7 @@ const ClientsSection1 = () => {
           >
             {t(`${translationKey}.partners`)}.
           </Button>
-          <Button href={'#testimonialsSection'} color="info" variant="text">
+          <Button href="#testimonialsSection" color="info" variant="text">
             {t(`${translationKey}.testimonials`)}.
           </Button>
         </ButtonGroup>

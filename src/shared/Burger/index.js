@@ -13,12 +13,12 @@ import LightLogoCompany from 'assets/images/logoWhite.png';
 import ChangeLangButton from 'components/ChangeLangButton';
 import EmailFormSection from 'components/EmailFormSection';
 import { FlexBetweenAlignCenter, FlexBox, FlexGap10 } from 'components/FlexBox';
+import LanguageLink from 'components/LanguageLink';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { HEADER_BURGER_MENU } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { companyRecoil } from 'store';
 
@@ -88,11 +88,7 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerHeader>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <LazyImage
-                className="logo"
-                src={LightLogoCompany}
-                alt="orion"
-              />
+              <LazyImage className="logo" src={LightLogoCompany} alt="orion" />
 
               <IconButton onClick={handleClose} color="secondary">
                 <Icon className="closeIcon">close</Icon>
@@ -127,11 +123,7 @@ const Burger = ({ isOpen, handleClose }) => {
         <StyledBurgerMain>
           <OrionContainer>
             <FlexBetweenAlignCenter>
-              <LazyImage
-                className="logo"
-                src={PrimaryLogoCompany}
-                alt="swt"
-              />
+              <LazyImage className="logo" src={PrimaryLogoCompany} alt="swt" />
 
               <ChangeLangButton color="info" />
             </FlexBetweenAlignCenter>
@@ -150,15 +142,16 @@ const Burger = ({ isOpen, handleClose }) => {
             </Typography>
             <StyledBurgerMenu>
               {HEADER_BURGER_MENU.map((item, idx) => (
-                <NavLink
+                <LanguageLink
                   key={idx}
+                  type="navLink"
                   to={item.link}
                   className="item"
                   onClick={handleClose}
                 >
                   <Typography variant="h5">{t(item.text)}</Typography>
                   <Icon>chevron_right</Icon>
-                </NavLink>
+                </LanguageLink>
               ))}
             </StyledBurgerMenu>
           </OrionContainer>

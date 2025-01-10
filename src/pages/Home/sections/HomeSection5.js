@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   ButtonGroup,
   Icon,
   IconButton,
@@ -9,6 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 import ReviewsBg from 'assets/images/backgrounds/reviews.webp';
+import DefaultButton from 'components/DefaultButton';
 import { FlexGap10 } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
@@ -173,7 +173,8 @@ const HomeSection5 = () => {
               </Box>
             )}
 
-            <Button
+            <DefaultButton
+              size="medium"
               component={Link}
               color="secondary"
               variant="contained"
@@ -181,7 +182,7 @@ const HomeSection5 = () => {
               to="/clients-&-partners#testimonialsSection"
             >
               {t('buttons.readOthers')}
-            </Button>
+            </DefaultButton>
           </>
         ) : (
           <Styled50vhLoadingBox>

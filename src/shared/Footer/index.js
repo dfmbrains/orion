@@ -1,11 +1,11 @@
 import { Box, Grid, styled, Typography } from '@mui/material';
 import { FlexBetweenAlignCenter, FlexGap10 } from 'components/FlexBox';
+import LanguageLink from 'components/LanguageLink';
 import { Logo } from 'components/Logo';
 import OrionContainer from 'components/OrionContainer';
 import SocialMediaButtons from 'components/SocialMediaButtons';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 const StyledFooter = styled('footer')(({ theme }) => ({
   padding: '60px 0 15px',
@@ -131,7 +131,7 @@ const Footer = () => {
                   <StyledColumn>
                     {column.elements.map((item, index) => (
                       <StyledLink key={index}>
-                        <Link to={item.link}>
+                        <LanguageLink to={item.link}>
                           <Typography
                             color="#919191"
                             variant="body1"
@@ -139,7 +139,7 @@ const Footer = () => {
                           >
                             {item.title}
                           </Typography>
-                        </Link>
+                        </LanguageLink>
 
                         {item?.active && (
                           <Typography

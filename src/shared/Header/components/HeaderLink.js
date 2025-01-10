@@ -1,7 +1,7 @@
 import { MenuItem, styled, Typography } from '@mui/material';
+import LanguageLink from 'components/LanguageLink';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, NavLink } from 'react-router-dom';
 
 const StyledBox = styled('li')(({ theme }) => ({
   padding: '12px 15px',
@@ -9,8 +9,17 @@ const StyledBox = styled('li')(({ theme }) => ({
 
   [theme.breakpoints.down('lg')]: { padding: '0 10px' },
 
+  '& .navLink': {
+    color: '#FFFFFF',
+    transition: '0.3s',
+
+    h6: {
+      fontWeight: '500',
+    },
+  },
+
   '&:hover': {
-    '& .link': {
+    '& .navLink': {
       color: theme.palette.primary.main,
       transition: '0.3s',
     },
@@ -30,15 +39,6 @@ const StyledBox = styled('li')(({ theme }) => ({
       width: 'calc(100% + 20px)',
       borderRadius: 5,
     },
-  },
-}));
-
-const StyledLink = styled(NavLink)(() => ({
-  color: '#FFFFFF',
-  transition: '0.3s',
-
-  h6: {
-    fontWeight: '500',
   },
 }));
 
@@ -85,14 +85,15 @@ const HeaderLink = ({ headerLink }) => {
 
   return (
     <StyledBox onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>
-      <StyledLink
-        className="link"
+      <LanguageLink
+        type="navLink"
+        className="navLink"
         to={headerLink.link}
         title={headerLink.title}
         aria-label={t(headerLink.ariaLabel)}
       >
         <Typography variant="subtitle2">{t(headerLink.text)}</Typography>
-      </StyledLink>
+      </LanguageLink>
 
       {headerLink?.subLinks && (
         <nav>
@@ -103,14 +104,14 @@ const HeaderLink = ({ headerLink }) => {
                 component="li"
                 onClick={handleMenuClose}
               >
-                <Link
+                <LanguageLink
                   to={subLink.link}
                   title={subLink.title}
                   style={{ color: '#FFF' }}
                   aria-label={t(subLink.ariaLabel)}
                 >
                   <Typography variant="body1">{t(subLink.text)}</Typography>
-                </Link>
+                </LanguageLink>
               </StyledMenuItem>
             ))}
           </StyledMenu>
