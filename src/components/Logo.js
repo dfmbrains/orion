@@ -13,7 +13,7 @@ const StyledImg = styled('img')(({ theme }) => ({
 export const Logo = () => {
   return (
     <LanguageLink to="/home" style={{ display: 'flex' }}>
-      <StyledImg src={LogoWhite} alt="Orion Trans" />
+      <StyledImg src={LogoWhite} alt="Orion-Trans" />
     </LanguageLink>
   );
 };

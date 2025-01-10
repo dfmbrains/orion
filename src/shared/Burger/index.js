@@ -161,7 +161,7 @@ const Burger = ({ isOpen, handleClose }) => {
 
         <Divider />
         <Typography mt={1} pb={2} variant="body2" sx={{ textAlign: 'center' }}>
-          Copyright © {new Date().getFullYear()} Orion Trans{' '}
+          Copyright © {new Date().getFullYear()} Orion-Trans{' '}
           {t('footer.privacy.right')}
         </Typography>
       </StyledBurger>

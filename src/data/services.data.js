@@ -84,7 +84,7 @@ export const servicesData = [
     id: '10',
     language: 'zh',
     created: '11/25/2024',
-    title: 'Orion Trans  国际铁路货物运输',
+    title: 'Orion-Trans  国际铁路货物运输',
     subtitle: '',
     images: { file: ServiceImg1, name: 'wagons' },
     content: [
@@ -94,7 +94,7 @@ export const servicesData = [
       },
       {
         title: '为什么选择铁路运输？',
-        text: '铁路运输是运输原材料、设备和产品等大宗重型货物的理想选择，运输量大，安全性高。选择orion trans，您将获得在每个环节的专业支持、具有竞争力的价格和优质的服务。我们致力于让您的物流变得简单、可靠和便捷。',
+        text: '铁路运输是运输原材料、设备和产品等大宗重型货物的理想选择，运输量大，安全性高。选择Orion-Trans，您将获得在每个环节的专业支持、具有竞争力的价格和优质的服务。我们致力于让您的物流变得简单、可靠和便捷。',
       },
       {
         title: '为什么选择我们的铁路运输服务？',

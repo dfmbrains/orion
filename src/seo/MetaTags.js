@@ -36,7 +36,7 @@ const MetaTags = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={window.location.href} />
       <meta property="og:locale" content={getOgLocale(i18n.language)} />
-      <meta property="og:site_name" content="Orion Trans" />
+      <meta property="og:site_name" content="Orion-Trans" />
       {imageUrl && <meta property="og:image" content={imageUrl} />}
 
       {/*twitter*/}
