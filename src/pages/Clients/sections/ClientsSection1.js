@@ -19,7 +19,7 @@ import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { partnersRecoil } from 'store';
+import { companiesRecoil } from 'store';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -32,11 +32,14 @@ const StyledSection = styled('section')(({ theme }) => ({
 }));
 
 const StyledImageBox = styled(FlexAllCenter)(() => ({
-  height: '100px',
-  overflow: 'hidden',
+  width: '215px',
+  height: '120px',
+  background: '#F7F7F7',
+  borderRadius: '16px',
 
   '& img': {
-    minHeight: '100%',
+    maxWidth: '80%',
+    maxHeight: '80%',
   },
 }));
 
@@ -46,7 +49,7 @@ const ClientsSection1 = () => {
 
   const theme = useTheme();
 
-  const partnersList = useRecoilValue(partnersRecoil);
+  const companiesList = useRecoilValue(companiesRecoil);
 
   const [searchParams] = useSearchParams();
   const [part, setPart] = useState(
@@ -57,6 +60,7 @@ const ClientsSection1 = () => {
     if (searchParams.has('part') && +searchParams.get('part') !== part) {
       setPart(+searchParams.get('part'));
     }
+    // eslint-disable-next-line
   }, [searchParams]);
 
   return (
@@ -113,7 +117,7 @@ const ClientsSection1 = () => {
             : t(`${translationKey}.selectedPartners.subtitle`)}
         </Typography>
 
-        {partnersList ? (
+        {companiesList ? (
           <Box
             mt={{ md: 6, sm: 5, xs: 4 }}
             pt={{ md: 10, sm: 8, xs: 6 }}
@@ -121,8 +125,8 @@ const ClientsSection1 = () => {
           >
             <Swiper
               navigation
-              slidesPerView={4}
-              spaceBetween={20}
+              spaceBetween={2}
+              slidesPerView={6}
               modules={[Navigation]}
               className="swiperStatic swiperCustomNavigation"
             >
@@ -130,13 +134,21 @@ const ClientsSection1 = () => {
                 <SwiperButtons />
               </StyledSwiperButtonsPosition>
 
-              {partnersList.map(el => (
-                <SwiperSlide key={el.id}>
-                  <StyledImageBox>
-                    <LazyImage src={el.images.file} alt={el.images.name} />
-                  </StyledImageBox>
-                </SwiperSlide>
-              ))}
+              {companiesList
+                .filter(item =>
+                  item.type !== 'all'
+                    ? part === 0
+                      ? item.type === 'client'
+                      : item.type === 'partner'
+                    : item,
+                )
+                .map(el => (
+                  <SwiperSlide key={el.id}>
+                    <StyledImageBox>
+                      <LazyImage src={el.images.file} alt={el.images.name} />
+                    </StyledImageBox>
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </Box>
         ) : (

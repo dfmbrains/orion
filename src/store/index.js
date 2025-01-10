@@ -1,6 +1,6 @@
 import { blogData } from 'data/blog.data';
 import { companyData } from 'data/company.data';
-import { partnersData } from 'data/partners.data';
+import { companiesData } from 'data/companies.data';
 import { reviewsData } from 'data/reviews.data';
 import { servicesData } from 'data/services.data';
 import { teamData } from 'data/team.data';
@@ -42,9 +42,9 @@ export const teamRecoil = atom({
   default: teamData,
 });
 
-export const partnersRecoil = atom({
-  key: 'partnersRecoilState',
-  default: partnersData,
+export const companiesRecoil = atom({
+  key: 'companiesRecoilState',
+  default: companiesData,
 });
 
 export const companyRecoil = atom({
