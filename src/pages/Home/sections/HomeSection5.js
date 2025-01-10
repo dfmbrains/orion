@@ -59,33 +59,9 @@ const StyledImageBox = styled('div')(({ theme }) => ({
     height: '60px',
   },
 
-  '& .box': {
-    position: 'relative',
+  '& .img': {
     width: '100%',
     height: '100%',
-    overflow: 'hidden',
-    borderRadius: '50%',
-  },
-
-  '& .img': {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    minWidth: '100%',
-    minHeight: '100%',
-    maxWidth: '130%',
-    maxHeight: '130%',
-  },
-
-  '& .child': {
-    position: 'absolute',
-    right: '0',
-    top: '0',
-    transform: 'translate(25%, -25%)',
-    width: '50%',
-    height: '50%',
-    borderRadius: '50%',
   },
 }));
 
@@ -123,18 +99,10 @@ const HomeSection5 = () => {
 
             <FlexGap10>
               <StyledImageBox>
-                <div className="box">
-                  <LazyImage
-                    className="img"
-                    src={selectedReview?.img}
-                    alt={selectedReview?.name}
-                  />
-                </div>
-
                 <LazyImage
-                  className="child"
+                  className="img"
+                  alt={selectedReview?.company}
                   src={selectedReview?.companyLogo}
-                  alt={selectedReview.company}
                 />
               </StyledImageBox>
 
