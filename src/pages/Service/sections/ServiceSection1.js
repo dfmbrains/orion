@@ -7,7 +7,7 @@ import { filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, serviceRecoil } from 'store';
+import { serviceRecoil } from 'store';
 import ServiceCard from '../components/ServiceCard';
 
 const StyledSection = styled('section')(({ theme }) => ({
@@ -38,21 +38,20 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
 
 const ServiceSection1 = () => {
   const translationKey = 'service.section1';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const theme = useTheme();
 
   const serviceList = useRecoilValue(serviceRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (serviceList) {
-      const filtered = filterArrByLanguage(serviceList, language);
+      const filtered = filterArrByLanguage(serviceList, i18n.language);
       setData(filtered);
     }
-  }, [serviceList, language]);
+  }, [serviceList, i18n.language]);
 
   return (
     <StyledSection>

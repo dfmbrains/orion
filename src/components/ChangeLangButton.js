@@ -7,8 +7,6 @@ import i18next from 'i18next';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { selectedLanguageRecoil } from 'store';
 
 const ChangeLangButton = ({ color }) => {
   const theme = useTheme();
@@ -17,8 +15,6 @@ const ChangeLangButton = ({ color }) => {
   const navigate = useNavigate();
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
-
-  const setSelectedLang = useSetRecoilState(selectedLanguageRecoil);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -30,8 +26,6 @@ const ChangeLangButton = ({ color }) => {
 
   const handleChangeLanguage = async language => {
     await i18next.changeLanguage(language);
-
-    setSelectedLang(language);
 
     setAnchorEl(null);
     window.removeEventListener('scroll', handleCloseOnScroll);

@@ -10,7 +10,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { companyRecoil, selectedLanguageRecoil } from 'store';
+import { companyRecoil } from 'store';
 import ContactForm from '../components/ContactForm';
 
 const StyledSection = styled('section')(({ theme }) => ({
@@ -34,11 +34,10 @@ function a11yProps(index) {
 }
 
 const ContactContentSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const translationKey = 'contact.content';
 
   const company = useRecoilValue(companyRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [formVariant, setFormVariant] = useSearchParams();
 
@@ -86,12 +85,12 @@ const ContactContentSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={getMapLinkByLocaleAndCoordinates(
-                      language,
+                      i18n.language,
                       company.about.coordinates,
                     )}
                   >
                     <Typography variant="subtitle2" color="#1B1B1B">
-                      {company.about.address[language]}
+                      {company.about.address[i18n.language]}
                     </Typography>
                   </a>
                 </div>

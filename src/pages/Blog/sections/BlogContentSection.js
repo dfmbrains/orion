@@ -5,8 +5,9 @@ import OrionLoading from 'components/OrionLoading';
 import PostCard from 'components/PostCard';
 import { filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import { blogRecoil, selectedLanguageRecoil } from 'store';
+import { blogRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '100px 0 80px',
@@ -36,18 +37,18 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
 }));
 
 const BlogContentSection = () => {
+  const { i18n } = useTranslation();
   const blogList = useRecoilValue(blogRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (language && blogList) {
-      const filteredReviews = filterArrByLanguage(blogList, language);
+    if (i18n.language && blogList) {
+      const filteredReviews = filterArrByLanguage(blogList, i18n.language);
 
       setData(filteredReviews);
     }
-  }, [language, blogList]);
+  }, [i18n.language, blogList]);
 
   return (
     <StyledSection>

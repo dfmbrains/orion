@@ -13,7 +13,7 @@ import { filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import { blogRecoil, selectedLanguageRecoil } from 'store';
+import { blogRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '45px 0 90px',
@@ -35,11 +35,10 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
 
 const HomeSection7 = () => {
   const translationKey = 'home.section7';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const theme = useTheme();
 
   const blogList = useRecoilValue(blogRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -47,12 +46,12 @@ const HomeSection7 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (language && blogList) {
-      const filteredReviews = filterArrByLanguage(blogList, language);
+    if (i18n.language && blogList) {
+      const filteredReviews = filterArrByLanguage(blogList, i18n.language);
 
       setData(filteredReviews.slice(0, isMobile ? 3 : isLaptop ? 2 : 3));
     }
-  }, [language, blogList, isLaptop, isMobile]);
+  }, [i18n.language, blogList, isLaptop, isMobile]);
 
   return (
     <StyledSection>

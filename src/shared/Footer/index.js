@@ -59,9 +59,6 @@ const StyledBottomBox = styled('div')(({ theme }) => ({
 const Footer = () => {
   const { t } = useTranslation();
 
-  // const services = useRecoilValue(serviceRecoil);
-  // const language = useRecoilValue(selectedLanguageRecoil);
-
   const footerMenu = [
     {
       title: t('footer.menu.column1'),

@@ -2,8 +2,7 @@ import { styled, Typography } from '@mui/material';
 import { StyledAvatar } from 'components/StyledComponents';
 import { formatName } from 'helpers/utils';
 import React from 'react';
-import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil } from 'store';
+import { useTranslation } from 'react-i18next';
 
 const StyledBox = styled('div')(() => ({
   display: 'flex',
@@ -12,7 +11,7 @@ const StyledBox = styled('div')(() => ({
 }));
 
 const TeamMemberCard = ({ member }) => {
-  const language = useRecoilValue(selectedLanguageRecoil);
+  const { i18n } = useTranslation();
 
   return (
     <StyledBox>
@@ -20,7 +19,7 @@ const TeamMemberCard = ({ member }) => {
 
       <Typography mt={1} variant="subtitle1">
         {formatName(
-          language,
+          i18n.language,
           member.lastName,
           member.firstName,
           member.midName,

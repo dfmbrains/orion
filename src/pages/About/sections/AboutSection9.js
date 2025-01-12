@@ -7,7 +7,7 @@ import { createDesiredArrays, filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, teamRecoil } from 'store';
+import { teamRecoil } from 'store';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TeamMemberCard from '../components/TeamMemberCard';
@@ -42,22 +42,21 @@ const StyledSection = styled('section')(({ theme }) => ({
 
 const AboutSection9 = () => {
   const translationKey = 'about.section9';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const theme = useTheme();
 
   const team = useRecoilValue(teamRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (team) {
-      const filteredTeam = filterArrByLanguage(team, language);
+      const filteredTeam = filterArrByLanguage(team, i18n.language);
 
       setData(createDesiredArrays(filteredTeam));
     }
-  }, [team, language]);
+  }, [team, i18n.language]);
 
   return (
     <StyledSection id="aboutSection9">

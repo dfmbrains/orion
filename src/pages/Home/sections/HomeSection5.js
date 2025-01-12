@@ -19,7 +19,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { reviewsRecoil, selectedLanguageRecoil } from 'store';
+import { reviewsRecoil } from 'store';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '80px 0',
@@ -67,10 +67,9 @@ const StyledImageBox = styled('div')(({ theme }) => ({
 
 const HomeSection5 = () => {
   const translationKey = 'home.section5';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const reviews = useRecoilValue(reviewsRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const theme = useTheme();
 
@@ -78,13 +77,13 @@ const HomeSection5 = () => {
   const [selectedReview, setSelectedReview] = useState(null);
 
   useEffect(() => {
-    if (language && reviews) {
-      const filteredReviews = filterArrByLanguage(reviews, language);
+    if (i18n.language && reviews) {
+      const filteredReviews = filterArrByLanguage(reviews, i18n.language);
 
       setData(filteredReviews);
       setSelectedReview(filteredReviews[0]);
     }
-  }, [language, reviews]);
+  }, [i18n.language, reviews]);
 
   return (
     <StyledSection>

@@ -1,16 +1,10 @@
 import { blogData } from 'data/blog.data';
-import { companyData } from 'data/company.data';
 import { companiesData } from 'data/companies.data';
+import { companyData } from 'data/company.data';
 import { reviewsData } from 'data/reviews.data';
 import { servicesData } from 'data/services.data';
 import { teamData } from 'data/team.data';
-import { defaultAppLanguage } from 'helpers/constants';
 import { atom } from 'recoil';
-
-export const selectedLanguageRecoil = atom({
-  key: 'selectedLanguageRecoilState',
-  default: localStorage.getItem('i18nextLng') || defaultAppLanguage,
-});
 
 export const monthsRecoil = atom({
   key: 'mothsRecoilState',

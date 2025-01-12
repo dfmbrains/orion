@@ -1,13 +1,13 @@
 import { Box, styled, Typography } from '@mui/material';
+import LazyImage from 'components/LazyImage';
 import { filterArrByLanguage } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
-import { reviewsRecoil, selectedLanguageRecoil } from 'store';
+import { reviewsRecoil } from 'store';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FlexGap10 } from './FlexBox';
-import LazyImage from 'components/LazyImage';
 import OrionContainer from './OrionContainer';
 import OrionLoading from './OrionLoading';
 import { Styled50vhLoadingBox } from './StyledComponents';
@@ -99,20 +99,19 @@ const StyledImgBox = styled('div')(({ theme }) => ({
 }));
 
 const TestimonialsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const reviews = useRecoilValue(reviewsRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (language && reviews) {
-      const filteredReviews = filterArrByLanguage(reviews, language);
+    if (i18n.language && reviews) {
+      const filteredReviews = filterArrByLanguage(reviews, i18n.language);
 
       setData(filteredReviews);
     }
-  }, [language, reviews]);
+  }, [i18n.language, reviews]);
 
   return (
     <StyledSection id="testimonialsSection">
@@ -142,10 +141,7 @@ const TestimonialsSection = () => {
                   <SwiperSlide key={el.id}>
                     <FlexGap10 sx={{ columnGap: '30px' }}>
                       <StyledImgBox>
-                        <LazyImage
-                          src={el?.companyLogo}
-                          alt={el?.company}
-                        />
+                        <LazyImage src={el?.companyLogo} alt={el?.company} />
                       </StyledImgBox>
 
                       <div>

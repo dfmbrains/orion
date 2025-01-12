@@ -19,12 +19,12 @@ import {
   StyledSwiperButtonsPosition,
 } from 'components/StyledComponents';
 import SwiperButtons from 'components/SwiperButtons';
-import { scrollIntoView, filterArrByLanguage, formatName } from 'helpers/utils';
+import { filterArrByLanguage, formatName, scrollIntoView } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { selectedLanguageRecoil, teamRecoil } from 'store';
+import { teamRecoil } from 'store';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -78,24 +78,23 @@ const StyledFlexGap10 = styled(FlexGap10)(({ theme }) => ({
 
 const HomeSection6 = () => {
   const translationKey = 'home.section6';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const theme = useTheme();
 
   const team = useRecoilValue(teamRecoil);
-  const language = useRecoilValue(selectedLanguageRecoil);
 
   const [active, setActive] = useState(null);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (team) {
-      const filteredTeam = filterArrByLanguage(team, language);
+      const filteredTeam = filterArrByLanguage(team, i18n.language);
 
       setData(filteredTeam);
       setActive(filteredTeam[0]);
     }
-  }, [team, language]);
+  }, [team, i18n.language]);
 
   return (
     <StyledSection id="homeTeamSection">
@@ -131,7 +130,7 @@ const HomeSection6 = () => {
                     </Typography>
                     <Typography fontWeight="500" variant="subtitle1">
                       {formatName(
-                        language,
+                        i18n.language,
                         active.lastName,
                         active.firstName,
                         active.midName,
@@ -223,7 +222,7 @@ const HomeSection6 = () => {
                               sx={{ wordBreak: 'break-all' }}
                             >
                               {formatName(
-                                language,
+                                i18n.language,
                                 member.lastName,
                                 member.firstName,
                               )}
