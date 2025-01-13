@@ -76,6 +76,25 @@ const StyledFlexGap10 = styled(FlexGap10)(({ theme }) => ({
   },
 }));
 
+const swiperBreakpoints = {
+  1200: {
+    spaceBetween: 20,
+    slidesPerView: 4,
+  },
+  900: {
+    spaceBetween: 15,
+    slidesPerView: 3,
+  },
+  550: {
+    spaceBetween: 15,
+    slidesPerView: 2,
+  },
+  0: {
+    spaceBetween: 15,
+    slidesPerView: 1,
+  },
+};
+
 const HomeSection6 = () => {
   const translationKey = 'home.section6';
   const { t, i18n } = useTranslation();
@@ -86,6 +105,13 @@ const HomeSection6 = () => {
 
   const [active, setActive] = useState(null);
   const [data, setData] = useState([]);
+
+  const handleClickMember = member => {
+    if (member.id !== active.id) {
+      scrollIntoView('#homeTeamSection');
+      setActive(member);
+    }
+  };
 
   useEffect(() => {
     if (team) {
@@ -162,76 +188,53 @@ const HomeSection6 = () => {
             </Grid>
 
             <Box
-              mt={{ lg: 8, md: 6, sm: 4, xs: 3 }}
               sx={{ position: 'relative' }}
+              mt={{ lg: 8, md: 6, sm: 4, xs: 3 }}
             >
               <Typography variant="h2" mb={{ md: 5, xs: 3 }}>
                 {t(`${translationKey}.subtitle`)}
               </Typography>
               <Swiper
-                className="swiperStatic swiperCustomNavigation"
-                navigation={true}
-                modules={[Navigation]}
-                slidesPerView={4}
+                navigation
                 spaceBetween={20}
-                breakpoints={{
-                  1200: {
-                    spaceBetween: 20,
-                    slidesPerView: 4,
-                  },
-                  900: {
-                    spaceBetween: 15,
-                    slidesPerView: 3,
-                  },
-                  550: {
-                    spaceBetween: 15,
-                    slidesPerView: 2,
-                  },
-                  0: {
-                    spaceBetween: 15,
-                    slidesPerView: 1,
-                  },
-                }}
+                slidesPerView={4}
+                modules={[Navigation]}
+                breakpoints={swiperBreakpoints}
+                className="swiperStatic swiperCustomNavigation"
               >
                 <StyledSwiperButtonsPosition>
                   <SwiperButtons />
                 </StyledSwiperButtonsPosition>
 
-                {data.map(
-                  (member, idx) =>
-                    member.id !== active.id && (
-                      <SwiperSlide key={idx}>
-                        <StyledFlexGap10
-                          theme={theme}
-                          onClick={() => {
-                            scrollIntoView('#homeTeamSection');
-                            setActive(member);
-                          }}
+                {data.map((member, idx) => (
+                  <SwiperSlide key={idx}>
+                    <StyledFlexGap10
+                      theme={theme}
+                      onClick={() => handleClickMember(member)}
+                    >
+                      <StyledAvatarSmall
+                        src={member.images.file}
+                        alt={member.images.name}
+                      />
+                      <div>
+                        <Typography color="#4E5865" variant="body1">
+                          {member.position}
+                        </Typography>
+                        <Typography
+                          fontWeight="500"
+                          variant="subtitle1"
+                          sx={{ wordBreak: 'break-all' }}
                         >
-                          <StyledAvatarSmall
-                            src={member.images.file}
-                            alt={member.images.name}
-                          />
-                          <div>
-                            <Typography color="#4E5865" variant="body1">
-                              {member.position}
-                            </Typography>
-                            <Typography
-                              fontWeight="500"
-                              variant="subtitle1"
-                              sx={{ wordBreak: 'break-all' }}
-                            >
-                              {formatName(
-                                i18n.language,
-                                member.lastName,
-                                member.firstName,
-                              )}
-                            </Typography>
-                          </div>
-                        </StyledFlexGap10>
-                      </SwiperSlide>
-                    ),
-                )}
+                          {formatName(
+                            i18n.language,
+                            member.lastName,
+                            member.firstName,
+                          )}
+                        </Typography>
+                      </div>
+                    </StyledFlexGap10>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </Box>
           </>
