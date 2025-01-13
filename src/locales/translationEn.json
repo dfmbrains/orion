@@ -64,7 +64,7 @@
     "readOurStory": "Read Our Story",
     "contactUs": "Contact Us",
     "calculateRailTariff": "Calculate A Rail Tariff",
-    "cancel": "Cancel",
+    "close": "Close",
     "goBack": "Go Back"
   },
   "snackbarTexts": {
@@ -101,7 +101,7 @@
     "clients": "Clients",
     "partners": "Partners",
     "blogs": "Blogs",
-    "contact": "Contact",
+    "contacts": "Contacts",
     "getInTouch": "Get In Touch",
     "leaveReview": "Leave a review",
     "clientsAndPartners": "Clients & Partners",

@@ -49,7 +49,7 @@ export default function CompanyHistoryDialog({ open, handleClose }) {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary" variant="outlined">
-          {t('buttons.cancel')}
+          {t('buttons.close')}
         </Button>
       </DialogActions>
     </Dialog>

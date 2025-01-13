@@ -59,7 +59,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '执行董事',
-    about: '',
+    about: '我们公司执行总监Anvar于2016年开始了他的职业生涯。在漫长的时间里，他不断成长为一名专业的物流专家，以高质量和高效率的工作表现脱颖而出。作为我们的领袖，他始终激励团队并突破他们的能力边界。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -122,7 +122,7 @@ export const teamData = [
     birthDate: '19/08/1998',
     gender: 1,
     position: '商业总监',
-    about: '',
+    about: 'Madina拥有在马来西亚和意大利的商科学历，具有独特的国际教育背景。她将国际经验与战略性思维融入公司的运营，帮助公司在商业管理中取得卓越成果。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2021',
@@ -185,7 +185,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '物流部负责人（集装箱运输）',
-    about: '',
+    about: 'Akim拥有8年的专业经验，高效管理集装箱运输及其他运输方式。他成功协调团队工作，解决复杂的物流问题，为客户提供最佳解决方案，确保运输的顺畅进行。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -248,7 +248,7 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: '物流经理',
-    about: '',
+    about: '她擅长解决问题，对每位客户采取个性化的服务。在公司两年的工作中，她展现了高度的组织能力、系统化的工作方法以及快速适应变化的能力。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -311,7 +311,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '从中国到独联体国家的物流专家',
-    about: '',
+    about: '凭借在中国获得的高等教育和对汉语与中国的深入了解，她能够专业地组织从中国到独联体国家的物流运输。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -374,7 +374,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '物流经理',
-    about: '',
+    about: 'Azim是一位经验丰富的物流专家，能够迅速解决各种复杂程度的问题。他对细节的关注和在多任务环境中工作的能力使他成为我们团队中不可或缺的一员。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -437,7 +437,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '物流经理',
-    about: '',
+    about: '在短时间内，他展现出了高水平的专业素养和出色的分析能力。他迅速适应了市场的特殊性，并自信地解决与运输相关的各种问题。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -561,7 +561,7 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: '首席会计师',
-    about: '',
+    about: '拥有超过10年的公司工作经验，我们财务总监是真正可靠支柱。她掌控所有财务操作，管理预算并积极参与战略决策。她在会计和金融领域的卓越能力以及多年的经验，使她成为我们团队中不可替代的一员。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -624,7 +624,7 @@ export const teamData = [
     birthDate: '',
     gender: 1,
     position: '会计',
-    about: '',
+    about: '高素质的会计师，注重细节，总是以清晰和负责的态度对待她的工作。她确保准确计算和及时报告，对公司的财务稳定发挥重要作用。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',
@@ -687,7 +687,7 @@ export const teamData = [
     birthDate: '',
     gender: 0,
     position: '办公室经理',
-    about: '',
+    about: '自2010年公司成立以来，他一直与我们同在。他负责办公室的高效运行，管理行政事务，并始终关注团队的需求，为办公室营造友好的氛围。',
     email: 'oriontransoffice@gmail.com',
     workPeriod: {
       from: '11/25/2016',

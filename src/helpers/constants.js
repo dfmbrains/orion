@@ -164,10 +164,10 @@ export const HEADER_BURGER_MENU = [
     ],
   },
   {
-    text: 'menu.contact',
+    text: 'menu.contacts',
     link: '/contact?form=0',
     title: 'Get in touch with us', // Subtitle to describe contact page
-    ariaLabel: 'menu.contact',
+    ariaLabel: 'menu.contacts',
     subLinks: [
       {
         link: '/contact?form=0#contactContentSection',

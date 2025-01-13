@@ -431,8 +431,8 @@ export const servicesData = [
     id: '18',
     language: 'zh',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: '每日车厢位置查询',
+    subtitle: '每日车厢位置查询',
     images: { name: '', file: ServiceImg5 },
     content: [
       {
@@ -494,8 +494,8 @@ export const servicesData = [
     id: '20',
     language: 'zh',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: '我们的服务对象',
+    subtitle: '我们的服务对象',
     images: { name: '', file: ServiceImg6 },
     content: [
       {
@@ -550,8 +550,8 @@ export const servicesData = [
     id: '22',
     language: 'zh',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: '货物运输伴随文件办理',
+    subtitle: '货物运输伴随文件办理',
     images: { name: '', file: ServiceImg7 },
     content: [
       {
@@ -609,8 +609,8 @@ export const servicesData = [
     id: '24',
     language: 'zh',
     created: '11/25/2024',
-    title: '',
-    subtitle: '',
+    title: '铁路运输个性化咨询',
+    subtitle: '铁路运输个性化咨询',
     images: { name: '', file: ServiceImg8 },
     content: [
       {

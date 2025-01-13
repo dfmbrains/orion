@@ -64,7 +64,7 @@
     "readOurStory": "Узнать нашу историю",
     "contactUs": "Связаться с нами",
     "calculateRailTariff": "Расчет ж/д тарифа",
-    "cancel": "Назад",
+    "close": "Закрыть",
     "goBack": "Вернуться назад"
   },
   "snackbarTexts": {
@@ -101,7 +101,7 @@
     "clients": "Клиенты",
     "partners": "Партнеры",
     "blogs": "Статьи",
-    "contact": "Контакты",
+    "contacts": "Контакты",
     "getInTouch": "Написать нам",
     "leaveReview": "Оставить отзыв",
     "clientsAndPartners": "Клиенты и партнеры",

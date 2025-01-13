@@ -71,7 +71,7 @@ const Footer = () => {
           link: '/clients-&-partners#header',
         },
         { title: t('menu.blogs'), link: '/blog#header' },
-        { title: t('menu.contact'), link: '/contact#header' },
+        { title: t('menu.contacts'), link: '/contact#header' },
         {
           title: t('menu.career'),
           link: '/career#header',
