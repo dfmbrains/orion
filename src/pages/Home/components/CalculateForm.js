@@ -234,6 +234,7 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
+                  required
                   fullWidth
                   type="text"
                   name="name"
@@ -266,6 +267,7 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
+                  required
                   fullWidth
                   type="text"
                   name="phoneNumber"
@@ -282,6 +284,7 @@ const CalculateForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={5.5}>
                 <TextField
+                  required
                   fullWidth
                   type="text"
                   name="email"

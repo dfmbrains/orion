@@ -96,6 +96,7 @@ const ContactForm = ({ translationKey }) => {
             >
               <Grid item xs={6}>
                 <TextField
+                  required
                   fullWidth
                   type="text"
                   name="name"
@@ -109,6 +110,7 @@ const ContactForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={6}>
                 <TextField
+                  required
                   fullWidth
                   type="text"
                   name="email"
@@ -148,6 +150,7 @@ const ContactForm = ({ translationKey }) => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                  required
                   multiline
                   minRows={5}
                   fullWidth
