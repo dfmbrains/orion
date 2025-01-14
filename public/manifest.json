@@ -1,25 +1,80 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "id": "/",
+  "name": "Orion-Trans",
+  "short_name": "Orion",
+  "description": "International Railway Freight and Forwarding",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#1B1B1B",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone"
+  ],
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "./assets/screenshots/home.png",
+      "sizes": "1902x872",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./assets/screenshots/services.png",
+      "sizes": "1895x868",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/screenshots/about.png",
+      "sizes": "1895x868",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/screenshots/clients.png",
+      "sizes": "1894x865",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/screenshots/contact.png",
+      "sizes": "1896x868",
+      "type": "image/png"
+    }
+  ],
   "icons": [
     {
-      "src": "./assets/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "./assets/favicon16.ico",
+      "sizes": "16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "./assets/favicon24.ico",
+      "sizes": "24x24",
+      "type": "image/x-icon"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "./assets/favicon32.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./assets/favicon64.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./assets/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "categories": [
+    "business"
+  ]
 }
