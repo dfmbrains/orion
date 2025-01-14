@@ -83,7 +83,7 @@ const Burger = ({ isOpen, handleClose }) => {
   const company = useRecoilValue(companyRecoil);
 
   return (
-    <Drawer anchor={'left'} open={isOpen}>
+    <Drawer anchor="left" open={isOpen} variant="persistent">
       <StyledBurger>
         <StyledBurgerHeader>
           <OrionContainer>

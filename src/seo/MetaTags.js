@@ -18,6 +18,7 @@ const MetaTags = ({
   descriptionKey,
   ogType = 'website',
   imageUrl = defaultOgImage,
+  children,
 }) => {
   const { t, i18n } = useTranslation();
 
@@ -44,6 +45,8 @@ const MetaTags = ({
       <meta name="twitter:title" content={t(titleKey)} />
       <meta name="twitter:description" content={t(descriptionKey)} />
       {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+
+      {children && children}
     </Helmet>
   );
 };

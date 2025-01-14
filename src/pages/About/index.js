@@ -17,14 +17,30 @@ import AboutSection8 from './sections/AboutSection8';
 import AboutSection9 from './sections/AboutSection9';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    inLanguage: i18n.language,
+    url: `https://test.oriontrans.kg/${i18n.language}/about`,
+    name: t('meta.about.title'),
+    description: t('meta.about.description'),
+  };
 
   return (
     <>
       <MetaTags
         titleKey="meta.about.title"
         descriptionKey="meta.about.description"
-      />
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+      </MetaTags>
 
       <PromoSection title={t('about.promo1')} bgImage={AboutBg} />
       <AboutSection1 />
@@ -37,7 +53,11 @@ const About = () => {
       <AboutSection7 />
       <AboutSection8 />
       <TestimonialsSection />
-      <PromoSection isFullHeight title={t('about.promo2')} bgImage={OurTeamBg} />
+      <PromoSection
+        isFullHeight
+        title={t('about.promo2')}
+        bgImage={OurTeamBg}
+      />
       <AboutSection9 />
     </>
   );

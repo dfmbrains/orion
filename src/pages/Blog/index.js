@@ -6,14 +6,30 @@ import MetaTags from 'seo/MetaTags';
 import BlogContentSection from './sections/BlogContentSection';
 
 const Blog = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    inLanguage: i18n.language,
+    url: `https://test.oriontrans.kg/${i18n.language}/blog`,
+    name: t('meta.blogs.title'),
+    description: t('meta.blogs.description'),
+  };
 
   return (
     <>
       <MetaTags
         titleKey="meta.blogs.title"
         descriptionKey="meta.blogs.description"
-      />
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+      </MetaTags>
 
       <PromoSection bgImage={BlogImg} title={t('blog.promo')} />
       <BlogContentSection />
