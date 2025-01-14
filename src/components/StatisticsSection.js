@@ -1,6 +1,6 @@
 import { styled, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import CountUp from 'react-countup';
+import { useCountUp } from 'react-countup';
 import { useTranslation } from 'react-i18next';
 import { FlexGap10 } from './FlexBox';
 import OrionContainer from './OrionContainer';
@@ -46,25 +46,26 @@ const StyledBox = styled('div')(({ theme, bgcolor }) => ({
   [theme.breakpoints.down('sm')]: { width: '100%', padding: '5px 0px 5px 10%' },
 }));
 
-const ValueComponent = ({ item, bgcolor }) => {
+const ValueComponent = ({ item, bgcolor, itemId }) => {
+  useCountUp({
+    ref: itemId,
+    start: 0,
+    prefix: '',
+    suffix: '',
+    duration: 2,
+    separator: ',',
+    enableScrollSpy: true,
+    end: item.value,
+    decimals: item.value % 1 !== 0 ? 1 : 0,
+  });
+
   return (
     <StyledBox bgcolor={bgcolor}>
       <Typography fontWeight="500" variant="body1">
         {item.title}
       </Typography>
       <FlexGap10>
-        <Typography variant="h1" component="h5">
-          <CountUp
-            start={0}
-            prefix=""
-            suffix=""
-            duration={2}
-            separator=","
-            enableScrollSpy
-            end={item.value}
-            decimals={item.value % 1 !== 0 ? 1 : 0}
-          />
-        </Typography>
+        <Typography id={itemId} variant="h1" component="h5" />
         <Typography variant="h4" component="h5" mt={{ sm: 2, xs: 1 }}>
           {item.valueTag}
         </Typography>
@@ -84,7 +85,12 @@ const StatisticsSection = ({ bgcolor }) => {
       <OrionContainer>
         <StyledRow>
           {data.map((item, idx) => (
-            <ValueComponent key={idx} item={item} bgcolor={bgcolor} />
+            <ValueComponent
+              key={idx}
+              item={item}
+              bgcolor={bgcolor}
+              itemId={`counter-${idx}`}
+            />
           ))}
         </StyledRow>
       </OrionContainer>

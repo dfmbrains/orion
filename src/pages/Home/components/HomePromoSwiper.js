@@ -36,7 +36,9 @@ const StyledMenuContainer = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('md')]: { flexWrap: 'wrap', gap: '15px' },
 }));
 
-const StyledMenuItem = styled(Typography)(({ theme, isSelected }) => ({
+const StyledMenuItem = styled(Typography, {
+  shouldForwardProp: prop => prop !== 'isSelected',
+})(({ theme, isSelected }) => ({
   textAlign: 'left',
   width: 'calc(100% / 4 - 30px * 3 / 4)',
   color: theme.palette.secondary.main,
