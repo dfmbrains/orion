@@ -2,26 +2,20 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Card,
   styled,
   Typography,
   useTheme,
 } from '@mui/material';
-import { FlexAllCenter } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import OrionLoading from 'components/OrionLoading';
-import {
-  Styled50vhLoadingBox,
-  StyledSwiperButtonsPosition,
-} from 'components/StyledComponents';
-import SwiperButtons from 'components/SwiperButtons';
+import { Styled50vhLoadingBox } from 'components/StyledComponents';
 import React, { useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { companiesRecoil } from 'store';
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 const StyledSection = styled('section')(({ theme }) => ({
   padding: '90px 0 160px',
@@ -31,11 +25,33 @@ const StyledSection = styled('section')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: { padding: '40px 0 60px' },
 }));
 
-const StyledImageBox = styled(FlexAllCenter)(() => ({
-  width: '215px',
+const StyledRow = styled(Box)(({ theme }) => ({
+  gap: '24px',
+  width: '100%',
+  display: 'flex',
+  flexWrap: 'wrap',
+  position: 'relative',
+  flexDirection: 'row',
+  alignItems: 'center',
+
+  [theme.breakpoints.down('md')]: { gap: '16px' },
+}));
+
+const StyledImageBox = styled(Card)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 'calc(100% / 5 - 24px * 4 / 5)',
   height: '120px',
   background: '#F7F7F7',
   borderRadius: '16px',
+
+  [theme.breakpoints.down('lg')]: { width: 'calc(100% / 4 - 24px * 3 / 4)' },
+  [theme.breakpoints.down('md')]: {
+    width: 'calc(100% / 4 - 16px * 3 / 4)',
+    height: '110px',
+  },
+  [theme.breakpoints.down('sm')]: { width: 'calc(100% / 2 - 16px / 2)' ,height: '95px'},
 
   '& img': {
     maxWidth: '80%',
@@ -118,39 +134,21 @@ const ClientsSection1 = () => {
         </Typography>
 
         {companiesList ? (
-          <Box
-            mt={{ md: 6, sm: 5, xs: 4 }}
-            pt={{ md: 10, sm: 8, xs: 6 }}
-            sx={{ position: 'relative' }}
-          >
-            <Swiper
-              navigation
-              spaceBetween={2}
-              slidesPerView={6}
-              modules={[Navigation]}
-              className="swiperStatic swiperCustomNavigation"
-            >
-              <StyledSwiperButtonsPosition>
-                <SwiperButtons />
-              </StyledSwiperButtonsPosition>
-
-              {companiesList
-                .filter(item =>
-                  item.type !== 'all'
-                    ? part === 0
-                      ? item.type === 'client'
-                      : item.type === 'partner'
-                    : item,
-                )
-                .map((el, idx) => (
-                  <SwiperSlide key={idx}>
-                    <StyledImageBox>
-                      <LazyImage src={el.images.file} alt={el.images.name} />
-                    </StyledImageBox>
-                  </SwiperSlide>
-                ))}
-            </Swiper>
-          </Box>
+          <StyledRow mt={{ xs: 12 }}>
+            {companiesList
+              .filter(item =>
+                item.type !== 'all'
+                  ? part === 0
+                    ? item.type === 'client'
+                    : item.type === 'partner'
+                  : item,
+              )
+              .map((el, idx) => (
+                <StyledImageBox key={idx}>
+                  <LazyImage alt={el.name} src={el.images.file} />
+                </StyledImageBox>
+              ))}
+          </StyledRow>
         ) : (
           <Styled50vhLoadingBox>
             <OrionLoading />
