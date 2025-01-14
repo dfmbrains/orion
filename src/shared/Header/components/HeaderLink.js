@@ -89,7 +89,6 @@ const HeaderLink = ({ headerLink }) => {
         type="navLink"
         className="navLink"
         to={headerLink.link}
-        title={headerLink.title}
         aria-label={t(headerLink.ariaLabel)}
       >
         <Typography variant="subtitle2">{t(headerLink.text)}</Typography>
