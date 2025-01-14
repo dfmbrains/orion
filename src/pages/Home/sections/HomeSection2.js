@@ -163,8 +163,8 @@ const HomeSection2 = () => {
                 {t(`${translationKey}.otherServices.title`)}:
               </Typography>
 
-              {otherServicesList.map((el, ind) => (
-                <Typography key={ind} mt={ind === 0 ? 0 : 1} variant="body1">
+              {otherServicesList.map((el, idx) => (
+                <Typography key={idx} mt={idx === 0 ? 0 : 1} variant="body1">
                   {el}
                 </Typography>
               ))}

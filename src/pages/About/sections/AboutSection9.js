@@ -118,8 +118,8 @@ const AboutSection9 = () => {
                         rowGap: '20px',
                       }}
                     >
-                      {membersArr.map(member => (
-                        <TeamMemberCard key={member.id} member={member} />
+                      {membersArr.map((member, idx) => (
+                        <TeamMemberCard key={idx} member={member} />
                       ))}
                     </Box>
                   </SwiperSlide>

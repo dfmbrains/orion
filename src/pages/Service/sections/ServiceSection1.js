@@ -97,8 +97,8 @@ const ServiceSection1 = () => {
 
         <StyledFlexBox>
           {serviceList ? (
-            data.map(service => (
-              <React.Fragment key={service.id}>
+            data.map((service, idx) => (
+              <React.Fragment key={idx}>
                 <ServiceCard data={service} />
               </React.Fragment>
             ))

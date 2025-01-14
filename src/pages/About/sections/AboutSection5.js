@@ -98,9 +98,9 @@ const AboutSection5 = () => {
               />
             </Typography>
 
-            {objectives.map((el, ind) => (
+            {objectives.map((el, idx) => (
               <Typography
-                key={ind}
+                key={idx}
                 variant="subtitle1"
                 className="aboutSection5Objectives"
               >

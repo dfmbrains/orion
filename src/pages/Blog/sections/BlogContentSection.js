@@ -55,8 +55,8 @@ const BlogContentSection = () => {
       {blogList ? (
         <OrionContainer>
           <StyledFlexBox>
-            {data.map(post => (
-              <PostCard key={post.id} post={post} />
+            {data.map((post, idx) => (
+              <PostCard key={idx} post={post} />
             ))}
           </StyledFlexBox>
         </OrionContainer>

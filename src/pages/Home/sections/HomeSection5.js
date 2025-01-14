@@ -118,10 +118,11 @@ const HomeSection5 = () => {
                 <ButtonGroup>
                   {data.map((item, idx) => {
                     const isSelected = item.id === selectedReview.id;
+
                     return (
                       <IconButton
+                        key={idx}
                         size="small"
-                        key={item.id}
                         aria-label={`Go to slide #${idx + 1}`}
                         onClick={() => setSelectedReview(item)}
                         sx={{

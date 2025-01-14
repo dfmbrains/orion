@@ -142,8 +142,8 @@ const ClientsSection1 = () => {
                       : item.type === 'partner'
                     : item,
                 )
-                .map(el => (
-                  <SwiperSlide key={el.id}>
+                .map((el, idx) => (
+                  <SwiperSlide key={idx}>
                     <StyledImageBox>
                       <LazyImage src={el.images.file} alt={el.images.name} />
                     </StyledImageBox>

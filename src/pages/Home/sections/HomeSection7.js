@@ -62,8 +62,8 @@ const HomeSection7 = () => {
           </Typography>
 
           <Grid container spacing={{ md: 5, xs: 2 }}>
-            {data.map((el, ind) => (
-              <StyledGridItem key={ind} item lg={4} sm={6} xs={12}>
+            {data.map((el, idx) => (
+              <StyledGridItem key={idx} item lg={4} sm={6} xs={12}>
                 <PostCard post={el} />
               </StyledGridItem>
             ))}

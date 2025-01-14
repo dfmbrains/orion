@@ -39,8 +39,8 @@ const BlogDetailsPromo = ({ images }) => {
           className="mySwiper"
           modules={[Navigation]}
         >
-          {images.map((img, ind) => (
-            <SwiperSlide key={ind}>
+          {images.map((img, idx) => (
+            <SwiperSlide key={idx}>
               <StyledSlideBox>
                 <LazyImage src={img.file} alt={img.name} />
               </StyledSlideBox>

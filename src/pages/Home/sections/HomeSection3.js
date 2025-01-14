@@ -236,7 +236,7 @@ const HomeSection3 = () => {
                           </StyledCountryItem>
 
                           {item[1] && (
-                            <StyledCountryItem key={idx}>
+                            <StyledCountryItem>
                               <Typography variant="subtitle2">
                                 {item[1]}
                               </Typography>

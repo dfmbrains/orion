@@ -137,8 +137,8 @@ const TestimonialsSection = () => {
                   </>
                 )}
 
-                {data.map(el => (
-                  <SwiperSlide key={el.id}>
+                {data.map((el, idx) => (
+                  <SwiperSlide key={idx}>
                     <FlexGap10 sx={{ columnGap: '30px' }}>
                       <StyledImgBox>
                         <LazyImage src={el?.companyLogo} alt={el?.company} />

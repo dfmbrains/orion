@@ -20,8 +20,8 @@ const PageDetailsContent = ({ data }) => {
           {data.subtitle}
         </Typography>
 
-        {data.content.map((el, ind) => (
-          <React.Fragment key={ind}>
+        {data.content.map((el, idx) => (
+          <React.Fragment key={idx}>
             <Typography fontWeight={'500'} variant="h3" mb={2}>
               {el.title}
             </Typography>

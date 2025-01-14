@@ -139,11 +139,7 @@ const Footer = () => {
                         </LanguageLink>
 
                         {item?.active && (
-                          <Typography
-                            key={index}
-                            variant="body2"
-                            className="activeText"
-                          >
+                          <Typography variant="body2" className="activeText">
                             {item.active}
                           </Typography>
                         )}
