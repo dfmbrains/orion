@@ -1,6 +1,7 @@
 import ServiceBg from 'assets/images/backgrounds/serviceBg2.webp';
 import EmailFormSection from 'components/EmailFormSection';
 import PromoSection from 'components/PromoSection/PromoSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
@@ -14,7 +15,7 @@ const Service = () => {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/services`,
+    url: `${APP_URL}/${i18n.language}/services`,
     name: t('meta.services.title'),
     description: t('meta.services.description'),
   };

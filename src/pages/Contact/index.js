@@ -1,5 +1,6 @@
 import ContactBg from 'assets/images/backgrounds/contact.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
@@ -12,7 +13,7 @@ const Contact = () => {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/contact`,
+    url: `${APP_URL}/${i18n.language}/contact`,
     name: t('meta.contact.title'),
     description: t('meta.contact.description'),
   };

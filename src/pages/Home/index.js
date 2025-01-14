@@ -1,6 +1,7 @@
 import EmailFormSection from 'components/EmailFormSection';
 import FeaturesSection from 'components/FeaturesSection';
 import StatisticsSection from 'components/StatisticsSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
@@ -23,7 +24,7 @@ const Home = () => {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/home`,
+    url: `${APP_URL}/${i18n.language}/home`,
     name: t('meta.home.title'),
     description: t('meta.home.description'),
     logo: `${window.location.origin}/assets/logoWhite.png`,

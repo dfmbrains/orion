@@ -1,6 +1,7 @@
 import ClientsBg from 'assets/images/backgrounds/clients.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
 import TestimonialsSection from 'components/TestimonialsSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
@@ -13,7 +14,7 @@ const Clients = () => {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/clients-&-partners`,
+    url: `${APP_URL}/${i18n.language}/clients-&-partners`,
     name: t('meta.clients.title'),
     description: t('meta.clients.description'),
   };

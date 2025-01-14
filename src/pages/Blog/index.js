@@ -1,5 +1,6 @@
 import BlogImg from 'assets/images/backgrounds/news.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
@@ -12,7 +13,7 @@ const Blog = () => {
     '@context': 'https://schema.org',
     '@type': 'Blog',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/blog`,
+    url: `${APP_URL}/${i18n.language}/blog`,
     name: t('meta.blogs.title'),
     description: t('meta.blogs.description'),
   };

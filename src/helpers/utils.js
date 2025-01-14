@@ -1,3 +1,5 @@
+import { ENVIROMENT } from 'helpers/constants';
+
 export const scrollIntoView = (elementId, behavior = 'instant') => {
   const element = document.querySelector(elementId);
   if (element) {
@@ -48,3 +50,5 @@ export const getMapLinkByLocaleAndCoordinates = (language, coordinates) => {
     return `https://www.google.com/maps?q=${coordinates[1]},${coordinates[0]}`;
   }
 };
+
+export const isEnviromentProd = () => ENVIROMENT === 'prod';

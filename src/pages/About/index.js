@@ -3,6 +3,7 @@ import OurTeamBg from 'assets/images/backgrounds/our_team.webp';
 import PromoSection from 'components/PromoSection/PromoSection';
 import StatisticsSection from 'components/StatisticsSection';
 import TestimonialsSection from 'components/TestimonialsSection';
+import { APP_URL } from 'helpers/constants';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
@@ -23,7 +24,7 @@ const About = () => {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     inLanguage: i18n.language,
-    url: `https://test.oriontrans.kg/${i18n.language}/about`,
+    url: `${APP_URL}/${i18n.language}/about`,
     name: t('meta.about.title'),
     description: t('meta.about.description'),
   };
