@@ -35,8 +35,8 @@ const ServiceDetails = () => {
   return (
     <>
       <MetaTags
-        titleKey="meta.service.title"
-        descriptionKey="meta.service.description"
+        titleKey="meta.services.title"
+        descriptionKey="meta.services.description"
       />
 
       {serviceDetailsData ? (
