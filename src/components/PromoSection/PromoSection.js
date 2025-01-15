@@ -1,11 +1,7 @@
 import { styled } from '@mui/material';
-import React, { lazy, useState } from 'react';
-import Loadable from '../Loadable';
+import React, { useState } from 'react';
 import Loader from '../Loader';
-
-const PromoSectionContent = Loadable(
-  lazy(() => import('./PromoSectionContent')),
-);
+import PromoSectionContent from './PromoSectionContent';
 
 const StyledSection = styled('section')(({ theme, isFullHeight }) => ({
   position: 'relative',

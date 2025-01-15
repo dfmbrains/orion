@@ -1,10 +1,14 @@
 import ContactBg from 'assets/images/backgrounds/contact.webp';
+import Loadable from 'components/Loadable';
 import PromoSection from 'components/PromoSection/PromoSection';
 import { APP_URL } from 'helpers/constants';
-import React from 'react';
+import React, { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
-import ContactContentSection from './sections/ContactContentSection';
+
+const ContactContentSection = Loadable(
+  lazy(() => import('./sections/ContactContentSection')),
+);
 
 const Contact = () => {
   const { t, i18n } = useTranslation();

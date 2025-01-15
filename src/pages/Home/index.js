@@ -1,19 +1,27 @@
-import EmailFormSection from 'components/EmailFormSection';
-import FeaturesSection from 'components/FeaturesSection';
-import StatisticsSection from 'components/StatisticsSection';
+import Loadable from 'components/Loadable';
 import { APP_URL } from 'helpers/constants';
-import React from 'react';
+import React, { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
 import MetaTags from 'seo/MetaTags';
 import { companyRecoil } from 'store';
 import HomePromo from './sections/HomePromo';
-import HomeSection2 from './sections/HomeSection2';
-import HomeSection3 from './sections/HomeSection3';
-import HomeSection4 from './sections/HomeSection4';
-import HomeSection5 from './sections/HomeSection5';
-import HomeSection6 from './sections/HomeSection6';
-import HomeSection7 from './sections/HomeSection7';
+
+const HomeSection2 = Loadable(lazy(() => import('./sections/HomeSection2')));
+const HomeSection3 = Loadable(lazy(() => import('./sections/HomeSection3')));
+const HomeSection4 = Loadable(lazy(() => import('./sections/HomeSection4')));
+const HomeSection5 = Loadable(lazy(() => import('./sections/HomeSection5')));
+const HomeSection6 = Loadable(lazy(() => import('./sections/HomeSection6')));
+const HomeSection7 = Loadable(lazy(() => import('./sections/HomeSection7')));
+const FeaturesSection = Loadable(
+  lazy(() => import('components/FeaturesSection')),
+);
+const EmailFormSection = Loadable(
+  lazy(() => import('components/EmailFormSection')),
+);
+const StatisticsSection = Loadable(
+  lazy(() => import('components/StatisticsSection')),
+);
 
 const Home = () => {
   const { t, i18n } = useTranslation();

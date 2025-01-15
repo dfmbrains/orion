@@ -1,13 +1,17 @@
 import BlogImg from 'assets/images/backgrounds/news.webp';
+import Loadable from 'components/Loadable';
 import PromoSection from 'components/PromoSection/PromoSection';
 import { APP_URL } from 'helpers/constants';
-import React from 'react';
+import React, { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
-import BlogContentSection from './sections/BlogContentSection';
+
+const BlogContentSection = Loadable(
+  lazy(() => import('./sections/BlogContentSection')),
+);
 
 const Blog = () => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const jsonLd = {
     '@context': 'https://schema.org',

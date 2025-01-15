@@ -1,11 +1,17 @@
 import ClientsBg from 'assets/images/backgrounds/clients.webp';
+import Loadable from 'components/Loadable';
 import PromoSection from 'components/PromoSection/PromoSection';
-import TestimonialsSection from 'components/TestimonialsSection';
 import { APP_URL } from 'helpers/constants';
-import React from 'react';
+import React, { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'seo/MetaTags';
-import ClientsSection1 from './sections/ClientsSection1';
+
+const ClientsSection1 = Loadable(
+  lazy(() => import('./sections/ClientsSection1')),
+);
+const TestimonialsSection = Loadable(
+  lazy(() => import('components/TestimonialsSection')),
+);
 
 const Clients = () => {
   const { t, i18n } = useTranslation();

@@ -1,13 +1,19 @@
-import EmailFormSection from 'components/EmailFormSection';
+import Loadable from 'components/Loadable';
 import OrionLoading from 'components/OrionLoading';
-import PageDetailsContent from 'components/PageDetailsContent';
 import { Styled100vhLoadingBox } from 'components/StyledComponents';
-import React, { useEffect } from 'react';
+import React, { lazy, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import MetaTags from 'seo/MetaTags';
 import { blogDetailsRecoil, blogRecoil } from 'store';
 import BlogDetailsPromo from './sections/BlogDetailsPromo';
+
+const PageDetailsContent = Loadable(
+  lazy(() => import('components/PageDetailsContent')),
+);
+const EmailFormSection = Loadable(
+  lazy(() => import('components/EmailFormSection')),
+);
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -42,6 +48,7 @@ const BlogDetails = () => {
           <OrionLoading />
         </Styled100vhLoadingBox>
       )}
+
       <EmailFormSection />
     </>
   );
