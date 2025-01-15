@@ -30,7 +30,9 @@ const NotFound = () => {
       <MetaTags
         titleKey="meta.notFound.title"
         descriptionKey="meta.notFound.description"
-      />
+      >
+        <meta name="robots" content="noindex, nofollow" />
+      </MetaTags>
 
       <NotFoundRoot>
         <StyledPromoBackgroundBox bgimage={BgImg}>

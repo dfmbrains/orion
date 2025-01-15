@@ -1,6 +1,33 @@
 {
   "currentLanguage": "ru",
   "orionTrans": "Орион-Транс",
+  "ariaLabels": {
+    "scrollTopButton": "Вернуться к началу страницы",
+    "sliderNextButton": "Следующий слайд",
+    "sliderPrevButton": "Предыдущий слайд",
+    "openWechat": "Открыть WeChat компании",
+    "openFacebook": "Открыть Facebook компании",
+    "openInstagram": "Открыть Instagram компании",
+    "openLinkedIn": "Открыть LinkedIn компании",
+    "openWhatsapp": "Открыть WhatsApp компании",
+    "openTelegram": "Открыть Telegram компании",
+    "openSkype": "Открыть Skype компании",
+    "goToSlideNumber": "Перейти к слайду {{item}}",
+    "headerSubmenu": "Подменю для раздела \"{{item}}\""
+  },
+  "tagTitles": {
+    "scrollTopButton": "Наверх",
+    "sliderNextButton": "Вперед",
+    "sliderPrevButton": "Назад",
+    "openWechat": "Открыть WeChat",
+    "openFacebook": "Открыть Facebook",
+    "openInstagram": "Открыть Instagram",
+    "openLinkedIn": "Открыть LinkedIn",
+    "openWhatsapp": "Открыть WhatsApp",
+    "openTelegram": "Открыть Telegram",
+    "openSkype": "Открыть Skype",
+    "goToSlideNumber": "Слайд {{item}}"
+  },
   "meta": {
     "home": {
       "title": "Орион-Транс | Главная - Ж/д грузоперевозки и экспедирование",

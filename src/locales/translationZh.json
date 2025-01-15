@@ -1,6 +1,33 @@
 {
   "currentLanguage": "zh",
   "orionTrans": "Orion-Trans",
+  "ariaLabels": {
+    "scrollTopButton": "返回页面顶部",
+    "sliderNextButton": "下一张",
+    "sliderPrevButton": "上一张",
+    "openWechat": "打开公司的微信",
+    "openFacebook": "打开公司的Facebook（脸书）",
+    "openInstagram": "打开公司的Instagram",
+    "openLinkedIn": "打开公司的LinkedIn（领英）",
+    "openWhatsapp": "打开公司的Whatsapp",
+    "openTelegram": "打开公司的Telegram",
+    "openSkype": "打开公司的Skype",
+    "goToSlideNumber": "转到第{{item}}个幻灯片",
+    "headerSubmenu": "“{{item}}”子菜单"
+  },
+  "tagTitles": {
+    "scrollTopButton": "顶部",
+    "sliderNextButton": "下一张",
+    "sliderPrevButton": "上一张",
+    "openWechat": "打开微信",
+    "openFacebook": "打开Facebook（脸书）",
+    "openInstagram": "打开Instagram",
+    "openLinkedIn": "打开LinkedIn（领英）",
+    "openWhatsapp": "打开Whatsapp",
+    "openTelegram": "打开Telegram",
+    "openSkype": "打开Skype",
+    "goToSlideNumber": "幻灯片{{item}}"
+  },
   "meta": {
     "home": {
       "title": "Orion-Trans | 首页 - 铁路货运与物流服务",

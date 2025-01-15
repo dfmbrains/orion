@@ -72,11 +72,11 @@ const Footer = () => {
         },
         { title: t('menu.blogs'), link: '/blog#header' },
         { title: t('menu.contacts'), link: '/contact#header' },
-        {
-          title: t('menu.career'),
-          link: '/career#header',
-          active: t('footer.activeText.career'),
-        },
+        // {
+        //   title: t('menu.career'),
+        //   link: '/career#header',
+        //   active: t('footer.activeText.career'),
+        // },
       ],
     },
     // {

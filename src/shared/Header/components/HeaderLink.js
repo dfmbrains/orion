@@ -101,7 +101,9 @@ const HeaderLink = ({ headerLink, controlsId }) => {
       {headerLink?.subLinks && (
         <StyledMenu
           id={controlsId}
-          aria-label="Submenu"
+          aria-label={t('ariaLabels.headerSubmenu', {
+            item: t(headerLink.text),
+          })}
           aria-hidden={isOpen ? 'false' : 'true'}
           style={{
             visibility: isOpen ? 'visible' : 'hidden',

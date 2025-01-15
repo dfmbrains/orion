@@ -104,6 +104,7 @@ const TestimonialsSection = () => {
   const reviews = useRecoilValue(reviewsRecoil);
 
   const [data, setData] = useState([]);
+  const [slideStatus, setSlideStatus] = useState(1);
 
   useEffect(() => {
     if (i18n.language && reviews) {
@@ -129,11 +130,16 @@ const TestimonialsSection = () => {
                 modules={[Navigation, Pagination]}
                 className="swiperStatic swiperCustomNavigation"
                 pagination={{ clickable: true, type: 'progressbar' }}
+                onSlideChange={swiperSlide =>
+                  setSlideStatus(
+                    swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                  )
+                }
               >
                 {data.length > 1 && (
                   <>
-                    <SwiperButtonPrev />
-                    <SwiperButtonNext />
+                    <SwiperButtonPrev isBeginning={slideStatus === 1} />
+                    <SwiperButtonNext isEnd={slideStatus === 2} />
                   </>
                 )}
 

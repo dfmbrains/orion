@@ -8,10 +8,13 @@ import WechatDark from 'assets/icons/wechat-dark.svg';
 import WechatLight from 'assets/icons/wechat.svg';
 import LazyImage from 'components/LazyImage';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useRecoilValue } from 'recoil';
 import { companyRecoil } from 'store';
 
 const SocialMediaButtons = ({ color }) => {
+  const { t } = useTranslation();
+
   const company = useRecoilValue(companyRecoil);
 
   const SkypeIcons = { info: SkypeDark, secondary: SkypeLight };
@@ -23,8 +26,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Facebook page"
-        aria-label="Visit our Facebook page"
+        title={t('tagTitles.openFacebook')}
+        aria-label={t('ariaLabels.openFacebook')}
         href={company?.socialMedia.facebook.link || '#'}
       >
         <Icon>facebook</Icon>
@@ -33,8 +36,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Instagram page"
-        aria-label="Visit our Instagram page"
+        title={t('tagTitles.openInstagram')}
+        aria-label={t('ariaLabels.openInstagram')}
         href={company?.socialMedia.instagram.link || '#'}
       >
         <InstagramIcon />
@@ -43,8 +46,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our LinkedIn page"
-        aria-label="Visit our LinkedIn page"
+        title={t('tagTitles.openLinkedIn')}
+        aria-label={t('ariaLabels.openLinkedIn')}
         href={company?.socialMedia.linkedIn.link || '#'}
       >
         <LinkedInIcon />
@@ -53,8 +56,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Whatsapp"
-        aria-label="Visit our Whatsapp"
+        title={t('tagTitles.openWhatsapp')}
+        aria-label={t('ariaLabels.openWhatsapp')}
         href={company?.socialMedia.whatsapp.link || '#'}
       >
         <WhatsAppIcon />
@@ -63,8 +66,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Telegram"
-        aria-label="Visit our Telegram"
+        title={t('tagTitles.openTelegram')}
+        aria-label={t('ariaLabels.openTelegram')}
         href={company?.socialMedia.telegram.link || '#'}
       >
         <Icon>telegram</Icon>
@@ -73,8 +76,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Skype"
-        aria-label="Visit our Skype"
+        title={t('tagTitles.openSkype')}
+        aria-label={t('ariaLabels.openSkype')}
         href={company?.socialMedia.skype.link || '#'}
       >
         <LazyImage src={SkypeIcons[color]} alt="skype" />
@@ -83,8 +86,8 @@ const SocialMediaButtons = ({ color }) => {
         color={color}
         target="_blank"
         rel="noopener noreferrer"
-        title="Visit our Wechat"
-        aria-label="Visit our Wechat"
+        title={t('tagTitles.openWechat')}
+        aria-label={t('ariaLabels.openWechat')}
         href={company?.socialMedia.wechat.link || '#'}
       >
         <LazyImage src={WechatIcons[color]} alt="wechat" />

@@ -1,5 +1,6 @@
 import { Icon, IconButton, styled } from '@mui/material';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSwiper } from 'swiper/react';
 import { FlexBox } from './FlexBox';
 
@@ -20,43 +21,47 @@ const StyledIconButton = styled(IconButton)(() => ({
   },
 }));
 
-export const SwiperButtonPrev = () => {
+export const SwiperButtonPrev = ({ isBeginning }) => {
+  const { t } = useTranslation();
   const swiper = useSwiper();
 
   return (
     <StyledIconButton
       size="small"
-      title="Previous slide"
-      aria-label="Previous slide"
+      disabled={isBeginning}
       className="swiperButtonPrev"
       onClick={() => swiper.slidePrev()}
+      title={t('tagTitles.sliderPrevButton')}
+      aria-label={t('ariaLabels.sliderPrevButton')}
     >
       <Icon>keyboard_arrow_left</Icon>
     </StyledIconButton>
   );
 };
 
-export const SwiperButtonNext = () => {
+export const SwiperButtonNext = ({ isEnd }) => {
+  const { t } = useTranslation();
   const swiper = useSwiper();
 
   return (
     <StyledIconButton
       size="small"
-      title="Next slide"
-      aria-label="Next slide"
+      disabled={isEnd}
       className="swiperButtonNext"
       onClick={() => swiper.slideNext()}
+      title={t('tagTitles.sliderNextButton')}
+      aria-label={t('ariaLabels.sliderNextButton')}
     >
       <Icon>keyboard_arrow_right</Icon>
     </StyledIconButton>
   );
 };
 
-const SwiperButtons = () => {
+const SwiperButtons = ({ slideStatus }) => {
   return (
     <StyledSwiperButtonsBox>
-      <SwiperButtonPrev />
-      <SwiperButtonNext />
+      <SwiperButtonPrev isBeginning={slideStatus === 1} />
+      <SwiperButtonNext isEnd={slideStatus === 2} />
     </StyledSwiperButtonsBox>
   );
 };

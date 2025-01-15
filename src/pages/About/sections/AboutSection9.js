@@ -40,15 +40,21 @@ const StyledSection = styled('section')(({ theme }) => ({
   },
 }));
 
+const swiperBreakpoints = {
+  900: { spaceBetween: 50, slidesPerView: 2 },
+  0: { spaceBetween: 30, slidesPerView: 1 },
+};
+
 const AboutSection9 = () => {
   const translationKey = 'about.section9';
-  const { t, i18n } = useTranslation();
 
+  const { t, i18n } = useTranslation();
   const theme = useTheme();
 
   const team = useRecoilValue(teamRecoil);
 
   const [data, setData] = useState([]);
+  const [slideStatus, setSlideStatus] = useState(1);
 
   useEffect(() => {
     if (team) {
@@ -98,15 +104,17 @@ const AboutSection9 = () => {
                 spaceBetween={50}
                 slidesPerView={2}
                 modules={[Navigation]}
+                breakpoints={swiperBreakpoints}
                 className="swiperStatic swiperCustomNavigation"
-                breakpoints={{
-                  900: { spaceBetween: 50, slidesPerView: 2 },
-                  0: { spaceBetween: 30, slidesPerView: 1 },
-                }}
+                onSlideChange={swiperSlide =>
+                  setSlideStatus(
+                    swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                  )
+                }
               >
                 <>
-                  <SwiperButtonPrev />
-                  <SwiperButtonNext />
+                  <SwiperButtonPrev isBeginning={slideStatus === 1} />
+                  <SwiperButtonNext isEnd={slideStatus === 2} />
                 </>
 
                 {data.map((membersArr, idx) => (

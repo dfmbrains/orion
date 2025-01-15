@@ -157,14 +157,27 @@ const StyledCalculateItem = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('lg')]: { paddingLeft: '16px', paddingRight: '16px' },
 }));
 
+const swiperBreakpoints = {
+  600: {
+    spaceBetween: 15,
+    slidesPerView: 3,
+  },
+  0: {
+    spaceBetween: 15,
+    slidesPerView: 2,
+  },
+};
+
 const HomeSection3 = () => {
-  const theme = useTheme();
   const translationKey = 'home.section3';
+
+  const theme = useTheme();
   const { t } = useTranslation();
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [countriesList, setCountriesList] = useState([]);
+  const [slideStatus, setSlideStatus] = useState(1);
 
   useEffect(() => {
     const countries = t('countries', { returnObjects: true }) || [];
@@ -209,21 +222,17 @@ const HomeSection3 = () => {
                     slidesPerView={3}
                     spaceBetween={15}
                     modules={[Navigation]}
+                    breakpoints={swiperBreakpoints}
                     className="swiperStatic swiperCustomNavigation"
-                    breakpoints={{
-                      600: {
-                        spaceBetween: 15,
-                        slidesPerView: 3,
-                      },
-                      0: {
-                        spaceBetween: 15,
-                        slidesPerView: 2,
-                      },
-                    }}
+                    onSlideChange={swiperSlide =>
+                      setSlideStatus(
+                        swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                      )
+                    }
                   >
                     <>
-                      <SwiperButtonPrev />
-                      <SwiperButtonNext />
+                      <SwiperButtonPrev isBeginning={slideStatus === 1} />
+                      <SwiperButtonNext isEnd={slideStatus === 2} />
                     </>
 
                     {countriesList.map((item, idx) => (
@@ -282,9 +291,7 @@ const HomeSection3 = () => {
             </StyledCalculateItem>
           </StyledCalculateCard>
 
-          {!isMobile && (
-            <LazyImage src={MapBg} alt="map" className="mapBg" />
-          )}
+          {!isMobile && <LazyImage src={MapBg} alt="map" className="mapBg" />}
         </StyledContentBox>
       </OrionContainer>
     </StyledSection>

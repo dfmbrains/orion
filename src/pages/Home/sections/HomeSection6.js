@@ -97,14 +97,15 @@ const swiperBreakpoints = {
 
 const HomeSection6 = () => {
   const translationKey = 'home.section6';
-  const { t, i18n } = useTranslation();
 
+  const { t, i18n } = useTranslation();
   const theme = useTheme();
 
   const team = useRecoilValue(teamRecoil);
 
   const [active, setActive] = useState(null);
   const [data, setData] = useState([]);
+  const [slideStatus, setSlideStatus] = useState(1);
 
   const handleClickMember = member => {
     if (member.id !== active.id) {
@@ -202,9 +203,14 @@ const HomeSection6 = () => {
                 modules={[Navigation]}
                 breakpoints={swiperBreakpoints}
                 className="swiperStatic swiperCustomNavigation"
+                onSlideChange={swiperSlide =>
+                  setSlideStatus(
+                    swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                  )
+                }
               >
                 <StyledSwiperButtonsPosition>
-                  <SwiperButtons />
+                  <SwiperButtons slideStatus={slideStatus} />
                 </StyledSwiperButtonsPosition>
 
                 {data.map((member, idx) => (

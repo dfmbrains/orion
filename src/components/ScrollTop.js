@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import { handleScrollToTop } from 'helpers/utils';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const StyledIconButton = styled(IconButton)(({ theme, status }) => ({
   position: 'fixed',
@@ -28,6 +29,7 @@ const StyledIconButton = styled(IconButton)(({ theme, status }) => ({
 
 const ScrollTop = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [active, setActive] = useState();
 
   const isLaptop = useMediaQuery(theme.breakpoints.down('lg'));
@@ -42,9 +44,9 @@ const ScrollTop = () => {
     <StyledIconButton
       theme={theme}
       status={active}
-      title="Scroll to top"
-      aria-label="Scroll to top"
       size={isLaptop ? 'medium' : 'large'}
+      title={t('tagTitles.scrollTopButton')}
+      aria-label={t('ariaLabels.scrollTopButton')}
       onClick={() => handleScrollToTop('smooth')}
     >
       <Icon>arrow_upward</Icon>

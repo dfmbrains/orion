@@ -10,7 +10,7 @@ import { FlexGap10 } from 'components/FlexBox';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import { SwiperButtonNext, SwiperButtonPrev } from 'components/SwiperButtons';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -38,6 +38,8 @@ const StyledSection = styled('section')(({ theme }) => ({
 const HomeSection4 = () => {
   const translationKey = 'home.section4';
   const { t } = useTranslation();
+
+  const [slideStatus, setSlideStatus] = useState(1);
 
   const stockImages = [
     GondolaImg,
@@ -84,12 +86,17 @@ const HomeSection4 = () => {
               navigation
               pagination={{ clickable: true }}
               className="swiperCustomNavigation"
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
               modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              onSlideChange={swiperSlide =>
+                setSlideStatus(
+                  swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                )
+              }
             >
               <FlexGap10 sx={{ display: 'inline-flex' }} mt={2}>
-                <SwiperButtonPrev />
-                <SwiperButtonNext />
+                <SwiperButtonPrev isBeginning={slideStatus === 1} />
+                <SwiperButtonNext isEnd={slideStatus === 2} />
               </FlexGap10>
 
               {stockImages.map((item, idx) => (

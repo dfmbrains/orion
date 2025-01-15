@@ -1,6 +1,5 @@
 import { styled } from '@mui/material';
 import LogoWhite from 'assets/images/logoWhite.webp';
-import LanguageLink from 'components/LanguageLink';
 import React from 'react';
 
 const StyledImg = styled('img')(({ theme }) => ({
@@ -13,9 +12,5 @@ const StyledImg = styled('img')(({ theme }) => ({
 }));
 
 export const Logo = () => {
-  return (
-    <LanguageLink to="/home" style={{ display: 'flex' }}>
-      <StyledImg src={LogoWhite} alt="Orion-Trans" />
-    </LanguageLink>
-  );
+  return <StyledImg src={LogoWhite} alt="Orion-Trans" />;
 };

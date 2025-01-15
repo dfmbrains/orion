@@ -1,6 +1,33 @@
 {
   "currentLanguage": "en",
   "orionTrans": "Orion-Trans",
+  "ariaLabels": {
+    "scrollTopButton": "Back to the top of the page",
+    "sliderNextButton": "Next slide",
+    "sliderPrevButton": "Previous slide",
+    "openWechat": "Open the company's WeChat",
+    "openFacebook": "Open the company's Facebook",
+    "openInstagram": "Open the company's Instagram",
+    "openLinkedIn": "Open the company's LinkedIn",
+    "openWhatsapp": "Open the company's WhatsApp",
+    "openTelegram": "Open the company's Telegram",
+    "openSkype": "Open the company's Skype",
+    "goToSlideNumber": "Go to slide {{item}}",
+    "headerSubmenu": "Submenu for \"{{item}}\""
+  },
+  "tagTitles": {
+    "scrollTopButton": "Top",
+    "sliderNextButton": "Next",
+    "sliderPrevButton": "Previous",
+    "openWechat": "Open WeChat",
+    "openFacebook": "Open Facebook",
+    "openInstagram": "Open Instagram",
+    "openLinkedIn": "Open LinkedIn",
+    "openWhatsapp": "Open WhatsApp",
+    "openTelegram": "Open Telegram",
+    "openSkype": "Open Skype",
+    "goToSlideNumber": "Slide {{item}}"
+  },
   "meta": {
     "home": {
       "title": "Orion-Trans | Home - Railway Freight and Forwarding",

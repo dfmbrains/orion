@@ -123,7 +123,12 @@ const HomeSection5 = () => {
                       <IconButton
                         key={idx}
                         size="small"
-                        aria-label={`Go to slide #${idx + 1}`}
+                        title={t('tagTitles.goToSlideNumber', {
+                          item: idx + 1,
+                        })}
+                        aria-label={t('ariaLabels.goToSlideNumber', {
+                          item: idx + 1,
+                        })}
                         onClick={() => setSelectedReview(item)}
                         sx={{
                           color: isSelected

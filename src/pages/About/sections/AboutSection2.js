@@ -73,12 +73,33 @@ const StyledSwiperSlide = styled('div')(({ theme }) => ({
   },
 }));
 
+const swiperBreakpoints = {
+  1200: {
+    spaceBetween: 10,
+    slidesPerView: 6,
+  },
+  900: {
+    spaceBetween: 10,
+    slidesPerView: 5,
+  },
+  600: {
+    spaceBetween: 10,
+    slidesPerView: 4,
+  },
+  0: {
+    spaceBetween: 5,
+    slidesPerView: 3,
+  },
+};
+
 const AboutSection2 = () => {
   const translationKey = 'about.section2';
-  const { t } = useTranslation();
 
+  const { t } = useTranslation();
   const theme = useTheme();
+
   const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const [slideStatus, setSlideStatus] = useState(1);
 
   const handleCloseDialog = () => setIsOpenDialog(false);
 
@@ -137,32 +158,20 @@ const AboutSection2 = () => {
               {t(`${translationKey}.subtitle2`)}
             </Typography>
             <Swiper
-              className="swiperStatic swiperCustomNavigation"
-              navigation={true}
-              modules={[Navigation]}
+              navigation
               slidesPerView={6}
               spaceBetween={10}
-              breakpoints={{
-                1200: {
-                  spaceBetween: 10,
-                  slidesPerView: 6,
-                },
-                900: {
-                  spaceBetween: 10,
-                  slidesPerView: 5,
-                },
-                600: {
-                  spaceBetween: 10,
-                  slidesPerView: 4,
-                },
-                0: {
-                  spaceBetween: 5,
-                  slidesPerView: 3,
-                },
-              }}
+              modules={[Navigation]}
+              breakpoints={swiperBreakpoints}
+              className="swiperStatic swiperCustomNavigation"
+              onSlideChange={swiperSlide =>
+                setSlideStatus(
+                  swiperSlide.isBeginning ? 1 : swiperSlide.isEnd ? 2 : 0,
+                )
+              }
             >
               <StyledSwiperButtonsPosition>
-                <SwiperButtons />
+                <SwiperButtons slideStatus={slideStatus} />
               </StyledSwiperButtonsPosition>
 
               {countries.map((el, idx) => (
