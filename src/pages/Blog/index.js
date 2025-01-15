@@ -27,6 +27,14 @@ const Blog = () => {
       <MetaTags
         titleKey="meta.blogs.title"
         descriptionKey="meta.blogs.description"
+        additionalTags={
+          <link
+            as="image"
+            rel="preload"
+            type="image/webp"
+            href="./assets/images/backgrounds/news.webp"
+          />
+        }
       >
         <script
           type="application/ld+json"
