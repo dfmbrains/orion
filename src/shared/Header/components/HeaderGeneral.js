@@ -52,7 +52,11 @@ const HeaderGeneral = ({ openBurger, color }) => {
             <nav>
               <StyledNavList>
                 {HEADER_BURGER_MENU.map((item, idx) => (
-                  <HeaderLink key={idx} headerLink={item} />
+                  <HeaderLink
+                    key={idx}
+                    headerLink={item}
+                    controlsId={`submenu-${idx}`}
+                  />
                 ))}
               </StyledNavList>
             </nav>

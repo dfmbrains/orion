@@ -42,20 +42,16 @@ const StyledBox = styled('li')(({ theme }) => ({
   },
 }));
 
-const StyledMenu = styled('ol')(({ isActive }) => ({
+const StyledMenu = styled('nav')(() => ({
   background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4))',
   color: '#FFFFFF',
   borderRadius: '8px',
   top: 'calc(100%)',
   left: 0,
-  padding: 0,
   backdropFilter: 'blur(20px)',
   minWidth: '300px',
   position: 'absolute',
-  visibility: isActive ? 'visible' : 'hidden',
-  opacity: isActive ? 1 : 0,
   transition: '0.3s',
-  pointerEvents: isActive ? 'auto' : 'none',
 }));
 
 const StyledMenuItem = styled(MenuItem)(() => ({
@@ -66,7 +62,7 @@ const StyledMenuItem = styled(MenuItem)(() => ({
   },
 }));
 
-const HeaderLink = ({ headerLink }) => {
+const HeaderLink = ({ headerLink, controlsId }) => {
   const { t } = useTranslation();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -83,8 +79,16 @@ const HeaderLink = ({ headerLink }) => {
     }
   };
 
+  const isOpen = Boolean(anchorEl);
+
   return (
-    <StyledBox onMouseEnter={handleMenuOpen} onMouseLeave={handleMenuClose}>
+    <StyledBox
+      aria-controls={controlsId}
+      onMouseEnter={handleMenuOpen}
+      onMouseLeave={handleMenuClose}
+      aria-haspopup={headerLink?.subLinks ? 'true' : undefined}
+      aria-expanded={headerLink?.subLinks && isOpen ? 'true' : 'false'}
+    >
       <LanguageLink
         type="navLink"
         className="navLink"
@@ -95,8 +99,17 @@ const HeaderLink = ({ headerLink }) => {
       </LanguageLink>
 
       {headerLink?.subLinks && (
-        <nav>
-          <StyledMenu isActive={anchorEl} onClose={handleMenuClose}>
+        <StyledMenu
+          id={controlsId}
+          aria-label="Submenu"
+          aria-hidden={isOpen ? 'false' : 'true'}
+          style={{
+            visibility: isOpen ? 'visible' : 'hidden',
+            opacity: isOpen ? 1 : 0,
+            pointerEvents: isOpen ? 'auto' : 'none',
+          }}
+        >
+          <ul role="menu" onClose={handleMenuClose}>
             {headerLink.subLinks.map((subLink, index) => (
               <StyledMenuItem
                 key={index}
@@ -113,8 +126,8 @@ const HeaderLink = ({ headerLink }) => {
                 </LanguageLink>
               </StyledMenuItem>
             ))}
-          </StyledMenu>
-        </nav>
+          </ul>
+        </StyledMenu>
       )}
     </StyledBox>
   );
