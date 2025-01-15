@@ -31,9 +31,6 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
     [theme.breakpoints.down('md')]: { width: 'calc(100% / 3 - 30px * 2 / 3)' },
     [theme.breakpoints.down('sm')]: { width: '100%' },
   },
-  '& .serviceCardImg': {
-    height: '100px',
-  },
 }));
 
 const ServiceSection1 = () => {

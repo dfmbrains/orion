@@ -27,6 +27,7 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
 
   '& .postCardImg': {
     height: '270px',
+
     [theme.breakpoints.down('lg')]: { height: '240px' },
     [theme.breakpoints.down('md')]: { height: '220px' },
     [theme.breakpoints.down('sm')]: { height: '210px' },

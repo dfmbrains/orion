@@ -1,7 +1,6 @@
 import { styled } from '@mui/material';
 import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
-import { StyledResponsiveImageBox } from 'components/StyledComponents';
 import React from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,12 +18,12 @@ const StyledSection = styled('section')(() => ({
   },
 }));
 
-const StyledSlideBox = styled(StyledResponsiveImageBox)(() => ({
+const StyledSlideBox = styled('div')(() => ({
   height: 'calc(100vh / 4 * 3)',
 
   '& img': {
-    maxWidth: '120%',
-    maxHeight: '120%',
+    width: '100%',
+    objectFit: 'cover',
   },
 }));
 

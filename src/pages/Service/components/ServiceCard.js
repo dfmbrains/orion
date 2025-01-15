@@ -1,6 +1,5 @@
 import { Box, Card, styled, Typography } from '@mui/material';
 import LazyImage from 'components/LazyImage';
-import { StyledResponsiveImageBox } from 'components/StyledComponents';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
@@ -25,6 +24,11 @@ const StyledCard = styled(Card)(({ theme }) => ({
       backgroundColor: theme.palette.primary.main,
     },
   },
+
+  '& .serviceCardImg': {
+    maxWidth: '100%',
+    objectFit: 'cover',
+  },
 }));
 
 const StyledLink = styled(Link)(() => ({
@@ -39,9 +43,11 @@ const ServiceCard = ({ data }) => {
   return (
     <StyledCard className="serviceCard" onClick={() => setServiceDetails(data)}>
       <StyledLink to={`/services/${data.id}`}>
-        <StyledResponsiveImageBox className="serviceCardImg">
-          <LazyImage src={data?.images?.file} alt={data?.images?.name} />
-        </StyledResponsiveImageBox>
+        <LazyImage
+          src={data?.images?.file}
+          alt={data?.images?.name}
+          className="serviceCardImg"
+        />
 
         <Box pt={2} pb={5} px={3}>
           <Typography mb={2} color="#1B1B1B" variant="subtitle1">

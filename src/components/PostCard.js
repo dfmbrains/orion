@@ -7,11 +7,19 @@ import { Link } from 'react-router-dom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { blogDetailsRecoil, monthsRecoil } from 'store';
 import { FlexGap10 } from './FlexBox';
-import { StyledResponsiveImageBox } from './StyledComponents';
+
+const StyledPostCard = styled('div')(() => ({
+  '& .postCardImg': {
+    maxWidth: '100%',
+    objectFit: 'cover',
+    borderRadius: '16px',
+  },
+}));
 
 const StyledBox = styled('div')(({ theme }) => ({
   paddingLeft: '15px',
   borderLeft: '1px solid #A6A6A6',
+
   [theme.breakpoints.down('md')]: {
     paddingLeft: '0',
     borderLeft: 'none',
@@ -33,10 +41,13 @@ const PostCard = ({ post }) => {
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <div className="postCard">
-      <StyledResponsiveImageBox className="postCardImg">
-        <LazyImage src={post.images[0].file} alt={post.images[0].name} />
-      </StyledResponsiveImageBox>
+    <StyledPostCard className="postCard">
+      <LazyImage
+        className="postCardImg"
+        src={post.images[0].file}
+        alt={post.images[0].name}
+      />
+
       <FlexGap10
         mt={{ lg: 3, xs: 1 }}
         sx={{
@@ -89,7 +100,7 @@ const PostCard = ({ post }) => {
           </DefaultButton>
         </StyledBox>
       </FlexGap10>
-    </div>
+    </StyledPostCard>
   );
 };
 

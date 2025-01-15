@@ -58,18 +58,6 @@ const StyledSwiperButtonsPosition = styled('div')(({ theme }) => ({
   },
 }));
 
-const StyledResponsiveImageBox = styled('div')(() => ({
-  width: '100%',
-  overflow: 'hidden',
-  borderRadius: '10px',
-
-  '& img': {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  },
-}));
-
 const Styled100vhLoadingBox = styled('div')(() => ({
   position: 'relative',
   height: '100vh',
@@ -103,7 +91,6 @@ export {
   StyledPromoBackgroundBox,
   StylePromoColumn,
   StyledSwiperButtonsPosition,
-  StyledResponsiveImageBox,
   Styled100vhLoadingBox,
   Styled50vhLoadingBox,
   StyledAvatar,
