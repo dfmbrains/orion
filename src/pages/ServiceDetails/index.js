@@ -6,14 +6,15 @@ import React, { lazy, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import MetaTags from 'seo/MetaTags';
+import EmailFormSection from 'components/EmailFormSection';
 import { serviceDetailsRecoil, serviceRecoil } from 'store';
 
 const PageDetailsContent = Loadable(
   lazy(() => import('components/PageDetailsContent')),
 );
-const EmailFormSection = Loadable(
-  lazy(() => import('components/EmailFormSection')),
-);
+// const EmailFormSection = Loadable(
+//   lazy(() => import('components/EmailFormSection')),
+// );
 
 const ServiceDetails = () => {
   const { id } = useParams();
