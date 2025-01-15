@@ -35,7 +35,7 @@ const Home = () => {
     url: `${APP_URL}/${i18n.language}/home`,
     name: t('meta.home.title'),
     description: t('meta.home.description'),
-    logo: `${window.location.origin}/assets/logoWhite.png`,
+    logo: `${window.location.origin}/assets/logoWhite.webp`,
     foundingDate: '2010',
     sameAs: Object.values(company.socialMedia)
       .map(item => item.link)

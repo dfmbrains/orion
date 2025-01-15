@@ -12,7 +12,7 @@ const getOgLocale = (lang = defaultAppLanguage) => {
   return locales[lang];
 };
 
-const defaultOgImage = `${window.location.origin}/assets/logoWhite.png`;
+const defaultOgImage = `${window.location.origin}/assets/logoWhite.webp`;
 
 const MetaTags = ({
   titleKey,
@@ -20,6 +20,7 @@ const MetaTags = ({
   ogType = 'website',
   imageUrl = defaultOgImage,
   children,
+  additionalTags,
 }) => {
   const { t, i18n } = useTranslation();
 
@@ -54,6 +55,8 @@ const MetaTags = ({
       ) : (
         <meta name="robots" content="noindex, nofollow" />
       )}
+
+      {additionalTags && additionalTags}
     </Helmet>
   );
 };

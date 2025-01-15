@@ -8,8 +8,8 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import PrimaryLogoCompany from 'assets/images/logo.png';
-import LightLogoCompany from 'assets/images/logoWhite.png';
+import PrimaryLogoCompany from 'assets/images/logo.webp';
+import LightLogoCompany from 'assets/images/logoWhite.webp';
 import ChangeLangButton from 'components/ChangeLangButton';
 import EmailFormSection from 'components/EmailFormSection';
 import { FlexBetweenAlignCenter, FlexBox, FlexGap10 } from 'components/FlexBox';

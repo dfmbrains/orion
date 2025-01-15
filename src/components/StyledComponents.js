@@ -59,20 +59,14 @@ const StyledSwiperButtonsPosition = styled('div')(({ theme }) => ({
 }));
 
 const StyledResponsiveImageBox = styled('div')(() => ({
-  position: 'relative',
   width: '100%',
   overflow: 'hidden',
   borderRadius: '10px',
 
   '& img': {
-    maxWidth: '120%',
-    maxHeight: '120%',
-    minWidth: '100%',
-    minHeight: '100%',
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
 }));
 

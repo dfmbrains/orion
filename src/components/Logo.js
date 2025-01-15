@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import LogoWhite from 'assets/images/logoWhite.png';
+import LogoWhite from 'assets/images/logoWhite.webp';
 import LanguageLink from 'components/LanguageLink';
 import React from 'react';
 
