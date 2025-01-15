@@ -56,11 +56,11 @@ export const HEADER_BURGER_MENU = [
         text: 'subMenuServices.subMenu4',
         ariaLabel: 'subMenuServices.subMenu4',
       },
-      {
-        link: '/services/5',
-        text: 'subMenuServices.subMenu5',
-        ariaLabel: 'subMenuServices.subMenu5',
-      },
+      // {
+      //   link: '/services/5',
+      //   text: 'subMenuServices.subMenu5',
+      //   ariaLabel: 'subMenuServices.subMenu5',
+      // },
       {
         link: '/services/6',
         text: 'subMenuServices.subMenu6',
