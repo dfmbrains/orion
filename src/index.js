@@ -9,6 +9,7 @@ import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import OrionTheme from 'styles/OrionTheme';
+import 'material-icons/iconfont/material-icons.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
