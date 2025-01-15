@@ -1,12 +1,13 @@
+import EmailFormSection from 'components/EmailFormSection';
 import Loadable from 'components/Loadable';
 import OrionLoading from 'components/OrionLoading';
 import PromoSection from 'components/PromoSection/PromoSection';
 import { Styled100vhLoadingBox } from 'components/StyledComponents';
 import React, { lazy, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import MetaTags from 'seo/MetaTags';
-import EmailFormSection from 'components/EmailFormSection';
 import { serviceDetailsRecoil, serviceRecoil } from 'store';
 
 const PageDetailsContent = Loadable(
@@ -18,16 +19,32 @@ const PageDetailsContent = Loadable(
 
 const ServiceDetails = () => {
   const { id } = useParams();
+  const { i18n } = useTranslation();
 
   const servicesList = useRecoilValue(serviceRecoil);
   const [serviceDetailsData, setServiceDetailsData] =
     useRecoilState(serviceDetailsRecoil);
 
   useEffect(() => {
-    if (!serviceDetailsData || id !== serviceDetailsData.id) {
-      setServiceDetailsData(servicesList.find(item => item.id === id));
+    if (
+      !serviceDetailsData ||
+      id !== serviceDetailsData.id ||
+      serviceDetailsData.language !== i18n.language
+    ) {
+      setServiceDetailsData(
+        servicesList
+          .filter(item => item.id === id)
+          .find(item => i18n.language === item.language),
+      );
     }
-  }, [id, serviceDetailsData, servicesList, setServiceDetailsData]);
+  }, [
+    i18n.language,
+    id,
+    serviceDetailsData,
+    servicesList,
+    setServiceDetailsData,
+  ]);
+
   useEffect(() => {
     return () => setServiceDetailsData(null);
   }, [setServiceDetailsData]);

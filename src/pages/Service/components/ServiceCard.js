@@ -1,7 +1,7 @@
 import { Box, Card, styled, Typography } from '@mui/material';
+import LanguageLink from 'components/LanguageLink';
 import LazyImage from 'components/LazyImage';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { serviceDetailsRecoil } from 'store';
 
@@ -31,18 +31,19 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const StyledLink = styled(Link)(() => ({
-  display: 'block',
-  width: '100%',
-  height: '100%',
-}));
-
 const ServiceCard = ({ data }) => {
   const setServiceDetails = useSetRecoilState(serviceDetailsRecoil);
 
   return (
     <StyledCard className="serviceCard" onClick={() => setServiceDetails(data)}>
-      <StyledLink to={`/services/${data.id}`}>
+      <LanguageLink
+        to={`/services/${data.id}`}
+        style={{
+          display: 'block',
+          width: '100%',
+          height: '100%',
+        }}
+      >
         <LazyImage
           src={data?.images?.file}
           alt={data?.images?.name}
@@ -60,7 +61,7 @@ const ServiceCard = ({ data }) => {
         </Box>
 
         <div className="serviceCardLine" />
-      </StyledLink>
+      </LanguageLink>
     </StyledCard>
   );
 };

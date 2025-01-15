@@ -129,17 +129,17 @@ export const HEADER_BURGER_MENU = [
     ariaLabel: 'menu.blogs',
     subLinks: [
       {
-        link: '/blog/4',
+        link: '/blog/1',
         text: 'subMenuBlogs.subMenu1',
         ariaLabel: 'subMenuBlogs.subMenu1',
       },
       {
-        link: '/blog/1',
+        link: '/blog/2',
         text: 'subMenuBlogs.subMenu2',
         ariaLabel: 'subMenuBlogs.subMenu2',
       },
       {
-        link: '/blog/10',
+        link: '/blog/3',
         text: 'subMenuBlogs.subMenu3',
         ariaLabel: 'subMenuBlogs.subMenu3',
       },

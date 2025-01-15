@@ -94,11 +94,7 @@ const ServiceSection1 = () => {
 
         <StyledFlexBox>
           {serviceList ? (
-            data.map((service, idx) => (
-              <React.Fragment key={idx}>
-                <ServiceCard data={service} />
-              </React.Fragment>
-            ))
+            data.map((service, idx) => <ServiceCard key={idx} data={service} />)
           ) : (
             <Styled50vhLoadingBox>
               <OrionLoading />
