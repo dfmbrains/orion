@@ -1,5 +1,4 @@
 import { styled } from '@mui/material';
-import LazyImage from 'components/LazyImage';
 import OrionContainer from 'components/OrionContainer';
 import React from 'react';
 import { Navigation } from 'swiper';
