@@ -15,7 +15,11 @@ const TeamMemberCard = ({ member }) => {
 
   return (
     <StyledBox>
-      <StyledAvatar src={member.images.file} alt={member.images.name} />
+      <StyledAvatar
+        src={member.images.file}
+        alt={member.images.name}
+        imgProps={{ loading: 'lazy' }}
+      />
 
       <Typography mt={1} variant="subtitle1">
         {formatName(

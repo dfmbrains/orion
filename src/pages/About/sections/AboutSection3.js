@@ -17,6 +17,8 @@ const StyledSection = styled('section')(({ theme }) => ({
   '& .aboutSection3Img': {
     width: '80%',
     borderRadius: '16px',
+    height: 'auto',
+
     [theme.breakpoints.down('lg')]: { width: '100%' },
   },
 }));

@@ -149,6 +149,7 @@ const HomeSection6 = () => {
                   <StyledAvatar
                     src={active.images.file}
                     alt={active.images.name}
+                    imgProps={{ loading: 'lazy' }}
                   />
                   <div>
                     <Typography color="#4E5865" variant="body1">
@@ -215,6 +216,7 @@ const HomeSection6 = () => {
                       <StyledAvatarSmall
                         src={member.images.file}
                         alt={member.images.name}
+                        imgProps={{ loading: 'lazy' }}
                       />
                       <div>
                         <Typography color="#4E5865" variant="body1">
