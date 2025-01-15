@@ -7,13 +7,14 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import MetaTags from 'seo/MetaTags';
 import { blogDetailsRecoil, blogRecoil } from 'store';
 import BlogDetailsPromo from './sections/BlogDetailsPromo';
+import EmailFormSection from 'components/EmailFormSection';
 
 const PageDetailsContent = Loadable(
   lazy(() => import('components/PageDetailsContent')),
 );
-const EmailFormSection = Loadable(
-  lazy(() => import('components/EmailFormSection')),
-);
+// const EmailFormSection = Loadable(
+//   lazy(() => import('components/EmailFormSection')),
+// );
 
 const BlogDetails = () => {
   const { id } = useParams();
